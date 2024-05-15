@@ -9,4 +9,4 @@ void main(array<String^>^ args)
 	Application::SetCompatibleTextRenderingDefault(false);
 	Proyecto3::VentanaPrincipal form;
 	Application::Run(% form);
-}//comentario
+}

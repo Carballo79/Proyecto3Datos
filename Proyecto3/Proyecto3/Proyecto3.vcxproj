@@ -120,14 +120,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArbolAA.cpp" />
+    <ClCompile Include="ArbolAVL.cpp" />
+    <ClCompile Include="ArbolB.cpp" />
+    <ClCompile Include="ArbolBB.cpp" />
+    <ClCompile Include="ArbolRN.cpp" />
+    <ClCompile Include="NodoAAA.cpp" />
+    <ClCompile Include="NodoAB.cpp" />
+    <ClCompile Include="NodoABB.cpp" />
+    <ClCompile Include="NodoAVL.cpp" />
+    <ClCompile Include="NodoARN.cpp" />
+    <ClCompile Include="Utilidades.cpp" />
+    <ClCompile Include="VentanaAdmin.cpp" />
+    <ClCompile Include="VentanaCliente.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
+    <ClCompile Include="VentanaVendedor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArbolAA.h" />
+    <ClInclude Include="ArbolAVL.h" />
+    <ClInclude Include="ArbolB.h" />
+    <ClInclude Include="ArbolBB.h" />
+    <ClInclude Include="ArbolRN.h" />
+    <ClInclude Include="NodoAAA.h" />
+    <ClInclude Include="NodoAB.h" />
+    <ClInclude Include="NodoABB.h" />
+    <ClInclude Include="NodoARN.h" />
+    <ClInclude Include="NodoAVL.h" />
+    <ClInclude Include="Utilidades.h" />
+    <ClInclude Include="VentanaAdmin.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaCliente.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaPrincipal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaVendedor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VentanaAdmin.resx">
+      <DependentUpon>VentanaAdmin.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.h</DependentUpon>
     </EmbeddedResource>

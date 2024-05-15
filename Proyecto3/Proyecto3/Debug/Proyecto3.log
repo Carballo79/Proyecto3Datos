@@ -1,4 +1,4 @@
 ﻿  VentanaPrincipal.cpp
-C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(7,1): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
-  VentanaPrincipal.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
-  Proyecto3.vcxproj -> C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  ArbolAA.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Proyecto3.vcxproj -> C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe

@@ -1,3 +1,7 @@
 C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.AssemblyReference.cache
 C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaPrincipal.resources
 C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.AssemblyReference.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaPrincipal.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaAdmin.resources
