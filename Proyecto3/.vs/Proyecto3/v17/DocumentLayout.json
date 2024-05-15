@@ -1,14 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\",
+  "WorkspaceRootPath": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,32 +18,52 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "VentanaPrincipal.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp",
-              "RelativeToolTip": "Proyecto3\\VentanaPrincipal.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-15T05:29:48.618Z",
-              "EditorCaption": ""
+              "Title": "VentanaPrincipal.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto3\\VentanaPrincipal.h [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-15T05:57:40.375Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VentanaPrincipal.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h [Design]",
-              "RelativeToolTip": "Proyecto3\\VentanaPrincipal.h [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-15T05:28:16.415Z",
-              "EditorCaption": " [Design]"
+              "Title": "VentanaPrincipal.cpp",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.cpp",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp",
+              "RelativeToolTip": "Proyecto3\\VentanaPrincipal.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-15T05:57:37.61Z",
+              "EditorCaption": ""
             }
           ]
         }
