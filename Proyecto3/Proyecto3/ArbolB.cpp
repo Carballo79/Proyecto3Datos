@@ -229,6 +229,40 @@ void ArbolB::crearAdmins(ArbolBB& ciudades)
     archivo.close();
 }
 
+void ArbolB::crearVendedores()
+{
+    string linea, cedula, nombre, vendedor;
+
+    ifstream archivo("Vendedores.txt");
+
+    if (!archivo)
+    {
+        cout << "\n\tNo se pudo abrir el archivo Vendedores.txt\n" << endl;
+        return;
+    }
+
+    while (getline(archivo, linea))
+    {
+        // Ignora l�neas vac�as
+        if (linea.empty() || (linea.find_first_not_of(" \t\r\n") == string::npos))
+            continue;
+
+        istringstream ss(linea);
+
+        getline(ss, cedula, ';');
+        ss >> ws;
+        getline(ss, nombre, ';');
+        ss >> ws;
+
+        vendedor = cedula + "; " + nombre;
+
+        if (!buscar(cedula))
+            insertarNodo(vendedor);
+    }
+
+    archivo.close();
+}
+
 string ArbolB::obtenerNodo(string dato)
 {
     NodoAB* nodo = raiz;

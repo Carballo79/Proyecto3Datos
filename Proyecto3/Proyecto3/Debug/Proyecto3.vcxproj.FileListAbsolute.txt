@@ -4,4 +4,10 @@ C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyect
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.AssemblyReference.cache
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaPrincipal.resources
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
-C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaAdmin.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos - Copy\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.AssemblyReference.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos - Copy\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaPrincipal.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos - Copy\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos - Copy\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaSupermercado.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos - Copy\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaInsercion.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaInsercion.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaSupermercado.resources

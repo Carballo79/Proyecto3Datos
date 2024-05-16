@@ -1,3 +1,4 @@
+#pragma once
 
 #include "NodoAVL.h"
 #include "ArbolBB.h"

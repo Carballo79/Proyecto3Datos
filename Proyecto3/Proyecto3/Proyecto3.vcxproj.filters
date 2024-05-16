@@ -51,13 +51,10 @@
     <ClCompile Include="Utilidades.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="VentanaAdmin.cpp">
+    <ClCompile Include="VentanaSupermercado.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VentanaCliente.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="VentanaVendedor.cpp">
+    <ClCompile Include="VentanaInsercion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,13 +95,10 @@
     <ClInclude Include="ArbolAA.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VentanaAdmin.h">
+    <ClInclude Include="VentanaSupermercado.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VentanaCliente.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="VentanaVendedor.h">
+    <ClInclude Include="VentanaInsercion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

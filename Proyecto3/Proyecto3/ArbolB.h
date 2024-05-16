@@ -1,3 +1,4 @@
+#pragma once
 
 #include "NodoAB.h"
 #include "ArbolBB.h"
@@ -14,6 +15,7 @@ public:
     void modificarNodo(string nuevoDato);
     void crearClientes(ArbolBB& ciudades);
     void crearAdmins(ArbolBB& ciudades);
+    void crearVendedores();
     string obtenerNodo(string dato);
     void mostrarArbol(NodoAB* nodo);
     void mostrarArbol();

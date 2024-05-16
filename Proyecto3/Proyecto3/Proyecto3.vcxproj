@@ -131,10 +131,9 @@
     <ClCompile Include="NodoAVL.cpp" />
     <ClCompile Include="NodoARN.cpp" />
     <ClCompile Include="Utilidades.cpp" />
-    <ClCompile Include="VentanaAdmin.cpp" />
-    <ClCompile Include="VentanaCliente.cpp" />
+    <ClCompile Include="VentanaInsercion.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
-    <ClCompile Include="VentanaVendedor.cpp" />
+    <ClCompile Include="VentanaSupermercado.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolAA.h" />
@@ -148,25 +147,25 @@
     <ClInclude Include="NodoARN.h" />
     <ClInclude Include="NodoAVL.h" />
     <ClInclude Include="Utilidades.h" />
-    <ClInclude Include="VentanaAdmin.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="VentanaCliente.h">
+    <ClInclude Include="VentanaInsercion.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="VentanaVendedor.h">
+    <ClInclude Include="VentanaSupermercado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="VentanaAdmin.resx">
-      <DependentUpon>VentanaAdmin.h</DependentUpon>
+    <EmbeddedResource Include="VentanaInsercion.resx">
+      <DependentUpon>VentanaInsercion.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaSupermercado.resx">
+      <DependentUpon>VentanaSupermercado.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
