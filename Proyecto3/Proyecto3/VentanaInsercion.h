@@ -1,6 +1,6 @@
 #pragma once
 
-#include "VentanaSupermercado.h"
+//#include "VentanaSupermercado.h"
 
 namespace Proyecto3 {
 

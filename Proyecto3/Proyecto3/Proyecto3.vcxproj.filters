@@ -57,6 +57,12 @@
     <ClCompile Include="VentanaInsercion.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VentanaConsultas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VentanaModificacion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VentanaPrincipal.h">
@@ -99,6 +105,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VentanaInsercion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VentanaConsultas.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VentanaModificacion.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

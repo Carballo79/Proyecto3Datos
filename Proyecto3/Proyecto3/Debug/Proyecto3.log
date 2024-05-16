@@ -1,19 +1,6 @@
-﻿  ArbolAA.cpp
-  ArbolAVL.cpp
-  ArbolB.cpp
-  ArbolBB.cpp
-  ArbolRN.cpp
-  NodoAAA.cpp
-  NodoAB.cpp
-  NodoABB.cpp
-  NodoAVL.cpp
-  NodoARN.cpp
-  Utilidades.cpp
-  VentanaInsercion.cpp
+﻿  VentanaConsultas.cpp
   VentanaPrincipal.cpp
-C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
-  VentanaSupermercado.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(8,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   Generating Code...
   ArbolAA.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Proyecto3.vcxproj -> C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe

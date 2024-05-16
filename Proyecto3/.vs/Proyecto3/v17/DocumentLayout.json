@@ -3,6 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaConsultas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaConsultas.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -11,24 +23,8 @@
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaInsercion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaInsercion.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaPrincipal.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolBB.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolAVL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,85 +58,78 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VentanaInsercion.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaInsercion.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaInsercion.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos - Copy\\Proyecto3\\Proyecto3\\VentanaInsercion.h [Design]",
-              "RelativeToolTip": "..\\..\\Proyecto3Datos - Copy\\Proyecto3\\Proyecto3\\VentanaInsercion.h [Design]",
+              "DocumentIndex": 0,
+              "Title": "VentanaPrincipal.h [Design]",
+              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.h",
+              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h [Design]",
+              "RelativeToolTip": "Proyecto3\\VentanaPrincipal.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T08:09:15.003Z"
+              "WhenOpened": "2024-05-16T18:54:13.274Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "VentanaSupermercado.h [Design]",
+              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
+              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h [Design]",
+              "RelativeToolTip": "Proyecto3\\VentanaSupermercado.h [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-16T18:53:33.69Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ArbolAVL.h",
+              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h",
+              "RelativeDocumentMoniker": "Proyecto3\\ArbolAVL.h",
+              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h",
+              "RelativeToolTip": "Proyecto3\\ArbolAVL.h",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-16T18:47:22.985Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "VentanaSupermercado.h",
               "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
               "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
               "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
               "RelativeToolTip": "Proyecto3\\VentanaSupermercado.h",
-              "ViewState": "AQIAAAYBAAAAAAAAAAAAADgBAAA/AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAJgCAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T07:50:15.195Z",
+              "WhenOpened": "2024-05-16T18:42:35.774Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "VentanaSupermercado.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos - Copy\\Proyecto3\\Proyecto3\\VentanaSupermercado.h [Design]",
-              "RelativeToolTip": "..\\..\\Proyecto3Datos - Copy\\Proyecto3\\Proyecto3\\VentanaSupermercado.h [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T07:35:18.529Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VentanaPrincipal.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.cpp",
-              "RelativeToolTip": "Proyecto3\\VentanaPrincipal.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-16T07:32:41.47Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ArbolBB.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.h",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolBB.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.h",
-              "RelativeToolTip": "Proyecto3\\ArbolBB.h",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABQAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T07:23:46.064Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "VentanaPrincipal.h",
               "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h",
               "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.h",
               "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h",
               "RelativeToolTip": "Proyecto3\\VentanaPrincipal.h",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAIAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T07:21:30.078Z"
+              "WhenOpened": "2024-05-16T18:40:36.443Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VentanaPrincipal.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaPrincipal.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaPrincipal.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos - Copy\\Proyecto3\\Proyecto3\\VentanaPrincipal.h [Design]",
-              "RelativeToolTip": "..\\..\\Proyecto3Datos - Copy\\Proyecto3\\Proyecto3\\VentanaPrincipal.h [Design]",
+              "DocumentIndex": 2,
+              "Title": "VentanaConsultas.h [Design]",
+              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaConsultas.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaConsultas.h",
+              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaConsultas.h [Design]",
+              "RelativeToolTip": "Proyecto3\\VentanaConsultas.h [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-16T06:47:03.933Z"
+              "WhenOpened": "2024-05-16T18:54:09.916Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

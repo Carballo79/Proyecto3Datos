@@ -131,7 +131,9 @@
     <ClCompile Include="NodoAVL.cpp" />
     <ClCompile Include="NodoARN.cpp" />
     <ClCompile Include="Utilidades.cpp" />
+    <ClCompile Include="VentanaConsultas.cpp" />
     <ClCompile Include="VentanaInsercion.cpp" />
+    <ClCompile Include="VentanaModificacion.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
     <ClCompile Include="VentanaSupermercado.cpp" />
   </ItemGroup>
@@ -147,7 +149,13 @@
     <ClInclude Include="NodoARN.h" />
     <ClInclude Include="NodoAVL.h" />
     <ClInclude Include="Utilidades.h" />
+    <ClInclude Include="VentanaConsultas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaInsercion.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaModificacion.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaPrincipal.h">
@@ -158,8 +166,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VentanaConsultas.resx">
+      <DependentUpon>VentanaConsultas.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaInsercion.resx">
       <DependentUpon>VentanaInsercion.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaModificacion.resx">
+      <DependentUpon>VentanaModificacion.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.h</DependentUpon>

@@ -57,7 +57,7 @@ namespace Proyecto3 {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
+
 	private: System::Windows::Forms::TextBox^ stringCedula;
 
 
@@ -101,6 +101,9 @@ namespace Proyecto3 {
 
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Label^ mensaje;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Label^ label3;
+	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	protected:
 
@@ -117,7 +120,7 @@ namespace Proyecto3 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(VentanaPrincipal::typeid));
 			this->stringCedula = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btnAdmin = (gcnew System::Windows::Forms::RadioButton());
@@ -125,48 +128,42 @@ namespace Proyecto3 {
 			this->btnVendedor = (gcnew System::Windows::Forms::RadioButton());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->mensaje = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
-			// 
-			// button1
-			// 
-			this->button1->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(36, 40);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(161, 44);
-			this->button1->TabIndex = 0;
-			this->button1->Text = L"Ventana Inicial";
-			this->button1->UseVisualStyleBackColor = true;
 			// 
 			// stringCedula
 			// 
-			this->stringCedula->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->stringCedula->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->stringCedula->Location = System::Drawing::Point(391, 152);
+			this->stringCedula->Location = System::Drawing::Point(245, 247);
 			this->stringCedula->Name = L"stringCedula";
-			this->stringCedula->Size = System::Drawing::Size(139, 30);
+			this->stringCedula->Size = System::Drawing::Size(148, 27);
 			this->stringCedula->TabIndex = 4;
 			this->stringCedula->TextChanged += gcnew System::EventHandler(this, &VentanaPrincipal::textBox1_TextChanged);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(235, 155);
+			this->label1->Location = System::Drawing::Point(243, 218);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(150, 23);
+			this->label1->Size = System::Drawing::Size(126, 19);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Digite su cédula:";
+			this->label1->Click += gcnew System::EventHandler(this, &VentanaPrincipal::label1_Click);
 			// 
 			// btnAdmin
 			// 
 			this->btnAdmin->AutoSize = true;
-			this->btnAdmin->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnAdmin->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnAdmin->Location = System::Drawing::Point(58, 155);
+			this->btnAdmin->Location = System::Drawing::Point(54, 282);
 			this->btnAdmin->Name = L"btnAdmin";
-			this->btnAdmin->Size = System::Drawing::Size(148, 27);
+			this->btnAdmin->Size = System::Drawing::Size(127, 23);
 			this->btnAdmin->TabIndex = 8;
 			this->btnAdmin->TabStop = true;
 			this->btnAdmin->Text = L"Administrador";
@@ -175,11 +172,11 @@ namespace Proyecto3 {
 			// btnCliente
 			// 
 			this->btnCliente->AutoSize = true;
-			this->btnCliente->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnCliente->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCliente->Location = System::Drawing::Point(58, 191);
+			this->btnCliente->Location = System::Drawing::Point(54, 311);
 			this->btnCliente->Name = L"btnCliente";
-			this->btnCliente->Size = System::Drawing::Size(86, 27);
+			this->btnCliente->Size = System::Drawing::Size(75, 23);
 			this->btnCliente->TabIndex = 9;
 			this->btnCliente->TabStop = true;
 			this->btnCliente->Text = L"Cliente";
@@ -188,11 +185,11 @@ namespace Proyecto3 {
 			// btnVendedor
 			// 
 			this->btnVendedor->AutoSize = true;
-			this->btnVendedor->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnVendedor->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnVendedor->Location = System::Drawing::Point(58, 227);
+			this->btnVendedor->Location = System::Drawing::Point(54, 340);
 			this->btnVendedor->Name = L"btnVendedor";
-			this->btnVendedor->Size = System::Drawing::Size(109, 27);
+			this->btnVendedor->Size = System::Drawing::Size(94, 23);
 			this->btnVendedor->TabIndex = 10;
 			this->btnVendedor->TabStop = true;
 			this->btnVendedor->Text = L"Vendedor";
@@ -200,29 +197,72 @@ namespace Proyecto3 {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(297, 270);
+			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
+			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->button2->Location = System::Drawing::Point(277, 322);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
+			this->button2->Size = System::Drawing::Size(77, 77);
 			this->button2->TabIndex = 11;
-			this->button2->Text = L"button2";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &VentanaPrincipal::button2_Click);
 			// 
 			// mensaje
 			// 
 			this->mensaje->AutoSize = true;
-			this->mensaje->Location = System::Drawing::Point(236, 191);
+			this->mensaje->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->mensaje->ForeColor = System::Drawing::Color::Brown;
+			this->mensaje->Location = System::Drawing::Point(243, 282);
 			this->mensaje->Name = L"mensaje";
-			this->mensaje->Size = System::Drawing::Size(35, 13);
+			this->mensaje->Size = System::Drawing::Size(0, 18);
 			this->mensaje->TabIndex = 12;
-			this->mensaje->Text = L"label2";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto Medium", 20.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->label2->Location = System::Drawing::Point(120, 142);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(219, 33);
+			this->label2->TabIndex = 13;
+			this->label2->Text = L"Inicio de sesión";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Roboto Medium", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->label3->Location = System::Drawing::Point(50, 246);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(160, 23);
+			this->label3->TabIndex = 14;
+			this->label3->Text = L"Tipo de usuario";
+			this->label3->Click += gcnew System::EventHandler(this, &VentanaPrincipal::label3_Click);
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.BackgroundImage")));
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox1->Location = System::Drawing::Point(182, 31);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(95, 95);
+			this->pictureBox1->TabIndex = 15;
+			this->pictureBox1->TabStop = false;
 			// 
 			// VentanaPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(584, 461);
+			this->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->ClientSize = System::Drawing::Size(444, 431);
+			this->Controls->Add(this->pictureBox1);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->mensaje);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->btnVendedor);
@@ -230,11 +270,11 @@ namespace Proyecto3 {
 			this->Controls->Add(this->btnAdmin);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->stringCedula);
-			this->Controls->Add(this->button1);
 			this->Name = L"VentanaPrincipal";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VentanaPrincipal";
 			this->Load += gcnew System::EventHandler(this, &VentanaPrincipal::VentanaPrincipal_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -260,33 +300,40 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 			if (clientes.buscar(strCedula)) {
 				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado();
 				ventanaSuper->Show();
+				this->Visible = false;
 			}
 			else {
-				this->mensaje->Text = "No existe";
+				this->mensaje->Text = "La cédula no existe";
 			}
 		}
 		else if (!btnCliente->Checked && btnAdmin->Checked && !btnVendedor->Checked) {
 			if (admins.buscar(strCedula)) {
 				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado();
 				ventanaSuper->Show();
+				this->Visible = false;
 			}
 			else {
-				this->mensaje->Text = "No existe";
+				this->mensaje->Text = "La cédula no existe";
 			}
 		}
 		else if (!btnCliente->Checked && !btnAdmin->Checked && btnVendedor->Checked) {
 			if (vendedores.buscar(strCedula)) {
 				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado();
 				ventanaSuper->Show();
+				this->Visible = false;
 			}
 			else {
-				this->mensaje->Text = "No existe";
+				this->mensaje->Text = "La cédula no existe";
 			}
 		}
 	}
 	else {
-		this->mensaje->Text = "Cedula vacia";
+		this->mensaje->Text = "Campo vacío";
 	}
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label3_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

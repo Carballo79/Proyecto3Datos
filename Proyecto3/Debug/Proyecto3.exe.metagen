@@ -1,4 +1,6 @@
+  Proyecto3.VentanaConsultas.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaInsercion.resources - Embedded, ContainedInManifestFile, 
+  Proyecto3.VentanaModificacion.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaPrincipal.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaSupermercado.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
@@ -16,7 +18,7 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
-Class Proyecto3.VentanaSupermercado: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+Class Proyecto3.VentanaConsultas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Proyecto3.VentanaInsercion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
@@ -27,6 +29,12 @@ Class Proyecto3.VentanaInsercion: AutoLayout, AnsiClass, Class, Public, BeforeFi
   Methods:
     get_Valor(): PrivateScope, Public, HideBySig, SpecialName
     set_Valor(String): PrivateScope, Public, HideBySig, SpecialName
+Class Proyecto3.VentanaModificacion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class Proyecto3.VentanaSupermercado: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
 Class Proyecto3.VentanaPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
