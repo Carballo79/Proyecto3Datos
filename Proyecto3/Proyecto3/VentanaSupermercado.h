@@ -8,6 +8,8 @@
 //
 //#include <msclr/marshal_cppstd.h>
 
+#include "VentanaInsercion.h"
+
 namespace Proyecto3 {
 
 	//ArbolBB* pasillosI;
@@ -25,8 +27,20 @@ namespace Proyecto3 {
 	public ref class VentanaSupermercado : public System::Windows::Forms::Form
 	{
 	public:
+		Form^ obj;
+
 		VentanaSupermercado(void)
 		{
+			InitializeComponent();
+			//
+			//TODO: Add the constructor code here
+			//
+		}
+
+		VentanaSupermercado(Form^ obj1)
+		{
+			obj = obj1;
+
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
@@ -110,6 +124,9 @@ namespace Proyecto3 {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Button^ btnInsertar;
 	private: System::Windows::Forms::Label^ mensaje;
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::TabPage^ tabPage2;
 
 
 	private:
@@ -182,8 +199,13 @@ namespace Proyecto3 {
 			this->txtCodPasillo = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->btnInsertar = (gcnew System::Windows::Forms::Button());
+			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->menuStrip1->SuspendLayout();
 			this->gBoxInsercion->SuspendLayout();
+			this->tabControl1->SuspendLayout();
+			this->tabPage1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -195,7 +217,7 @@ namespace Proyecto3 {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(585, 24);
+			this->menuStrip1->Size = System::Drawing::Size(771, 24);
 			this->menuStrip1->TabIndex = 4;
 			this->menuStrip1->Text = L"menuStrip1";
 			this->menuStrip1->ItemClicked += gcnew System::Windows::Forms::ToolStripItemClickedEventHandler(this, &VentanaSupermercado::menuStrip1_ItemClicked);
@@ -225,50 +247,50 @@ namespace Proyecto3 {
 			// IPasillo
 			// 
 			this->IPasillo->Name = L"IPasillo";
-			this->IPasillo->Size = System::Drawing::Size(150, 22);
+			this->IPasillo->Size = System::Drawing::Size(180, 22);
 			this->IPasillo->Text = L"Pasillo";
 			this->IPasillo->Click += gcnew System::EventHandler(this, &VentanaSupermercado::IPasillo_Click);
 			// 
 			// productosToolStripMenuItem
 			// 
 			this->productosToolStripMenuItem->Name = L"productosToolStripMenuItem";
-			this->productosToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->productosToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->productosToolStripMenuItem->Text = L"Producto";
 			// 
 			// marcasToolStripMenuItem
 			// 
 			this->marcasToolStripMenuItem->Name = L"marcasToolStripMenuItem";
-			this->marcasToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->marcasToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->marcasToolStripMenuItem->Text = L"Marca";
 			// 
 			// inventarioToolStripMenuItem
 			// 
 			this->inventarioToolStripMenuItem->Name = L"inventarioToolStripMenuItem";
-			this->inventarioToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->inventarioToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->inventarioToolStripMenuItem->Text = L"Inventario";
 			// 
 			// administradorToolStripMenuItem
 			// 
 			this->administradorToolStripMenuItem->Name = L"administradorToolStripMenuItem";
-			this->administradorToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->administradorToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->administradorToolStripMenuItem->Text = L"Administrador";
 			// 
 			// clienteToolStripMenuItem
 			// 
 			this->clienteToolStripMenuItem->Name = L"clienteToolStripMenuItem";
-			this->clienteToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->clienteToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->clienteToolStripMenuItem->Text = L"Cliente";
 			// 
 			// vendedorToolStripMenuItem
 			// 
 			this->vendedorToolStripMenuItem->Name = L"vendedorToolStripMenuItem";
-			this->vendedorToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->vendedorToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->vendedorToolStripMenuItem->Text = L"Vendedor";
 			// 
 			// ciudadToolStripMenuItem
 			// 
 			this->ciudadToolStripMenuItem->Name = L"ciudadToolStripMenuItem";
-			this->ciudadToolStripMenuItem->Size = System::Drawing::Size(150, 22);
+			this->ciudadToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ciudadToolStripMenuItem->Text = L"Ciudad";
 			// 
 			// consultasToolStripMenuItem
@@ -536,10 +558,9 @@ namespace Proyecto3 {
 			this->gBoxInsercion->Controls->Add(this->txtNombre);
 			this->gBoxInsercion->Controls->Add(this->txtCodPasillo);
 			this->gBoxInsercion->Controls->Add(this->label1);
-			this->gBoxInsercion->Controls->Add(this->btnInsertar);
 			this->gBoxInsercion->Font = (gcnew System::Drawing::Font(L"Roboto Medium", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->gBoxInsercion->Location = System::Drawing::Point(35, 85);
+			this->gBoxInsercion->Location = System::Drawing::Point(720, 102);
 			this->gBoxInsercion->Name = L"gBoxInsercion";
 			this->gBoxInsercion->Size = System::Drawing::Size(500, 314);
 			this->gBoxInsercion->TabIndex = 5;
@@ -608,7 +629,7 @@ namespace Proyecto3 {
 			this->btnInsertar->Font = (gcnew System::Drawing::Font(L"Roboto Medium", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnInsertar->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->btnInsertar->Location = System::Drawing::Point(346, 243);
+			this->btnInsertar->Location = System::Drawing::Point(119, 199);
 			this->btnInsertar->Name = L"btnInsertar";
 			this->btnInsertar->Size = System::Drawing::Size(110, 39);
 			this->btnInsertar->TabIndex = 0;
@@ -616,11 +637,43 @@ namespace Proyecto3 {
 			this->btnInsertar->UseVisualStyleBackColor = true;
 			this->btnInsertar->Click += gcnew System::EventHandler(this, &VentanaSupermercado::btnInsertar_Click);
 			// 
+			// tabControl1
+			// 
+			this->tabControl1->Controls->Add(this->tabPage1);
+			this->tabControl1->Controls->Add(this->tabPage2);
+			this->tabControl1->Location = System::Drawing::Point(56, 67);
+			this->tabControl1->Name = L"tabControl1";
+			this->tabControl1->SelectedIndex = 0;
+			this->tabControl1->Size = System::Drawing::Size(638, 403);
+			this->tabControl1->TabIndex = 6;
+			// 
+			// tabPage1
+			// 
+			this->tabPage1->Controls->Add(this->btnInsertar);
+			this->tabPage1->Location = System::Drawing::Point(4, 22);
+			this->tabPage1->Name = L"tabPage1";
+			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage1->Size = System::Drawing::Size(630, 377);
+			this->tabPage1->TabIndex = 0;
+			this->tabPage1->Text = L"tabPage1";
+			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// tabPage2
+			// 
+			this->tabPage2->Location = System::Drawing::Point(4, 22);
+			this->tabPage2->Name = L"tabPage2";
+			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+			this->tabPage2->Size = System::Drawing::Size(630, 377);
+			this->tabPage2->TabIndex = 1;
+			this->tabPage2->Text = L"tabPage2";
+			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
 			// VentanaSupermercado
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(585, 461);
+			this->ClientSize = System::Drawing::Size(771, 522);
+			this->Controls->Add(this->tabControl1);
 			this->Controls->Add(this->gBoxInsercion);
 			this->Controls->Add(this->menuStrip1);
 			this->Name = L"VentanaSupermercado";
@@ -629,6 +682,8 @@ namespace Proyecto3 {
 			this->menuStrip1->PerformLayout();
 			this->gBoxInsercion->ResumeLayout(false);
 			this->gBoxInsercion->PerformLayout();
+			this->tabControl1->ResumeLayout(false);
+			this->tabPage1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -637,13 +692,13 @@ namespace Proyecto3 {
 	private: System::Void insercionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void IPasillo_Click(System::Object^ sender, System::EventArgs^ e) {
-		/*String^ flag = "pasillo";
+		int opc = 1;
 
-		VentanaInsercion^ ventanaInsercion = gcnew VentanaInsercion();
-		ventanaInsercion->Valor = flag;
-		ventanaInsercion->Show();*/
+		this->Hide();
+		VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+		ventana->ShowDialog();
 
-		gBoxInsercion->Visible = true;
+		//gBoxInsercion->Visible = true;
 	}
 private: System::Void menuStrip1_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
 }
@@ -669,6 +724,9 @@ private: System::Void btnInsertar_Click(System::Object^ sender, System::EventArg
 	else {
 		this->mensaje->Text = "Campos vacíos";
 	}*/
+
+	this->Hide();
+	obj->Show();
 }
 };
 }

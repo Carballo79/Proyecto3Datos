@@ -298,7 +298,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		std::string strCedula = msclr::interop::marshal_as<std::string>(stringCedula);
 		if (btnCliente->Checked && !btnAdmin->Checked && !btnVendedor->Checked) {
 			if (clientes.buscar(strCedula)) {
-				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado();
+				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this);
 				ventanaSuper->Show();
 				this->Visible = false;
 			}
@@ -308,7 +308,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		else if (!btnCliente->Checked && btnAdmin->Checked && !btnVendedor->Checked) {
 			if (admins.buscar(strCedula)) {
-				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado();
+				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this);
 				ventanaSuper->Show();
 				this->Visible = false;
 			}
@@ -318,9 +318,9 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 		}
 		else if (!btnCliente->Checked && !btnAdmin->Checked && btnVendedor->Checked) {
 			if (vendedores.buscar(strCedula)) {
-				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado();
-				ventanaSuper->Show();
-				this->Visible = false;
+				this->Hide();
+				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this);
+				ventanaSuper->ShowDialog();
 			}
 			else {
 				this->mensaje->Text = "La cédula no existe";
