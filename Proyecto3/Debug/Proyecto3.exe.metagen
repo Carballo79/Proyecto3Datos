@@ -35,7 +35,11 @@ Class Proyecto3.VentanaInsercion: AutoLayout, AnsiClass, Class, Public, BeforeFi
     set_Valor(String): PrivateScope, Public, HideBySig, SpecialName
 Class Proyecto3.VentanaModificacion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Form obj : Public
+    Int32 opc : Public
 Class Proyecto3.VentanaSupermercado: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

@@ -16,11 +16,10 @@ namespace Proyecto3 {
 	/// </summary>
 	public ref class VentanaInsercion : public System::Windows::Forms::Form
 	{
-	public:
-
-		Form^ obj;
 	private: System::Windows::Forms::Label^ label1;
 	public:
+		
+		Form^ obj;
 		int opc;
 
 		VentanaInsercion(void)
@@ -640,6 +639,7 @@ namespace Proyecto3 {
 			this->codPasillo->Enabled = true;
 			this->codProducto->Enabled = true;
 			this->codMarca->Enabled = true;
+			this->codInventario->Enabled = true;
 			this->nombre->Enabled = true;
 			this->cantStock->Enabled = true;
 			this->codCanasta->Enabled = true;

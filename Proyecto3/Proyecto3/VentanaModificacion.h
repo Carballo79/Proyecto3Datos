@@ -15,12 +15,59 @@ namespace Proyecto3 {
 	public ref class VentanaModificacion : public System::Windows::Forms::Form
 	{
 	public:
+		Form^ obj;
+	private: System::Windows::Forms::Button^ btnBuscar;
+	public:
+
+	public:
+		int opc;
 		VentanaModificacion(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+
+		VentanaModificacion(Form^ obj1, int opc1)
+		{
+			obj = obj1;
+			opc = opc1;
+
+			InitializeComponent();
+
+			if (opc == 1)
+			{
+				ModificacionPasillo();
+			}
+			if (opc == 2)
+			{
+				ModificacionProducto();
+			}
+			if (opc == 3)
+			{
+				ModificacionMarca();
+			}
+			if (opc == 4)
+			{
+				ModificacionInventario();
+			}
+			if (opc == 5)
+			{
+				ModificacionAdministrador();
+			}
+			if (opc == 6)
+			{
+				ModificacionCliente();
+			}
+			if (opc == 7)
+			{
+				ModificacionVendedor();
+			}
+			if (opc == 8)
+			{
+				ModificacionCiudad();
+			}
 		}
 
 	protected:
@@ -113,150 +160,168 @@ namespace Proyecto3 {
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->btnBuscar = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
 			// 
 			// btnModificar
 			// 
+			this->btnModificar->Enabled = false;
 			this->btnModificar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnModificar->Location = System::Drawing::Point(421, 263);
+			this->btnModificar->Location = System::Drawing::Point(455, 263);
 			this->btnModificar->Name = L"btnModificar";
 			this->btnModificar->Size = System::Drawing::Size(109, 48);
 			this->btnModificar->TabIndex = 61;
 			this->btnModificar->Text = L"Modificar";
 			this->btnModificar->UseVisualStyleBackColor = true;
+			this->btnModificar->Click += gcnew System::EventHandler(this, &VentanaModificacion::btnModificar_Click);
 			// 
 			// Correo
 			// 
+			this->Correo->Enabled = false;
 			this->Correo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Correo->Location = System::Drawing::Point(201, 534);
+			this->Correo->Location = System::Drawing::Point(235, 537);
 			this->Correo->Name = L"Correo";
 			this->Correo->Size = System::Drawing::Size(200, 22);
 			this->Correo->TabIndex = 60;
 			// 
 			// telefono
 			// 
+			this->telefono->Enabled = false;
 			this->telefono->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->telefono->Location = System::Drawing::Point(201, 501);
+			this->telefono->Location = System::Drawing::Point(235, 506);
 			this->telefono->Name = L"telefono";
 			this->telefono->Size = System::Drawing::Size(200, 22);
 			this->telefono->TabIndex = 59;
 			// 
 			// codCanasta
 			// 
+			this->codCanasta->Enabled = false;
 			this->codCanasta->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codCanasta->Location = System::Drawing::Point(201, 468);
+			this->codCanasta->Location = System::Drawing::Point(235, 473);
 			this->codCanasta->Name = L"codCanasta";
 			this->codCanasta->Size = System::Drawing::Size(200, 22);
 			this->codCanasta->TabIndex = 58;
 			// 
 			// cantStock
 			// 
+			this->cantStock->Enabled = false;
 			this->cantStock->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->cantStock->Location = System::Drawing::Point(201, 435);
+			this->cantStock->Location = System::Drawing::Point(235, 440);
 			this->cantStock->Name = L"cantStock";
 			this->cantStock->Size = System::Drawing::Size(200, 22);
 			this->cantStock->TabIndex = 57;
 			// 
 			// codPasillo
 			// 
+			this->codPasillo->Enabled = false;
 			this->codPasillo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codPasillo->Location = System::Drawing::Point(201, 72);
+			this->codPasillo->Location = System::Drawing::Point(235, 63);
 			this->codPasillo->Name = L"codPasillo";
 			this->codPasillo->Size = System::Drawing::Size(200, 22);
 			this->codPasillo->TabIndex = 56;
 			// 
 			// codProducto
 			// 
+			this->codProducto->Enabled = false;
 			this->codProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codProducto->Location = System::Drawing::Point(201, 101);
+			this->codProducto->Location = System::Drawing::Point(235, 97);
 			this->codProducto->Name = L"codProducto";
 			this->codProducto->Size = System::Drawing::Size(200, 22);
 			this->codProducto->TabIndex = 55;
 			// 
 			// codMarca
 			// 
+			this->codMarca->Enabled = false;
 			this->codMarca->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codMarca->Location = System::Drawing::Point(201, 138);
+			this->codMarca->Location = System::Drawing::Point(235, 131);
 			this->codMarca->Name = L"codMarca";
 			this->codMarca->Size = System::Drawing::Size(200, 22);
 			this->codMarca->TabIndex = 54;
 			// 
 			// codInventario
 			// 
+			this->codInventario->Enabled = false;
 			this->codInventario->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codInventario->Location = System::Drawing::Point(201, 171);
+			this->codInventario->Location = System::Drawing::Point(235, 165);
 			this->codInventario->Name = L"codInventario";
 			this->codInventario->Size = System::Drawing::Size(200, 22);
 			this->codInventario->TabIndex = 53;
 			// 
 			// codCliente
 			// 
+			this->codCliente->Enabled = false;
 			this->codCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codCliente->Location = System::Drawing::Point(201, 204);
+			this->codCliente->Location = System::Drawing::Point(235, 199);
 			this->codCliente->Name = L"codCliente";
 			this->codCliente->Size = System::Drawing::Size(200, 22);
 			this->codCliente->TabIndex = 52;
 			// 
 			// codAdmin
 			// 
+			this->codAdmin->Enabled = false;
 			this->codAdmin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codAdmin->Location = System::Drawing::Point(201, 234);
+			this->codAdmin->Location = System::Drawing::Point(235, 233);
 			this->codAdmin->Name = L"codAdmin";
 			this->codAdmin->Size = System::Drawing::Size(200, 22);
 			this->codAdmin->TabIndex = 51;
 			// 
 			// codVendedor
 			// 
+			this->codVendedor->Enabled = false;
 			this->codVendedor->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codVendedor->Location = System::Drawing::Point(201, 263);
+			this->codVendedor->Location = System::Drawing::Point(235, 268);
 			this->codVendedor->Name = L"codVendedor";
 			this->codVendedor->Size = System::Drawing::Size(200, 22);
 			this->codVendedor->TabIndex = 50;
 			// 
 			// codCiudad
 			// 
+			this->codCiudad->Enabled = false;
 			this->codCiudad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codCiudad->Location = System::Drawing::Point(201, 296);
+			this->codCiudad->Location = System::Drawing::Point(235, 301);
 			this->codCiudad->Name = L"codCiudad";
 			this->codCiudad->Size = System::Drawing::Size(200, 22);
 			this->codCiudad->TabIndex = 49;
 			// 
 			// nombre
 			// 
+			this->nombre->Enabled = false;
 			this->nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->nombre->Location = System::Drawing::Point(201, 329);
+			this->nombre->Location = System::Drawing::Point(235, 335);
 			this->nombre->Name = L"nombre";
 			this->nombre->Size = System::Drawing::Size(200, 22);
 			this->nombre->TabIndex = 48;
 			// 
 			// cantGondola
 			// 
+			this->cantGondola->Enabled = false;
 			this->cantGondola->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->cantGondola->Location = System::Drawing::Point(201, 362);
+			this->cantGondola->Location = System::Drawing::Point(235, 369);
 			this->cantGondola->Name = L"cantGondola";
 			this->cantGondola->Size = System::Drawing::Size(200, 22);
 			this->cantGondola->TabIndex = 47;
 			// 
 			// precio
 			// 
+			this->precio->Enabled = false;
 			this->precio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->precio->Location = System::Drawing::Point(201, 402);
+			this->precio->Location = System::Drawing::Point(235, 403);
 			this->precio->Name = L"precio";
 			this->precio->Size = System::Drawing::Size(200, 22);
 			this->precio->TabIndex = 46;
@@ -281,9 +346,9 @@ namespace Proyecto3 {
 			this->label14->Location = System::Drawing::Point(51, 502);
 			this->label14->Name = L"label14";
 			this->label14->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label14->Size = System::Drawing::Size(90, 34);
+			this->label14->Size = System::Drawing::Size(151, 34);
 			this->label14->TabIndex = 44;
-			this->label14->Text = L"Teléfono:";
+			this->label14->Text = L"Nuevo Teléfono:";
 			// 
 			// label13
 			// 
@@ -293,9 +358,9 @@ namespace Proyecto3 {
 			this->label13->Location = System::Drawing::Point(51, 468);
 			this->label13->Name = L"label13";
 			this->label13->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label13->Size = System::Drawing::Size(117, 34);
+			this->label13->Size = System::Drawing::Size(178, 34);
 			this->label13->TabIndex = 43;
-			this->label13->Text = L"CodCanasta:";
+			this->label13->Text = L"Nuevo CodCanasta:";
 			// 
 			// label12
 			// 
@@ -305,9 +370,9 @@ namespace Proyecto3 {
 			this->label12->Location = System::Drawing::Point(51, 434);
 			this->label12->Name = L"label12";
 			this->label12->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label12->Size = System::Drawing::Size(99, 34);
+			this->label12->Size = System::Drawing::Size(159, 34);
 			this->label12->TabIndex = 42;
-			this->label12->Text = L"CantStock:";
+			this->label12->Text = L"Nueva CantStock:";
 			// 
 			// label11
 			// 
@@ -317,9 +382,9 @@ namespace Proyecto3 {
 			this->label11->Location = System::Drawing::Point(51, 400);
 			this->label11->Name = L"label11";
 			this->label11->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label11->Size = System::Drawing::Size(69, 34);
+			this->label11->Size = System::Drawing::Size(130, 34);
 			this->label11->TabIndex = 41;
-			this->label11->Text = L"Precio:";
+			this->label11->Text = L"Nuevo Precio:";
 			// 
 			// label10
 			// 
@@ -329,9 +394,10 @@ namespace Proyecto3 {
 			this->label10->Location = System::Drawing::Point(51, 366);
 			this->label10->Name = L"label10";
 			this->label10->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label10->Size = System::Drawing::Size(125, 34);
+			this->label10->Size = System::Drawing::Size(185, 34);
 			this->label10->TabIndex = 40;
-			this->label10->Text = L"CantGondola:";
+			this->label10->Text = L"Nueva CantGondola:";
+			this->label10->Click += gcnew System::EventHandler(this, &VentanaModificacion::label10_Click);
 			// 
 			// label9
 			// 
@@ -341,9 +407,10 @@ namespace Proyecto3 {
 			this->label9->Location = System::Drawing::Point(51, 332);
 			this->label9->Name = L"label9";
 			this->label9->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label9->Size = System::Drawing::Size(84, 34);
+			this->label9->Size = System::Drawing::Size(145, 34);
 			this->label9->TabIndex = 39;
-			this->label9->Text = L"Nombre:";
+			this->label9->Text = L"Nuevo Nombre:";
+			this->label9->Click += gcnew System::EventHandler(this, &VentanaModificacion::label9_Click);
 			// 
 			// label8
 			// 
@@ -356,6 +423,7 @@ namespace Proyecto3 {
 			this->label8->Size = System::Drawing::Size(110, 34);
 			this->label8->TabIndex = 38;
 			this->label8->Text = L"CodCiudad:";
+			this->label8->Click += gcnew System::EventHandler(this, &VentanaModificacion::label8_Click);
 			// 
 			// label7
 			// 
@@ -446,7 +514,7 @@ namespace Proyecto3 {
 			this->label16->AutoSize = true;
 			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(231, 20);
+			this->label16->Location = System::Drawing::Point(278, 26);
 			this->label16->Name = L"label16";
 			this->label16->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
 			this->label16->Size = System::Drawing::Size(116, 34);
@@ -454,11 +522,24 @@ namespace Proyecto3 {
 			this->label16->Text = L"Modificacion";
 			this->label16->Click += gcnew System::EventHandler(this, &VentanaModificacion::label16_Click);
 			// 
+			// btnBuscar
+			// 
+			this->btnBuscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnBuscar->Location = System::Drawing::Point(455, 63);
+			this->btnBuscar->Name = L"btnBuscar";
+			this->btnBuscar->Size = System::Drawing::Size(109, 48);
+			this->btnBuscar->TabIndex = 63;
+			this->btnBuscar->Text = L"Buscar";
+			this->btnBuscar->UseVisualStyleBackColor = true;
+			this->btnBuscar->Click += gcnew System::EventHandler(this, &VentanaModificacion::btnBuscar_Click);
+			// 
 			// VentanaModificacion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(542, 605);
+			this->ClientSize = System::Drawing::Size(586, 605);
+			this->Controls->Add(this->btnBuscar);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->btnModificar);
 			this->Controls->Add(this->Correo);
@@ -497,8 +578,85 @@ namespace Proyecto3 {
 			this->PerformLayout();
 
 		}
+
+		void ModificacionPasillo(void)
+		{
+			this->codPasillo->Enabled = true;
+			//this->nombre->Enabled = true;
+		}
+
+		void ModificacionProducto(void)
+		{
+			this->codProducto->Enabled = true;
+			//this->nombre->Enabled = true;
+		}
+
+		void ModificacionMarca(void)
+		{
+			this->codMarca->Enabled = true;
+			//this->nombre->Enabled = true;
+			//this->cantGondola->Enabled = true;
+			//this->precio->Enabled = true;
+
+		}
+
+		void ModificacionInventario(void)
+		{
+
+			this->codInventario->Enabled = true;
+			//this->nombre->Enabled = true;
+			//this->cantStock->Enabled = true;
+			//this->codCanasta->Enabled = true;
+		}
+
+		void ModificacionAdministrador(void)
+		{
+			this->codAdmin->Enabled = true;
+			//this->nombre->Enabled = true;
+
+		}
+
+		void ModificacionCliente(void)
+		{
+			this->codCliente->Enabled = true;
+			//this->nombre->Enabled = true;
+			//this->telefono->Enabled = true;
+		}
+
+		void ModificacionVendedor(void)
+		{
+			this->codVendedor->Enabled = true;
+			//this->nombre->Enabled = true;
+		}
+
+		void ModificacionCiudad(void)
+		{
+			this->codCiudad->Enabled = true;
+			//this->nombre->Enabled = true;
+		}
+
+
+
 #pragma endregion
 	private: System::Void label16_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void btnModificar_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (opc == 1) {
+		MessageBox::Show(L"HOLA");
+	}
+
+	this->Close();
+	obj->Show();
+}
+private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->btnModificar->Enabled = true;
+	this->btnBuscar->Enabled = false;
+}
 };
 }
