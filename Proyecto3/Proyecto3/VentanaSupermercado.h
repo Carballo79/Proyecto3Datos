@@ -256,42 +256,49 @@ namespace Proyecto3 {
 			this->productosToolStripMenuItem->Name = L"productosToolStripMenuItem";
 			this->productosToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->productosToolStripMenuItem->Text = L"Producto";
+			this->productosToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::productosToolStripMenuItem_Click);
 			// 
 			// marcasToolStripMenuItem
 			// 
 			this->marcasToolStripMenuItem->Name = L"marcasToolStripMenuItem";
 			this->marcasToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->marcasToolStripMenuItem->Text = L"Marca";
+			this->marcasToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::marcasToolStripMenuItem_Click);
 			// 
 			// inventarioToolStripMenuItem
 			// 
 			this->inventarioToolStripMenuItem->Name = L"inventarioToolStripMenuItem";
 			this->inventarioToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->inventarioToolStripMenuItem->Text = L"Inventario";
+			this->inventarioToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::inventarioToolStripMenuItem_Click);
 			// 
 			// administradorToolStripMenuItem
 			// 
 			this->administradorToolStripMenuItem->Name = L"administradorToolStripMenuItem";
 			this->administradorToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->administradorToolStripMenuItem->Text = L"Administrador";
+			this->administradorToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::administradorToolStripMenuItem_Click);
 			// 
 			// clienteToolStripMenuItem
 			// 
 			this->clienteToolStripMenuItem->Name = L"clienteToolStripMenuItem";
 			this->clienteToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->clienteToolStripMenuItem->Text = L"Cliente";
+			this->clienteToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::clienteToolStripMenuItem_Click);
 			// 
 			// vendedorToolStripMenuItem
 			// 
 			this->vendedorToolStripMenuItem->Name = L"vendedorToolStripMenuItem";
 			this->vendedorToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->vendedorToolStripMenuItem->Text = L"Vendedor";
+			this->vendedorToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::vendedorToolStripMenuItem_Click);
 			// 
 			// ciudadToolStripMenuItem
 			// 
 			this->ciudadToolStripMenuItem->Name = L"ciudadToolStripMenuItem";
 			this->ciudadToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->ciudadToolStripMenuItem->Text = L"Ciudad";
+			this->ciudadToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::ciudadToolStripMenuItem_Click);
 			// 
 			// consultasToolStripMenuItem
 			// 
@@ -558,7 +565,7 @@ namespace Proyecto3 {
 			this->gBoxInsercion->Controls->Add(this->txtNombre);
 			this->gBoxInsercion->Controls->Add(this->txtCodPasillo);
 			this->gBoxInsercion->Controls->Add(this->label1);
-			this->gBoxInsercion->Font = (gcnew System::Drawing::Font(L"Roboto Medium", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->gBoxInsercion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->gBoxInsercion->Location = System::Drawing::Point(720, 102);
 			this->gBoxInsercion->Name = L"gBoxInsercion";
@@ -571,7 +578,7 @@ namespace Proyecto3 {
 			// mensaje
 			// 
 			this->mensaje->AutoSize = true;
-			this->mensaje->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->mensaje->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->mensaje->ForeColor = System::Drawing::Color::Brown;
 			this->mensaje->Location = System::Drawing::Point(247, 167);
@@ -582,51 +589,51 @@ namespace Proyecto3 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label2->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->label2->Location = System::Drawing::Point(93, 123);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(69, 19);
+			this->label2->Size = System::Drawing::Size(69, 20);
 			this->label2->TabIndex = 5;
 			this->label2->Text = L"Nombre:";
 			// 
 			// txtNombre
 			// 
-			this->txtNombre->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtNombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->txtNombre->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->txtNombre->Location = System::Drawing::Point(250, 124);
 			this->txtNombre->Name = L"txtNombre";
-			this->txtNombre->Size = System::Drawing::Size(145, 27);
+			this->txtNombre->Size = System::Drawing::Size(145, 26);
 			this->txtNombre->TabIndex = 4;
 			// 
 			// txtCodPasillo
 			// 
-			this->txtCodPasillo->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtCodPasillo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->txtCodPasillo->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->txtCodPasillo->Location = System::Drawing::Point(250, 91);
 			this->txtCodPasillo->Name = L"txtCodPasillo";
-			this->txtCodPasillo->Size = System::Drawing::Size(145, 27);
+			this->txtCodPasillo->Size = System::Drawing::Size(145, 26);
 			this->txtCodPasillo->TabIndex = 3;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->label1->Location = System::Drawing::Point(93, 94);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(135, 19);
+			this->label1->Size = System::Drawing::Size(133, 20);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Codigo de pasillo:";
 			this->label1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::label1_Click);
 			// 
 			// btnInsertar
 			// 
-			this->btnInsertar->Font = (gcnew System::Drawing::Font(L"Roboto Medium", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->btnInsertar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->btnInsertar->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->btnInsertar->Location = System::Drawing::Point(119, 199);
@@ -727,6 +734,55 @@ private: System::Void btnInsertar_Click(System::Object^ sender, System::EventArg
 
 	this->Hide();
 	obj->Show();
+}
+private: System::Void productosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 2;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void marcasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 3;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void inventarioToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 4;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void administradorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 5;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void clienteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 6;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void vendedorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 7;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void ciudadToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 8;
+
+	this->Hide();
+	VentanaInsercion^ ventana = gcnew VentanaInsercion(this, opc);
+	ventana->ShowDialog();
 }
 };
 }
