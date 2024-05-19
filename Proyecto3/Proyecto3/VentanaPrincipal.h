@@ -1,20 +1,20 @@
 #pragma once
 
 #include "VentanaSupermercado.h"
-#include "ArbolBB.h"
-#include "ArbolAVL.h"
-#include "ArbolRN.h"
-#include "ArbolAA.h"
-#include "ArbolB.h"
-
+#include <string>
+#include <Windows.h>
 #include <msclr/marshal_cppstd.h>
 
 namespace Proyecto3 {
-	ArbolBB pasillos, ciudades;
-	ArbolAVL productos;
-	ArbolRN marcas;
-	ArbolAA inventarios;
-	ArbolB clientes, admins, vendedores;
+
+	ArbolBB pasillosA, ciudadesA;
+	ArbolAVL productosA;
+	ArbolRN marcasA;
+	ArbolAA inventariosA;
+	ArbolB clientesA, adminsA, vendedoresA;
+
+	wstring salida = L"";
+	LPCWSTR sw;
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -36,14 +36,52 @@ namespace Proyecto3 {
 			//TODO: Add the constructor code here
 			//
 
-			pasillos.crearPasillos();
-			productos.crearProductos(pasillos);
-			marcas.crearMarcas(pasillos, productos);
-			inventarios.crearInventarios(pasillos, productos, marcas);
-			ciudades.crearCiudades();
-			clientes.crearClientes(ciudades);
-			admins.crearAdmins(ciudades);
-			vendedores.crearVendedores();
+			pasillosA.crearPasillos();
+			productosA.crearProductos(pasillosA);
+			marcasA.crearMarcas(pasillosA, productosA);
+			inventariosA.crearInventarios(pasillosA, productosA, marcasA);
+			ciudadesA.crearCiudades();
+			clientesA.crearClientes(ciudadesA);
+			adminsA.crearAdmins(ciudadesA);
+			vendedoresA.crearVendedores();
+			
+			salida += L"\nPasillos:\n";
+			pasillosA.mostrarArbol(pasillosA.raiz, 0, salida);
+
+			salida += L"\nProductos:\n";
+			productosA.mostrarArbol(productosA.raiz, 0, salida);
+
+			salida += L"\nMarcas:\n";
+			marcasA.mostrarArbol(marcasA.raiz, 0, salida);
+
+			salida += L"\nInventarios:\n";
+			inventariosA.mostrarArbol(inventariosA.raiz, 0, salida);
+
+			salida += L"\nClientes:\n";
+			clientesA.mostrarArbol(clientesA.raiz, salida);
+
+			salida += L"\nAdministradores:\n";
+			adminsA.mostrarArbol(adminsA.raiz, salida);
+
+			salida += L"\nVendedores:\n";
+			vendedoresA.mostrarArbol(vendedoresA.raiz, salida);
+
+			salida += L"\nCiudades:\n";
+			ciudadesA.mostrarArbol(ciudadesA.raiz, 0, salida);
+
+			salida += L"\n";
+
+			sw = salida.c_str();
+
+			OutputDebugString(sw);
+		}
+
+		void ReiniciarComponentes() {
+			// Reinicia los componentes de la ventana
+			this->stringCedula->Text = "";
+			this->btnAdmin->Checked = false;
+			this->btnCliente->Checked = false;
+			this->btnVendedor->Checked = false;
 		}
 
 	protected:
@@ -59,46 +97,10 @@ namespace Proyecto3 {
 		}
 
 	private: System::Windows::Forms::TextBox^ stringCedula;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::RadioButton^ btnAdmin;
 	private: System::Windows::Forms::RadioButton^ btnCliente;
 	private: System::Windows::Forms::RadioButton^ btnVendedor;
-
-
-
-
-
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::Label^ mensaje;
 	private: System::Windows::Forms::Label^ label2;
@@ -199,7 +201,7 @@ namespace Proyecto3 {
 			// 
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button2->Location = System::Drawing::Point(277, 322);
+			this->button2->Location = System::Drawing::Point(279, 322);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(77, 77);
 			this->button2->TabIndex = 11;
@@ -279,6 +281,7 @@ namespace Proyecto3 {
 			this->PerformLayout();
 
 		}
+
 #pragma endregion
 
 	private: System::Void modificacionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -293,41 +296,43 @@ private: System::Void VentanaPrincipal_Load(System::Object^ sender, System::Even
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ stringCedula = this->stringCedula->Text;
+
 	if (!String::IsNullOrEmpty(stringCedula)) {
 		this->mensaje->Text = "";
-		std::string strCedula = msclr::interop::marshal_as<std::string>(stringCedula);
+		string strCedula = msclr::interop::marshal_as<string>(stringCedula);
+		
 		if (btnCliente->Checked && !btnAdmin->Checked && !btnVendedor->Checked) {
-			if (clientes.buscar(strCedula)) {
-				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this);
-				ventanaSuper->Show();
-				this->Visible = false;
-			}
-			else {
-				this->mensaje->Text = "La cédula no existe";
-			}
-		}
-		else if (!btnCliente->Checked && btnAdmin->Checked && !btnVendedor->Checked) {
-			if (admins.buscar(strCedula)) {
-				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this);
-				ventanaSuper->Show();
-				this->Visible = false;
-			}
-			else {
-				this->mensaje->Text = "La cédula no existe";
-			}
-		}
-		else if (!btnCliente->Checked && !btnAdmin->Checked && btnVendedor->Checked) {
-			if (vendedores.buscar(strCedula)) {
+			if (clientesA.buscar(strCedula)) {
 				this->Hide();
-				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this);
+				this->ReiniciarComponentes();
+				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this, pasillosA, productosA, marcasA,
+					inventariosA, adminsA, clientesA, vendedoresA, ciudadesA);
 				ventanaSuper->ShowDialog();
+			} else {
+				this->mensaje->Text = "La cédula no existe";
 			}
-			else {
+		} else if (!btnCliente->Checked && btnAdmin->Checked && !btnVendedor->Checked) {
+			if (adminsA.buscar(strCedula)) {
+				this->Hide();
+				this->ReiniciarComponentes();
+				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this, pasillosA, productosA, marcasA,
+					inventariosA, adminsA, clientesA, vendedoresA, ciudadesA);
+				ventanaSuper->ShowDialog();
+			} else {
+				this->mensaje->Text = "La cédula no existe";
+			}
+		} else if (!btnCliente->Checked && !btnAdmin->Checked && btnVendedor->Checked) {
+			if (vendedoresA.buscar(strCedula)) {
+				this->Hide();
+				this->ReiniciarComponentes();
+				VentanaSupermercado^ ventanaSuper = gcnew VentanaSupermercado(this, pasillosA, productosA, marcasA,
+					inventariosA, adminsA, clientesA, vendedoresA, ciudadesA);
+				ventanaSuper->ShowDialog();
+			} else {
 				this->mensaje->Text = "La cédula no existe";
 			}
 		}
-	}
-	else {
+	} else {
 		this->mensaje->Text = "Campo vacío";
 	}
 }

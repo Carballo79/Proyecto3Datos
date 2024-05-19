@@ -288,23 +288,26 @@ string ArbolB::obtenerNodo(string dato)
     return "";
 }
 
-void ArbolB::mostrarArbol(NodoAB* nodo)
+void ArbolB::mostrarArbol(NodoAB* nodo, wstring& salida)
 {
     if (nodo != NULL)
     {
-        cout << "\t";
-
         for (int i = nodo->cuenta - 1; i >= 0; i--)
         {
-            mostrarArbol(nodo->hijos[i + 1]);
-            cout << nodo->llaves[i] << " - \t" << endl << endl;
+            mostrarArbol(nodo->hijos[i + 1], salida);
+
+            // Construye la cadena con los datos del nodo
+            std::wstring nodoStr = L"\t";
+            nodoStr += strAWstr(nodo->llaves[i] + " - \t\r\n");
+
+            // Agrega la cadena del nodo a la salida
+            salida += nodoStr;
         }
 
-        mostrarArbol(nodo->hijos[0]);
+        mostrarArbol(nodo->hijos[0], salida);
     }
 }
 
-void ArbolB::mostrarArbol() { mostrarArbol(raiz); }
 
 void ArbolB::reporteClientes()
 {

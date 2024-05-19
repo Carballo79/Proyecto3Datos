@@ -1,7 +1,6 @@
 
 #include "ArbolBB.h"
 #include "Utilidades.h"
-
 #include <string>
 #include <fstream>
 #include <sstream>
@@ -135,24 +134,26 @@ void ArbolBB::crearCiudades()
     }
 }
 
-void ArbolBB::mostrarArbol(NodoABB* nodo, int nivel)
+void ArbolBB::mostrarArbol(NodoABB* nodo, int nivel, wstring& salida)
 {
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1);
+        mostrarArbol(nodo->Hder, nivel + 1, salida);
 
-        cout << "\t";
-
+        // Construye la cadena con los datos del nodo
+        wstring nodoStr = L"";
         for (int i = 0; i < nivel; i++)
-            cout << "    ";
+            nodoStr += L"    ";
 
-        cout << nodo->dato << endl << endl;
+        // Agrega el dato del nodo a la cadena
+        nodoStr += strAWstr(nodo->dato) + L"\r\n";
 
-        mostrarArbol(nodo->Hizq, nivel + 1);
+        // Agrega la cadena del nodo a la salida
+        salida += nodoStr;
+
+        mostrarArbol(nodo->Hizq, nivel + 1, salida);
     }
 }
-
-void ArbolBB::mostrarArbol() { mostrarArbol(raiz, 0); }
 
 string ArbolBB::buscarMasVisitado(NodoABB* nodo)
 {

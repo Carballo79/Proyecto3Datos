@@ -4,7 +4,7 @@
   Proyecto3.VentanaPrincipal.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaSupermercado.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
-Assembly Proyecto3, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly Proyecto3, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -20,13 +20,17 @@ Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c5619
 	hash=None, flags=None
 Class Proyecto3.VentanaConsultas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
-Class Proyecto3.VentanaInsercion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
-  :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Form, Int32, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.Windows.Forms.Form obj : Public
+    System.Windows.Forms.Form ventana2 : Public
+    Int32 opc : Public
+Class Proyecto3.VentanaInsercion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form, Int32, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Form ventana2 : Public
     Int32 opc : Public
   Properties:
     System.String Valor 'get set' : 
@@ -35,17 +39,19 @@ Class Proyecto3.VentanaInsercion: AutoLayout, AnsiClass, Class, Public, BeforeFi
     set_Valor(String): PrivateScope, Public, HideBySig, SpecialName
 Class Proyecto3.VentanaModificacion: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Form, Int32, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.Windows.Forms.Form obj : Public
+    System.Windows.Forms.Form ventana2 : Public
     Int32 opc : Public
 Class Proyecto3.VentanaSupermercado: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Form, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
-    System.Windows.Forms.Form obj : Public
+    System.Windows.Forms.Form ventana1 : Public
 Class Proyecto3.VentanaPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ReiniciarComponentes(): PrivateScope, Public, HideBySig

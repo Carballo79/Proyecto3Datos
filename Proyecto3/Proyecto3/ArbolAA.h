@@ -18,8 +18,7 @@ public:
     string buscarPorMarca(string dato);
     void modificarNodo(string llaveNodo, string nuevoDato);
     void crearInventarios(ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas);
-    void mostrarArbol(NodoAAA* nodo, int nivel);
-    void mostrarArbol();
+    void mostrarArbol(NodoAAA* nodo, int nivel, wstring& salida);
 
     NodoAAA* skew(NodoAAA* x);
     NodoAAA* split(NodoAAA* x);

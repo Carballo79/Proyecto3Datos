@@ -19,8 +19,7 @@ public:
     void modificarNodo(string llaveNodo, string nuevoDato);
     void crearPasillos();
     void crearCiudades();
-    void mostrarArbol(NodoABB* nodo, int nivel);
-    void mostrarArbol();
+    void mostrarArbol(NodoABB* nodo, int nivel, wstring& salida);
     string buscarMasVisitado(NodoABB* nodo);
     string buscarMasVisitado();
     string buscarMenosVisitado(NodoABB* nodo);

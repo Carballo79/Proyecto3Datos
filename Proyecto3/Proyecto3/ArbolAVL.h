@@ -19,13 +19,12 @@ public:
     void crearProductos(ArbolBB& pasillos);
     void mostrarPorLlave(NodoAVL* nodo, string dato);
     void mostrarPorLlave(string dato);
-    void mostrarArbol(NodoAVL* nodo, int nivel);
-    void mostrarArbol();
+    void mostrarArbol(NodoAVL* nodo, int nivel, wstring& salida);
     void crearReporteProPasillo(NodoAVL* nodo, string llaveNodo, ofstream& archivo);
     void crearReporteProPasillo(string llaveNodo);
 
     int altura(NodoAVL* N);
-    int max(int a, int b);
+    int maximo(int a, int b);
     NodoAVL* rotacionIzquierda(NodoAVL* n1);
     NodoAVL* rotacionDerecha(NodoAVL* n2);
     int obtenerFB(NodoAVL* N);

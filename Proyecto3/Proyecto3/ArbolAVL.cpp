@@ -153,24 +153,26 @@ void ArbolAVL::mostrarPorLlave(NodoAVL* nodo, string dato)
 
 void ArbolAVL::mostrarPorLlave(string dato) { mostrarPorLlave(raiz, dato); }
 
-void ArbolAVL::mostrarArbol(NodoAVL* nodo, int nivel)
+void ArbolAVL::mostrarArbol(NodoAVL* nodo, int nivel, wstring& salida)
 {
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1);
+        mostrarArbol(nodo->Hder, nivel + 1, salida);
 
-        cout << "\t";
-
+        // Construye la cadena con los datos del nodo
+        wstring nodoStr = L"";
         for (int i = 0; i < nivel; i++)
-            cout << "    ";
+            nodoStr += L"    ";
 
-        cout << nodo->dato << endl << endl;
+        // Agrega el dato del nodo a la cadena
+        nodoStr += strAWstr(nodo->dato) + L"\r\n";
 
-        mostrarArbol(nodo->Hizq, nivel + 1);
+        // Agrega la cadena del nodo a la salida
+        salida += nodoStr;
+
+        mostrarArbol(nodo->Hizq, nivel + 1, salida);
     }
 }
-
-void ArbolAVL::mostrarArbol() { mostrarArbol(raiz, 0); }
 
 void ArbolAVL::crearReporteProPasillo(string llaveNodo) {
     ofstream archivo;
@@ -210,7 +212,7 @@ int ArbolAVL::altura(NodoAVL* N)
     return N->altura;
 }
 
-int ArbolAVL::max(int a, int b) { return (a > b) ? a : b; }
+int ArbolAVL::maximo(int a, int b) { return (a > b) ? a : b; }
 
 NodoAVL* ArbolAVL::rotacionIzquierda(NodoAVL* n1)
 {
@@ -219,8 +221,8 @@ NodoAVL* ArbolAVL::rotacionIzquierda(NodoAVL* n1)
     n1->Hder = n2->Hizq;
     n2->Hizq = n1;
 
-    n1->altura = max(altura(n1->Hizq), altura(n1->Hder)) + 1;
-    n2->altura = max(altura(n2->Hizq), altura(n2->Hder)) + 1;
+    n1->altura = maximo(altura(n1->Hizq), altura(n1->Hder)) + 1;
+    n2->altura = maximo(altura(n2->Hizq), altura(n2->Hder)) + 1;
 
     return n2;
 }
@@ -232,8 +234,8 @@ NodoAVL* ArbolAVL::rotacionDerecha(NodoAVL* n2)
     n2->Hizq = n1->Hder;
     n1->Hder = n2;
 
-    n2->altura = max(altura(n2->Hizq), altura(n2->Hder)) + 1;
-    n1->altura = max(altura(n1->Hizq), altura(n1->Hder)) + 1;
+    n2->altura = maximo(altura(n2->Hizq), altura(n2->Hder)) + 1;
+    n1->altura = maximo(altura(n1->Hizq), altura(n1->Hder)) + 1;
 
     return n1;
 }

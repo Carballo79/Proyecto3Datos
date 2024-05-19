@@ -17,8 +17,7 @@ public:
     void crearAdmins(ArbolBB& ciudades);
     void crearVendedores();
     string obtenerNodo(string dato);
-    void mostrarArbol(NodoAB* nodo);
-    void mostrarArbol();
+    void mostrarArbol(NodoAB* nodo, wstring& salida);
     void reporteClientes();
     string buscarMostrarContacto(string dato);
     void aumentarNumFacturas(string dato);

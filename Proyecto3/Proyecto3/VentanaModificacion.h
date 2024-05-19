@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Proyecto3.h"
+#include <string>
+#include <msclr/marshal_cppstd.h>
+
 namespace Proyecto3 {
 
 	using namespace System;
@@ -15,12 +19,9 @@ namespace Proyecto3 {
 	public ref class VentanaModificacion : public System::Windows::Forms::Form
 	{
 	public:
-		Form^ obj;
-	private: System::Windows::Forms::Button^ btnBuscar;
-	public:
-
-	public:
+		Form^ ventana2;
 		int opc;
+		
 		VentanaModificacion(void)
 		{
 			InitializeComponent();
@@ -29,10 +30,20 @@ namespace Proyecto3 {
 			//
 		}
 
-		VentanaModificacion(Form^ obj1, int opc1)
+		VentanaModificacion(Form^ ventana, int _opc, ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas, ArbolAA& inventarios,
+			ArbolB& admins, ArbolB& clientes, ArbolB& vendedores, ArbolBB& ciudades)
 		{
-			obj = obj1;
-			opc = opc1;
+			ventana2 = ventana;
+			opc = _opc;
+
+			pasillosB = &pasillos;
+			productosB = &productos;
+			marcasB = &marcas;
+			inventariosB = &inventarios;
+			adminsB = &admins;
+			clientesB = &clientes;
+			vendedoresB = &vendedores;
+			ciudadesB = &ciudades;
 
 			InitializeComponent();
 
@@ -81,8 +92,8 @@ namespace Proyecto3 {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Button^ btnBuscar;
 	private: System::Windows::Forms::Button^ btnModificar;
-	protected:
 	private: System::Windows::Forms::TextBox^ Correo;
 	private: System::Windows::Forms::TextBox^ telefono;
 	private: System::Windows::Forms::TextBox^ codCanasta;
@@ -573,7 +584,9 @@ namespace Proyecto3 {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"VentanaModificacion";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VentanaModificacion";
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &VentanaModificacion::VentanaModificacion_FormClosing);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -647,16 +660,42 @@ private: System::Void label9_Click(System::Object^ sender, System::EventArgs^ e)
 private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void btnModificar_Click(System::Object^ sender, System::EventArgs^ e) {
-	if (opc == 1) {
-		MessageBox::Show(L"HOLA");
-	}
+	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+	string nombreStr = msclr::interop::marshal_as<string>(this->nombre->Text);
 
-	this->Close();
-	obj->Show();
+	if (opc == 1) {
+		if (!String::IsNullOrEmpty(this->nombre->Text)) {
+			pasillosB->modificarNodo(codPasilloStr, nombreStr);
+
+			MessageBox::Show("Pasillo modificado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
 }
 private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->btnModificar->Enabled = true;
-	this->btnBuscar->Enabled = false;
+	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+
+	if (pasillosB->existeNodo(codPasilloStr))
+	{
+		MessageBox::Show("Pasillo encontrado.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+		this->nombre->Enabled = true;
+		this->btnModificar->Enabled = true;
+		this->btnBuscar->Enabled = false;
+	}
+	else
+	{
+		MessageBox::Show("Pasillo no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
+private: System::Void VentanaModificacion_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	this->Hide();
+	ventana2->Show();
 }
 };
 }

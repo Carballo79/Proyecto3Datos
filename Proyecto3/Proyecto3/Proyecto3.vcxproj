@@ -130,6 +130,7 @@
     <ClCompile Include="NodoABB.cpp" />
     <ClCompile Include="NodoAVL.cpp" />
     <ClCompile Include="NodoARN.cpp" />
+    <ClCompile Include="Proyecto3.cpp" />
     <ClCompile Include="Utilidades.cpp" />
     <ClCompile Include="VentanaConsultas.cpp" />
     <ClCompile Include="VentanaInsercion.cpp" />
@@ -148,6 +149,7 @@
     <ClInclude Include="NodoABB.h" />
     <ClInclude Include="NodoARN.h" />
     <ClInclude Include="NodoAVL.h" />
+    <ClInclude Include="Proyecto3.h" />
     <ClInclude Include="Utilidades.h" />
     <ClInclude Include="VentanaConsultas.h">
       <FileType>CppForm</FileType>

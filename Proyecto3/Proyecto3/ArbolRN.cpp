@@ -217,24 +217,26 @@ void ArbolRN::mostrarPorLlave(NodoARN* nodo, string dato)
 
 void ArbolRN::mostrarPorLlave(string dato) { mostrarPorLlave(raiz, dato); }
 
-void ArbolRN::mostrarArbol(NodoARN* nodo, int nivel)
+void ArbolRN::mostrarArbol(NodoARN* nodo, int nivel, wstring& salida)
 {
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1);
+        mostrarArbol(nodo->Hder, nivel + 1, salida);
 
-        cout << "\t";
-
+        // Construye la cadena con los datos del nodo
+        wstring nodoStr = L"";
         for (int i = 0; i < nivel; i++)
-            cout << "    ";
+            nodoStr += L"    ";
 
-        cout << (nodo->color ? "(R) " : "(N) ") + nodo->dato << endl << endl;
+        // Agrega el dato del nodo a la cadena
+        nodoStr += strAWstr((nodo->color ? "(R) " : "(N) ") + nodo->dato) + L"\r\n";
 
-        mostrarArbol(nodo->Hizq, nivel + 1);
+        // Agrega la cadena del nodo a la salida
+        salida += nodoStr;
+
+        mostrarArbol(nodo->Hizq, nivel + 1, salida);
     }
 }
-
-void ArbolRN::mostrarArbol() { mostrarArbol(raiz, 0); }
 
 void ArbolRN::rotacionIzquierda(NodoARN* nodo)
 {

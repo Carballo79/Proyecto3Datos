@@ -1,5 +1,4 @@
 #include "VentanaPrincipal.h"
-#include "ArbolB.h"
 
 using namespace System;
 using namespace System::Windows::Forms;

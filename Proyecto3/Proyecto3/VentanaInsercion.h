@@ -1,6 +1,8 @@
 #pragma once
 
-//#include "VentanaSupermercado.h"
+#include "Proyecto3.h"
+#include <string>
+#include <msclr/marshal_cppstd.h>
 
 namespace Proyecto3 {
 
@@ -18,8 +20,7 @@ namespace Proyecto3 {
 	{
 	private: System::Windows::Forms::Label^ label1;
 	public:
-		
-		Form^ obj;
+		Form^ ventana2;
 		int opc;
 
 		VentanaInsercion(void)
@@ -30,10 +31,20 @@ namespace Proyecto3 {
 			//
 		}
 
-		VentanaInsercion(Form^ obj1, int opc1)
+		VentanaInsercion(Form^ ventana, int _opc, ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas, ArbolAA& inventarios,
+			ArbolB& admins, ArbolB& clientes, ArbolB& vendedores, ArbolBB& ciudades)
 		{
-			obj = obj1;
-			opc = opc1;
+			ventana2 = ventana;
+			opc = _opc;
+
+			pasillosB = &pasillos;
+			productosB = &productos;
+			marcasB = &marcas;
+			inventariosB = &inventarios;
+			adminsB = &admins;
+			clientesB = &clientes;
+			vendedoresB = &vendedores;
+			ciudadesB = &ciudades;
 
 			InitializeComponent();
 
@@ -682,12 +693,23 @@ namespace Proyecto3 {
 	private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void btnIngresar_Click(System::Object^ sender, System::EventArgs^ e) {
-		if (opc == 1) {
-			MessageBox::Show(L"HOLA");
-		}
+		string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+		string nombreStr = msclr::interop::marshal_as<string>(this->nombre->Text);
 
-		this->Close();
-		obj->Show();
+		if (opc == 1) {
+			if (!codPasilloStr.empty() && !nombreStr.empty()) {
+				string pasillo = codPasilloStr + "; " + nombreStr;
+				pasillosB->insertarNodo(pasillo);
+				
+				MessageBox::Show("Pasillo insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Close();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
 	}
 private: System::Void VentanaInsercion_Load(System::Object^ sender, System::EventArgs^ e) {
 }

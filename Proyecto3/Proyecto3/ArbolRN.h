@@ -19,8 +19,7 @@ public:
     void crearMarcas(ArbolBB& pasillos, ArbolAVL& productos);
     void mostrarPorLlave(NodoARN* nodo, string dato);
     void mostrarPorLlave(string dato);
-    void mostrarArbol(NodoARN* nodo, int nivel);
-    void mostrarArbol();
+    void mostrarArbol(NodoARN* nodo, int nivel, wstring& salida);
     void rotacionIzquierda(NodoARN* nodo);
     void rotacionDerecha(NodoARN* nodo);
 };

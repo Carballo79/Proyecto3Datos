@@ -1,5 +1,9 @@
 #pragma once
 
+#include "Proyecto3.h"
+#include <string>
+#include <msclr/marshal_cppstd.h>
+
 namespace Proyecto3 {
 
 	using namespace System;
@@ -15,12 +19,66 @@ namespace Proyecto3 {
 	public ref class VentanaConsultas : public System::Windows::Forms::Form
 	{
 	public:
+		Form^ ventana2;
+		int opc;
+
 		VentanaConsultas(void)
 		{
 			InitializeComponent();
 			//
 			//TODO: Add the constructor code here
 			//
+		}
+
+		VentanaConsultas(Form^ ventana, int _opc, ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas, ArbolAA& inventarios,
+			ArbolB& admins, ArbolB& clientes, ArbolB& vendedores, ArbolBB& ciudades)
+		{
+			ventana2 = ventana;
+			opc = _opc;
+
+			pasillosB = &pasillos;
+			productosB = &productos;
+			marcasB = &marcas;
+			inventariosB = &inventarios;
+			adminsB = &admins;
+			clientesB = &clientes;
+			vendedoresB = &vendedores;
+			ciudadesB = &ciudades;
+
+			InitializeComponent();
+			
+			if (opc == 1)
+			{
+				ConsultarPasillo();
+			}
+			if (opc == 2)
+			{
+				ConsultarProducto();
+			}
+			if (opc == 3)
+			{
+				ConsultarMarca();
+			}
+			if (opc == 4)
+			{
+				ConsultarInventario();
+			}
+			if (opc == 5)
+			{
+				ConsultarAdministrador();
+			}
+			if (opc == 6)
+			{
+				ConsultarCliente();
+			}
+			if (opc == 7)
+			{
+				ConsultarVendedor();
+			}
+			if (opc == 8)
+			{
+				ConsultarCiudad();
+			}
 		}
 
 	protected:
@@ -97,9 +155,11 @@ namespace Proyecto3 {
 			this->btnConsultar->TabIndex = 61;
 			this->btnConsultar->Text = L"Consultar";
 			this->btnConsultar->UseVisualStyleBackColor = true;
+			this->btnConsultar->Click += gcnew System::EventHandler(this, &VentanaConsultas::btnConsultar_Click);
 			// 
 			// codPasillo
 			// 
+			this->codPasillo->Enabled = false;
 			this->codPasillo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codPasillo->Location = System::Drawing::Point(157, 61);
@@ -109,6 +169,7 @@ namespace Proyecto3 {
 			// 
 			// codProducto
 			// 
+			this->codProducto->Enabled = false;
 			this->codProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codProducto->Location = System::Drawing::Point(157, 95);
@@ -118,6 +179,7 @@ namespace Proyecto3 {
 			// 
 			// codMarca
 			// 
+			this->codMarca->Enabled = false;
 			this->codMarca->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codMarca->Location = System::Drawing::Point(157, 129);
@@ -127,6 +189,7 @@ namespace Proyecto3 {
 			// 
 			// codInventario
 			// 
+			this->codInventario->Enabled = false;
 			this->codInventario->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codInventario->Location = System::Drawing::Point(157, 163);
@@ -136,6 +199,7 @@ namespace Proyecto3 {
 			// 
 			// codCliente
 			// 
+			this->codCliente->Enabled = false;
 			this->codCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codCliente->Location = System::Drawing::Point(157, 197);
@@ -145,6 +209,7 @@ namespace Proyecto3 {
 			// 
 			// codAdmin
 			// 
+			this->codAdmin->Enabled = false;
 			this->codAdmin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codAdmin->Location = System::Drawing::Point(157, 231);
@@ -154,6 +219,7 @@ namespace Proyecto3 {
 			// 
 			// codVendedor
 			// 
+			this->codVendedor->Enabled = false;
 			this->codVendedor->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codVendedor->Location = System::Drawing::Point(157, 265);
@@ -163,6 +229,7 @@ namespace Proyecto3 {
 			// 
 			// codCiudad
 			// 
+			this->codCiudad->Enabled = false;
 			this->codCiudad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->codCiudad->Location = System::Drawing::Point(157, 299);
@@ -308,8 +375,67 @@ namespace Proyecto3 {
 			this->PerformLayout();
 
 		}
+
+		void ConsultarPasillo(void)
+		{
+			this->codPasillo->Enabled = true;
+		}
+
+		void ConsultarProducto(void)
+		{
+			this->codProducto->Enabled = true;
+		}
+
+		void ConsultarMarca(void)
+		{
+			this->codMarca->Enabled = true;
+		}
+
+		void ConsultarInventario(void)
+		{
+			this->codInventario->Enabled = true;
+		}
+
+		void ConsultarAdministrador(void)
+		{
+			this->codAdmin->Enabled = true;
+
+		}
+
+		void ConsultarCliente(void)
+		{
+			this->codCliente->Enabled = true;
+		}
+
+		void ConsultarVendedor(void)
+		{
+			this->codVendedor->Enabled = true;
+		}
+
+		void ConsultarCiudad(void)
+		{
+			this->codCiudad->Enabled = true;
+		}
+
 #pragma endregion
 	private: System::Void label8_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
+	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+
+	if (opc == 1) {
+		if (pasillosB->existeNodo(codPasilloStr))
+		{
+			MessageBox::Show("Pasillo encontrado.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else
+		{
+			MessageBox::Show("Pasillo no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+}
 };
 }
