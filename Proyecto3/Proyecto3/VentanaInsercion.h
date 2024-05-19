@@ -694,17 +694,219 @@ namespace Proyecto3 {
 	}
 	private: System::Void btnIngresar_Click(System::Object^ sender, System::EventArgs^ e) {
 		string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+		string codProductoStr = msclr::interop::marshal_as<string>(this->codProducto->Text);
+		string codMarcaStr = msclr::interop::marshal_as<string>(this->codMarca->Text);
+		string codInventarioStr = msclr::interop::marshal_as<string>(this->codInventario->Text);
+		string codClienteStr = msclr::interop::marshal_as<string>(this->codCliente->Text);
+		string codAdminStr = msclr::interop::marshal_as<string>(this->codAdmin->Text);
+		string codVendedorStr = msclr::interop::marshal_as<string>(this->codVendedor->Text);
+		string codCiudadStr = msclr::interop::marshal_as<string>(this->codCiudad->Text);
 		string nombreStr = msclr::interop::marshal_as<string>(this->nombre->Text);
+		string cantGondolaStr = msclr::interop::marshal_as<string>(this->cantGondola->Text);
+		string cantStockStr = msclr::interop::marshal_as<string>(this->cantStock->Text);
+		string codCanastaStr = msclr::interop::marshal_as<string>(this->codCanasta->Text);
+		string precioStr = msclr::interop::marshal_as<string>(this->precio->Text);
+		string telefonoStr = msclr::interop::marshal_as<string>(this->telefono->Text);
+		string CorreoStr = msclr::interop::marshal_as<string>(this->Correo->Text);
 
 		if (opc == 1) {
 			if (!codPasilloStr.empty() && !nombreStr.empty()) {
-				string pasillo = codPasilloStr + "; " + nombreStr;
-				pasillosB->insertarNodo(pasillo);
-				
-				MessageBox::Show("Pasillo insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				if (!pasillosB->existeNodo(codPasilloStr)) {
+					string pasillo = codPasilloStr + "; " + nombreStr;
+					pasillosB->insertarNodo(pasillo);
 
-				this->Close();
-				ventana2->Show();
+					MessageBox::Show("Pasillo insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					this->Close();
+					ventana2->Show();
+				}
+				else {
+					MessageBox::Show("Pasillo ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 2) {
+			if (!codPasilloStr.empty() && !codProductoStr.empty() && !nombreStr.empty()) {
+				if (pasillosB->existeNodo(codPasilloStr)) {
+					if (!productosB->existeNodo(codProductoStr)) {
+						string producto = codPasilloStr + "; " + codProductoStr + "; " + nombreStr;
+						productosB->insertarNodo(producto);
+
+						MessageBox::Show("Producto insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+						this->Close();
+						ventana2->Show();
+					}
+					else {
+						MessageBox::Show("Producto ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					}
+				}
+				else {
+					MessageBox::Show("Pasillo no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 3) {
+			if (!codPasilloStr.empty() && !codProductoStr.empty() && !codMarcaStr.empty()
+				&& !nombreStr.empty() && !cantGondolaStr.empty() && !precioStr.empty()) {
+				if (pasillosB->existeNodo(codPasilloStr)) {
+					if (productosB->existeNodo(codProductoStr)) {
+						if (!marcasB->existeNodo(codMarcaStr)) {
+							string marca = codPasilloStr + "; " + codProductoStr + "; " + 
+								nombreStr + "; " + cantGondolaStr + "; " + precioStr;
+							marcasB->insertarNodo(marca);
+
+							MessageBox::Show("Marca insertada exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+							this->Close();
+							ventana2->Show();
+						}
+						else {
+							MessageBox::Show("Marca ya registrada.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+						}
+					}
+					else {
+						MessageBox::Show("Producto no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					}
+				}
+				else {
+					MessageBox::Show("Pasillo no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 4) {
+			if (!codPasilloStr.empty() && !codProductoStr.empty() && !codMarcaStr.empty()
+				&& !codInventarioStr.empty() && !nombreStr.empty() && !cantStockStr.empty() && !codCanastaStr.empty()) {
+				if (pasillosB->existeNodo(codPasilloStr)) {
+					if (productosB->existeNodo(codProductoStr)) {
+						if (marcasB->existeNodo(codMarcaStr)) {
+							if (!inventariosB->existeNodo(codInventarioStr)) {
+								string inventario = codPasilloStr + "; " + codProductoStr + "; " +
+									codInventarioStr + "; " +nombreStr + "; " + cantStockStr + "; " +
+									codCanastaStr;
+								inventariosB->insertarNodo(inventario);
+
+								MessageBox::Show("Inventario insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+								this->Close();
+								ventana2->Show();
+							}
+							else {
+								MessageBox::Show("Inventario ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+							}
+						}
+						else {
+							MessageBox::Show("Marca no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+						}
+					}
+					else {
+						MessageBox::Show("Producto no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					}
+				}
+				else {
+					MessageBox::Show("Pasillo no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 5) {
+			if (!codAdminStr.empty() && !nombreStr.empty() && !codCiudadStr.empty() 
+				&& !telefonoStr.empty() && !CorreoStr.empty()){
+				if (!adminsB->buscar(codAdminStr)) {
+					if (ciudadesB->existeNodo(codCiudadStr)) {
+						string admin = codAdminStr + "; " + nombreStr + "; " +
+							codCiudadStr + "; " + telefonoStr + "; " + CorreoStr;
+						adminsB->insertarNodo(admin);
+
+						MessageBox::Show("Administrador insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+						this->Close();
+						ventana2->Show();
+					}
+					else {
+						MessageBox::Show("Ciudad no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					}
+				}
+				else {
+					MessageBox::Show("Administrador ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 6) {
+			if (!codClienteStr.empty() && !nombreStr.empty()
+				&& !telefonoStr.empty() && !CorreoStr.empty()) {
+				if (!clientesB->buscar(codClienteStr)) {
+					string cliente = codClienteStr + "; " + nombreStr + "; " + telefonoStr + "; " + CorreoStr;
+					clientesB->insertarNodo(cliente);
+
+					MessageBox::Show("Cliente insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					this->Close();
+					ventana2->Show();
+				}
+				else {
+					MessageBox::Show("Cliente ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 7) {
+			if (!codVendedorStr.empty() && !nombreStr.empty()) {
+				if (!vendedoresB->buscar(codVendedorStr)) {
+					string vendedor = codVendedorStr + "; " + nombreStr;
+					vendedoresB->insertarNodo(vendedor);
+
+					MessageBox::Show("Vendendor insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					this->Close();
+					ventana2->Show();
+				}
+				else {
+					MessageBox::Show("Vendedor ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
+			}
+			else {
+				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		if (opc == 8) {
+			if (!codCiudadStr.empty() && !nombreStr.empty()) {
+				if (!ciudadesB->existeNodo(codCiudadStr)) {
+					string ciudad = codCiudadStr + "; " + nombreStr;
+					ciudadesB->insertarNodo(ciudad);
+
+					MessageBox::Show("Ciudad insertada exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+					this->Close();
+					ventana2->Show();
+				}
+				else {
+					MessageBox::Show("Ciudad ya registrada.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+				}
+
 			}
 			else {
 				MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
