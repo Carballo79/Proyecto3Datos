@@ -422,7 +422,6 @@ namespace Proyecto3 {
 	}
 private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
 	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
-
 	if (opc == 1) {
 		if (pasillosB->existeNodo(codPasilloStr))
 		{

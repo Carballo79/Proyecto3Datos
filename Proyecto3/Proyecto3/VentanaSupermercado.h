@@ -80,7 +80,7 @@ namespace Proyecto3 {
 	private: System::Windows::Forms::ToolStripMenuItem^ reportesToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ pasilloMasVisitadoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ facturaciónToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ descuentosToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ facturaciónClienteToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ facturaciónInventarioToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ controlesToolStripMenuItem;
@@ -122,6 +122,25 @@ namespace Proyecto3 {
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem30;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem31;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem32;
+private: System::Windows::Forms::ToolStripMenuItem^ consultarPrecioToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ consultarDescuentoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ consultarProductosToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ consultarDescuentoDeUnToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ consultarMarcasToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ pasilloMenosVisitadoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ productosPorPasilloMásVendidosToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ marcasMásVendidosToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ clienteQueMásComproToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ clienteQueMenosComproToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1;
+private: System::Windows::Forms::ToolStripMenuItem^ clienteQueMásFacturoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ marcasDeUnProductoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ facturaDeMayorMontoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ productosDeUnPasilloToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ clientesDelSupermercadoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ pasillosDelSupermercadoToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ inventarioDelSupermercadoToolStripMenuItem;
+
 
 
 
@@ -202,7 +221,6 @@ namespace Proyecto3 {
 			this->reportesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->pasilloMasVisitadoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->facturaciónToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->descuentosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->facturaciónClienteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->facturaciónInventarioToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->controlesToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -211,6 +229,24 @@ namespace Proyecto3 {
 			this->revisarGóndolasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->acercaDeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->contactosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->consultarPrecioToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->consultarDescuentoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->consultarProductosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->consultarDescuentoDeUnToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->consultarMarcasToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->pasilloMenosVisitadoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->productosPorPasilloMásVendidosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->marcasMásVendidosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->clienteQueMásComproToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->clienteQueMenosComproToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->clienteQueMásFacturoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->marcasDeUnProductoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->facturaDeMayorMontoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->productosDeUnPasilloToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->clientesDelSupermercadoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->inventarioDelSupermercadoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->pasillosDelSupermercadoToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -320,56 +356,56 @@ namespace Proyecto3 {
 			// toolStripMenuItem1
 			// 
 			this->toolStripMenuItem1->Name = L"toolStripMenuItem1";
-			this->toolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem1->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem1->Text = L"Pasillo";
 			this->toolStripMenuItem1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem1_Click);
 			// 
 			// toolStripMenuItem2
 			// 
 			this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
-			this->toolStripMenuItem2->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem2->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem2->Text = L"Producto";
 			this->toolStripMenuItem2->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem2_Click);
 			// 
 			// toolStripMenuItem3
 			// 
 			this->toolStripMenuItem3->Name = L"toolStripMenuItem3";
-			this->toolStripMenuItem3->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem3->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem3->Text = L"Marca";
 			this->toolStripMenuItem3->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem3_Click);
 			// 
 			// toolStripMenuItem4
 			// 
 			this->toolStripMenuItem4->Name = L"toolStripMenuItem4";
-			this->toolStripMenuItem4->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem4->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem4->Text = L"Inventario";
 			this->toolStripMenuItem4->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem4_Click);
 			// 
 			// toolStripMenuItem5
 			// 
 			this->toolStripMenuItem5->Name = L"toolStripMenuItem5";
-			this->toolStripMenuItem5->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem5->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem5->Text = L"Administrador";
 			this->toolStripMenuItem5->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem5_Click);
 			// 
 			// toolStripMenuItem6
 			// 
 			this->toolStripMenuItem6->Name = L"toolStripMenuItem6";
-			this->toolStripMenuItem6->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem6->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem6->Text = L"Cliente";
 			this->toolStripMenuItem6->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem6_Click);
 			// 
 			// toolStripMenuItem7
 			// 
 			this->toolStripMenuItem7->Name = L"toolStripMenuItem7";
-			this->toolStripMenuItem7->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem7->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem7->Text = L"Vendedor";
 			this->toolStripMenuItem7->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem7_Click);
 			// 
 			// toolStripMenuItem8
 			// 
 			this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
-			this->toolStripMenuItem8->Size = System::Drawing::Size(180, 22);
+			this->toolStripMenuItem8->Size = System::Drawing::Size(150, 22);
 			this->toolStripMenuItem8->Text = L"Ciudad";
 			this->toolStripMenuItem8->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem8_Click);
 			// 
@@ -508,7 +544,7 @@ namespace Proyecto3 {
 			});
 			this->verTodoToolStripMenuItem->Name = L"verTodoToolStripMenuItem";
 			this->verTodoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
-			this->verTodoToolStripMenuItem->Text = L"Ver todo";
+			this->verTodoToolStripMenuItem->Text = L"Ver Arboles";
 			// 
 			// toolStripMenuItem25
 			// 
@@ -561,7 +597,14 @@ namespace Proyecto3 {
 			// 
 			// reportesToolStripMenuItem
 			// 
-			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->pasilloMasVisitadoToolStripMenuItem });
+			this->reportesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(14) {
+				this->pasilloMasVisitadoToolStripMenuItem,
+					this->pasilloMenosVisitadoToolStripMenuItem, this->productosPorPasilloMásVendidosToolStripMenuItem, this->marcasMásVendidosToolStripMenuItem,
+					this->clienteQueMásComproToolStripMenuItem, this->clienteQueMenosComproToolStripMenuItem, this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1,
+					this->clienteQueMásFacturoToolStripMenuItem, this->marcasDeUnProductoToolStripMenuItem, this->facturaDeMayorMontoToolStripMenuItem,
+					this->productosDeUnPasilloToolStripMenuItem, this->clientesDelSupermercadoToolStripMenuItem, this->pasillosDelSupermercadoToolStripMenuItem,
+					this->inventarioDelSupermercadoToolStripMenuItem
+			});
 			this->reportesToolStripMenuItem->Name = L"reportesToolStripMenuItem";
 			this->reportesToolStripMenuItem->Size = System::Drawing::Size(65, 20);
 			this->reportesToolStripMenuItem->Text = L"Reportes";
@@ -569,24 +612,18 @@ namespace Proyecto3 {
 			// pasilloMasVisitadoToolStripMenuItem
 			// 
 			this->pasilloMasVisitadoToolStripMenuItem->Name = L"pasilloMasVisitadoToolStripMenuItem";
-			this->pasilloMasVisitadoToolStripMenuItem->Size = System::Drawing::Size(177, 22);
+			this->pasilloMasVisitadoToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->pasilloMasVisitadoToolStripMenuItem->Text = L"Pasillo mas visitado";
 			// 
 			// facturaciónToolStripMenuItem
 			// 
-			this->facturaciónToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
-				this->descuentosToolStripMenuItem,
-					this->facturaciónClienteToolStripMenuItem, this->facturaciónInventarioToolStripMenuItem
+			this->facturaciónToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->facturaciónClienteToolStripMenuItem,
+					this->facturaciónInventarioToolStripMenuItem
 			});
 			this->facturaciónToolStripMenuItem->Name = L"facturaciónToolStripMenuItem";
 			this->facturaciónToolStripMenuItem->Size = System::Drawing::Size(81, 20);
 			this->facturaciónToolStripMenuItem->Text = L"Facturación";
-			// 
-			// descuentosToolStripMenuItem
-			// 
-			this->descuentosToolStripMenuItem->Name = L"descuentosToolStripMenuItem";
-			this->descuentosToolStripMenuItem->Size = System::Drawing::Size(192, 22);
-			this->descuentosToolStripMenuItem->Text = L"Descuentos";
 			// 
 			// facturaciónClienteToolStripMenuItem
 			// 
@@ -602,9 +639,10 @@ namespace Proyecto3 {
 			// 
 			// controlesToolStripMenuItem
 			// 
-			this->controlesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->controlesToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
 				this->verificarInventarioToolStripMenuItem,
-					this->comprasToolStripMenuItem, this->revisarGóndolasToolStripMenuItem
+					this->revisarGóndolasToolStripMenuItem, this->consultarPrecioToolStripMenuItem, this->consultarDescuentoToolStripMenuItem, this->consultarProductosToolStripMenuItem,
+					this->consultarMarcasToolStripMenuItem, this->consultarDescuentoDeUnToolStripMenuItem, this->comprasToolStripMenuItem
 			});
 			this->controlesToolStripMenuItem->Name = L"controlesToolStripMenuItem";
 			this->controlesToolStripMenuItem->Size = System::Drawing::Size(70, 20);
@@ -613,20 +651,20 @@ namespace Proyecto3 {
 			// verificarInventarioToolStripMenuItem
 			// 
 			this->verificarInventarioToolStripMenuItem->Name = L"verificarInventarioToolStripMenuItem";
-			this->verificarInventarioToolStripMenuItem->Size = System::Drawing::Size(172, 22);
+			this->verificarInventarioToolStripMenuItem->Size = System::Drawing::Size(183, 22);
 			this->verificarInventarioToolStripMenuItem->Text = L"Verificar inventario";
 			// 
 			// comprasToolStripMenuItem
 			// 
 			this->comprasToolStripMenuItem->Name = L"comprasToolStripMenuItem";
-			this->comprasToolStripMenuItem->Size = System::Drawing::Size(172, 22);
-			this->comprasToolStripMenuItem->Text = L"Compras";
+			this->comprasToolStripMenuItem->Size = System::Drawing::Size(226, 22);
+			this->comprasToolStripMenuItem->Text = L"Comprar";
 			// 
 			// revisarGóndolasToolStripMenuItem
 			// 
 			this->revisarGóndolasToolStripMenuItem->Name = L"revisarGóndolasToolStripMenuItem";
-			this->revisarGóndolasToolStripMenuItem->Size = System::Drawing::Size(172, 22);
-			this->revisarGóndolasToolStripMenuItem->Text = L"Revisar góndolas";
+			this->revisarGóndolasToolStripMenuItem->Size = System::Drawing::Size(226, 22);
+			this->revisarGóndolasToolStripMenuItem->Text = L"Verificar góndolas";
 			// 
 			// acercaDeToolStripMenuItem
 			// 
@@ -639,6 +677,114 @@ namespace Proyecto3 {
 			this->contactosToolStripMenuItem->Name = L"contactosToolStripMenuItem";
 			this->contactosToolStripMenuItem->Size = System::Drawing::Size(73, 20);
 			this->contactosToolStripMenuItem->Text = L"Contactos";
+			// 
+			// consultarPrecioToolStripMenuItem
+			// 
+			this->consultarPrecioToolStripMenuItem->Name = L"consultarPrecioToolStripMenuItem";
+			this->consultarPrecioToolStripMenuItem->Size = System::Drawing::Size(183, 22);
+			this->consultarPrecioToolStripMenuItem->Text = L"Consultar precio";
+			// 
+			// consultarDescuentoToolStripMenuItem
+			// 
+			this->consultarDescuentoToolStripMenuItem->Name = L"consultarDescuentoToolStripMenuItem";
+			this->consultarDescuentoToolStripMenuItem->Size = System::Drawing::Size(183, 22);
+			this->consultarDescuentoToolStripMenuItem->Text = L"Consultar descuento";
+			// 
+			// consultarProductosToolStripMenuItem
+			// 
+			this->consultarProductosToolStripMenuItem->Name = L"consultarProductosToolStripMenuItem";
+			this->consultarProductosToolStripMenuItem->Size = System::Drawing::Size(183, 22);
+			this->consultarProductosToolStripMenuItem->Text = L"Consultar productos";
+			// 
+			// consultarDescuentoDeUnToolStripMenuItem
+			// 
+			this->consultarDescuentoDeUnToolStripMenuItem->Name = L"consultarDescuentoDeUnToolStripMenuItem";
+			this->consultarDescuentoDeUnToolStripMenuItem->Size = System::Drawing::Size(226, 22);
+			this->consultarDescuentoDeUnToolStripMenuItem->Text = L"Consultar descuento clientes";
+			// 
+			// consultarMarcasToolStripMenuItem
+			// 
+			this->consultarMarcasToolStripMenuItem->Name = L"consultarMarcasToolStripMenuItem";
+			this->consultarMarcasToolStripMenuItem->Size = System::Drawing::Size(226, 22);
+			this->consultarMarcasToolStripMenuItem->Text = L"Consultar marcas";
+			// 
+			// pasilloMenosVisitadoToolStripMenuItem
+			// 
+			this->pasilloMenosVisitadoToolStripMenuItem->Name = L"pasilloMenosVisitadoToolStripMenuItem";
+			this->pasilloMenosVisitadoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->pasilloMenosVisitadoToolStripMenuItem->Text = L"Pasillo menos visitado";
+			// 
+			// productosPorPasilloMásVendidosToolStripMenuItem
+			// 
+			this->productosPorPasilloMásVendidosToolStripMenuItem->Name = L"productosPorPasilloMásVendidosToolStripMenuItem";
+			this->productosPorPasilloMásVendidosToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->productosPorPasilloMásVendidosToolStripMenuItem->Text = L"Productos por pasillo más vendidos";
+			// 
+			// marcasMásVendidosToolStripMenuItem
+			// 
+			this->marcasMásVendidosToolStripMenuItem->Name = L"marcasMásVendidosToolStripMenuItem";
+			this->marcasMásVendidosToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->marcasMásVendidosToolStripMenuItem->Text = L"Marcas más vendidos";
+			// 
+			// clienteQueMásComproToolStripMenuItem
+			// 
+			this->clienteQueMásComproToolStripMenuItem->Name = L"clienteQueMásComproToolStripMenuItem";
+			this->clienteQueMásComproToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->clienteQueMásComproToolStripMenuItem->Text = L"Cliente que más compro";
+			// 
+			// clienteQueMenosComproToolStripMenuItem
+			// 
+			this->clienteQueMenosComproToolStripMenuItem->Name = L"clienteQueMenosComproToolStripMenuItem";
+			this->clienteQueMenosComproToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->clienteQueMenosComproToolStripMenuItem->Text = L"Cliente que menos compro";
+			// 
+			// productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1
+			// 
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Name = L"productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1";
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Size = System::Drawing::Size(304, 22);
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Text = L"Producto que más se cargó en las Góndolas";
+			// 
+			// clienteQueMásFacturoToolStripMenuItem
+			// 
+			this->clienteQueMásFacturoToolStripMenuItem->Name = L"clienteQueMásFacturoToolStripMenuItem";
+			this->clienteQueMásFacturoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->clienteQueMásFacturoToolStripMenuItem->Text = L"Cliente que más facturo";
+			// 
+			// marcasDeUnProductoToolStripMenuItem
+			// 
+			this->marcasDeUnProductoToolStripMenuItem->Name = L"marcasDeUnProductoToolStripMenuItem";
+			this->marcasDeUnProductoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->marcasDeUnProductoToolStripMenuItem->Text = L"Marcas de un producto";
+			// 
+			// facturaDeMayorMontoToolStripMenuItem
+			// 
+			this->facturaDeMayorMontoToolStripMenuItem->Name = L"facturaDeMayorMontoToolStripMenuItem";
+			this->facturaDeMayorMontoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->facturaDeMayorMontoToolStripMenuItem->Text = L"Factura de mayor monto";
+			// 
+			// productosDeUnPasilloToolStripMenuItem
+			// 
+			this->productosDeUnPasilloToolStripMenuItem->Name = L"productosDeUnPasilloToolStripMenuItem";
+			this->productosDeUnPasilloToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->productosDeUnPasilloToolStripMenuItem->Text = L"Productos de un pasillo";
+			// 
+			// clientesDelSupermercadoToolStripMenuItem
+			// 
+			this->clientesDelSupermercadoToolStripMenuItem->Name = L"clientesDelSupermercadoToolStripMenuItem";
+			this->clientesDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->clientesDelSupermercadoToolStripMenuItem->Text = L"Clientes del supermercado";
+			// 
+			// inventarioDelSupermercadoToolStripMenuItem
+			// 
+			this->inventarioDelSupermercadoToolStripMenuItem->Name = L"inventarioDelSupermercadoToolStripMenuItem";
+			this->inventarioDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->inventarioDelSupermercadoToolStripMenuItem->Text = L"Inventario del supermercado";
+			// 
+			// pasillosDelSupermercadoToolStripMenuItem
+			// 
+			this->pasillosDelSupermercadoToolStripMenuItem->Name = L"pasillosDelSupermercadoToolStripMenuItem";
+			this->pasillosDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(304, 22);
+			this->pasillosDelSupermercadoToolStripMenuItem->Text = L"Pasillos del supermercado";
 			// 
 			// VentanaSupermercado
 			// 
