@@ -337,12 +337,14 @@ namespace Proyecto3 {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label9->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label9->Location = System::Drawing::Point(208, 12);
+			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->label9->Location = System::Drawing::Point(207, 23);
 			this->label9->Name = L"label9";
 			this->label9->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label9->Size = System::Drawing::Size(89, 34);
+			this->label9->Size = System::Drawing::Size(105, 35);
 			this->label9->TabIndex = 62;
 			this->label9->Text = L"Consultar";
 			// 
@@ -370,7 +372,9 @@ namespace Proyecto3 {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"VentanaConsultas";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VentanaConsultas";
+			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &VentanaConsultas::VentanaConsultas_FormClosing);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -422,19 +426,173 @@ namespace Proyecto3 {
 	}
 private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
 	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
-	if (opc == 1) {
-		if (pasillosB->existeNodo(codPasilloStr))
-		{
-			MessageBox::Show("Pasillo encontrado.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	string codProductoStr = msclr::interop::marshal_as<string>(this->codProducto->Text);
+	string codMarcaStr = msclr::interop::marshal_as<string>(this->codMarca->Text);
+	string codInventarioStr = msclr::interop::marshal_as<string>(this->codInventario->Text);
+	string codAdminStr = msclr::interop::marshal_as<string>(this->codAdmin->Text);
+	string codClienteStr = msclr::interop::marshal_as<string>(this->codCliente->Text);
+	string codVendedorStr = msclr::interop::marshal_as<string>(this->codVendedor->Text);
+	string codCiudadStr = msclr::interop::marshal_as<string>(this->codCiudad->Text);
 
-			this->Hide();
-			ventana2->Show();
+	if (opc == 1) {
+		if (!codPasilloStr.empty()) {
+			if (pasillosB->existeNodo(msclr::interop::marshal_as<string>(this->codPasillo->Text)))
+			{
+				string pasillo = pasillosB->buscarNodo(pasillosB->raiz, codPasilloStr)->dato;
+				String^ pasilloStr = msclr::interop::marshal_as<String^>(pasillo);
+				MessageBox::Show("Pasillo encontrado: " + pasilloStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else
+			{
+				MessageBox::Show("Pasillo no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
 		}
-		else
-		{
-			MessageBox::Show("Pasillo no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 	}
+
+	if (opc == 2) {
+		if (!codProductoStr.empty()) {
+			if (productosB->existeNodo(msclr::interop::marshal_as<string>(this->codProducto->Text)))
+			{
+				string producto = productosB->buscarNodo(productosB->raiz, codProductoStr)->dato;
+				String^ productoStr = msclr::interop::marshal_as<String^>(producto);
+				MessageBox::Show("Producto encontrado: " + productoStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else
+			{
+				MessageBox::Show("Producto no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 3) {
+		if (!codMarcaStr.empty()) {
+			if (marcasB->existeNodo(msclr::interop::marshal_as<string>(this->codMarca->Text))) {
+				string marca = marcasB->buscarNodo(marcasB->raiz, codMarcaStr)->dato;
+				String^ marcaStr = msclr::interop::marshal_as<String^>(marca);
+				MessageBox::Show("Marca encontrada: " + marcaStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Marca no encontrada.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 4) {
+		if (!codInventarioStr.empty()) {
+			if (inventariosB->existeNodo(msclr::interop::marshal_as<string>(this->codInventario->Text))) {
+				string inventario = inventariosB->buscarNodo(inventariosB->raiz, codInventarioStr)->dato;
+				String^ inventarioStr = msclr::interop::marshal_as<String^>(inventario);
+				MessageBox::Show("Inventario encontrado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Inventario no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 5) {
+		if (!codAdminStr.empty()) {
+			if (adminsB->buscar(msclr::interop::marshal_as<string>(this->codAdmin->Text))) {
+				string admin = adminsB->obtenerNodo(codAdminStr);
+				String^ adminStr = msclr::interop::marshal_as<String^>(admin);
+				MessageBox::Show("Administador encontrado: " + adminStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Administador no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 6) {
+		if (!codClienteStr.empty()) {
+			if (clientesB->buscar(msclr::interop::marshal_as<string>(this->codCliente->Text))) {
+				string cliente = clientesB->obtenerNodo(codClienteStr);
+				String^ clienteStr = msclr::interop::marshal_as<String^>(cliente);
+				MessageBox::Show("Cliente encontrado: " + clienteStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Cliente no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 7) {
+		if (!codVendedorStr.empty()) {
+			if (vendedoresB->buscar(msclr::interop::marshal_as<string>(this->codVendedor->Text))) {
+				string vendedor = vendedoresB->obtenerNodo(codVendedorStr);
+				String^ vendedorStr = msclr::interop::marshal_as<String^>(vendedor);
+				MessageBox::Show("Vendedor encontrado: " + vendedorStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Vendedor no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 8) {
+		if (!codCiudadStr.empty()) {
+			if (ciudadesB->existeNodo(msclr::interop::marshal_as<string>(this->codCiudad->Text))) {
+				string ciudad = ciudadesB->buscarNodo(ciudadesB->raiz, codCiudadStr)->dato;
+				String^ ciudadStr = msclr::interop::marshal_as<String^>(ciudad);
+				MessageBox::Show("Ciudad encontrada: " + ciudadStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Ciudad no encontrada.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+}
+private: System::Void VentanaConsultas_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	this->Hide();
+	ventana2->Show();
 }
 };
 }

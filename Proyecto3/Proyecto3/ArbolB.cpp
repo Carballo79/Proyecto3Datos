@@ -116,6 +116,25 @@ bool ArbolB::buscarNodo(NodoAB* nodo, string dato)
 
 bool ArbolB::buscar(string dato) { return buscarNodo(raiz, dato); }
 
+NodoAB* ArbolB::buscar(NodoAB* nodo, string dato)
+{
+    int llaveNodo = obtenerLlave(dato, 0);
+
+    if (nodo == NULL)
+        return NULL;
+
+    int i = 0;
+    while ((i < nodo->cuenta) && (llaveNodo > obtenerLlave(nodo->llaves[i], 0)))
+        i++;
+
+    if ((i < nodo->cuenta) && (llaveNodo == obtenerLlave(nodo->llaves[i], 0)))
+        return nodo;
+    else if (nodo->esHoja)
+        return NULL;
+    else
+        return buscar(nodo->hijos[i], dato);
+}
+
 void ArbolB::modificarNodo(string nuevoDato)
 {
     NodoAB* nodo = raiz;

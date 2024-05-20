@@ -564,15 +564,16 @@ namespace Proyecto3 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->label1->Location = System::Drawing::Point(228, 63);
+			this->label1->Location = System::Drawing::Point(242, 70);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(108, 25);
+			this->label1->Size = System::Drawing::Size(101, 25);
 			this->label1->TabIndex = 31;
 			this->label1->Text = L"Inserción";
+			this->label1->Click += gcnew System::EventHandler(this, &VentanaInsercion::label1_Click);
 			// 
 			// VentanaInsercion
 			// 
@@ -918,6 +919,10 @@ private: System::Void VentanaInsercion_Load(System::Object^ sender, System::Even
 private: System::Void codPasillo_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void VentanaInsercion_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	this->Hide();
+	ventana2->Show();
+}
+private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

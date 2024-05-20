@@ -46,12 +46,15 @@ Class Proyecto3.VentanaModificacion: AutoLayout, AnsiClass, Class, Public, Befor
     Int32 opc : Public
 Class Proyecto3.VentanaSupermercado: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
-    Void .ctor(System.Windows.Forms.Form, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.Windows.Forms.Form, Int32, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.Form ventana1 : Public
+    Int32 opc : Public
 Class Proyecto3.VentanaPrincipal: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    Int32 op : Public
   Methods:
     ReiniciarComponentes(): PrivateScope, Public, HideBySig

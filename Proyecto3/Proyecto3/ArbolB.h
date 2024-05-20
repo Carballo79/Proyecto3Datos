@@ -30,6 +30,7 @@ public:
     void dividirPagina(NodoAB* padre, int pos);
     void meterHoja(NodoAB* nodo, string dato);
     bool buscarNodo(NodoAB* nodo, string dato);
+    NodoAB* buscar(NodoAB* nodo, string dato);
     void reporteClientes(NodoAB* nodo, ofstream& archivo);
     void reporteClienteMasCompras(NodoAB* nodo, string& clienteMayor, int& maxNum);
     void reporteClienteMenosCompras(NodoAB* nodo, string& clienteMenor, int& minNum);

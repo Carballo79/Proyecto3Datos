@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Proyecto3.h"
+#include "Utilidades.h"
 #include <string>
 #include <msclr/marshal_cppstd.h>
 
@@ -94,7 +95,8 @@ namespace Proyecto3 {
 		}
 	private: System::Windows::Forms::Button^ btnBuscar;
 	private: System::Windows::Forms::Button^ btnModificar;
-	private: System::Windows::Forms::TextBox^ Correo;
+	private: System::Windows::Forms::TextBox^ correo;
+
 	private: System::Windows::Forms::TextBox^ telefono;
 	private: System::Windows::Forms::TextBox^ codCanasta;
 	private: System::Windows::Forms::TextBox^ cantStock;
@@ -140,7 +142,7 @@ namespace Proyecto3 {
 		void InitializeComponent(void)
 		{
 			this->btnModificar = (gcnew System::Windows::Forms::Button());
-			this->Correo = (gcnew System::Windows::Forms::TextBox());
+			this->correo = (gcnew System::Windows::Forms::TextBox());
 			this->telefono = (gcnew System::Windows::Forms::TextBox());
 			this->codCanasta = (gcnew System::Windows::Forms::TextBox());
 			this->cantStock = (gcnew System::Windows::Forms::TextBox());
@@ -187,15 +189,15 @@ namespace Proyecto3 {
 			this->btnModificar->UseVisualStyleBackColor = true;
 			this->btnModificar->Click += gcnew System::EventHandler(this, &VentanaModificacion::btnModificar_Click);
 			// 
-			// Correo
+			// correo
 			// 
-			this->Correo->Enabled = false;
-			this->Correo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->correo->Enabled = false;
+			this->correo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Correo->Location = System::Drawing::Point(235, 537);
-			this->Correo->Name = L"Correo";
-			this->Correo->Size = System::Drawing::Size(200, 22);
-			this->Correo->TabIndex = 60;
+			this->correo->Location = System::Drawing::Point(235, 537);
+			this->correo->Name = L"correo";
+			this->correo->Size = System::Drawing::Size(200, 22);
+			this->correo->TabIndex = 60;
 			// 
 			// telefono
 			// 
@@ -345,9 +347,9 @@ namespace Proyecto3 {
 			this->label15->Location = System::Drawing::Point(51, 534);
 			this->label15->Name = L"label15";
 			this->label15->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label15->Size = System::Drawing::Size(73, 34);
+			this->label15->Size = System::Drawing::Size(134, 34);
 			this->label15->TabIndex = 45;
-			this->label15->Text = L"Correo:";
+			this->label15->Text = L"Nuevo Correo:";
 			// 
 			// label14
 			// 
@@ -523,14 +525,16 @@ namespace Proyecto3 {
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label16->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label16->Location = System::Drawing::Point(278, 26);
+			this->label16->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
+				static_cast<System::Int32>(static_cast<System::Byte>(64)));
+			this->label16->Location = System::Drawing::Point(267, 25);
 			this->label16->Name = L"label16";
 			this->label16->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label16->Size = System::Drawing::Size(116, 34);
+			this->label16->Size = System::Drawing::Size(136, 35);
 			this->label16->TabIndex = 62;
-			this->label16->Text = L"Modificacion";
+			this->label16->Text = L"Modificación";
 			this->label16->Click += gcnew System::EventHandler(this, &VentanaModificacion::label16_Click);
 			// 
 			// btnBuscar
@@ -553,7 +557,7 @@ namespace Proyecto3 {
 			this->Controls->Add(this->btnBuscar);
 			this->Controls->Add(this->label16);
 			this->Controls->Add(this->btnModificar);
-			this->Controls->Add(this->Correo);
+			this->Controls->Add(this->correo);
 			this->Controls->Add(this->telefono);
 			this->Controls->Add(this->codCanasta);
 			this->Controls->Add(this->cantStock);
@@ -661,13 +665,159 @@ private: System::Void label10_Click(System::Object^ sender, System::EventArgs^ e
 }
 private: System::Void btnModificar_Click(System::Object^ sender, System::EventArgs^ e) {
 	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+	string codProductoStr = msclr::interop::marshal_as<string>(this->codProducto->Text);
+	string codMarcaStr = msclr::interop::marshal_as<string>(this->codMarca->Text);
+	string codInventarioStr = msclr::interop::marshal_as<string>(this->codInventario->Text);
+	string codAdminStr = msclr::interop::marshal_as<string>(this->codAdmin->Text);
+	string codClienteStr = msclr::interop::marshal_as<string>(this->codCliente->Text);
+	string codVendedorStr = msclr::interop::marshal_as<string>(this->codVendedor->Text);
+	string codCiudadStr = msclr::interop::marshal_as<string>(this->codCiudad->Text);
 	string nombreStr = msclr::interop::marshal_as<string>(this->nombre->Text);
+	string cantGondolaStr = msclr::interop::marshal_as<string>(this->cantGondola->Text);
+	string cantStockStr = msclr::interop::marshal_as<string>(this->cantStock->Text);
+	string codCanastaStr = msclr::interop::marshal_as<string>(this->codCanasta->Text);
+	string precioStr = msclr::interop::marshal_as<string>(this->precio->Text);
+	string telefonoStr = msclr::interop::marshal_as<string>(this->telefono->Text);
+	string correoStr = msclr::interop::marshal_as<string>(this->correo->Text);
 
 	if (opc == 1) {
 		if (!String::IsNullOrEmpty(this->nombre->Text)) {
 			pasillosB->modificarNodo(codPasilloStr, nombreStr);
 
-			MessageBox::Show("Pasillo modificado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			string pasillo = pasillosB->buscarNodo(pasillosB->raiz, codPasilloStr)->dato;
+			String^ pasilloStr = msclr::interop::marshal_as<String^>(pasillo);
+			MessageBox::Show("Pasillo modificado: " + pasilloStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 2) {
+		if (!String::IsNullOrEmpty(this->nombre->Text)) {
+			productosB->modificarNodo(codProductoStr, nombreStr);
+
+			string producto = productosB->buscarNodo(productosB->raiz, codProductoStr)->dato;
+			String^ productoStr = msclr::interop::marshal_as<String^>(producto);
+			MessageBox::Show("Producto modificado: " + productoStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 3) {
+		if (!String::IsNullOrEmpty(this->nombre->Text) && !String::IsNullOrEmpty(this->cantGondola->Text)
+				&& !String::IsNullOrEmpty(this->precio->Text)) {
+			string nuevoDato = nombreStr + "; " + cantGondolaStr + "; " + precioStr;
+			marcasB->modificarNodo(codMarcaStr, nuevoDato);
+
+			string marca = marcasB->buscarNodo(marcasB->raiz, codMarcaStr)->dato;
+			String^ marcaStr = msclr::interop::marshal_as<String^>(marca);
+			MessageBox::Show("Marca modificada: " + marcaStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 4) {
+		if (!String::IsNullOrEmpty(this->nombre->Text) && !String::IsNullOrEmpty(this->cantStock->Text)
+			&& !String::IsNullOrEmpty(this->codCanasta->Text)) {
+			string nuevoDato = nombreStr + "; " + cantStockStr + "; " + codCanastaStr;
+			inventariosB->modificarNodo(codInventarioStr, nuevoDato);
+
+			string inventario = inventariosB->buscarNodo(inventariosB->raiz, codInventarioStr)->dato;
+			String^ inventarioStr = msclr::interop::marshal_as<String^>(inventario);
+			MessageBox::Show("Inventario modificado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 5) {
+		if (!String::IsNullOrEmpty(this->nombre->Text) && !String::IsNullOrEmpty(this->codCiudad->Text) 
+				&& !String::IsNullOrEmpty(this->telefono->Text) && !String::IsNullOrEmpty(this->correo->Text)) {
+			if (ciudadesB->existeNodo(codCiudadStr)) {
+				string nuevoDato = codAdminStr + "; " + nombreStr + "; " + codCiudadStr + "; " + telefonoStr + "; " + correoStr;
+				adminsB->modificarNodo(nuevoDato);
+
+				string admin = adminsB->obtenerNodo(codAdminStr);
+				String^ adminStr = msclr::interop::marshal_as<String^>(admin);
+				MessageBox::Show("Administrador modificado: " + adminStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Ciudad no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 6) {
+		if (!String::IsNullOrEmpty(this->nombre->Text) && !String::IsNullOrEmpty(this->codCiudad->Text)
+			&& !String::IsNullOrEmpty(this->telefono->Text) && !String::IsNullOrEmpty(this->correo->Text)) {
+			if (ciudadesB->existeNodo(codCiudadStr)) {
+				string nuevoDato = codClienteStr + "; " + nombreStr + "; " + codCiudadStr + "; " + telefonoStr + "; " + correoStr;
+				clientesB->modificarNodo(nuevoDato);
+
+				string cliente = clientesB->obtenerNodo(codClienteStr);
+				String^ clienteStr = msclr::interop::marshal_as<String^>(cliente);
+				MessageBox::Show("Cliente modificado: " + clienteStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else {
+				MessageBox::Show("Ciudad no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 7) {
+		if (!String::IsNullOrEmpty(this->nombre->Text)) {
+			string nuevoDato = codVendedorStr + "; " + nombreStr;
+			vendedoresB->modificarNodo(nuevoDato);
+
+			string vendedor = vendedoresB->obtenerNodo(codVendedorStr);
+			String^ vendedorStr = msclr::interop::marshal_as<String^>(vendedor);
+			MessageBox::Show("Vendedor modificado: " + vendedorStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 8) {
+		if (!String::IsNullOrEmpty(this->nombre->Text)) {
+			ciudadesB->modificarNodo(codCiudadStr, nombreStr);
+
+			string ciudad = ciudadesB->buscarNodo(ciudadesB->raiz, codCiudadStr)->dato;
+			String^ ciudadStr = msclr::interop::marshal_as<String^>(ciudad);
+			MessageBox::Show("Ciudad modificada: " + ciudadStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 			this->Hide();
 			ventana2->Show();
@@ -679,18 +829,193 @@ private: System::Void btnModificar_Click(System::Object^ sender, System::EventAr
 }
 private: System::Void btnBuscar_Click(System::Object^ sender, System::EventArgs^ e) {
 	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+	string codProductoStr = msclr::interop::marshal_as<string>(this->codProducto->Text);
+	string codMarcaStr = msclr::interop::marshal_as<string>(this->codMarca->Text);
+	string codInventarioStr = msclr::interop::marshal_as<string>(this->codInventario->Text);
+	string codAdminStr = msclr::interop::marshal_as<string>(this->codAdmin->Text);
+	string codClienteStr = msclr::interop::marshal_as<string>(this->codCliente->Text);
+	string codVendedorStr = msclr::interop::marshal_as<string>(this->codVendedor->Text);
+	string codCiudadStr = msclr::interop::marshal_as<string>(this->codCiudad->Text);
 
-	if (pasillosB->existeNodo(codPasilloStr))
-	{
-		MessageBox::Show("Pasillo encontrado.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	if (opc == 1) {
+		if (!codPasilloStr.empty()) {
+			if (pasillosB->existeNodo(msclr::interop::marshal_as<string>(this->codPasillo->Text)))
+			{
+				string pasillo = pasillosB->buscarNodo(pasillosB->raiz, codPasilloStr)->dato;
+				String^ pasilloStr = msclr::interop::marshal_as<String^>(pasillo);
+				MessageBox::Show("Pasillo encontrado: " + pasilloStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-		this->nombre->Enabled = true;
-		this->btnModificar->Enabled = true;
-		this->btnBuscar->Enabled = false;
+				this->codPasillo->Enabled = false;
+				this->nombre->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else
+			{
+				MessageBox::Show("Pasillo no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		} else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 	}
-	else
-	{
-		MessageBox::Show("Pasillo no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+
+	if (opc == 2) {
+		if (!codProductoStr.empty()) {
+			if (productosB->existeNodo(msclr::interop::marshal_as<string>(this->codProducto->Text)))
+			{
+				string producto = productosB->buscarNodo(productosB->raiz, codProductoStr)->dato;
+				String^ pasilloStr = msclr::interop::marshal_as<String^>(producto);
+				MessageBox::Show("Producto encontrado: ", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codProducto->Enabled = false;
+				this->nombre->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else
+			{
+				MessageBox::Show("Producto no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 3) {
+		if (!codMarcaStr.empty()) {
+			if (marcasB->existeNodo(msclr::interop::marshal_as<string>(this->codMarca->Text))) {
+				string marca = marcasB->buscarNodo(marcasB->raiz, codMarcaStr)->dato;
+				String^ marcaStr = msclr::interop::marshal_as<String^>(marca);
+				MessageBox::Show("Marca encontrada: " + marcaStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codMarca->Enabled = false;
+				this->nombre->Enabled = true;
+				this->cantGondola->Enabled = true;
+				this->precio->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else {
+				MessageBox::Show("Marca no encontrada.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 4) {
+		if (!codInventarioStr.empty()) {
+			if (inventariosB->existeNodo(msclr::interop::marshal_as<string>(this->codInventario->Text))) {
+				string inventario = inventariosB->buscarNodo(inventariosB->raiz, codInventarioStr)->dato;
+				String^ inventarioStr = msclr::interop::marshal_as<String^>(inventario);
+				MessageBox::Show("Inventario encontrado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codInventario->Enabled = false;
+				this->nombre->Enabled = true;
+				this->cantStock->Enabled = true;
+				this->codCanasta->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else {
+				MessageBox::Show("Inventario no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 5) {
+		if (!codAdminStr.empty()) {
+			if (adminsB->buscar(msclr::interop::marshal_as<string>(this->codAdmin->Text))) {
+				string admin = adminsB->obtenerNodo(codAdminStr);
+				String^ adminStr = msclr::interop::marshal_as<String^>(admin);
+				MessageBox::Show("Administador encontrado: " + adminStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codAdmin->Enabled = false;
+				this->nombre->Enabled = true;
+				this->codCiudad->Enabled = true;
+				this->telefono->Enabled = true;
+				this->correo->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else {
+				MessageBox::Show("Administador no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 6) {
+		if (!codClienteStr.empty()) {
+			if (clientesB->buscar(msclr::interop::marshal_as<string>(this->codCliente->Text))) {
+				string cliente = clientesB->obtenerNodo(codClienteStr);
+				String^ clienteStr = msclr::interop::marshal_as<String^>(cliente);
+				MessageBox::Show("Cliente encontrado: " + clienteStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codCliente->Enabled = false;
+				this->nombre->Enabled = true;
+				this->codCiudad->Enabled = true;
+				this->telefono->Enabled = true;
+				this->correo->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else {
+				MessageBox::Show("Cliente no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 7) {
+		if (!codVendedorStr.empty()) {
+			if (vendedoresB->buscar(msclr::interop::marshal_as<string>(this->codVendedor->Text))) {
+				string vendedor = vendedoresB->obtenerNodo(codVendedorStr);
+				String^ vendedorStr = msclr::interop::marshal_as<String^>(vendedor);
+				MessageBox::Show("Vendedor encontrado: " + vendedorStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codVendedor->Enabled = false;
+				this->nombre->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else {
+				MessageBox::Show("Vendedor no encontrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 8) {
+		if (!codCiudadStr.empty()) {
+			if (ciudadesB->existeNodo(msclr::interop::marshal_as<string>(this->codCiudad->Text))) {
+				string ciudad = ciudadesB->buscarNodo(ciudadesB->raiz, codCiudadStr)->dato;
+				String^ ciudadStr = msclr::interop::marshal_as<String^>(ciudad);
+				MessageBox::Show("Ciudad encontrada: " + ciudadStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->codCiudad->Enabled = false;
+				this->nombre->Enabled = true;
+				this->btnBuscar->Enabled = false;
+				this->btnModificar->Enabled = true;
+			}
+			else {
+				MessageBox::Show("Ciudad no encontrada.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+			}
+		}
+		else {
+			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 	}
 }
 private: System::Void VentanaModificacion_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
