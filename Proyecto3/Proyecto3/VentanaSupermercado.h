@@ -4,6 +4,7 @@
 #include "VentanaInsercion.h"
 #include "VentanaConsultas.h"
 #include "VentanaModificacion.h"
+#include "VentanaEliminación.h"
 
 namespace Proyecto3 {
 
@@ -657,6 +658,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->mConsultarDescuentoClientes = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mAcercaDe = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mContactos = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->datosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mMantenimiento1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem33 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem34 = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -731,7 +733,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->mFacturacion1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem95 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem96 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->datosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->menuStrip2->SuspendLayout();
 			this->menuStrip3->SuspendLayout();
@@ -983,48 +984,56 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem17->Name = L"toolStripMenuItem17";
 			this->toolStripMenuItem17->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem17->Text = L"Pasillo";
+			this->toolStripMenuItem17->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem17_Click);
 			// 
 			// toolStripMenuItem18
 			// 
 			this->toolStripMenuItem18->Name = L"toolStripMenuItem18";
 			this->toolStripMenuItem18->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem18->Text = L"Producto";
+			this->toolStripMenuItem18->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem18_Click);
 			// 
 			// toolStripMenuItem19
 			// 
 			this->toolStripMenuItem19->Name = L"toolStripMenuItem19";
 			this->toolStripMenuItem19->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem19->Text = L"Marca";
+			this->toolStripMenuItem19->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem19_Click);
 			// 
 			// toolStripMenuItem20
 			// 
 			this->toolStripMenuItem20->Name = L"toolStripMenuItem20";
 			this->toolStripMenuItem20->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem20->Text = L"Inventario";
+			this->toolStripMenuItem20->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem20_Click);
 			// 
 			// toolStripMenuItem21
 			// 
 			this->toolStripMenuItem21->Name = L"toolStripMenuItem21";
 			this->toolStripMenuItem21->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem21->Text = L"Administrador";
+			this->toolStripMenuItem21->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem21_Click);
 			// 
 			// toolStripMenuItem22
 			// 
 			this->toolStripMenuItem22->Name = L"toolStripMenuItem22";
 			this->toolStripMenuItem22->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem22->Text = L"Cliente";
+			this->toolStripMenuItem22->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem22_Click);
 			// 
 			// toolStripMenuItem23
 			// 
 			this->toolStripMenuItem23->Name = L"toolStripMenuItem23";
 			this->toolStripMenuItem23->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem23->Text = L"Vendedor";
+			this->toolStripMenuItem23->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem23_Click);
 			// 
 			// toolStripMenuItem24
 			// 
 			this->toolStripMenuItem24->Name = L"toolStripMenuItem24";
 			this->toolStripMenuItem24->Size = System::Drawing::Size(196, 28);
 			this->toolStripMenuItem24->Text = L"Ciudad";
+			this->toolStripMenuItem24->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem24_Click);
 			// 
 			// menuVerTodo
 			// 
@@ -1286,6 +1295,12 @@ private: System::ComponentModel::IContainer^ components;
 			this->mContactos->Name = L"mContactos";
 			this->mContactos->Size = System::Drawing::Size(105, 28);
 			this->mContactos->Text = L"Contactos";
+			// 
+			// datosToolStripMenuItem
+			// 
+			this->datosToolStripMenuItem->Name = L"datosToolStripMenuItem";
+			this->datosToolStripMenuItem->Size = System::Drawing::Size(127, 28);
+			this->datosToolStripMenuItem->Text = L"Datos";
 			// 
 			// mMantenimiento1
 			// 
@@ -2069,12 +2084,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem96->Text = L"Comprar Inventario";
 			this->toolStripMenuItem96->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			// 
-			// datosToolStripMenuItem
-			// 
-			this->datosToolStripMenuItem->Name = L"datosToolStripMenuItem";
-			this->datosToolStripMenuItem->Size = System::Drawing::Size(180, 28);
-			this->datosToolStripMenuItem->Text = L"Datos";
-			// 
 			// VentanaSupermercado
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
@@ -2598,6 +2607,70 @@ private: System::Void toolStripMenuItem92_Click(System::Object^ sender, System::
 
 	this->Hide();
 	VentanaModificacion^ ventana = gcnew VentanaModificacion(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem17_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 1;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem18_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 2;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem19_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 3;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem20_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 4;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem21_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 5;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem22_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 6;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem23_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 7;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
+		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem24_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 8;
+
+	this->Hide();
+	VentanaEliminación^ ventana = gcnew VentanaEliminación(this, opc, *pasillosB, *productosB, *marcasB,
 		*inventariosB, *adminsB, *clientesB, *vendedoresB, *ciudadesB);
 	ventana->ShowDialog();
 }

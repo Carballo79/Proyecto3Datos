@@ -673,6 +673,7 @@ namespace Proyecto3 {
 			this->nombre->Enabled = true;
 			this->telefono->Enabled = true;
 			this->Correo->Enabled = true;
+			this->codCiudad->Enabled = true;
 		}
 
 		void InsercionVendedor(void)
@@ -761,7 +762,7 @@ namespace Proyecto3 {
 				if (pasillosB->existeNodo(codPasilloStr)) {
 					if (productosB->existeNodo(codProductoStr)) {
 						if (!marcasB->existeNodo(codMarcaStr)) {
-							string marca = codPasilloStr + "; " + codProductoStr + "; " + 
+							string marca = codPasilloStr + "; " + codProductoStr + "; " + codMarcaStr + "; " +
 								nombreStr + "; " + cantGondolaStr + "; " + precioStr;
 							marcasB->insertarNodo(marca);
 
@@ -794,7 +795,7 @@ namespace Proyecto3 {
 					if (productosB->existeNodo(codProductoStr)) {
 						if (marcasB->existeNodo(codMarcaStr)) {
 							if (!inventariosB->existeNodo(codInventarioStr)) {
-								string inventario = codPasilloStr + "; " + codProductoStr + "; " +
+								string inventario = codPasilloStr + "; " + codProductoStr + "; " +codMarcaStr + "; " +
 									codInventarioStr + "; " +nombreStr + "; " + cantStockStr + "; " +
 									codCanastaStr;
 								inventariosB->insertarNodo(inventario);
@@ -854,15 +855,20 @@ namespace Proyecto3 {
 		}
 		if (opc == 6) {
 			if (!codClienteStr.empty() && !nombreStr.empty()
-				&& !telefonoStr.empty() && !CorreoStr.empty()) {
+				&& !telefonoStr.empty() && !CorreoStr.empty() && !codCiudadStr.empty()) {
 				if (!clientesB->buscar(codClienteStr)) {
-					string cliente = codClienteStr + "; " + nombreStr + "; " + telefonoStr + "; " + CorreoStr;
-					clientesB->insertarNodo(cliente);
+					if (ciudadesB->existeNodo(codCiudadStr)) {
+						string cliente = codClienteStr + "; " + nombreStr + "; " + codCiudadStr + "; " + telefonoStr + "; " + CorreoStr;
+						clientesB->insertarNodo(cliente);
 
-					MessageBox::Show("Cliente insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+						MessageBox::Show("Cliente insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-					this->Close();
-					ventana2->Show();
+						this->Close();
+						ventana2->Show();
+					}
+					else {
+						MessageBox::Show("Ciudad no existe.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+					}
 				}
 				else {
 					MessageBox::Show("Cliente ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);

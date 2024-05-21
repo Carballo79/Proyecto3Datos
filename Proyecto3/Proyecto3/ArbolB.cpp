@@ -11,6 +11,8 @@ using namespace std;
 
 ArbolB::ArbolB() : raiz(NULL) {}
 
+
+
 void ArbolB::insertarNodo(string dato)
 {
     if (raiz == NULL)
@@ -37,26 +39,33 @@ void ArbolB::dividirPagina(NodoAB* padre, int pos)
 {
     NodoAB* hijo = padre->hijos[pos];
     NodoAB* nuevoHijo = new NodoAB(hijo->esHoja);
-    padre->llaves[pos] = hijo->llaves[MAX_LLAVES / 2 - 1];
-    nuevoHijo->cuenta = MAX_LLAVES / 2;
+    int mitad = MAX_LLAVES / 2;
 
-    for (int i = 0; i < nuevoHijo->cuenta; i++)
+    // Mover las llaves y los hijos al nuevo nodo
+    for (int i = 0; i < mitad; i++)
     {
-        nuevoHijo->llaves[i] = hijo->llaves[i + MAX_LLAVES / 2];
+        nuevoHijo->llaves[i] = hijo->llaves[i + mitad];
     }
 
     if (!hijo->esHoja)
     {
-        for (int i = 0; i <= nuevoHijo->cuenta; i++)
-            nuevoHijo->hijos[i] = hijo->hijos[i + MAX_LLAVES / 2];
+        for (int i = 0; i <= mitad; i++)
+        {
+            nuevoHijo->hijos[i] = hijo->hijos[i + mitad];
+        }
     }
 
-    hijo->cuenta = MAX_LLAVES / 2;
+    hijo->cuenta = mitad - 1;
+    nuevoHijo->cuenta = mitad;
 
     for (int i = padre->cuenta; i > pos; i--)
+    {
         padre->hijos[i + 1] = padre->hijos[i];
+        padre->llaves[i] = padre->llaves[i - 1];
+    }
 
     padre->hijos[pos + 1] = nuevoHijo;
+    padre->llaves[pos] = hijo->llaves[mitad - 1];
     padre->cuenta++;
 }
 
@@ -79,7 +88,9 @@ void ArbolB::meterHoja(NodoAB* nodo, string dato)
     else
     {
         while ((i >= 0) && (llaveDato < obtenerLlave(nodo->llaves[i], 0)))
+        {
             i--;
+        }
 
         i++;
 
@@ -88,7 +99,9 @@ void ArbolB::meterHoja(NodoAB* nodo, string dato)
             dividirPagina(nodo, i);
 
             if (llaveDato > obtenerLlave(nodo->llaves[i], 0))
+            {
                 i++;
+            }
         }
 
         meterHoja(nodo->hijos[i], dato);
@@ -700,4 +713,259 @@ void ArbolB::reporteClienteMasFacturas(NodoAB* nodo, string& clienteMayor, int& 
         for (int i = 0; i <= nodo->cuenta; ++i)
             reporteClienteMasFacturas(nodo->hijos[i], clienteMayor, maxNum);
     }
+}
+
+void ArbolB::eliminar(string cedula) {
+    if (!buscar(cedula)) {
+        cout << "El dato a eliminar no existe en el árbol." << endl;
+        return;
+    }
+    eliminarNodo(raiz, cedula);
+
+    // Si la raíz tiene 0 llaves, hacer su único hijo la nueva raíz
+    // si tiene un hijo, de lo contrario asignar NULL.
+    if (raiz->cuenta == 0) {
+        NodoAB* tmp = raiz;
+        if (raiz->esHoja)
+            raiz = NULL;
+        else
+            raiz = raiz->hijos[0];
+
+        // Liberar la antigua raíz
+        delete tmp;
+    }
+    return;
+}
+
+void ArbolB::eliminarNodo(NodoAB* nodo, string cedula) {
+    int idx = 0;
+    while (idx < nodo->cuenta && obtenerLlave(nodo->llaves[idx], 0) < obtenerLlave(cedula, 0))
+        ++idx;
+
+    // Si la llave a ser eliminada se encuentra en este nodo
+    if (idx < nodo->cuenta && obtenerLlave(nodo->llaves[idx], 0) == obtenerLlave(cedula, 0)) {
+        if (nodo->esHoja)
+            eliminarDeHoja(nodo, idx);
+        else
+            eliminarDeNoHoja(nodo, idx);
+    }
+    else {
+        // Si este nodo es una hoja, entonces la llave no está en el árbol
+        if (nodo->esHoja) {
+            cout << "La llave " << cedula << " no existe en el árbol." << endl;
+            return;
+        }
+
+        // La llave a ser eliminada está presente en el subárbol con raíz en este nodo
+        // La bandera indica si la llave está presente en el subárbol con raíz en el último hijo de este nodo
+        bool flag = ((idx == nodo->cuenta) ? true : false);
+
+        // Si el hijo donde la llave se supone que existe tiene menos de t llaves, llenamos ese hijo
+        if (nodo->hijos[idx]->cuenta < MAX_LLAVES / 2)
+            llenar(nodo, idx);
+
+        // Si el último hijo ha sido fusionado, se debe haber fusionado con el anterior hijo y
+        // por lo tanto debemos recursivamente eliminar la llave en el (idx-1)ésimo hijo. De lo contrario,
+        // debemos recursivamente eliminar la llave en el (idx)ésimo hijo.
+        if (flag && idx > nodo->cuenta)
+            eliminarNodo(nodo->hijos[idx - 1], cedula);
+        else
+            eliminarNodo(nodo->hijos[idx], cedula);
+    }
+    return;
+}
+
+// Un método de utilidad para eliminar la llave k en el subárbol con raíz en este nodo
+// El supuesto es que el nodo debe tener al menos t llaves
+void ArbolB::eliminarDeNoHoja(NodoAB* nodo, int idx) {
+    string k = nodo->llaves[idx];
+
+    // Si el hijo que precede a k (nodo->C[idx]) tiene al menos t llaves,
+    // entonces encuentra el predecesor 'pred' de k en el subárbol con raíz en
+    // C[idx]. Reemplaza k por pred. Recursivamente borra pred
+    // en C[idx]
+    if (nodo->hijos[idx]->cuenta >= MAX_LLAVES / 2) {
+        string pred = obtenerPredecesor(nodo, idx);
+        nodo->llaves[idx] = pred;
+        eliminarNodo(nodo->hijos[idx], pred);
+    }
+
+    // Si el hijo nodo->C[idx] tiene menos de t llaves, entonces examina C[idx+1].
+    // Si C[idx+1] tiene al menos t llaves, entonces encuentra el sucesor 'succ' de k en
+    // el subárbol con raíz en C[idx+1]
+    // Reemplaza k por succ
+    // Recursivamente borra succ en C[idx+1]
+    else if (nodo->hijos[idx + 1]->cuenta >= MAX_LLAVES / 2) {
+        string succ = obtenerSucesor(nodo, idx);
+        nodo->llaves[idx] = succ;
+        eliminarNodo(nodo->hijos[idx + 1], succ);
+    }
+
+    // Si tanto C[idx] como C[idx+1] tienen t-1 llaves, fusiona k y todo C[idx+1]
+    // en C[idx]
+    // Ahora C[idx] contiene 2t-1 llaves
+    // Libera C[idx+1] y recursivamente borra k en C[idx]
+    else {
+        fusionar(nodo, idx);
+        eliminarNodo(nodo->hijos[idx], k);
+    }
+    return;
+}
+
+// Para eliminar yd de nodo->C[idx]
+void ArbolB::eliminarDeHoja(NodoAB* nodo, int idx) {
+    // Mueve todas las llaves después de idx en el nodo actual una posición atrás
+    for (int i = idx + 1; i < nodo->cuenta; ++i)
+        nodo->llaves[i - 1] = nodo->llaves[i];
+
+    // Reduce la cuenta de llaves
+    nodo->cuenta--;
+
+    return;
+}
+
+// Una función para llenar el hijo C[idx] del nodo actual que tiene menos de t-1 llaves
+void ArbolB::llenar(NodoAB* nodo, int idx) {
+    // Si el hijo anterior (C[idx-1]) tiene más de t-1 llaves, toma una llave de ese hijo
+    if (idx != 0 && nodo->hijos[idx - 1]->cuenta >= MAX_LLAVES / 2)
+        tomarDePrev(nodo, idx);
+
+    // Si el siguiente hijo (C[idx+1]) tiene más de t-1 llaves, toma una llave de ese hijo
+    else if (idx != nodo->cuenta && nodo->hijos[idx + 1]->cuenta >= MAX_LLAVES / 2)
+        tomarDeSig(nodo, idx);
+
+    // Fusiona C[idx] con su hermano
+    // Si C[idx] es el último hijo, fusiona con su hermano anterior
+    // De lo contrario, fusiona con su siguiente hermano (C[idx+1])
+    else {
+        if (idx != nodo->cuenta)
+            fusionar(nodo, idx);
+        else
+            fusionar(nodo, idx - 1);
+    }
+    return;
+}
+
+// Una función para tomar una llave del nodo->C[idx-1] y insertarla
+// en C[idx]
+void ArbolB::tomarDePrev(NodoAB* nodo, int idx) {
+    NodoAB* hijo = nodo->hijos[idx];
+    NodoAB* hermano = nodo->hijos[idx - 1];
+
+    // La última llave de C[idx-1] sube al padre y la llave[idx-1]
+    // del padre se inserta como la primera llave en C[idx]. Así, el hermano pierde una
+    // llave y el hijo gana una llave
+
+    // Mover todas las llaves en C[idx] una posición adelante
+    for (int i = hijo->cuenta - 1; i >= 0; --i)
+        hijo->llaves[i + 1] = hijo->llaves[i];
+
+    // Si C[idx] no es una hoja, mover todos sus hijos una posición adelante
+    if (!hijo->esHoja) {
+        for (int i = hijo->cuenta; i >= 0; --i)
+            hijo->hijos[i + 1] = hijo->hijos[i];
+    }
+
+    // Establecer la primera llave del hijo igual a las llaves[idx-1] del nodo actual
+    hijo->llaves[0] = nodo->llaves[idx - 1];
+
+    // Mover el último hijo del hermano como primer hijo de C[idx]
+    if (!hijo->esHoja)
+        hijo->hijos[0] = hermano->hijos[hermano->cuenta];
+
+    // Mover la llave del hermano al padre
+    // Esto reduce el número de llaves en el hermano
+    nodo->llaves[idx - 1] = hermano->llaves[hermano->cuenta - 1];
+
+    hijo->cuenta += 1;
+    hermano->cuenta -= 1;
+
+    return;
+}
+
+void ArbolB::tomarDeSig(NodoAB* nodo, int idx) {
+    NodoAB* hijo = nodo->hijos[idx];
+    NodoAB* hermano = nodo->hijos[idx + 1];
+
+    // Las llaves[idx] se inserta como la última llave en C[idx]
+    hijo->llaves[(hijo->cuenta)] = nodo->llaves[idx];
+
+    // El primer hijo del hermano se inserta como el último hijo en C[idx]
+    if (!(hijo->esHoja))
+        hijo->hijos[(hijo->cuenta) + 1] = hermano->hijos[0];
+
+    // La primera llave del hermano se inserta en llaves[idx]
+    nodo->llaves[idx] = hermano->llaves[0];
+
+    // Mover todas las llaves en el hermano una posición atrás
+    for (int i = 1; i < hermano->cuenta; ++i)
+        hermano->llaves[i - 1] = hermano->llaves[i];
+
+    // Mover los hijos del hermano una posición atrás
+    if (!hermano->esHoja) {
+        for (int i = 1; i <= hermano->cuenta; ++i)
+            hermano->hijos[i - 1] = hermano->hijos[i];
+    }
+
+    // Incrementar y decrementar la cuenta de llaves de C[idx] y C[idx+1] respectivamente
+    hijo->cuenta += 1;
+    hermano->cuenta -= 1;
+
+    return;
+}
+
+// Una función para fusionar idx-th y (idx+1)th hijos de C
+void ArbolB::fusionar(NodoAB* nodo, int idx) {
+    NodoAB* hijo = nodo->hijos[idx];
+    NodoAB* hermano = nodo->hijos[idx + 1];
+
+    // Tomar una llave del nodo actual e insertarla en la posición (t-1) en C[idx]
+    hijo->llaves[MAX_LLAVES / 2 - 1] = nodo->llaves[idx];
+
+    // Copiar las llaves de C[idx+1] a C[idx] al final
+    for (int i = 0; i < hermano->cuenta; ++i)
+        hijo->llaves[i + MAX_LLAVES / 2] = hermano->llaves[i];
+
+    // Copiar los hijos del hermano a C[idx]
+    if (!hijo->esHoja) {
+        for (int i = 0; i <= hermano->cuenta; ++i)
+            hijo->hijos[i + MAX_LLAVES / 2] = hermano->hijos[i];
+    }
+
+    // Mover todas las llaves después de idx en el nodo actual una posición atrás - para llenar el vacío creado al mover llaves[idx] a C[idx]
+    for (int i = idx + 1; i < nodo->cuenta; ++i)
+        nodo->llaves[i - 1] = nodo->llaves[i];
+
+    // Mover los hijos después de (idx+1) en el nodo actual una posición atrás
+    for (int i = idx + 2; i <= nodo->cuenta; ++i)
+        nodo->hijos[i - 1] = nodo->hijos[i];
+
+    // Actualizar la cuenta de llaves de hijo y nodo actual
+    hijo->cuenta += hermano->cuenta + 1;
+    nodo->cuenta--;
+
+    // Liberar la memoria ocupada por hermano
+    delete(hermano);
+
+    return;
+}
+
+string ArbolB::obtenerPredecesor(NodoAB* nodo, int idx) {
+    // Mover al nodo más a la derecha en el subárbol izquierdo
+    NodoAB* cur = nodo->hijos[idx];
+    while (!cur->esHoja)
+        cur = cur->hijos[cur->cuenta];
+
+    // Devolver la última llave del nodo hoja
+    return cur->llaves[cur->cuenta - 1];
+}
+
+string ArbolB::obtenerSucesor(NodoAB* nodo, int idx) {
+    // Mover al nodo más a la izquierda en el subárbol derecho
+    NodoAB* cur = nodo->hijos[idx + 1];
+    while (!cur->esHoja)
+        cur = cur->hijos[0];
+
+    // Devolver la primera llave del nodo hoja
+    return cur->llaves[0];
 }

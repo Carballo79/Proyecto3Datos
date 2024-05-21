@@ -247,3 +247,100 @@ int ArbolAVL::obtenerFB(NodoAVL* N)
 
     return (altura(N->Hizq) - altura(N->Hder));
 }
+
+NodoAVL* minValueNode(NodoAVL* node)
+{
+    NodoAVL* current = node;
+
+    /* loop down to find the leftmost leaf */
+    while (current->Hizq != NULL)
+        current = current->Hizq;
+
+    return current;
+}
+
+NodoAVL* ArbolAVL::eliminarNodo(NodoAVL* root, int key)
+{
+
+    if (root == NULL)
+        return root;
+
+
+    if (key < obtenerLlave(root->dato,1))
+        root->Hizq = eliminarNodo(root->Hizq, key);
+
+
+    else if (key > obtenerLlave(root->dato, 1))
+        root->Hder = eliminarNodo(root->Hder, key);
+
+
+    else
+    {
+        if ((root->Hizq == NULL) ||
+            (root->Hder == NULL))
+        {
+            NodoAVL* temp = root->Hizq ?
+                root->Hizq:
+                root->Hder;
+
+            if (temp == NULL)
+            {
+                temp = root;
+                root = NULL;
+            }
+            else 
+                *root = *temp; 
+
+            free(temp);
+        }
+        else
+        {
+
+            NodoAVL* temp = minValueNode(root->Hder);
+
+
+            root->dato = temp->dato;
+
+            root->Hder = eliminarNodo(root->Hder,
+                obtenerLlave(temp->dato, 1));
+        }
+    }
+
+
+    if (root == NULL)
+        return root;
+
+
+    root->altura = 1 + maximo(altura(root->Hizq),
+        altura(root->Hder));
+
+
+    int balance = obtenerFB(root);
+
+
+    if (balance > 1 &&
+        obtenerFB(root->Hizq) >= 0)
+        return rotacionDerecha(root);
+
+
+    if (balance > 1 &&
+        obtenerFB(root->Hizq) < 0)
+    {
+        root->Hizq = rotacionIzquierda(root->Hizq);
+        return rotacionDerecha(root);
+    }
+
+
+    if (balance < -1 &&
+        obtenerFB(root->Hder) <= 0)
+        return rotacionIzquierda(root);
+
+    if (balance < -1 &&
+        obtenerFB(root->Hder) > 0)
+    {
+        root->Hder = rotacionDerecha(root->Hder);
+        return rotacionIzquierda(root);
+    }
+
+    return root;
+}

@@ -1,17 +1,7 @@
-﻿  ArbolAA.cpp
-  ArbolAVL.cpp
-  ArbolB.cpp
-  ArbolBB.cpp
-  ArbolRN.cpp
-  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
-  NodoAAA.cpp
-  NodoAB.cpp
-  NodoABB.cpp
-  NodoARN.cpp
-  NodoAVL.cpp
+﻿  ArbolB.cpp
   Proyecto3.cpp
-  Utilidades.cpp
   VentanaConsultas.cpp
+  VentanaEliminación.cpp
   VentanaInsercion.cpp
   VentanaModificacion.cpp
   VentanaPrincipal.cpp

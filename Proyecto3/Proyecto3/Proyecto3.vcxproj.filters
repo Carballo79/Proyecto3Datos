@@ -66,6 +66,9 @@
     <ClCompile Include="Proyecto3.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
+    <ClCompile Include="VentanaEliminación.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VentanaPrincipal.h">
@@ -117,6 +120,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Proyecto3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VentanaEliminación.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

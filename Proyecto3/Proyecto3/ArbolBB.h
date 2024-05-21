@@ -28,4 +28,5 @@ public:
     void crearReportePasillos();
     void crearReportePasilloMasVisitado();
     void crearReportePasilloMenosVisitado();
+    void eliminarNodo(int cod);
 };

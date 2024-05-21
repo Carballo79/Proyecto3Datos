@@ -9,6 +9,7 @@ public:
     ArbolAVL();
 
     NodoAVL* raiz;
+    bool Hh;
 
     NodoAVL* insertarBalanceado(NodoAVL*& nodo, string dato);
     void insertarNodo(string dato);
@@ -28,4 +29,7 @@ public:
     NodoAVL* rotacionIzquierda(NodoAVL* n1);
     NodoAVL* rotacionDerecha(NodoAVL* n2);
     int obtenerFB(NodoAVL* N);
+
+
+    NodoAVL* eliminarNodo(NodoAVL* root, int key);
 };

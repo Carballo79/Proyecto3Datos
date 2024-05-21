@@ -35,5 +35,21 @@ public:
     void reporteClienteMasCompras(NodoAB* nodo, string& clienteMayor, int& maxNum);
     void reporteClienteMenosCompras(NodoAB* nodo, string& clienteMenor, int& minNum);
     void reporteClienteMasFacturas(NodoAB* nodo, string& clienteMayor, int& maxNum);
+
+
+
+    void eliminar(string cedula);
+    void eliminarNodo(NodoAB* nodo, string cedula);
+    void eliminarDeNoHoja(NodoAB* nodo, int idx);
+    void eliminarDeHoja(NodoAB* nodo, int idx);
+    void llenar(NodoAB* nodo, int idx);
+    void tomarDePrev(NodoAB* nodo, int idx);
+    void tomarDeSig(NodoAB* nodo, int idx);
+    void fusionar(NodoAB* nodo, int idx);
+    string obtenerPredecesor(NodoAB* nodo, int idx);
+    string obtenerSucesor(NodoAB* nodo, int idx);
+
+
+
 };
 

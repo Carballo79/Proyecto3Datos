@@ -22,4 +22,9 @@ public:
     void mostrarArbol(NodoARN* nodo, int nivel, wstring& salida);
     void rotacionIzquierda(NodoARN* nodo);
     void rotacionDerecha(NodoARN* nodo);
+    void eliminarNodo(int dato);
+    void deleteFix(NodoARN* nodo);
+    void rbTransplant(NodoARN* u, NodoARN* v);
+    void deleteNodeHelper(NodoARN* node, int key);
+    NodoARN* minimum(NodoARN* node);
 };

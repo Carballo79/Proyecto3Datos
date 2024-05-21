@@ -1,4 +1,5 @@
   Proyecto3.VentanaConsultas.resources - Embedded, ContainedInManifestFile, 
+  Proyecto3.VentanaEliminación.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaInsercion.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaModificacion.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaPrincipal.resources - Embedded, ContainedInManifestFile, 
@@ -19,6 +20,13 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
 Class Proyecto3.VentanaConsultas: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form, Int32, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Form ventana2 : Public
+    Int32 opc : Public
+Class Proyecto3.VentanaEliminación: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form, Int32, ArbolBB*, ArbolAVL*, ArbolRN*, ArbolAA*, ArbolB*, ArbolB*, ArbolB*, ArbolBB*): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

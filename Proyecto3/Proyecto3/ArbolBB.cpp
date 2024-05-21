@@ -281,3 +281,81 @@ void ArbolBB::crearReportePasilloMenosVisitado()
         cout << "\nNo se pudo abrir el archivo.\n";
     }
 }
+
+void ArbolBB::eliminarNodo(int cod) {
+    NodoABB* padre = NULL;
+    NodoABB* actual = raiz;
+    while (actual != NULL && obtenerLlave(actual->dato,0) != cod) {
+        padre = actual;
+        if (cod < obtenerLlave(actual->dato, 0)) {
+            actual = actual->Hizq;
+        }
+        else {
+            actual = actual->Hder;
+        }
+    }
+    if (actual == NULL) {
+        cout << "Cedula no encontrada en el arbol." << endl;
+        return;
+    }
+    if (actual->Hizq == NULL && actual->Hder == NULL) {
+        if (padre != NULL) {
+            if (padre->Hizq == actual) {
+                padre->Hizq = NULL;
+            }
+            else {
+                padre->Hder = NULL;
+            }
+        }
+        else {
+            raiz = NULL;
+        }
+        delete actual;
+    }
+    else if (actual->Hizq == NULL) {
+        NodoABB* hijo = actual->Hder;
+        if (padre != NULL) {
+            if (padre->Hizq == actual) {
+                padre->Hizq = hijo;
+            }
+            else {
+                padre->Hder = hijo;
+            }
+        }
+        else {
+            raiz = hijo;
+        }
+        delete actual;
+    }
+    else if (actual->Hder == NULL) {
+        NodoABB* hijo = actual->Hizq;
+        if (padre != NULL) {
+            if (padre->Hizq == actual) {
+                padre->Hizq = hijo;
+            }
+            else {
+                padre->Hder = hijo;
+            }
+        }
+        else {
+            raiz = hijo;
+        }
+        delete actual;
+    }
+    else {
+        NodoABB* sucesorPadre = actual;
+        NodoABB* sucesor = actual->Hder;
+        while (sucesor->Hizq != NULL) {
+            sucesorPadre = sucesor;
+            sucesor = sucesor->Hizq;
+        }
+        actual->dato = sucesor->dato;
+        if (sucesorPadre->Hizq == sucesor) {
+            sucesorPadre->Hizq = sucesor->Hder;
+        }
+        else {
+            sucesorPadre->Hder = sucesor->Hder;
+        }
+        delete sucesor;
+    }
+}
