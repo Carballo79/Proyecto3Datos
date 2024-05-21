@@ -1,17 +1,3 @@
-﻿  ArbolAA.cpp
-  ArbolAVL.cpp
-  ArbolB.cpp
-  ArbolBB.cpp
-  ArbolRN.cpp
-  Proyecto3.cpp
-  Utilidades.cpp
-  VentanaConsultas.cpp
-  VentanaEliminación.cpp
-  VentanaInsercion.cpp
-  VentanaModificacion.cpp
-  VentanaPrincipal.cpp
-C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(7,1): warning C4829: Parámetros posiblemente incorrectos para la función main. Utilice 'int main(Platform::Array<Platform::String^>^ argv)'
-  VentanaSupermercado.cpp
-  Generando código...
+﻿  ArbolB.cpp
   ArbolAA.obj : se encontró un módulo MSIL; vinculación incremental deshabilitada para MSIL; ejecutando vínculo completo
   Proyecto3.vcxproj -> C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe

@@ -969,3 +969,38 @@ string ArbolB::obtenerSucesor(NodoAB* nodo, int idx) {
     // Devolver la primera llave del nodo hoja
     return cur->llaves[0];
 }
+
+
+
+void ArbolB::recorrerArbol(NodoAB* nodo, int variable) {
+    if (nodo == NULL)
+        return;
+
+    // Variable para indicar si se eliminó algún nodo
+    bool eliminado = false;
+
+    // Verificar el nodo actual con la variable y eliminar si es necesario
+    for (int i = 0; i < nodo->cuenta; ++i) {
+        if (obtenerLlave(nodo->llaves[i], 2) == variable) {
+            eliminarNodo(nodo, obtenerDato(nodo->llaves[i], 0));
+            eliminado = true;
+            break;
+        }
+    }
+    if (eliminado) {
+        // Si se eliminó un nodo, continuar el recorrido desde el nodo actual
+        recorrerArbol(nodo, variable);
+        return; // Importante: después de volver desde el nodo actual, terminar la ejecución para evitar procesamiento adicional
+    }
+
+    // Recorrer los hijos del nodo actual
+    if (!nodo->esHoja) {
+        for (int i = 0; i <= nodo->cuenta; ++i) {
+            recorrerArbol(nodo->hijos[i], variable);
+        }
+    }
+}
+
+
+
+

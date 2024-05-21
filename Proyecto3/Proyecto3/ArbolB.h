@@ -50,6 +50,7 @@ public:
     string obtenerSucesor(NodoAB* nodo, int idx);
 
 
+    void recorrerArbol(NodoAB* nodo, int variable);
 
 };
 

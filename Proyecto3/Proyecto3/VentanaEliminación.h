@@ -595,7 +595,8 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				int cod = stringAInt(codCiudadStr);
 				ciudadesB->eliminarNodo(cod);
 				/////////ELIMINAR ADMINISTRADORES Y CLIENTES CON LA CIUDAD ELIMINADA/////////////////
-
+				adminsB->recorrerArbol(adminsB->raiz, cod);
+				clientesB->recorrerArbol(clientesB->raiz, cod);
 
 				MessageBox::Show("Ciudad Eliminada: " + ciudadStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
