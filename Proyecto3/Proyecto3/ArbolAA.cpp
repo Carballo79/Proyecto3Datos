@@ -89,6 +89,69 @@ void ArbolAA::modificarNodo(string llaveNodo, string nuevoDato)
         cout << "\n\tEl inventario no existe en el arbol.\n" << endl;
 }
 
+NodoAAA* ArbolAA::eliminarNodoRecursivo(NodoAAA* nodo, int cod) {
+    if (nodo == NULL) {
+        return NULL;
+    }
+
+    if (cod < obtenerLlave(nodo->dato, 3)) {
+        nodo->Hizq = eliminarNodoRecursivo(nodo->Hizq, cod);
+    }
+    else if (cod > obtenerLlave(nodo->dato, 3)) {
+        nodo->Hder = eliminarNodoRecursivo(nodo->Hder, cod);
+    }
+    else {
+        if (nodo->Hizq == NULL && nodo->Hder == NULL) {
+            delete nodo;
+            return NULL;
+        }
+        else if (nodo->Hizq == NULL) {
+            NodoAAA* temp = nodo->Hder;
+            delete nodo;
+            return temp;
+        }
+        else if (nodo->Hder == NULL) {
+            NodoAAA* temp = nodo->Hizq;
+            delete nodo;
+            return temp;
+        }
+        else {
+            NodoAAA* sucesor = nodo->Hder;
+            while (sucesor->Hizq != NULL) {
+                sucesor = sucesor->Hizq;
+            }
+            nodo->dato = sucesor->dato;
+            nodo->Hder = eliminarNodoRecursivo(nodo->Hder, obtenerLlave(sucesor->dato, 3));
+        }
+    }
+
+    return nodo;
+}
+
+void ArbolAA::eliminarNodo(int cod) {
+    string codnuevo = intAString(cod);
+    NodoAAA* nodoEliminar = buscarNodo(raiz, codnuevo);
+
+    if (nodoEliminar != NULL) {
+        raiz = eliminarNodoRecursivo(raiz, cod);
+    }
+}
+
+void ArbolAA::recorrerArbol(NodoAAA*& nodo, int valor, int pos) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->Hizq, valor, pos);
+
+        if (obtenerLlave(nodo->dato, pos) == valor) {
+            eliminarNodo(obtenerLlave(nodo->dato, 3));
+            // Reinicia el recorrido desde el principio después de la eliminación
+            recorrerArbol(raiz, valor, pos);
+            return; // Termina el recorrido actual para evitar procesamiento adicional
+        }
+
+        recorrerArbol(nodo->Hder, valor, pos);
+    }
+}
+
 void ArbolAA::crearInventarios(ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas)
 {
     string linea, codPasillo, codProducto, codMarca, codInventario, nombre,
@@ -202,63 +265,4 @@ NodoAAA* ArbolAA::split(NodoAAA* x)
     }
 
     return x;
-}
-
-NodoAAA* ArbolAA::eliminarNodoRecursivo(NodoAAA* nodo, int cod) {
-    if (nodo == NULL) {
-        return NULL;
-    }
-    if (cod < obtenerLlave(nodo->dato,3)) {
-        nodo->Hizq = eliminarNodoRecursivo(nodo->Hizq, cod);
-    }
-    else if (cod > obtenerLlave(nodo->dato, 3)) {
-        nodo->Hder = eliminarNodoRecursivo(nodo->Hder, cod);
-    }
-    else {
-        if (nodo->Hizq == NULL && nodo->Hder == NULL) {
-            delete nodo;
-            return NULL;
-        }
-        else if (nodo->Hizq == NULL) {
-            NodoAAA* temp = nodo->Hder;
-            delete nodo;
-            return temp;
-        }
-        else if (nodo->Hder == NULL) {
-            NodoAAA* temp = nodo->Hizq;
-            delete nodo;
-            return temp;
-        }
-        else {
-            NodoAAA* sucesor = nodo->Hder;
-            while (sucesor->Hizq != NULL) {
-                sucesor = sucesor->Hizq;
-            }
-            nodo->dato = sucesor->dato;
-            nodo->Hder = eliminarNodoRecursivo(nodo->Hder, obtenerLlave(sucesor->dato, 3));
-        }
-    }
-    return nodo;
-}
-
-void ArbolAA::eliminarNodo(int cod) {
-    string codnuevo = intAString(cod);
-    NodoAAA* nodoEliminar = buscarNodo(raiz, codnuevo);
-    if (nodoEliminar != NULL) {
-        raiz = eliminarNodoRecursivo(raiz, cod);
-    }
-}
-
-void ArbolAA::recorrerArbol(NodoAAA*& nodo, int valor,int pos) {
-    if (nodo != NULL) {
-        recorrerArbol(nodo->Hizq, valor,pos);
-        if (obtenerLlave(nodo->dato,pos) == valor) {
-            eliminarNodo(obtenerLlave(nodo->dato, 3));
-            // Reinicia el recorrido desde el principio después de la eliminación
-            recorrerArbol(raiz, valor,pos);
-            return; // Termina el recorrido actual para evitar procesamiento adicional
-        }
-
-        recorrerArbol(nodo->Hder, valor,pos);
-    }
 }

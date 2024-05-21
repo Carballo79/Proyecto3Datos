@@ -17,6 +17,9 @@ public:
     bool existeNodo(string dato);
     NodoAVL* filtrarDato(NodoAVL* nodo, string dato);
     void modificarNodo(string llaveNodo, string nuevoDato);
+    NodoAVL* eliminarNodo(NodoAVL* root, int key);
+    NodoAVL* eliminar(int dato);
+    void recorrerArbol(NodoAVL*& nodo, int valor, int pos);
     void crearProductos(ArbolBB& pasillos);
     void mostrarPorLlave(NodoAVL* nodo, string dato);
     void mostrarPorLlave(string dato);
@@ -29,12 +32,5 @@ public:
     NodoAVL* rotacionIzquierda(NodoAVL* n1);
     NodoAVL* rotacionDerecha(NodoAVL* n2);
     int obtenerFB(NodoAVL* N);
-
-
-    NodoAVL* eliminarNodo(NodoAVL* root, int key);
-
-    void recorrerArbol(NodoAVL*& nodo, int valor, int pos);
-
-    NodoAVL* eliminar(int dato);
-
+    NodoAVL* minValorNodo(NodoAVL* nodo);
 };

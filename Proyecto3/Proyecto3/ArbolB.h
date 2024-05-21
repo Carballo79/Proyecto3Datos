@@ -36,8 +36,6 @@ public:
     void reporteClienteMenosCompras(NodoAB* nodo, string& clienteMenor, int& minNum);
     void reporteClienteMasFacturas(NodoAB* nodo, string& clienteMayor, int& maxNum);
 
-
-
     void eliminar(string cedula);
     void eliminarNodo(NodoAB* nodo, string cedula);
     void eliminarDeNoHoja(NodoAB* nodo, int idx);
@@ -48,9 +46,6 @@ public:
     void fusionar(NodoAB* nodo, int idx);
     string obtenerPredecesor(NodoAB* nodo, int idx);
     string obtenerSucesor(NodoAB* nodo, int idx);
-
-
     void recorrerArbol(NodoAB* nodo, int variable);
-
 };
 

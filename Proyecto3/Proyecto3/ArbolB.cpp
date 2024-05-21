@@ -970,8 +970,6 @@ string ArbolB::obtenerSucesor(NodoAB* nodo, int idx) {
     return cur->llaves[0];
 }
 
-
-
 void ArbolB::recorrerArbol(NodoAB* nodo, int variable) {
     if (nodo == NULL)
         return;
@@ -1000,7 +998,3 @@ void ArbolB::recorrerArbol(NodoAB* nodo, int variable) {
         }
     }
 }
-
-
-
-

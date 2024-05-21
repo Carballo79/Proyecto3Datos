@@ -1,1 +1,12 @@
-﻿  Proyecto3.vcxproj -> C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe
+﻿  ArbolB.cpp
+  Proyecto3.cpp
+  VentanaConsultas.cpp
+  VentanaEliminación.cpp
+  VentanaInsercion.cpp
+  VentanaModificacion.cpp
+  VentanaPrincipal.cpp
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+  VentanaSupermercado.cpp
+  Generating Code...
+  ArbolAA.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  Proyecto3.vcxproj -> C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe

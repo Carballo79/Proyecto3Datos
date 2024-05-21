@@ -17,14 +17,12 @@ public:
     string buscarPorMarca(NodoAAA* nodo, string dato);
     string buscarPorMarca(string dato);
     void modificarNodo(string llaveNodo, string nuevoDato);
+    NodoAAA* eliminarNodoRecursivo(NodoAAA* nodo, int cod);
+    void eliminarNodo(int cod);
+    void recorrerArbol(NodoAAA*& nodo, int variable, int pos);
     void crearInventarios(ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas);
     void mostrarArbol(NodoAAA* nodo, int nivel, wstring& salida);
 
     NodoAAA* skew(NodoAAA* x);
     NodoAAA* split(NodoAAA* x);
-
-    NodoAAA* eliminarNodoRecursivo(NodoAAA* nodo, int cod);
-    void eliminarNodo(int cod);
-
-    void recorrerArbol(NodoAAA*& nodo, int variable, int pos);
 };

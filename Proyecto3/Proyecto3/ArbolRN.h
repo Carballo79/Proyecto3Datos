@@ -16,17 +16,16 @@ public:
     bool existeNodo(string dato);
     NodoARN* filtrarDato(NodoARN* nodo, string dato);
     void modificarNodo(string llaveNodo, string nuevoDato);
+    void eliminarNodo(int dato);
+    void eliminarReparar(NodoARN* nodo);
+    void transplanteRN(NodoARN* u, NodoARN* v);
+    void eliminarNodoAux(NodoARN* node, int key);
+    NodoARN* minimo(NodoARN* node);
+    void recorrerArbol(NodoARN*& nodo, int variable, int pos);
     void crearMarcas(ArbolBB& pasillos, ArbolAVL& productos);
     void mostrarPorLlave(NodoARN* nodo, string dato);
     void mostrarPorLlave(string dato);
     void mostrarArbol(NodoARN* nodo, int nivel, wstring& salida);
     void rotacionIzquierda(NodoARN* nodo);
     void rotacionDerecha(NodoARN* nodo);
-    void eliminarNodo(int dato);
-    void deleteFix(NodoARN* nodo);
-    void rbTransplant(NodoARN* u, NodoARN* v);
-    void deleteNodeHelper(NodoARN* node, int key);
-    NodoARN* minimum(NodoARN* node);
-
-    void recorrerArbol(NodoARN*& nodo, int variable, int pos);
 };

@@ -28,3 +28,4 @@ C:\Users\cjose\Downloads\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.Vent
 C:\Users\cjose\Downloads\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaPrincipal.resources
 C:\Users\cjose\Downloads\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaSupermercado.resources
 C:\Users\cjose\Downloads\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaEliminación.resources

@@ -152,6 +152,181 @@ void ArbolRN::modificarNodo(string llaveNodo, string nuevoDato)
         cout << "\n\tLa marca no existe en el arbol.\n" << endl;
 }
 
+void ArbolRN::eliminarReparar(NodoARN* x) {
+    while ((x != raiz) && ((x == NULL) || (x->color == 0))) {
+        if (x == x->padre->Hizq) {
+            NodoARN* s = x->padre->Hder;
+
+            if (s->color == 1) {
+                s->color = 0;
+                x->padre->color = 1;
+                rotacionIzquierda(x->padre);
+                s = x->padre->Hder;
+            }
+
+            if (((s->Hizq == NULL) || (s->Hizq->color == 0)) &&
+                ((s->Hder == NULL) || (s->Hder->color == 0))) {
+                s->color = 1;
+                x = x->padre;
+            }
+            else {
+                if ((s->Hder == NULL) || (s->Hder->color == 0)) {
+                    if (s->Hizq != NULL) s->Hizq->color = 0;
+                    s->color = 1;
+                    rotacionDerecha(s);
+                    s = x->padre->Hder;
+                }
+
+                s->color = x->padre->color;
+                x->padre->color = 0;
+
+                if (s->Hder != NULL) s->Hder->color = 0;
+                rotacionIzquierda(x->padre);
+                x = raiz;
+            }
+        }
+        else {
+            NodoARN* s = x->padre->Hizq;
+
+            if (s->color == 1) {
+                s->color = 0;
+                x->padre->color = 1;
+                rotacionDerecha(x->padre);
+                s = x->padre->Hizq;
+            }
+
+            if (((s->Hizq == NULL) || (s->Hizq->color == 0)) &&
+                ((s->Hder == NULL) || (s->Hder->color == 0))) {
+                s->color = 1;
+                x = x->padre;
+            }
+            else {
+                if ((s->Hizq == NULL) || (s->Hizq->color == 0)) {
+                    if (s->Hder != NULL) s->Hder->color = 0;
+                    s->color = 1;
+                    rotacionIzquierda(s);
+                    s = x->padre->Hizq;
+                }
+
+                s->color = x->padre->color;
+                x->padre->color = 0;
+
+                if (s->Hizq != NULL) s->Hizq->color = 0;
+                rotacionDerecha(x->padre);
+                x = raiz;
+            }
+        }
+    }
+
+    if (x != NULL) x->color = 0;
+}
+
+void ArbolRN::transplanteRN(NodoARN* u, NodoARN* v) {
+    if (u->padre == NULL) {
+        raiz = v;
+    }
+    else if (u == u->padre->Hizq) {
+        u->padre->Hizq = v;
+    }
+    else {
+        u->padre->Hder = v;
+    }
+
+    if (v != NULL) {
+        v->padre = u->padre;
+    }
+}
+
+void ArbolRN::eliminarNodoAux(NodoARN* node, int key) {
+    NodoARN* z = NULL;
+    NodoARN* x;
+    NodoARN* y;
+
+    while (node != NULL) {
+        if (obtenerLlave(node->dato, 2) == key) {
+            z = node;
+        }
+
+        if (obtenerLlave(node->dato, 2) <= key) {
+            node = node->Hder;
+        }
+        else {
+            node = node->Hizq;
+        }
+    }
+
+    if (z == NULL) {
+        cout << "Llave no encontrada en el arbol." << endl;
+        return;
+    }
+
+    y = z;
+    int y_original_color = y->color;
+
+    if (z->Hizq == NULL) {
+        x = z->Hder;
+        transplanteRN(z, z->Hder);
+    }
+    else if (z->Hder == NULL) {
+        x = z->Hizq;
+        transplanteRN(z, z->Hizq);
+    }
+    else {
+        y = minimo(z->Hder);
+        y_original_color = y->color;
+        x = y->Hder;
+
+        if (y->padre != z) {
+            transplanteRN(y, y->Hder);
+            y->Hder = z->Hder;
+
+            if (y->Hder != NULL) {
+                y->Hder->padre = y;
+            }
+        }
+
+        transplanteRN(z, y);
+        y->Hizq = z->Hizq;
+        if (y->Hizq != NULL) {
+            y->Hizq->padre = y;
+        }
+        y->color = z->color;
+    }
+
+    delete z;
+
+    if (y_original_color == 0 && x != NULL) {
+        eliminarReparar(x);
+    }
+}
+
+NodoARN* ArbolRN::minimo(NodoARN* nodo) {
+    while (nodo->Hizq != NULL) {
+        nodo = nodo->Hizq;
+    }
+
+    return nodo;
+}
+
+void ArbolRN::eliminarNodo(int data) {
+    eliminarNodoAux(this->raiz, data);
+}
+
+void ArbolRN::recorrerArbol(NodoARN*& nodo, int valor, int pos) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->Hizq, valor, pos);
+
+        if (obtenerLlave(nodo->dato, pos) == valor) {
+            eliminarNodo(obtenerLlave(nodo->dato, 2));
+            // Reinicia el recorrido desde el principio después de la eliminación
+            recorrerArbol(raiz, valor, pos);
+            return; // Termina el recorrido actual para evitar procesamiento adicional
+        }
+
+        recorrerArbol(nodo->Hder, valor, pos);
+    }
+}
+
 void ArbolRN::crearMarcas(ArbolBB& pasillos, ArbolAVL& productos)
 {
     string linea, codPasillo, codProducto, codMarca, nombre,
@@ -278,165 +453,4 @@ void ArbolRN::rotacionDerecha(NodoARN* nodo)
 
     y->Hder = nodo;
     nodo->padre = y;
-}
-
-
-
-
-
-void ArbolRN::deleteFix(NodoARN* x) {
-    while (x != raiz && (x == NULL || x->color == 0)) {
-        if (x == x->padre->Hizq) {
-            NodoARN* s = x->padre->Hder;
-            if (s->color == 1) {
-                s->color = 0;
-                x->padre->color = 1;
-                rotacionIzquierda(x->padre);
-                s = x->padre->Hder;
-            }
-            if ((s->Hizq == NULL || s->Hizq->color == 0) &&
-                (s->Hder == NULL || s->Hder->color == 0)) {
-                s->color = 1;
-                x = x->padre;
-            }
-            else {
-                if (s->Hder == NULL || s->Hder->color == 0) {
-                    if (s->Hizq != NULL) s->Hizq->color = 0;
-                    s->color = 1;
-                    rotacionDerecha(s);
-                    s = x->padre->Hder;
-                }
-                s->color = x->padre->color;
-                x->padre->color = 0;
-                if (s->Hder != NULL) s->Hder->color = 0;
-                rotacionIzquierda(x->padre);
-                x = raiz;
-            }
-        }
-        else {
-            NodoARN* s = x->padre->Hizq;
-            if (s->color == 1) {
-                s->color = 0;
-                x->padre->color = 1;
-                rotacionDerecha(x->padre);
-                s = x->padre->Hizq;
-            }
-            if ((s->Hizq == NULL || s->Hizq->color == 0) &&
-                (s->Hder == NULL || s->Hder->color == 0)) {
-                s->color = 1;
-                x = x->padre;
-            }
-            else {
-                if (s->Hizq == NULL || s->Hizq->color == 0) {
-                    if (s->Hder != NULL) s->Hder->color = 0;
-                    s->color = 1;
-                    rotacionIzquierda(s);
-                    s = x->padre->Hizq;
-                }
-                s->color = x->padre->color;
-                x->padre->color = 0;
-                if (s->Hizq != NULL) s->Hizq->color = 0;
-                rotacionDerecha(x->padre);
-                x = raiz;
-            }
-        }
-    }
-    if (x != NULL) x->color = 0;
-}
-
-void ArbolRN::rbTransplant(NodoARN* u, NodoARN* v) {
-    if (u->padre == NULL) {
-        raiz = v;
-    }
-    else if (u == u->padre->Hizq) {
-        u->padre->Hizq = v;
-    }
-    else {
-        u->padre->Hder = v;
-    }
-    if (v != NULL) {
-        v->padre = u->padre;
-    }
-}
-
-void ArbolRN::deleteNodeHelper(NodoARN* node, int key) {
-    NodoARN* z = NULL;
-    NodoARN* x;
-    NodoARN* y;
-
-    while (node != NULL) {
-        if (obtenerLlave(node->dato, 2) == key) {
-            z = node;
-        }
-        if (obtenerLlave(node->dato, 2) <= key) {
-            node = node->Hder;
-        }
-        else {
-            node = node->Hizq;
-        }
-    }
-
-    if (z == NULL) {
-        std::cout << "Key not found in the tree" << std::endl;
-        return;
-    }
-
-    y = z;
-    int y_original_color = y->color;
-    if (z->Hizq == NULL) {
-        x = z->Hder;
-        rbTransplant(z, z->Hder);
-    }
-    else if (z->Hder == NULL) {
-        x = z->Hizq;
-        rbTransplant(z, z->Hizq);
-    }
-    else {
-        y = minimum(z->Hder);
-        y_original_color = y->color;
-        x = y->Hder;
-        if (y->padre != z) {
-            rbTransplant(y, y->Hder);
-            y->Hder = z->Hder;
-            if (y->Hder != NULL) {
-                y->Hder->padre = y;
-            }
-        }
-        rbTransplant(z, y);
-        y->Hizq = z->Hizq;
-        if (y->Hizq != NULL) {
-            y->Hizq->padre = y;
-        }
-        y->color = z->color;
-    }
-    delete z;
-    if (y_original_color == 0 && x != NULL) {
-        deleteFix(x);
-    }
-}
-
-NodoARN* ArbolRN::minimum(NodoARN* node) {
-    while (node->Hizq != NULL) {
-        node = node->Hizq;
-    }
-    return node;
-}
-
-void ArbolRN::eliminarNodo(int data) {
-    deleteNodeHelper(this->raiz, data);
-}
-
-void ArbolRN::recorrerArbol(NodoARN*& nodo, int valor, int pos) {
-    if (nodo != NULL) {
-        recorrerArbol(nodo->Hizq, valor, pos);
-
-        if (obtenerLlave(nodo->dato, pos) == valor) {
-            eliminarNodo(obtenerLlave(nodo->dato, 2));
-            // Reinicia el recorrido desde el principio después de la eliminación
-            recorrerArbol(raiz, valor, pos);
-            return; // Termina el recorrido actual para evitar procesamiento adicional
-        }
-
-        recorrerArbol(nodo->Hder, valor, pos);
-    }
 }

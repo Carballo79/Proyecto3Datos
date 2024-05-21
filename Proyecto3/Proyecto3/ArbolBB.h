@@ -17,6 +17,7 @@ public:
     bool existeNodo(string dato);
     NodoABB* filtrarDato(NodoABB* nodo, string dato);
     void modificarNodo(string llaveNodo, string nuevoDato);
+    void eliminarNodo(int cod);
     void crearPasillos();
     void crearCiudades();
     void mostrarArbol(NodoABB* nodo, int nivel, wstring& salida);
@@ -28,7 +29,6 @@ public:
     void crearReportePasillos();
     void crearReportePasilloMasVisitado();
     void crearReportePasilloMenosVisitado();
-    void eliminarNodo(int cod);
 
  
 };

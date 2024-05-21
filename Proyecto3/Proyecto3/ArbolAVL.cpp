@@ -99,6 +99,87 @@ void ArbolAVL::modificarNodo(string llaveNodo, string nuevoDato)
         cout << "\n\tProducto no encontrado en el arbol.\n" << endl;
 }
 
+NodoAVL* ArbolAVL::eliminarNodo(NodoAVL* nodo, int llave)
+{
+    if (nodo == NULL)
+        return nodo;
+
+    if (llave < obtenerLlave(nodo->dato, 1))
+        nodo->Hizq = eliminarNodo(nodo->Hizq, llave);
+    else if (llave > obtenerLlave(nodo->dato, 1))
+        nodo->Hder = eliminarNodo(nodo->Hder, llave);
+    else
+    {
+        if ((nodo->Hizq == NULL) || (nodo->Hder == NULL))
+        {
+            NodoAVL* temp = nodo->Hizq ? nodo->Hizq : nodo->Hder;
+
+            if (temp == NULL)
+            {
+                temp = nodo;
+                nodo = NULL;
+            }
+            else
+                *nodo = *temp;
+
+            free(temp);
+        }
+        else
+        {
+            NodoAVL* temp = minValorNodo(nodo->Hder);
+
+            nodo->dato = temp->dato;
+
+            nodo->Hder = eliminarNodo(nodo->Hder, obtenerLlave(temp->dato, 1));
+        }
+    }
+
+    if (nodo == NULL)
+        return nodo;
+
+    nodo->altura = 1 + maximo(altura(nodo->Hizq), altura(nodo->Hder));
+
+    int balance = obtenerFB(nodo);
+
+    if ((balance > 1) && (obtenerFB(nodo->Hizq) >= 0))
+        return rotacionDerecha(nodo);
+
+    if ((balance > 1) && (obtenerFB(nodo->Hizq) < 0))
+    {
+        nodo->Hizq = rotacionIzquierda(nodo->Hizq);
+        return rotacionDerecha(nodo);
+    }
+
+    if ((balance < -1) && (obtenerFB(nodo->Hder) <= 0))
+        return rotacionIzquierda(nodo);
+
+    if ((balance < -1) && (obtenerFB(nodo->Hder) > 0))
+    {
+        nodo->Hder = rotacionDerecha(nodo->Hder);
+        return rotacionIzquierda(nodo);
+    }
+
+    return nodo;
+}
+
+NodoAVL* ArbolAVL::eliminar(int dato) {
+    return raiz = eliminarNodo(raiz, dato);
+}
+
+void ArbolAVL::recorrerArbol(NodoAVL*& nodo, int valor, int pos) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->Hizq, valor, pos);
+        if (obtenerLlave(nodo->dato, pos) == valor) {
+            eliminar(obtenerLlave(nodo->dato, 1));
+            // Reinicia el recorrido desde el principio después de la eliminación
+            recorrerArbol(raiz, valor, pos);
+            return; // Termina el recorrido actual para evitar procesamiento adicional
+        }
+
+        recorrerArbol(nodo->Hder, valor, pos);
+    }
+}
+
 void ArbolAVL::crearProductos(ArbolBB& pasillos)
 {
     string linea, codPasillo, codProducto, nombre, producto;
@@ -248,122 +329,12 @@ int ArbolAVL::obtenerFB(NodoAVL* N)
     return (altura(N->Hizq) - altura(N->Hder));
 }
 
-NodoAVL* minValueNode(NodoAVL* node)
+NodoAVL* ArbolAVL::minValorNodo(NodoAVL* nodo)
 {
-    NodoAVL* current = node;
+    NodoAVL* act = nodo;
 
-    /* loop down to find the leftmost leaf */
-    while (current->Hizq != NULL)
-        current = current->Hizq;
+    while (act->Hizq != NULL)
+        act = act->Hizq;
 
-    return current;
+    return act;
 }
-
-NodoAVL* ArbolAVL::eliminarNodo(NodoAVL* root, int key)
-{
-
-    if (root == NULL)
-        return root;
-
-
-    if (key < obtenerLlave(root->dato,1))
-        root->Hizq = eliminarNodo(root->Hizq, key);
-
-
-    else if (key > obtenerLlave(root->dato, 1))
-        root->Hder = eliminarNodo(root->Hder, key);
-
-
-    else
-    {
-        if ((root->Hizq == NULL) ||
-            (root->Hder == NULL))
-        {
-            NodoAVL* temp = root->Hizq ?
-                root->Hizq:
-                root->Hder;
-
-            if (temp == NULL)
-            {
-                temp = root;
-                root = NULL;
-            }
-            else 
-                *root = *temp; 
-
-            free(temp);
-        }
-        else
-        {
-
-            NodoAVL* temp = minValueNode(root->Hder);
-
-
-            root->dato = temp->dato;
-
-            root->Hder = eliminarNodo(root->Hder,
-                obtenerLlave(temp->dato, 1));
-        }
-    }
-
-
-    if (root == NULL)
-        return root;
-
-
-    root->altura = 1 + maximo(altura(root->Hizq),
-        altura(root->Hder));
-
-
-    int balance = obtenerFB(root);
-
-
-    if (balance > 1 &&
-        obtenerFB(root->Hizq) >= 0)
-        return rotacionDerecha(root);
-
-
-    if (balance > 1 &&
-        obtenerFB(root->Hizq) < 0)
-    {
-        root->Hizq = rotacionIzquierda(root->Hizq);
-        return rotacionDerecha(root);
-    }
-
-
-    if (balance < -1 &&
-        obtenerFB(root->Hder) <= 0)
-        return rotacionIzquierda(root);
-
-    if (balance < -1 &&
-        obtenerFB(root->Hder) > 0)
-    {
-        root->Hder = rotacionDerecha(root->Hder);
-        return rotacionIzquierda(root);
-    }
-
-    return root;
-}
-
-
-NodoAVL* ArbolAVL::eliminar(int dato) {
-    return raiz = eliminarNodo(raiz, dato);
-}
-
-
-void ArbolAVL::recorrerArbol(NodoAVL*& nodo, int valor, int pos) {
-    if (nodo != NULL) {
-        recorrerArbol(nodo->Hizq, valor, pos);
-        if (obtenerLlave(nodo->dato, pos) == valor) {
-            eliminar(obtenerLlave(nodo->dato, 1));
-            // Reinicia el recorrido desde el principio después de la eliminación
-            recorrerArbol(raiz, valor, pos);
-            return; // Termina el recorrido actual para evitar procesamiento adicional
-        }
-
-        recorrerArbol(nodo->Hder, valor, pos);
-    }
- }
-
-
-
