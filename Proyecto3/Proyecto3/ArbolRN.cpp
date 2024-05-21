@@ -426,4 +426,17 @@ void ArbolRN::eliminarNodo(int data) {
     deleteNodeHelper(this->raiz, data);
 }
 
+void ArbolRN::recorrerArbol(NodoARN*& nodo, int valor, int pos) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->Hizq, valor, pos);
 
+        if (obtenerLlave(nodo->dato, pos) == valor) {
+            eliminarNodo(obtenerLlave(nodo->dato, 2));
+            // Reinicia el recorrido desde el principio después de la eliminación
+            recorrerArbol(raiz, valor, pos);
+            return; // Termina el recorrido actual para evitar procesamiento adicional
+        }
+
+        recorrerArbol(nodo->Hder, valor, pos);
+    }
+}

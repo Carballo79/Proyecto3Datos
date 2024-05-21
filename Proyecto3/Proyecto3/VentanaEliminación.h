@@ -449,7 +449,12 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				int cod = stringAInt(codPasilloStr);
 				pasillosB->eliminarNodo(cod);
 				MessageBox::Show("Pasillo Eliminado: " + pasilloStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
-				/////////ELIMINAR PRODUCTOS, MARCAS Y INVENTARIOS CON EL PASILLO ELIMINADO/////////////////				this->Hide();
+				/////////ELIMINAR PRODUCTOS, MARCAS Y INVENTARIOS CON EL PASILLO ELIMINADO////////////////
+				productosB->recorrerArbol(productosB->raiz, cod, 0);
+				inventariosB->recorrerArbol(inventariosB->raiz, cod, 0);
+				marcasB->recorrerArbol(marcasB->raiz, cod, 0);
+
+				this->Hide();
 				ventana2->Show();
 			}
 			else
@@ -472,6 +477,9 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				productosB->eliminarNodo(productosB->raiz, cod);
 				MessageBox::Show("Producto Eliminado: " + productoStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 				/////////ELIMINAR MARCAS Y INVENTARIOS CON EL PRODUCTO ELIMINADO/////////////////
+				marcasB->recorrerArbol(marcasB->raiz, cod, 1);
+				inventariosB->recorrerArbol(inventariosB->raiz, cod, 1);
+
 				this->Hide();
 				ventana2->Show();
 			}
@@ -494,6 +502,8 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				marcasB->eliminarNodo(cod);
 				MessageBox::Show("Marca Eliminada: " + marcaStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 				/////////ELIMINAR INVENTARIOS CON LA MARCA ELIMINADA/////////////////
+				inventariosB->recorrerArbol(inventariosB->raiz, cod, 2);
+
 				this->Hide();
 				ventana2->Show();
 			}

@@ -32,4 +32,9 @@ public:
 
 
     NodoAVL* eliminarNodo(NodoAVL* root, int key);
+
+    void recorrerArbol(NodoAVL*& nodo, int valor, int pos);
+
+    NodoAVL* eliminar(int dato);
+
 };

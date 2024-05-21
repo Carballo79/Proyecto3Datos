@@ -25,4 +25,6 @@ public:
 
     NodoAAA* eliminarNodoRecursivo(NodoAAA* nodo, int cod);
     void eliminarNodo(int cod);
+
+    void recorrerArbol(NodoAAA*& nodo, int variable, int pos);
 };

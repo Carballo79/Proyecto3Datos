@@ -344,3 +344,26 @@ NodoAVL* ArbolAVL::eliminarNodo(NodoAVL* root, int key)
 
     return root;
 }
+
+
+NodoAVL* ArbolAVL::eliminar(int dato) {
+    return raiz = eliminarNodo(raiz, dato);
+}
+
+
+void ArbolAVL::recorrerArbol(NodoAVL*& nodo, int valor, int pos) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->Hizq, valor, pos);
+        if (obtenerLlave(nodo->dato, pos) == valor) {
+            eliminar(obtenerLlave(nodo->dato, 1));
+            // Reinicia el recorrido desde el principio después de la eliminación
+            recorrerArbol(raiz, valor, pos);
+            return; // Termina el recorrido actual para evitar procesamiento adicional
+        }
+
+        recorrerArbol(nodo->Hder, valor, pos);
+    }
+ }
+
+
+

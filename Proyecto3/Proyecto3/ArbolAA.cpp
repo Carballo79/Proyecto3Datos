@@ -248,3 +248,17 @@ void ArbolAA::eliminarNodo(int cod) {
         raiz = eliminarNodoRecursivo(raiz, cod);
     }
 }
+
+void ArbolAA::recorrerArbol(NodoAAA*& nodo, int valor,int pos) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->Hizq, valor,pos);
+        if (obtenerLlave(nodo->dato,pos) == valor) {
+            eliminarNodo(obtenerLlave(nodo->dato, 3));
+            // Reinicia el recorrido desde el principio después de la eliminación
+            recorrerArbol(raiz, valor,pos);
+            return; // Termina el recorrido actual para evitar procesamiento adicional
+        }
+
+        recorrerArbol(nodo->Hder, valor,pos);
+    }
+}

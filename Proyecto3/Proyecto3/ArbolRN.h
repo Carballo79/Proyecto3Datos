@@ -27,4 +27,6 @@ public:
     void rbTransplant(NodoARN* u, NodoARN* v);
     void deleteNodeHelper(NodoARN* node, int key);
     NodoARN* minimum(NodoARN* node);
+
+    void recorrerArbol(NodoARN*& nodo, int variable, int pos);
 };
