@@ -11,3 +11,4 @@ int stringAInt(std::string str);
 int obtenerLlave(std::string dato, int pos);
 string obtenerDato(string dato, int pos);
 wstring strAWstr(string& str);
+string intAString(int num);

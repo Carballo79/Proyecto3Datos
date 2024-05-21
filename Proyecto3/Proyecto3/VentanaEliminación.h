@@ -449,7 +449,7 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				int cod = stringAInt(codPasilloStr);
 				pasillosB->eliminarNodo(cod);
 				MessageBox::Show("Pasillo Eliminado: " + pasilloStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
-				this->Hide();
+				/////////ELIMINAR PRODUCTOS, MARCAS Y INVENTARIOS CON EL PASILLO ELIMINADO/////////////////				this->Hide();
 				ventana2->Show();
 			}
 			else
@@ -471,7 +471,7 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				int cod = stringAInt(codProductoStr);
 				productosB->eliminarNodo(productosB->raiz, cod);
 				MessageBox::Show("Producto Eliminado: " + productoStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
-
+				/////////ELIMINAR MARCAS Y INVENTARIOS CON EL PRODUCTO ELIMINADO/////////////////
 				this->Hide();
 				ventana2->Show();
 			}
@@ -493,7 +493,7 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				int cod = stringAInt(codMarcaStr);
 				marcasB->eliminarNodo(cod);
 				MessageBox::Show("Marca Eliminada: " + marcaStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
-
+				/////////ELIMINAR INVENTARIOS CON LA MARCA ELIMINADA/////////////////
 				this->Hide();
 				ventana2->Show();
 			}
@@ -511,8 +511,10 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 			if (inventariosB->existeNodo(msclr::interop::marshal_as<string>(this->codInventario->Text))) {
 				string inventario = inventariosB->buscarNodo(inventariosB->raiz, codInventarioStr)->dato;
 				String^ inventarioStr = msclr::interop::marshal_as<String^>(inventario);
-				MessageBox::Show("Inventario encontrado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				int cod = stringAInt(codInventarioStr);
+				inventariosB->eliminarNodo(cod);
 
+				MessageBox::Show("Inventario Eliminado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 				this->Hide();
 				ventana2->Show();
 			}
@@ -550,7 +552,8 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 			if (clientesB->buscar(msclr::interop::marshal_as<string>(this->codCliente->Text))) {
 				string cliente = clientesB->obtenerNodo(codClienteStr);
 				String^ clienteStr = msclr::interop::marshal_as<String^>(cliente);
-				MessageBox::Show("Cliente encontrado: " + clienteStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				clientesB->eliminar(codClienteStr);
+				MessageBox::Show("Cliente Eliminado: " + clienteStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 				this->Hide();
 				ventana2->Show();
@@ -569,7 +572,8 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 			if (vendedoresB->buscar(msclr::interop::marshal_as<string>(this->codVendedor->Text))) {
 				string vendedor = vendedoresB->obtenerNodo(codVendedorStr);
 				String^ vendedorStr = msclr::interop::marshal_as<String^>(vendedor);
-				MessageBox::Show("Vendedor encontrado: " + vendedorStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				vendedoresB->eliminar(codVendedorStr);
+				MessageBox::Show("Vendedor Eliminado: " + vendedorStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 				this->Hide();
 				ventana2->Show();
@@ -590,7 +594,7 @@ private: System::Void btnEliminar_Click(System::Object^ sender, System::EventArg
 				String^ ciudadStr = msclr::interop::marshal_as<String^>(ciudad);
 				int cod = stringAInt(codCiudadStr);
 				ciudadesB->eliminarNodo(cod);
-				/////////ELIMINAR ADMINISTRADORES CON LA CIUDAD ELIMINADA/////////////////
+				/////////ELIMINAR ADMINISTRADORES Y CLIENTES CON LA CIUDAD ELIMINADA/////////////////
 
 
 				MessageBox::Show("Ciudad Eliminada: " + ciudadStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);

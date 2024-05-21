@@ -22,4 +22,7 @@ public:
 
     NodoAAA* skew(NodoAAA* x);
     NodoAAA* split(NodoAAA* x);
+
+    NodoAAA* eliminarNodoRecursivo(NodoAAA* nodo, int cod);
+    void eliminarNodo(int cod);
 };
