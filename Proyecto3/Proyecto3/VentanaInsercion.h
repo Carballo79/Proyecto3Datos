@@ -487,7 +487,6 @@ namespace Proyecto3 {
 			this->codPasillo->Name = L"codPasillo";
 			this->codPasillo->Size = System::Drawing::Size(200, 22);
 			this->codPasillo->TabIndex = 25;
-			this->codPasillo->TextChanged += gcnew System::EventHandler(this, &VentanaInsercion::codPasillo_TextChanged);
 			// 
 			// codProducto
 			// 
@@ -573,7 +572,6 @@ namespace Proyecto3 {
 			this->label1->Size = System::Drawing::Size(101, 25);
 			this->label1->TabIndex = 31;
 			this->label1->Text = L"Inserción";
-			this->label1->Click += gcnew System::EventHandler(this, &VentanaInsercion::label1_Click);
 			// 
 			// VentanaInsercion
 			// 
@@ -616,7 +614,6 @@ namespace Proyecto3 {
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VentanaInsercion";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &VentanaInsercion::VentanaInsercion_FormClosing);
-			this->Load += gcnew System::EventHandler(this, &VentanaInsercion::VentanaInsercion_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -798,12 +795,18 @@ namespace Proyecto3 {
 								string inventario = codPasilloStr + "; " + codProductoStr + "; " +codMarcaStr + "; " +
 									codInventarioStr + "; " +nombreStr + "; " + cantStockStr + "; " +
 									codCanastaStr;
-								inventariosB->insertarNodo(inventario);
 
-								MessageBox::Show("Inventario insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+								if ((codCanastaStr == "1") || (codCanastaStr == "0"))
+								{
+									inventariosB->insertarNodo(inventario);
 
-								this->Close();
-								ventana2->Show();
+									MessageBox::Show("Inventario insertado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+									this->Close();
+									ventana2->Show();
+								}
+								else
+									MessageBox::Show("Solo puedes ingresar 0 o 1 como código de canasta.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 							}
 							else {
 								MessageBox::Show("Inventario ya registrado.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
@@ -920,15 +923,9 @@ namespace Proyecto3 {
 			}
 		}
 	}
-private: System::Void VentanaInsercion_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void codPasillo_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
 private: System::Void VentanaInsercion_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 	this->Hide();
 	ventana2->Show();
-}
-private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

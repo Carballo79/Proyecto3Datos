@@ -234,11 +234,13 @@ void ArbolAVL::mostrarPorLlave(NodoAVL* nodo, string dato)
 
 void ArbolAVL::mostrarPorLlave(string dato) { mostrarPorLlave(raiz, dato); }
 
-void ArbolAVL::mostrarArbol(NodoAVL* nodo, int nivel, wstring& salida)
+wstring ArbolAVL::mostrarArbol(NodoAVL* nodo, int nivel)
 {
+    wstring salida;
+
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hder, nivel + 1);
 
         // Construye la cadena con los datos del nodo
         wstring nodoStr = L"";
@@ -251,8 +253,10 @@ void ArbolAVL::mostrarArbol(NodoAVL* nodo, int nivel, wstring& salida)
         // Agrega la cadena del nodo a la salida
         salida += nodoStr;
 
-        mostrarArbol(nodo->Hizq, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hizq, nivel + 1);
     }
+
+    return salida;
 }
 
 void ArbolAVL::crearReporteProPasillo(string llaveNodo) {
@@ -337,4 +341,17 @@ NodoAVL* ArbolAVL::minValorNodo(NodoAVL* nodo)
         act = act->Hizq;
 
     return act;
+}
+
+void ArbolAVL::filtrarPorPasillo(NodoAVL* R, string codPasillo, System::Windows::Forms::ComboBox^ comboBox)
+{
+    if (R == NULL)
+        return;
+
+    filtrarPorPasillo(R->Hizq, codPasillo, comboBox);
+    
+    if (obtenerDato(R->dato, 0) == codPasillo)
+        comboBox->Items->Add(gcnew System::String(R->dato.c_str()));
+
+    filtrarPorPasillo(R->Hder, codPasillo, comboBox);
 }

@@ -6,3 +6,4 @@ ArbolAVL* productosB = NULL;
 ArbolRN* marcasB = NULL;
 ArbolAA* inventariosB = NULL;
 ArbolB* clientesB = NULL, * adminsB = NULL, * vendedoresB = NULL;
+NodoCliente* comprasClientes = NULL;

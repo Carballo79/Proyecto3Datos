@@ -207,25 +207,27 @@ void ArbolAA::crearInventarios(ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& 
     archivo.close();
 }
 
-void ArbolAA::mostrarArbol(NodoAAA* nodo, int nivel, wstring& salida)
+wstring ArbolAA::mostrarArbol(NodoAAA* nodo, int nivel)
 {
+    wstring salida;
+
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hder, nivel + 1);
 
-        // Construye la cadena con los datos del nodo
         wstring nodoStr = L"";
+        
         for (int i = 0; i < nivel; i++)
             nodoStr += L"    ";
 
-        // Agrega el dato del nodo a la cadena
         nodoStr += strAWstr(nodo->dato) + L"\r\n";
 
-        // Agrega la cadena del nodo a la salida
         salida += nodoStr;
 
-        mostrarArbol(nodo->Hizq, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hizq, nivel + 1);
     }
+
+    return salida;
 }
 
 NodoAAA* ArbolAA::skew(NodoAAA* x)

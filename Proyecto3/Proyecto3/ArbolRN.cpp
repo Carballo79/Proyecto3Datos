@@ -126,8 +126,7 @@ NodoARN* ArbolRN::filtrarDato(NodoARN* nodo, string dato)
     if (nodo == NULL)
         return NULL;
 
-    if (nodo == NULL || dato == obtenerDato(nodo->dato, 0) + "; "
-        + obtenerDato(nodo->dato, 1) + "; " + obtenerDato(nodo->dato, 2))
+    if (nodo == NULL || dato == obtenerDato(nodo->dato, 1))
         return nodo;
 
     if (obtenerLlave(dato, 2) < stringAInt(obtenerDato(nodo->dato, 2)))
@@ -392,25 +391,27 @@ void ArbolRN::mostrarPorLlave(NodoARN* nodo, string dato)
 
 void ArbolRN::mostrarPorLlave(string dato) { mostrarPorLlave(raiz, dato); }
 
-void ArbolRN::mostrarArbol(NodoARN* nodo, int nivel, wstring& salida)
+wstring ArbolRN::mostrarArbol(NodoARN* nodo, int nivel)
 {
+    wstring salida;
+
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hder, nivel + 1);
 
-        // Construye la cadena con los datos del nodo
         wstring nodoStr = L"";
+        
         for (int i = 0; i < nivel; i++)
             nodoStr += L"    ";
 
-        // Agrega el dato del nodo a la cadena
-        nodoStr += strAWstr((nodo->color ? "(R) " : "(N) ") + nodo->dato) + L"\r\n";
+        nodoStr += strAWstr(nodo->dato + (nodo->color ? " (R)" : " (N)")) + L"\r\n";
 
-        // Agrega la cadena del nodo a la salida
         salida += nodoStr;
 
-        mostrarArbol(nodo->Hizq, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hizq, nivel + 1);
     }
+
+    return salida;
 }
 
 void ArbolRN::rotacionIzquierda(NodoARN* nodo)
@@ -453,4 +454,17 @@ void ArbolRN::rotacionDerecha(NodoARN* nodo)
 
     y->Hder = nodo;
     nodo->padre = y;
+}
+
+void ArbolRN::filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox)
+{
+    if (R == NULL)
+        return;
+
+    filtrarPorProducto(R->Hizq, codProducto, comboBox);
+
+    if (obtenerDato(R->dato, 1) == codProducto)
+        comboBox->Items->Add(gcnew System::String(R->dato.c_str()));
+
+    filtrarPorProducto(R->Hder, codProducto, comboBox);
 }

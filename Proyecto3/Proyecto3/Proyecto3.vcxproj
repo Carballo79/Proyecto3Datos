@@ -89,7 +89,7 @@
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>User32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
@@ -100,7 +100,7 @@
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>User32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -130,8 +130,12 @@
     <ClCompile Include="NodoABB.cpp" />
     <ClCompile Include="NodoAVL.cpp" />
     <ClCompile Include="NodoARN.cpp" />
+    <ClCompile Include="NodoCliente.cpp" />
+    <ClCompile Include="NodoCteInfo.cpp" />
+    <ClCompile Include="NodoProducto.cpp" />
     <ClCompile Include="Proyecto3.cpp" />
     <ClCompile Include="Utilidades.cpp" />
+    <ClCompile Include="VentanaCompras.cpp" />
     <ClCompile Include="VentanaConsultas.cpp" />
     <ClCompile Include="VentanaEliminación.cpp" />
     <ClCompile Include="VentanaInsercion.cpp" />
@@ -150,8 +154,15 @@
     <ClInclude Include="NodoABB.h" />
     <ClInclude Include="NodoARN.h" />
     <ClInclude Include="NodoAVL.h" />
+    <ClInclude Include="NodoCliente.h" />
+    <ClInclude Include="NodoCteInfo.h" />
+    <ClInclude Include="NodoProducto.h" />
+    <ClInclude Include="NodoProInfo.h" />
     <ClInclude Include="Proyecto3.h" />
     <ClInclude Include="Utilidades.h" />
+    <ClInclude Include="VentanaCompras.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaConsultas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -172,6 +183,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VentanaCompras.resx">
+      <DependentUpon>VentanaCompras.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaConsultas.resx">
       <DependentUpon>VentanaConsultas.h</DependentUpon>
     </EmbeddedResource>

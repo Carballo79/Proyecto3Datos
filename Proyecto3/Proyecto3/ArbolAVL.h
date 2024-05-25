@@ -23,7 +23,7 @@ public:
     void crearProductos(ArbolBB& pasillos);
     void mostrarPorLlave(NodoAVL* nodo, string dato);
     void mostrarPorLlave(string dato);
-    void mostrarArbol(NodoAVL* nodo, int nivel, wstring& salida);
+    wstring mostrarArbol(NodoAVL* nodo, int nivel);
     void crearReporteProPasillo(NodoAVL* nodo, string llaveNodo, ofstream& archivo);
     void crearReporteProPasillo(string llaveNodo);
 
@@ -33,4 +33,6 @@ public:
     NodoAVL* rotacionDerecha(NodoAVL* n2);
     int obtenerFB(NodoAVL* N);
     NodoAVL* minValorNodo(NodoAVL* nodo);
+
+    void filtrarPorPasillo(NodoAVL* R, string codPasillo, System::Windows::Forms::ComboBox^ comboBox);
 };

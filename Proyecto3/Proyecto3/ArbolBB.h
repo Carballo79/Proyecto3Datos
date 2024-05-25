@@ -1,6 +1,7 @@
 #pragma once
 
 #include "NodoABB.h"
+#using <System.Windows.Forms.dll>
 
 using namespace std;
 
@@ -20,7 +21,7 @@ public:
     void eliminarNodo(int cod);
     void crearPasillos();
     void crearCiudades();
-    void mostrarArbol(NodoABB* nodo, int nivel, wstring& salida);
+    wstring mostrarArbol(NodoABB* nodo, int nivel);
     string buscarMasVisitado(NodoABB* nodo);
     string buscarMasVisitado();
     string buscarMenosVisitado(NodoABB* nodo);
@@ -30,5 +31,5 @@ public:
     void crearReportePasilloMasVisitado();
     void crearReportePasilloMenosVisitado();
 
- 
+    void inordenR(NodoABB* R, System::Windows::Forms::ComboBox^ comboBox);
 };

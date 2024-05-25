@@ -25,7 +25,9 @@ public:
     void crearMarcas(ArbolBB& pasillos, ArbolAVL& productos);
     void mostrarPorLlave(NodoARN* nodo, string dato);
     void mostrarPorLlave(string dato);
-    void mostrarArbol(NodoARN* nodo, int nivel, wstring& salida);
+    wstring mostrarArbol(NodoARN* nodo, int nivel);
     void rotacionIzquierda(NodoARN* nodo);
     void rotacionDerecha(NodoARN* nodo);
+
+    void filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox);
 };

@@ -11,8 +11,6 @@ using namespace std;
 
 ArbolB::ArbolB() : raiz(NULL) {}
 
-
-
 void ArbolB::insertarNodo(string dato)
 {
     if (raiz == NULL)
@@ -320,26 +318,33 @@ string ArbolB::obtenerNodo(string dato)
     return "";
 }
 
-void ArbolB::mostrarArbol(NodoAB* nodo, wstring& salida)
+wstring ArbolB::mostrarArbol(NodoAB* nodo, int nivel)
 {
+    wstring salida;
+
     if (nodo != NULL)
     {
-        for (int i = nodo->cuenta - 1; i >= 0; i--)
+        for (int i = nodo->cuenta; i >= 0; i--)
         {
-            mostrarArbol(nodo->hijos[i + 1], salida);
+            if (i < nodo->cuenta + 1)
+                salida += mostrarArbol(nodo->hijos[i], nivel + 1);
 
-            // Construye la cadena con los datos del nodo
-            std::wstring nodoStr = L"\t";
-            nodoStr += strAWstr(nodo->llaves[i] + " - \t\r\n");
+            if (i > 0 && i <= nodo->cuenta)
+            {
+                wstring nodoStr = L"";
 
-            // Agrega la cadena del nodo a la salida
-            salida += nodoStr;
+                for (int j = 0; j < nivel; j++)
+                    nodoStr += L"    ";
+
+                nodoStr += strAWstr(nodo->llaves[i - 1]) + L"\r\n";
+
+                salida += nodoStr;
+            }
         }
-
-        mostrarArbol(nodo->hijos[0], salida);
     }
-}
 
+    return salida;
+}
 
 void ArbolB::reporteClientes()
 {

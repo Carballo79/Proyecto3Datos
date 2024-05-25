@@ -734,14 +734,20 @@ private: System::Void btnModificar_Click(System::Object^ sender, System::EventAr
 		if (!String::IsNullOrEmpty(this->nombre->Text) && !String::IsNullOrEmpty(this->cantStock->Text)
 			&& !String::IsNullOrEmpty(this->codCanasta->Text)) {
 			string nuevoDato = nombreStr + "; " + cantStockStr + "; " + codCanastaStr;
-			inventariosB->modificarNodo(codInventarioStr, nuevoDato);
 
-			string inventario = inventariosB->buscarNodo(inventariosB->raiz, codInventarioStr)->dato;
-			String^ inventarioStr = msclr::interop::marshal_as<String^>(inventario);
-			MessageBox::Show("Inventario modificado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+			if ((codCanastaStr == "1") || (codCanastaStr == "0"))
+			{
+				inventariosB->modificarNodo(codInventarioStr, nuevoDato);
 
-			this->Hide();
-			ventana2->Show();
+				string inventario = inventariosB->buscarNodo(inventariosB->raiz, codInventarioStr)->dato;
+				String^ inventarioStr = msclr::interop::marshal_as<String^>(inventario);
+				MessageBox::Show("Inventario modificado: " + inventarioStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				this->Hide();
+				ventana2->Show();
+			}
+			else
+				MessageBox::Show("Solo puedes ingresar 0 o 1 como código de canasta.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
 		}
 		else {
 			MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);

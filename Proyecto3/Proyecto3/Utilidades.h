@@ -1,14 +1,11 @@
 #pragma once
 
 #include <sstream>
-#include <string>
-#include <codecvt>
-#include <locale>
 
 using namespace std;
 
 int stringAInt(std::string str);
+string intAString(int num);
 int obtenerLlave(std::string dato, int pos);
 string obtenerDato(string dato, int pos);
-wstring strAWstr(string& str);
-string intAString(int num);
+wstring strAWstr(string str);

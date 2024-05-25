@@ -11,5 +11,4 @@ public:
     NodoABB* Hizq, * Hder, * siguiente, * anterior;
 
     friend class ArbolBB;
-    friend class PilaABB;
 };

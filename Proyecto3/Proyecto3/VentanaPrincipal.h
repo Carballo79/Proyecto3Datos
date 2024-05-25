@@ -1,9 +1,10 @@
 #pragma once
 
-#include "VentanaSupermercado.h"
 #include <string>
 #include <Windows.h>
 #include <msclr/marshal_cppstd.h>
+#include "VentanaSupermercado.h"
+#include "Utilidades.h"
 
 namespace Proyecto3 {
 
@@ -12,9 +13,6 @@ namespace Proyecto3 {
 	ArbolRN marcasA;
 	ArbolAA inventariosA;
 	ArbolB clientesA, adminsA, vendedoresA;
-
-	wstring salida = L"";
-	LPCWSTR sw;
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -46,36 +44,6 @@ namespace Proyecto3 {
 			clientesA.crearClientes(ciudadesA);
 			adminsA.crearAdmins(ciudadesA);
 			vendedoresA.crearVendedores();
-
-			salida += L"\nPasillos:\n";
-			pasillosA.mostrarArbol(pasillosA.raiz, 0, salida);
-
-			salida += L"\nProductos:\n";
-			productosA.mostrarArbol(productosA.raiz, 0, salida);
-
-			salida += L"\nMarcas:\n";
-			marcasA.mostrarArbol(marcasA.raiz, 0, salida);
-
-			salida += L"\nInventarios:\n";
-			inventariosA.mostrarArbol(inventariosA.raiz, 0, salida);
-
-			salida += L"\nClientes:\n";
-			clientesA.mostrarArbol(clientesA.raiz, salida);
-
-			salida += L"\nAdministradores:\n";
-			adminsA.mostrarArbol(adminsA.raiz, salida);
-
-			salida += L"\nVendedores:\n";
-			vendedoresA.mostrarArbol(vendedoresA.raiz, salida);
-
-			salida += L"\nCiudades:\n";
-			ciudadesA.mostrarArbol(ciudadesA.raiz, 0, salida);
-
-			salida += L"\n";
-
-			sw = salida.c_str();
-
-			OutputDebugString(sw);
 		}
 
 		void ReiniciarComponentes(void) {
@@ -100,8 +68,10 @@ namespace Proyecto3 {
 				delete components;
 			}
 		}
+	public: System::Windows::Forms::TextBox^ stringCedula;
+	protected:
 
-	private: System::Windows::Forms::TextBox^ stringCedula;
+
 	private: System::Windows::Forms::Label^ label1;
 
 
@@ -181,7 +151,7 @@ namespace Proyecto3 {
 			// 
 			// button2
 			// 
-			this->button2->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->button2->BackColor = System::Drawing::SystemColors::Control;
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
@@ -297,9 +267,9 @@ namespace Proyecto3 {
 			// 
 			this->panel2->Controls->Add(this->btnCteReg);
 			this->panel2->Controls->Add(this->btnCteNoReg);
-			this->panel2->Location = System::Drawing::Point(216, 260);
+			this->panel2->Location = System::Drawing::Point(216, 277);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(200, 100);
+			this->panel2->Size = System::Drawing::Size(200, 93);
 			this->panel2->TabIndex = 21;
 			this->panel2->Visible = false;
 			// 
@@ -307,7 +277,7 @@ namespace Proyecto3 {
 			// 
 			this->btnCteReg->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCteReg->Location = System::Drawing::Point(17, 6);
+			this->btnCteReg->Location = System::Drawing::Point(17, 7);
 			this->btnCteReg->Name = L"btnCteReg";
 			this->btnCteReg->Size = System::Drawing::Size(166, 33);
 			this->btnCteReg->TabIndex = 23;
@@ -319,7 +289,7 @@ namespace Proyecto3 {
 			// 
 			this->btnCteNoReg->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCteNoReg->Location = System::Drawing::Point(17, 61);
+			this->btnCteNoReg->Location = System::Drawing::Point(17, 54);
 			this->btnCteNoReg->Name = L"btnCteNoReg";
 			this->btnCteNoReg->Size = System::Drawing::Size(166, 33);
 			this->btnCteNoReg->TabIndex = 24;
@@ -331,7 +301,7 @@ namespace Proyecto3 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::ControlLight;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(444, 431);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->btnVendedor);

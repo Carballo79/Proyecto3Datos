@@ -2,6 +2,7 @@
 #include "ArbolBB.h"
 #include "Utilidades.h"
 #include <string>
+#include <Windows.h>
 #include <fstream>
 #include <sstream>
 
@@ -225,25 +226,27 @@ void ArbolBB::crearCiudades()
     }
 }
 
-void ArbolBB::mostrarArbol(NodoABB* nodo, int nivel, wstring& salida)
+wstring ArbolBB::mostrarArbol(NodoABB* nodo, int nivel)
 {
+    wstring salida;
+    
     if (nodo != NULL)
     {
-        mostrarArbol(nodo->Hder, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hder, nivel + 1);
 
-        // Construye la cadena con los datos del nodo
         wstring nodoStr = L"";
+
         for (int i = 0; i < nivel; i++)
             nodoStr += L"    ";
 
-        // Agrega el dato del nodo a la cadena
         nodoStr += strAWstr(nodo->dato) + L"\r\n";
 
-        // Agrega la cadena del nodo a la salida
         salida += nodoStr;
 
-        mostrarArbol(nodo->Hizq, nivel + 1, salida);
+        salida += mostrarArbol(nodo->Hizq, nivel + 1);
     }
+
+    return salida;
 }
 
 string ArbolBB::buscarMasVisitado(NodoABB* nodo)
@@ -370,5 +373,17 @@ void ArbolBB::crearReportePasilloMenosVisitado()
     }
     else {
         cout << "\nNo se pudo abrir el archivo.\n";
+    }
+}
+
+void ArbolBB::inordenR(NodoABB* R, System::Windows::Forms::ComboBox^ comboBox)
+{
+    if (R == NULL)
+        return;
+    else
+    {
+        inordenR(R->Hizq, comboBox);
+        comboBox->Items->Add(gcnew System::String(R->dato.c_str()));
+        inordenR(R->Hder, comboBox);
     }
 }

@@ -1,5 +1,10 @@
-﻿  ArbolB.cpp
+﻿  ArbolAA.cpp
+  ArbolAVL.cpp
+  ArbolB.cpp
+  ArbolBB.cpp
+  ArbolRN.cpp
   Proyecto3.cpp
+  VentanaCompras.cpp
   VentanaConsultas.cpp
   VentanaEliminación.cpp
   VentanaInsercion.cpp
