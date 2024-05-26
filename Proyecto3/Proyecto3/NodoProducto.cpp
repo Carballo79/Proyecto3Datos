@@ -3,10 +3,10 @@
 
 NodoProducto::NodoProducto() : siguiente(NULL) {}
 
-NodoProducto* NodoProducto::insertar(NodoProducto*& lista, std::string marca, std::string cantidad)
+NodoProducto* NodoProducto::insertar(NodoProducto*& lista, std::string producto, std::string cantidad)
 {
     NodoProducto* nuevo = new NodoProducto();
-    nuevo->info.marca = marca;
+    nuevo->info.producto = producto;
     nuevo->info.cantidad = cantidad;
     nuevo->siguiente = lista;
     lista = nuevo;

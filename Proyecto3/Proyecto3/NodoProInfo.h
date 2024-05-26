@@ -5,6 +5,6 @@
 class NodoProInfo
 {
 public:
-    std::string marca;
+    std::string producto;
     std::string cantidad;
 };

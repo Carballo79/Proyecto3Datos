@@ -138,10 +138,13 @@
     <ClCompile Include="VentanaCompras.cpp" />
     <ClCompile Include="VentanaConsultas.cpp" />
     <ClCompile Include="VentanaEliminación.cpp" />
+    <ClCompile Include="VentanaFacturacionClientes.cpp" />
+    <ClCompile Include="VentanaInformacion.cpp" />
     <ClCompile Include="VentanaInsercion.cpp" />
     <ClCompile Include="VentanaModificacion.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
     <ClCompile Include="VentanaSupermercado.cpp" />
+    <ClCompile Include="VentanaVerificaciones.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolAA.h" />
@@ -169,6 +172,12 @@
     <ClInclude Include="VentanaEliminación.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="VentanaFacturacionClientes.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaInformacion.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaInsercion.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -179,6 +188,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaSupermercado.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaVerificaciones.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -192,6 +204,12 @@
     <EmbeddedResource Include="VentanaEliminación.resx">
       <DependentUpon>VentanaEliminación.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VentanaFacturacionClientes.resx">
+      <DependentUpon>VentanaFacturacionClientes.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaInformacion.resx">
+      <DependentUpon>VentanaInformacion.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaInsercion.resx">
       <DependentUpon>VentanaInsercion.h</DependentUpon>
     </EmbeddedResource>
@@ -203,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaSupermercado.resx">
       <DependentUpon>VentanaSupermercado.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaVerificaciones.resx">
+      <DependentUpon>VentanaVerificaciones.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

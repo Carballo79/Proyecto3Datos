@@ -10,5 +10,5 @@ public:
 
     NodoProducto();
 
-    static NodoProducto* insertar(NodoProducto*& lista, std::string marca, std::string cantidad);
+    static NodoProducto* insertar(NodoProducto*& lista, std::string producto, std::string cantidad);
 };

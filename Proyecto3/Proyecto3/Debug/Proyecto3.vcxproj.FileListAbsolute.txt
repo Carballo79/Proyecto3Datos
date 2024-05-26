@@ -30,3 +30,7 @@ C:\Users\cjose\Downloads\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.Vent
 C:\Users\cjose\Downloads\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaEliminación.resources
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaCompras.resources
+C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaCompras.resources
+C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaInformacion.resources
+C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaVerificaciones.resources
+C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaFacturacionClientes.resources

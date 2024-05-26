@@ -6,6 +6,9 @@
 #include "VentanaModificacion.h"
 #include "VentanaEliminación.h"
 #include "VentanaCompras.h"
+#include "VentanaInformacion.h"
+#include "VentanaVerificaciones.h"
+#include "VentanaFacturacionClientes.h"
 #include <Windows.h>
 
 namespace Proyecto3 {
@@ -88,7 +91,7 @@ namespace Proyecto3 {
 	private: System::Windows::Forms::ToolStripMenuItem^ mRevisarGondolas1;
 
 	private: System::Windows::Forms::ToolStripMenuItem^ mConsultarPrecio1;
-	private: System::Windows::Forms::ToolStripMenuItem^ mConsultarDescuento1;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ mConsultarProductos1;
 	private: System::Windows::Forms::ToolStripMenuItem^ mConsultarMarcas1;
 	private: System::Windows::Forms::ToolStripMenuItem^ mConsultarDescuentoClientes1;
@@ -215,175 +218,6 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem47;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem48;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem49;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem50;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	public:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	public:
 
@@ -529,9 +363,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ menuVerTodo;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem31;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem32;
 private: System::Windows::Forms::ToolStripMenuItem^ mConsultarPrecio;
-private: System::Windows::Forms::ToolStripMenuItem^ mConsultarDescuento;
+private: System::Windows::Forms::ToolStripMenuItem^ mConsultarDescuentoCliente;
+
+
 private: System::Windows::Forms::ToolStripMenuItem^ mConsultarProductos;
-private: System::Windows::Forms::ToolStripMenuItem^ mConsultarDescuentoClientes;
+
 
 
 
@@ -659,14 +495,13 @@ private: System::ComponentModel::IContainer^ components;
 			this->facturaciónInventarioToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->facturaciónClienteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mControles = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->mVerificarInventario = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mRevisarGondolas = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->mVerificarInventario = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mConsultarPrecio = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->mConsultarDescuento = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->mConsultarDescuentoCliente = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mConsultarProductos = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mConsultarMarcas = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mComprar = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->mConsultarDescuentoClientes = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mAcercaDe = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mContactos = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->datosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -719,13 +554,12 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem106 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip4 = (gcnew System::Windows::Forms::MenuStrip());
 			this->mControles1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->mVerificarInventario1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mRevisarGondolas1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->mVerificarInventario1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mConsultarPrecio1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->mConsultarDescuento1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->mConsultarDescuentoClientes1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mConsultarProductos1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mConsultarMarcas1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->mConsultarDescuentoClientes1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mComprar1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip5 = (gcnew System::Windows::Forms::MenuStrip());
 			this->mUsuarios = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -1244,13 +1078,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->facturaciónClienteToolStripMenuItem->Name = L"facturaciónClienteToolStripMenuItem";
 			this->facturaciónClienteToolStripMenuItem->Size = System::Drawing::Size(242, 28);
 			this->facturaciónClienteToolStripMenuItem->Text = L"Facturación Cliente";
+			this->facturaciónClienteToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::facturaciónClienteToolStripMenuItem_Click);
 			// 
 			// mControles
 			// 
-			this->mControles->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
-				this->mVerificarInventario,
-					this->mRevisarGondolas, this->mConsultarPrecio, this->mConsultarDescuento, this->mConsultarProductos, this->mConsultarMarcas,
-					this->mComprar, this->mConsultarDescuentoClientes
+			this->mControles->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
+				this->mRevisarGondolas,
+					this->mVerificarInventario, this->mConsultarPrecio, this->mConsultarDescuentoCliente, this->mConsultarProductos, this->mConsultarMarcas,
+					this->mComprar
 			});
 			this->mControles->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -1258,54 +1093,54 @@ private: System::ComponentModel::IContainer^ components;
 			this->mControles->Size = System::Drawing::Size(102, 28);
 			this->mControles->Text = L"Controles";
 			// 
-			// mVerificarInventario
-			// 
-			this->mVerificarInventario->Name = L"mVerificarInventario";
-			this->mVerificarInventario->Size = System::Drawing::Size(322, 28);
-			this->mVerificarInventario->Text = L"Verificar inventario";
-			// 
 			// mRevisarGondolas
 			// 
 			this->mRevisarGondolas->Name = L"mRevisarGondolas";
-			this->mRevisarGondolas->Size = System::Drawing::Size(322, 28);
+			this->mRevisarGondolas->Size = System::Drawing::Size(313, 28);
 			this->mRevisarGondolas->Text = L"Verificar góndolas";
+			this->mRevisarGondolas->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mRevisarGondolas_Click);
+			// 
+			// mVerificarInventario
+			// 
+			this->mVerificarInventario->Name = L"mVerificarInventario";
+			this->mVerificarInventario->Size = System::Drawing::Size(313, 28);
+			this->mVerificarInventario->Text = L"Verificar inventario";
+			this->mVerificarInventario->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mVerificarInventario_Click);
 			// 
 			// mConsultarPrecio
 			// 
 			this->mConsultarPrecio->Name = L"mConsultarPrecio";
-			this->mConsultarPrecio->Size = System::Drawing::Size(322, 28);
+			this->mConsultarPrecio->Size = System::Drawing::Size(313, 28);
 			this->mConsultarPrecio->Text = L"Consultar precio";
+			this->mConsultarPrecio->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarPrecio_Click);
 			// 
-			// mConsultarDescuento
+			// mConsultarDescuentoCliente
 			// 
-			this->mConsultarDescuento->Name = L"mConsultarDescuento";
-			this->mConsultarDescuento->Size = System::Drawing::Size(322, 28);
-			this->mConsultarDescuento->Text = L"Consultar descuento";
+			this->mConsultarDescuentoCliente->Name = L"mConsultarDescuentoCliente";
+			this->mConsultarDescuentoCliente->Size = System::Drawing::Size(313, 28);
+			this->mConsultarDescuentoCliente->Text = L"Consultar descuento cliente";
+			this->mConsultarDescuentoCliente->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarDescuento_Click);
 			// 
 			// mConsultarProductos
 			// 
 			this->mConsultarProductos->Name = L"mConsultarProductos";
-			this->mConsultarProductos->Size = System::Drawing::Size(322, 28);
+			this->mConsultarProductos->Size = System::Drawing::Size(313, 28);
 			this->mConsultarProductos->Text = L"Consultar productos";
+			this->mConsultarProductos->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarProductos_Click);
 			// 
 			// mConsultarMarcas
 			// 
 			this->mConsultarMarcas->Name = L"mConsultarMarcas";
-			this->mConsultarMarcas->Size = System::Drawing::Size(322, 28);
+			this->mConsultarMarcas->Size = System::Drawing::Size(313, 28);
 			this->mConsultarMarcas->Text = L"Consultar marcas";
+			this->mConsultarMarcas->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarMarcas_Click);
 			// 
 			// mComprar
 			// 
 			this->mComprar->Name = L"mComprar";
-			this->mComprar->Size = System::Drawing::Size(322, 28);
+			this->mComprar->Size = System::Drawing::Size(313, 28);
 			this->mComprar->Text = L"Comprar";
 			this->mComprar->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mComprar_Click);
-			// 
-			// mConsultarDescuentoClientes
-			// 
-			this->mConsultarDescuentoClientes->Name = L"mConsultarDescuentoClientes";
-			this->mConsultarDescuentoClientes->Size = System::Drawing::Size(322, 28);
-			this->mConsultarDescuentoClientes->Text = L"Consultar descuento clientes";
 			// 
 			// mAcercaDe
 			// 
@@ -1830,17 +1665,17 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip4->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
 			this->menuStrip4->Location = System::Drawing::Point(672, 388);
 			this->menuStrip4->Name = L"menuStrip4";
-			this->menuStrip4->Size = System::Drawing::Size(146, 181);
+			this->menuStrip4->Size = System::Drawing::Size(146, 162);
 			this->menuStrip4->TabIndex = 7;
 			this->menuStrip4->Text = L"menuStrip4";
 			// 
 			// mControles1
 			// 
 			this->mControles1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
-			this->mControles1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(8) {
-				this->mVerificarInventario1,
-					this->mRevisarGondolas1, this->mConsultarPrecio1, this->mConsultarDescuento1, this->mConsultarProductos1, this->mConsultarMarcas1,
-					this->mConsultarDescuentoClientes1, this->mComprar1
+			this->mControles1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(7) {
+				this->mRevisarGondolas1,
+					this->mVerificarInventario1, this->mConsultarPrecio1, this->mConsultarDescuentoClientes1, this->mConsultarProductos1, this->mConsultarMarcas1,
+					this->mComprar1
 			});
 			this->mControles1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -1851,15 +1686,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->mControles1->Text = L"Controles";
 			this->mControles1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			// 
-			// mVerificarInventario1
-			// 
-			this->mVerificarInventario1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mVerificarInventario1.Image")));
-			this->mVerificarInventario1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->mVerificarInventario1->Name = L"mVerificarInventario1";
-			this->mVerificarInventario1->Size = System::Drawing::Size(330, 30);
-			this->mVerificarInventario1->Text = L"Verificar inventario";
-			this->mVerificarInventario1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
 			// mRevisarGondolas1
 			// 
 			this->mRevisarGondolas1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mRevisarGondolas1.Image")));
@@ -1868,6 +1694,17 @@ private: System::ComponentModel::IContainer^ components;
 			this->mRevisarGondolas1->Size = System::Drawing::Size(330, 30);
 			this->mRevisarGondolas1->Text = L"Verificar góndolas";
 			this->mRevisarGondolas1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->mRevisarGondolas1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mRevisarGondolas1_Click);
+			// 
+			// mVerificarInventario1
+			// 
+			this->mVerificarInventario1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mVerificarInventario1.Image")));
+			this->mVerificarInventario1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->mVerificarInventario1->Name = L"mVerificarInventario1";
+			this->mVerificarInventario1->Size = System::Drawing::Size(330, 30);
+			this->mVerificarInventario1->Text = L"Verificar inventario";
+			this->mVerificarInventario1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->mVerificarInventario1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mVerificarInventario1_Click);
 			// 
 			// mConsultarPrecio1
 			// 
@@ -1877,33 +1714,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->mConsultarPrecio1->Size = System::Drawing::Size(330, 30);
 			this->mConsultarPrecio1->Text = L"Consultar precio";
 			this->mConsultarPrecio1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// mConsultarDescuento1
-			// 
-			this->mConsultarDescuento1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mConsultarDescuento1.Image")));
-			this->mConsultarDescuento1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->mConsultarDescuento1->Name = L"mConsultarDescuento1";
-			this->mConsultarDescuento1->Size = System::Drawing::Size(330, 30);
-			this->mConsultarDescuento1->Text = L"Consultar descuento";
-			this->mConsultarDescuento1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// mConsultarProductos1
-			// 
-			this->mConsultarProductos1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mConsultarProductos1.Image")));
-			this->mConsultarProductos1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->mConsultarProductos1->Name = L"mConsultarProductos1";
-			this->mConsultarProductos1->Size = System::Drawing::Size(330, 30);
-			this->mConsultarProductos1->Text = L"Consultar productos";
-			this->mConsultarProductos1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// mConsultarMarcas1
-			// 
-			this->mConsultarMarcas1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mConsultarMarcas1.Image")));
-			this->mConsultarMarcas1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->mConsultarMarcas1->Name = L"mConsultarMarcas1";
-			this->mConsultarMarcas1->Size = System::Drawing::Size(330, 30);
-			this->mConsultarMarcas1->Text = L"Consultar marcas";
-			this->mConsultarMarcas1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->mConsultarPrecio1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarPrecio1_Click);
 			// 
 			// mConsultarDescuentoClientes1
 			// 
@@ -1913,6 +1724,27 @@ private: System::ComponentModel::IContainer^ components;
 			this->mConsultarDescuentoClientes1->Size = System::Drawing::Size(330, 30);
 			this->mConsultarDescuentoClientes1->Text = L"Consultar descuento clientes";
 			this->mConsultarDescuentoClientes1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->mConsultarDescuentoClientes1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarDescuentoClientes1_Click);
+			// 
+			// mConsultarProductos1
+			// 
+			this->mConsultarProductos1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mConsultarProductos1.Image")));
+			this->mConsultarProductos1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->mConsultarProductos1->Name = L"mConsultarProductos1";
+			this->mConsultarProductos1->Size = System::Drawing::Size(330, 30);
+			this->mConsultarProductos1->Text = L"Consultar productos";
+			this->mConsultarProductos1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->mConsultarProductos1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarProductos1_Click);
+			// 
+			// mConsultarMarcas1
+			// 
+			this->mConsultarMarcas1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"mConsultarMarcas1.Image")));
+			this->mConsultarMarcas1->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->mConsultarMarcas1->Name = L"mConsultarMarcas1";
+			this->mConsultarMarcas1->Size = System::Drawing::Size(330, 30);
+			this->mConsultarMarcas1->Text = L"Consultar marcas";
+			this->mConsultarMarcas1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->mConsultarMarcas1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mConsultarMarcas1_Click);
 			// 
 			// mComprar1
 			// 
@@ -2266,8 +2098,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->mRevisarGondolas1->Enabled = false;
 			this->mConsultarMarcas->Enabled = false;
 			this->mConsultarMarcas1->Enabled = false;
-			this->mConsultarDescuentoClientes->Enabled = false;
-			this->mConsultarDescuentoClientes1->Enabled = false;
+			this->mConsultarDescuentoClientes1->Enabled = true;
+			this->mConsultarDescuentoCliente->Enabled = true;
 			this->mUsuarios->Enabled = false;
 		}
 
@@ -2280,16 +2112,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->mFacturacion1->Enabled = false;
 			this->mVerificarInventario->Enabled = false;
 			this->mVerificarInventario1->Enabled = false;
-			this->mConsultarDescuento->Enabled = false;
-			this->mConsultarDescuento1->Enabled = false;
+			this->mConsultarDescuentoCliente->Enabled = false;
+			this->mConsultarDescuentoClientes1->Enabled = false;
 			this->mComprar->Enabled = false;
 			this->mComprar1->Enabled = false;
 			this->mRevisarGondolas->Enabled = false;
 			this->mRevisarGondolas1->Enabled = false;
 			this->mConsultarMarcas->Enabled = false;
 			this->mConsultarMarcas1->Enabled = false;
-			this->mConsultarDescuentoClientes->Enabled = false;
-			this->mConsultarDescuentoClientes1->Enabled = false;
 			this->mUsuarios->Enabled = false;
 		}
 
@@ -2302,8 +2132,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->mFacturacion1->Enabled = false;
 			this->mVerificarInventario->Enabled = false;
 			this->mVerificarInventario1->Enabled = false;
-			this->mConsultarDescuento->Enabled = false;
-			this->mConsultarDescuento1->Enabled = false;
+			this->mConsultarDescuentoCliente->Enabled = true;
+			this->mConsultarDescuentoClientes1->Enabled = true;
 			this->mComprar->Enabled = false;
 			this->mComprar1->Enabled = false;
 			this->mRevisarGondolas->Enabled = false;
@@ -2933,6 +2763,84 @@ private: System::Void mComprar_Click(System::Object^ sender, System::EventArgs^ 
 private: System::Void mComprar1_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
 	VentanaCompras^ ventana = gcnew VentanaCompras(this, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarPrecio_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 1;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarDescuento_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 2;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarProductos_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 3;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarMarcas_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 4;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarPrecio1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 1;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarDescuentoClientes1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 2;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarProductos1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 3;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void mConsultarMarcas1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 4;
+	this->Hide();
+	VentanaInformacion^ ventana = gcnew VentanaInformacion(this, opc, *comprasClientes);
+	ventana->ShowDialog();
+}
+
+private: System::Void mRevisarGondolas_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 1;
+	this->Hide();
+	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void mVerificarInventario_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 2;
+	this->Hide();
+	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void mRevisarGondolas1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 1;
+	this->Hide();
+	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void mVerificarInventario1_Click(System::Object^ sender, System::EventArgs^ e) {
+	int opc = 2;
+	this->Hide();
+	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void facturaciónClienteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	VentanaFacturacionClientes^ ventana = gcnew VentanaFacturacionClientes(this,*comprasClientes);
 	ventana->ShowDialog();
 }
 };

@@ -1,46 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\",
+  "WorkspaceRootPath": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolRN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaFacturacionClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaFacturacionClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolRN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaFacturacionClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaFacturacionClientes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolAVL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolAVL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolBB.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolBB.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\NodoCliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\NodoCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaCompras.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO\\2022\\COMMUNITY\\VC\\TOOLS\\MSVC\\14.39.33519\\INCLUDE\\XSTRING||{3B902123-F8A7-4915-9F01-361F908088D0}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,136 +37,116 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArbolRN.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolRN.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp",
-              "RelativeToolTip": "Proyecto3\\ArbolRN.cpp",
-              "ViewState": "AQIAALUBAAAAAAAAAAAAAMoBAABZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-25T13:18:35.103Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArbolRN.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolRN.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h",
-              "RelativeToolTip": "Proyecto3\\ArbolRN.h",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAABUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-25T13:18:34.394Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArbolAVL.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolAVL.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.cpp",
-              "RelativeToolTip": "Proyecto3\\ArbolAVL.cpp",
-              "ViewState": "AQIAAE8BAAAAAAAAAAAAAFkBAABYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-25T13:17:59.562Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ArbolAVL.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolAVL.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h",
-              "RelativeToolTip": "Proyecto3\\ArbolAVL.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACQAAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-25T13:17:13.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ArbolBB.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.h",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolBB.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.h",
-              "RelativeToolTip": "Proyecto3\\ArbolBB.h",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-25T13:13:52.766Z",
+              "DocumentIndex": 6,
+              "Title": "xstring",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xstring",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xstring",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xstring",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.39.33519\\include\\xstring",
+              "ViewState": "AQIAALAKAAAAAAAAAAAYwMMIAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-05-26T01:14:22.864Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ArbolBB.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolBB.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolBB.cpp",
-              "RelativeToolTip": "Proyecto3\\ArbolBB.cpp",
-              "ViewState": "AQIAAHMBAAAAAAAAAAAAAIIBAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-25T12:33:58.661Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "NodoCliente.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\NodoCliente.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
-              "RelativeToolTip": "Proyecto3\\NodoCliente.cpp",
-              "ViewState": "AQIAACUAAAAAAAAAAAAAAD0AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-25T12:32:18.59Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "NodoCliente.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
               "RelativeDocumentMoniker": "Proyecto3\\NodoCliente.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
               "RelativeToolTip": "Proyecto3\\NodoCliente.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAALAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-25T12:31:55.255Z",
+              "WhenOpened": "2024-05-26T01:09:37.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
+              "Title": "VentanaFacturacionClientes.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaFacturacionClientes.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaFacturacionClientes.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaFacturacionClientes.h [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto3\\VentanaFacturacionClientes.h [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T01:01:17.103Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VentanaFacturacionClientes.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaFacturacionClientes.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaFacturacionClientes.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaFacturacionClientes.h",
+              "RelativeToolTip": "Proyecto3\\VentanaFacturacionClientes.h",
+              "ViewState": "AQIAAI8AAAAAAAAAAAAAAKcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-26T00:08:52.96Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NodoCliente.cpp",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
+              "RelativeDocumentMoniker": "Proyecto3\\NodoCliente.cpp",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
+              "RelativeToolTip": "Proyecto3\\NodoCliente.cpp",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAQwGgAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-25T23:57:05.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "VentanaCompras.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaCompras.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto3\\VentanaCompras.h [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-05-25T23:24:11.262Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "VentanaCompras.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h",
               "RelativeDocumentMoniker": "Proyecto3\\VentanaCompras.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h",
               "RelativeToolTip": "Proyecto3\\VentanaCompras.h",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAADIAAAAAAAAA",
+              "ViewState": "AQIAAFgBAAAAAAAAAAAvwGQBAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-24T11:18:36.627Z",
+              "WhenOpened": "2024-05-25T23:24:13.453Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "VentanaCompras.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaCompras.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaCompras.h [Design]",
-              "RelativeToolTip": "Proyecto3\\VentanaCompras.h [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-24T11:00:13.83Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }

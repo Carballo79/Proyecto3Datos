@@ -973,7 +973,7 @@
   <metadata name="menuStrip4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>362, 17</value>
   </metadata>
-  <data name="mVerificarInventario1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mRevisarGondolas1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH2SURBVEhLrZbL
@@ -988,7 +988,7 @@
         /kXRMMVWzF2liVqtv2Fxv9EBoCMgAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="mRevisarGondolas1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mVerificarInventario1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH2SURBVEhLrZbL
@@ -1018,7 +1018,7 @@
         /kXRMMVWzF2liVqtv2Fxv9EBoCMgAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="mConsultarDescuento1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="mConsultarDescuentoClientes1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH2SURBVEhLrZbL
@@ -1049,21 +1049,6 @@
 </value>
   </data>
   <data name="mConsultarMarcas1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
-        qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH2SURBVEhLrZbL
-        ThRBFIYnXEx8AtyCr+GFsFT2iEYNcY8aYCWsfAIugadA3agx0agbeAACbFRg70oIJBCC39dWTap7aoaO
-        zZ98ydSpOn91Tp3umlYN3YUDuKiwD7ehsTZBw1/wM+BvY8410gAcw+9iVJYx51xTSy6cg1W4D9fhJfik
-        76GqD+DcC3CtOebOQnbT12BClVO4BVXdAedyOXqVNAIncATP4B38gE+gUTfZAK5x7VswVw+99GzrDbjz
-        q2LUTPOgl56FRsHAHljLnK7BI1gKPAyxnPTQS0+9i4Nx4IHmdBN2wTUpO1AqQ6LYHCsOnoSBtbMTUvmU
-        0fwrTAb8bWwbBiHVOOjl/GMDyvY8h0MYMhBkWaJ5n4Egf38D59ww6gZorpeeJa2BCU+L0T8tQ9UkynNw
-        zjOJmgJjlr1DcQNLFvW/G+hVUizRH0hLFE16leiBgSBLZJlLJbIkLrR29wwk8pDtFuc1dEP5HmJbUD1k
-        GyUeclGNy9rUVrRbXJOi+TDkVGrTOi+aT+k5LAYmQiynjhdNrYMBX/OmWgC99Gwr97HzYvkM7afIaAy+
-        gGvN6fqxU70+17mr0Y3PIJfT8blWXhJeFh5MvHCegwm5C+cjODcNrjXH3Bnoh1q60iuzm3pd+hvQWN5o
-        /kXRMMVWzF2liVqtv2Fxv9EBoCMgAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="mConsultarDescuentoClientes1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
         qAAAAKgBefSzxgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAH2SURBVEhLrZbL

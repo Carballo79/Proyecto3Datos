@@ -19,7 +19,13 @@ public:
     NodoCliente* buscar(NodoCliente* lista, string cedula);
     NodoCliente* insertarOrdenadoSinRepetir(NodoCliente*& listaClientes, string cedula, string marca, string cantidad);
     wstring mostrarListaDeClientes(NodoCliente* lista);
-    void borrarProducto(NodoCliente* listaClientes, string cedula, string marca);
-    bool buscarMarca(NodoCliente* listaClientes, string cedula, string marca);
+    wstring mostrarClientePorCedula(NodoCliente* lista, string& cedulaBuscada);
+    void borrarProducto(NodoCliente* listaClientes, string cedula, string producto);
+    bool buscarProducto(NodoCliente* listaClientes, string cedula, string produco);
     string retornarCantidadDeProducto(NodoCliente* listaClientes, string cedula, string marca);
+
+ 
+    void mostrarClientePorcedulaFacturar(NodoCliente* lista, string cedulaBuscada, System::Windows::Forms::CheckedListBox^ checkListBox);
+
+    NodoCliente* eliminarPrimero(NodoCliente*& lista);
 };
