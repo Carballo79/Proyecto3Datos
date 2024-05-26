@@ -185,6 +185,7 @@ namespace Proyecto3 {
 
 
 		//Facturar va el codigo de el archivo factura!!!!!!!!
+		comprasClientes->ImprimirFactura(comprasClientes, clientesB, inventariosB, marcasB);
 
 
 		//Continuar

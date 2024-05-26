@@ -11,12 +11,28 @@ int stringAInt(string str)
     return num;
 }
 
+float stringAFloat(std::string str) {
+    stringstream ss(str);
+    float num = 0.0f; // Inicializamos a 0.0 para evitar resultados inesperados
+
+    ss >> num;
+
+    return num;
+}
+
 string intAString(int num)
 {
     ostringstream ss;
 
     ss << num;
 
+    return ss.str();
+}
+
+
+string floatAString(float num) {
+    ostringstream ss;
+    ss << num;
     return ss.str();
 }
 

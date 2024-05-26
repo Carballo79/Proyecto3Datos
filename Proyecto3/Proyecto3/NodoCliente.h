@@ -4,6 +4,10 @@
 
 #include "NodoCteInfo.h"
 #include "NodoProducto.h"
+#include "ArbolAA.h"
+#include "ArbolB.h"
+#include "ArbolRN.h"
+
 
 using namespace std;
 
@@ -29,4 +33,6 @@ public:
     void mostrarClientePorcedulaFacturar(NodoCliente* lista, string cedulaBuscada, System::Windows::Forms::CheckedListBox^ checkListBox);
 
     NodoCliente* eliminarPrimero(NodoCliente*& lista);
+
+    void ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& clientes, ArbolAA*& inventarios, ArbolRN*& marcas);
 };
