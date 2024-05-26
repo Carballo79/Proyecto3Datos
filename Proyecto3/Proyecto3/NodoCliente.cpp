@@ -4,29 +4,30 @@
 #include <msclr/marshal_cppstd.h>
 #using <System.Windows.Forms.dll>
 
+
 NodoCliente::NodoCliente() : siguiente(NULL) {}
 
 NodoCliente* NodoCliente::insertarOrdenado(NodoCliente*& lista, string cedula)
 {
-        NodoCliente* nuevo = new NodoCliente();
-        nuevo->info.cedula = cedula;
-        nuevo->siguiente = NULL;
+    NodoCliente* nuevo = new NodoCliente();
+    nuevo->info.cedula = cedula;
+    nuevo->siguiente = NULL;
 
-        // Si la lista está vacía, el nuevo nodo se convierte en el primer nodo
-        if (lista == NULL) {
-            lista = nuevo;
+    // Si la lista está vacía, el nuevo nodo se convierte en el primer nodo
+    if (lista == NULL) {
+        lista = nuevo;
+    }
+    else {
+        // Recorre la lista hasta encontrar el último nodo
+        NodoCliente* actual = lista;
+        while (actual->siguiente != NULL) {
+            actual = actual->siguiente;
         }
-        else {
-            // Recorre la lista hasta encontrar el último nodo
-            NodoCliente* actual = lista;
-            while (actual->siguiente != NULL) {
-                actual = actual->siguiente;
-            }
-            // Inserta el nuevo nodo al final de la lista
-            actual->siguiente = nuevo;
-        }
+        // Inserta el nuevo nodo al final de la lista
+        actual->siguiente = nuevo;
+    }
 
-        return nuevo;
+    return nuevo;
 }
 
 NodoCliente* NodoCliente::buscar(NodoCliente* lista, string cedula)
@@ -109,7 +110,7 @@ void NodoCliente::mostrarClientePorcedulaFacturar(NodoCliente* lista, string ced
 
             NodoProducto* listaProductos = lista->info.listaProductos;
             while (listaProductos != NULL) {
-                System::String^ productoInfo = L"Producto: " + msclr::interop::marshal_as<System::String^>(listaProductos->info.producto) + L" /// Cantidad: " + msclr::interop::marshal_as<System::String^>(listaProductos->info.cantidad);
+                System::String^ productoInfo = L"Producto: " + msclr::interop::marshal_as<System::String^>(listaProductos->info.producto) + L" Cantidad: " + msclr::interop::marshal_as<System::String^>(listaProductos->info.cantidad);
                 checkListBox->Items->Add(productoInfo);
                 listaProductos = listaProductos->siguiente;
             }
@@ -147,14 +148,12 @@ void NodoCliente::borrarProducto(NodoCliente* listaClientes, string cedula, stri
                 anterior->siguiente = actual->siguiente; // Si no es el primer nodo
 
             delete actual;
-            cout << "Producto '" << producto << "' eliminado del cliente con cedula " << cedula << endl;
             return;
         }
 
         anterior = actual;
         actual = actual->siguiente;
     }
-    cout << "Producto '" << producto << "' no encontrado en la lista de productos del cliente con cedula " << cedula << endl;
 }
 
 bool NodoCliente::buscarProducto(NodoCliente* listaClientes, string cedula, string producto)
@@ -177,6 +176,28 @@ bool NodoCliente::buscarProducto(NodoCliente* listaClientes, string cedula, stri
     return false;
 }
 
+void NodoCliente::modificarProducto(NodoCliente* listaClientes, string cedula, string producto, string cantidad)
+{
+    NodoCliente* cliente = buscar(listaClientes, cedula);
+
+    if (cliente == NULL)
+        return;
+
+    NodoProducto* actual = cliente->info.listaProductos;
+
+    while (actual != NULL) {
+        if (actual->info.producto == producto) {
+            actual->info.cantidad = cantidad;
+            return;
+        }
+
+        actual = actual->siguiente;
+    }
+
+    return;
+
+}
+
 NodoCliente* NodoCliente::eliminarPrimero(NodoCliente*& lista)
 {
     if (lista == NULL) {
@@ -189,6 +210,7 @@ NodoCliente* NodoCliente::eliminarPrimero(NodoCliente*& lista)
 
     return lista;  // Devolver la nueva cabeza de la lista
 }
+
 
 string NodoCliente::retornarCantidadDeProducto(NodoCliente* listaClientes, string cedula, string producto)
 {
@@ -209,3 +231,4 @@ string NodoCliente::retornarCantidadDeProducto(NodoCliente* listaClientes, strin
 
     return "";
 }
+

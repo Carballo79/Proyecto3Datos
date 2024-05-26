@@ -24,6 +24,7 @@ public:
     bool buscarProducto(NodoCliente* listaClientes, string cedula, string produco);
     string retornarCantidadDeProducto(NodoCliente* listaClientes, string cedula, string marca);
 
+    void modificarProducto(NodoCliente* listaClientes, string cedula, string producto, string cantidad);
  
     void mostrarClientePorcedulaFacturar(NodoCliente* lista, string cedulaBuscada, System::Windows::Forms::CheckedListBox^ checkListBox);
 
