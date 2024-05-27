@@ -1,2 +1,0 @@
-Cédula: 1234567
-Número de compras: 2

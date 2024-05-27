@@ -553,10 +553,10 @@ void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& cliente
         archivo << "Cantidad de Facturas de cliente: " << cantFacturasSTR << endl;
         if (cantFacturasINT >= 4) {
             archivo << "Total a pagar menos descuento por factura: " << totalAPagar * 0.95 << endl;
+            totalAPagar = (totalAPagar * 0.95);
         }
         string datosF = cedula + ";" + floatAString(totalAPagar) + ";" + cont;
         archivoDatosFacturas << datosF << endl;
-        
         break;
     }
 
@@ -569,15 +569,14 @@ void NodoCliente::clienteQueMasCompro() {
     string nombreArchivoEntrada = "comprasPorCliente.txt";
     string nombreArchivoSalida = "ReporteClienteMasCompro.txt";
 
+    // Primero, encontrar el número máximo de compras
     ifstream archivoEntrada(nombreArchivoEntrada);
     if (!archivoEntrada.is_open()) {
         cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
         return;
     }
 
-    int cedulaMaxCompras = 0;
     int numComprasMax = 0;
-
     string linea;
     while (getline(archivoEntrada, linea)) {
         istringstream iss(linea);
@@ -586,24 +585,214 @@ void NodoCliente::clienteQueMasCompro() {
         if (iss >> cedula >> separador >> numCompras) {
             if (numCompras > numComprasMax) {
                 numComprasMax = numCompras;
-                cedulaMaxCompras = cedula;
+            }
+        }
+    }
+    archivoEntrada.close();
+
+    // Segundo, escribir todos los clientes con el número máximo de compras
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, numCompras;
+        char separador;
+        if (iss >> cedula >> separador >> numCompras) {
+            if (numCompras == numComprasMax) {
+                archivoSalida << "Cédula: " << cedula << "\n";
+                archivoSalida << "Número de compras: " << numCompras << "\n";
+                archivoSalida << "-----------------\n";
             }
         }
     }
 
     archivoEntrada.close();
+    archivoSalida.close();
 
-    // Crear archivo de salida
-    ofstream archivoSalida(nombreArchivoSalida);
-    if (!archivoSalida.is_open()) {
-        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+}
+
+void NodoCliente::clienteQueMenosCompro() {
+    string nombreArchivoEntrada = "comprasPorCliente.txt";
+    string nombreArchivoSalida = "ReporteClienteMenosCompro.txt";
+
+    // Primero, encontrar el número minimo de compras
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
         return;
     }
 
-    archivoSalida << "Cédula: " << cedulaMaxCompras << "\n";
-    archivoSalida << "Número de compras: " << numComprasMax << "\n";
+    int numComprasMin = INT_MAX;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, numCompras;
+        char separador;
+        if (iss >> cedula >> separador >> numCompras) {
+            if (numCompras < numComprasMin) {
+                numComprasMin = numCompras;
+            }
+        }
+    }
+    archivoEntrada.close();
 
+    // Segundo, escribir todos los clientes con el número máximo de compras
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, numCompras;
+        char separador;
+        if (iss >> cedula >> separador >> numCompras) {
+            if (numCompras == numComprasMin) {
+                archivoSalida << "Cédula: " << cedula << "\n";
+                archivoSalida << "Número de compras: " << numCompras << "\n";
+                archivoSalida << "-----------------\n";
+            }
+        }
+    }
+
+    archivoEntrada.close();
+    archivoSalida.close();
+}
+
+
+
+void NodoCliente::clienteQueMasPago() {
+    string nombreArchivoEntrada = "datosFacturas.txt";
+    string nombreArchivoSalida = "ReporteClienteMasPago.txt";
+
+    // Primero, encontrar el monto máximo pagado
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    double montoMaximoPagado = 0.0;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, factura;
+        double montoPagado;
+        char separador;
+        if (iss >> cedula >> separador >> montoPagado >> separador >> factura) {
+            if (montoPagado > montoMaximoPagado) {
+                montoMaximoPagado = montoPagado;
+            }
+        }
+    }
+    archivoEntrada.close();
+
+    // Segundo, escribir todos los clientes que pagaron el monto máximo
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, factura;
+        double montoPagado;
+        char separador;
+        if (iss >> cedula >> separador >> montoPagado >> separador >> factura) {
+            if (montoPagado == montoMaximoPagado) {
+                archivoSalida << "Cédula: " << cedula << "\n";
+                archivoSalida << "Monto pagado: " << montoPagado << "\n";
+                archivoSalida << "Factura: " << factura << "\n";
+                archivoSalida << "-----------------\n";
+            }
+        }
+    }
+
+    archivoEntrada.close();
+    archivoSalida.close();
+}
+
+
+void NodoCliente::clienteQueMasFacturo() {
+    string nombreArchivoEntrada = "facturasPorCliente.txt";
+    string nombreArchivoSalida = "ReporteClienteQueMasFacturo.txt";
+
+    // Primero, encontrar el número máximo de facturas
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    int numFacturasMax = 0;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, numFacturas;
+        char separador;
+        if (iss >> cedula >> separador >> numFacturas) {
+            if (numFacturas > numFacturasMax) {
+                numFacturasMax = numFacturas;
+            }
+        }
+    }
+    archivoEntrada.close();
+
+    // Segundo, escribir todos los clientes con el número máximo de facturas
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, numFacturas;
+        char separador;
+        if (iss >> cedula >> separador >> numFacturas) {
+            if (numFacturas == numFacturasMax) {
+                archivoSalida << "Cédula: " << cedula << "\n";
+                archivoSalida << "Número de facturas: " << numFacturas << "\n";
+                archivoSalida << "-----------------\n";
+            }
+        }
+    }
+
+    archivoEntrada.close();
     archivoSalida.close();
 
-    cout << "Se ha creado el archivo " << nombreArchivoSalida << " con el cliente que más compró." << endl;
 }

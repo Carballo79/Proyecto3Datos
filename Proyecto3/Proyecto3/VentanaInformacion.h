@@ -346,8 +346,15 @@ private: System::Void btnConsultar_Click(System::Object^ sender, System::EventAr
 		if (!infDescuentoStr.empty())
 		{
 			if (clientesB->buscarNodo(clientesB->raiz, infDescuentoStr)) {
-				//Meter descuentos de cada cliente
-				MessageBox::Show("Descuento de: ", "Informacion", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+				string descuento = "0%";
+				string cantFacturasSTR = clientesB->conseguirContFacturas(infDescuentoStr);
+				int cantFacturasINT = stringAInt(cantFacturasSTR);
+				if (cantFacturasINT >= 4) {
+					descuento = "5%";
+				}
+				String^ descuentoMess = gcnew String(descuento.c_str());
+				MessageBox::Show("Descuento de: " + descuentoMess , "Informacion", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			}
 			else {
 				MessageBox::Show("Cliente no encontrado", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);

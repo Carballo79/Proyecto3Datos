@@ -42,5 +42,8 @@ public:
     void archivoAumentarFacturas(string cedula);
 
     void clienteQueMasCompro();
+    void clienteQueMenosCompro();
+    void clienteQueMasPago();
+    void clienteQueMasFacturo();
     bool archivoExiste(string archivoN);
 };
