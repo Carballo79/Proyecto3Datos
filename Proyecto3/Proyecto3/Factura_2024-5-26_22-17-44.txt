@@ -1,0 +1,13 @@
+FACTURA #1
+-----------------
+Cedula Cliente: 1234567
+Telefono:  23658974
+Correo:  juanpq@gmail.com
+CodProducto: 20 /// Marca: 51 /// Cantidad: 5 /// Precio Unitario: 1000 /// Total por producto: 5000
+Codigo de canasta: 
+______________
+ 
+Total: 5000
+Descuento total: 650
+Total a pagar: 4350
+Cantidad de Facturas de cliente: 1

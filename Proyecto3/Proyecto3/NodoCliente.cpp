@@ -235,6 +235,206 @@ string NodoCliente::retornarCantidadDeProducto(NodoCliente* listaClientes, strin
     return "";
 }
 
+string NodoCliente::extraerCont() {
+    ifstream archivo("contadorF.txt");
+    if (!archivo.is_open()) {
+        cerr << "Error al abrir el archivo. " << endl;
+        return "NULL";
+    }
+    string linea;
+    getline(archivo, linea);
+    archivo.close();
+    return linea;
+}
+
+void NodoCliente::archivoAumentarCompras(string cedula) {
+    string nombreArchivo = "comprasPorCliente.txt";
+
+    // Verifica si el archivo existe
+    ifstream archivoLectura(nombreArchivo);
+    bool archivoExiste = archivoLectura.is_open();
+    archivoLectura.close();
+
+    if (!archivoExiste) {
+        // El archivo no existe
+        ofstream archivoCreacion(nombreArchivo);
+        if (!archivoCreacion.is_open()) {
+            cerr << "Error al crear el archivo." << std::endl;
+            return;
+        }
+        archivoCreacion.close();
+    }
+
+    // Abrir el archivo en modo lectura
+    archivoLectura.open(nombreArchivo);
+    if (!archivoLectura.is_open()) {
+        cerr << "Error al abrir el archivo para lectura." << std::endl;
+        return;
+    }
+
+    bool cedulaEncontrada = false;
+    string linea;
+    while (getline(archivoLectura, linea)) {
+        istringstream ss(linea); // Mueve esta línea dentro del bucle
+        string cedulaActual;
+        while (getline(ss, cedulaActual, ';')) {
+            if (cedulaActual == cedula) {
+                cedulaEncontrada = true;
+                break;
+            }
+        }
+        if (cedulaEncontrada) {
+            break; // Sal del bucle exterior si encontraste la cédula
+        }
+    }
+
+    archivoLectura.close();
+
+    if (!cedulaEncontrada) {
+        // Abrir el archivo en modo escritura (append)
+        ofstream archivoEscritura(nombreArchivo, std::ios::app);
+        if (!archivoEscritura.is_open()) {
+            cerr << "Error al abrir el archivo para escritura." << endl;
+            return;
+        }
+
+        archivoEscritura << cedula + ";1" << endl; // Agrega ";1" al final de la línea
+        archivoEscritura.close();
+    }
+    else {
+        // Incrementar el número junto a la cédula
+        ifstream archivoLectura2(nombreArchivo);
+        ofstream archivoTemporal("temp.txt"); // Archivo temporal para escribir los datos actualizados
+
+        if (!archivoLectura2.is_open() || !archivoTemporal.is_open()) {
+            cerr << "Error al abrir archivos para lectura/escritura." << endl;
+            return;
+        }
+
+        string linea;
+        while (getline(archivoLectura2, linea)) {
+            istringstream ss(linea);
+            string cedulaActual;
+            getline(ss, cedulaActual, ';');
+
+            if (cedulaActual == cedula) {
+                // Encontramos la cédula, incrementa el número
+                int numero;
+                ss >> numero; // Lee el número actual
+                ++numero; // Incrementa el número
+                archivoTemporal << cedula << ";" << numero << endl;
+            }
+            else {
+                // No es la cédula buscada, copia la línea tal cual
+                archivoTemporal << linea << endl;
+            }
+        }
+
+        archivoLectura2.close();
+        archivoTemporal.close();
+
+        // Reemplazar el archivo original con el archivo temporal
+        remove(nombreArchivo.c_str());
+        rename("temp.txt", nombreArchivo.c_str());
+
+        cout << "Número actualizado para la cédula " << cedula << "." << endl;
+    }
+  
+}
+
+void NodoCliente::archivoAumentarFacturas(string cedula) {
+    string nombreArchivo = "facturasPorCliente.txt";
+
+    // Verifica si el archivo existe
+    ifstream archivoLectura(nombreArchivo);
+    bool archivoExiste = archivoLectura.is_open();
+    archivoLectura.close();
+
+    if (!archivoExiste) {
+        // El archivo no existe
+        ofstream archivoCreacion(nombreArchivo);
+        if (!archivoCreacion.is_open()) {
+            cerr << "Error al crear el archivo." << std::endl;
+            return;
+        }
+        archivoCreacion.close();
+    }
+
+    // Abrir el archivo en modo lectura
+    archivoLectura.open(nombreArchivo);
+    if (!archivoLectura.is_open()) {
+        cerr << "Error al abrir el archivo para lectura." << std::endl;
+        return;
+    }
+
+    bool cedulaEncontrada = false;
+    string linea;
+    while (getline(archivoLectura, linea)) {
+        istringstream ss(linea); // Mueve esta línea dentro del bucle
+        string cedulaActual;
+        while (getline(ss, cedulaActual, ';')) {
+            if (cedulaActual == cedula) {
+                cedulaEncontrada = true;
+                break;
+            }
+        }
+        if (cedulaEncontrada) {
+            break; // Sal del bucle exterior si encontraste la cédula
+        }
+    }
+
+    archivoLectura.close();
+
+    if (!cedulaEncontrada) {
+        // Abrir el archivo en modo escritura (append)
+        ofstream archivoEscritura(nombreArchivo, std::ios::app);
+        if (!archivoEscritura.is_open()) {
+            cerr << "Error al abrir el archivo para escritura." << endl;
+            return;
+        }
+
+        archivoEscritura << cedula + ";1" << endl; // Agrega ";1" al final de la línea
+        archivoEscritura.close();
+    }
+    else {
+        // Incrementar el número junto a la cédula
+        ifstream archivoLectura2(nombreArchivo);
+        ofstream archivoTemporal("temp.txt"); // Archivo temporal para escribir los datos actualizados
+
+        if (!archivoLectura2.is_open() || !archivoTemporal.is_open()) {
+            cerr << "Error al abrir archivos para lectura/escritura." << endl;
+            return;
+        }
+
+        string linea;
+        while (getline(archivoLectura2, linea)) {
+            istringstream ss(linea);
+            string cedulaActual;
+            getline(ss, cedulaActual, ';');
+
+            if (cedulaActual == cedula) {
+                // Encontramos la cédula, incrementa el número
+                int numero;
+                ss >> numero; // Lee el número actual
+                ++numero; // Incrementa el número
+                archivoTemporal << cedula << ";" << numero << endl;
+            }
+            else {
+                // No es la cédula buscada, copia la línea tal cual
+                archivoTemporal << linea << endl;
+            }
+        }
+
+        archivoLectura2.close();
+        archivoTemporal.close();
+
+        // Reemplazar el archivo original con el archivo temporal
+        remove(nombreArchivo.c_str());
+        rename("temp.txt", nombreArchivo.c_str());
+
+        cout << "Número actualizado para la cédula " << cedula << "." << endl;
+    }
+}
 
 void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& clientes, ArbolAA*& inventarios, ArbolRN*& marcas) {
     NodoCliente* aux = ComprasClientes;
@@ -243,7 +443,7 @@ void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& cliente
     double descuentoCanasta = 0.0;
     double total = 0.0;
     double totalAPagar = 0.0;
-    string canasta, cedula, data, temp, telefono, correo, codMarca, cantFacturasSTR;
+    string canasta, cedula, data, temp, telefono, correo, codMarca, cantFacturasSTR, cont;
     // Leer el contador de facturas del archivo
     ifstream archivoContador("contadorF.txt");
     int contadorFacturas;
@@ -296,16 +496,9 @@ void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& cliente
         NodoProducto* auxSL = aux->info.listaProductos;
         while (auxSL != NULL) {
 
+            //cantidad de compras por cliente
+            archivoAumentarCompras(cedula);
 
-
-            //clientes->aumentarNumCompras(cedula); aqui peta
-            ////////////////////////////////////////////////////////////////////////////////
-            /*
-            Crear archivo para que un cliente tenga su respectiva cantidad de compras osea por cada producto es una compra ejemplo
-                23232; 16  (16 productos en total)
-                45345; 31
-                423;22
-            */
 
             System::String^ elemento = msclr::interop::marshal_as<System::String^>(auxSL->info.producto);
             System::String^ cantidad = msclr::interop::marshal_as<System::String^>(auxSL->info.cantidad);
@@ -352,39 +545,65 @@ void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& cliente
         archivo << "Total: " << total << endl;
         archivo << "Descuento total: " << Descuentototal << endl;
         archivo << "Total a pagar: " << totalAPagar << endl;
-        //clientes->aumentarNumFacturas(cedula); peto
-        //cantFacturasSTR = clientes->conseguirContFacturas(cedula);
-        //cantFacturasINT = stringAInt(cantFacturasSTR);
-        /////////////////////////////////////////////////////////////////////////////////////////////////
-        /*
-        Crear archivo para que un cliente tenga su respectiva cantidad de facturas ejemplo
-         23232; 2 (2 facturas realizadas)
-         45345; 5
-         423;1
-        */
+        archivoAumentarFacturas(cedula);
+        cont = extraerCont();
+        cantFacturasSTR = clientes->conseguirContFacturas(cedula);
+        cantFacturasINT = stringAInt(cantFacturasSTR);
 
         archivo << "Cantidad de Facturas de cliente: " << cantFacturasSTR << endl;
         if (cantFacturasINT >= 4) {
             archivo << "Total a pagar menos descuento por factura: " << totalAPagar * 0.95 << endl;
         }
-        string datosF = cedula + ";" + floatAString(totalAPagar);
+        string datosF = cedula + ";" + floatAString(totalAPagar) + ";" + cont;
         archivoDatosFacturas << datosF << endl;
-        /*
-        Aqui lo que hago es agregar una linea nueva con lo que pago tal cliente en la factura para hacer el reporte del que mas 
-        facturo.
-
-        Cliente que más compro
-        Cliente que menos compro
-        Cliente que más facturo
-        Factura de mayor monto
-
-        Todo eso es para esos reportes.
-
-        */
+        
         break;
     }
 
     // Cerrar el archivo
     archivo.close();
     archivoDatosFacturas.close();
+}
+
+void NodoCliente::clienteQueMasCompro() {
+    string nombreArchivoEntrada = "comprasPorCliente.txt";
+    string nombreArchivoSalida = "ReporteClienteMasCompro.txt";
+
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    int cedulaMaxCompras = 0;
+    int numComprasMax = 0;
+
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int cedula, numCompras;
+        char separador;
+        if (iss >> cedula >> separador >> numCompras) {
+            if (numCompras > numComprasMax) {
+                numComprasMax = numCompras;
+                cedulaMaxCompras = cedula;
+            }
+        }
+    }
+
+    archivoEntrada.close();
+
+    // Crear archivo de salida
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        return;
+    }
+
+    archivoSalida << "Cédula: " << cedulaMaxCompras << "\n";
+    archivoSalida << "Número de compras: " << numComprasMax << "\n";
+
+    archivoSalida.close();
+
+    cout << "Se ha creado el archivo " << nombreArchivoSalida << " con el cliente que más compró." << endl;
 }

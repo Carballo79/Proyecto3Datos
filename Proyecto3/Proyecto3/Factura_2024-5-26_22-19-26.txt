@@ -1,0 +1,13 @@
+FACTURA #2
+-----------------
+Cedula Cliente: 1234567
+Telefono:  23658974
+Correo:  juanpq@gmail.com
+CodProducto: 73 /// Marca: 38 /// Cantidad: 4 /// Precio Unitario: 1850 /// Total por producto: 7400
+Codigo de canasta: 
+______________
+ 
+Total: 7400
+Descuento total: 962
+Total a pagar: 6438
+Cantidad de Facturas de cliente: 2

@@ -491,39 +491,29 @@ void ArbolB::aumentarNumCompras(string cedula)
 }
 string ArbolB::conseguirContFacturas(string cedula)
 {
-    NodoAB* nodo = raiz;
-    int llaveNodo = obtenerLlave(cedula, 0);
-
-    while (nodo != NULL)
-    {
-        int i = 0;
-
-        while ((i < nodo->cuenta) && (llaveNodo > obtenerLlave(nodo->llaves[i], 0)))
-            i++;
-
-        if ((i < nodo->cuenta) && (llaveNodo == obtenerLlave(nodo->llaves[i], 0)))
-        {
-            stringstream ss(nodo->llaves[i]);
-            string temp, numFacturas;
-            vector<string> datos;
-
-            // Extraer todos los datos
-            while (getline(ss, temp, ';'))
-                datos.push_back(temp);
-
-            // Obtener el número de facturas
-            numFacturas = datos[5];
-
-            return numFacturas;
-        }
-        else if (nodo->esHoja)
-            break;
-        else
-            nodo = nodo->hijos[i];
+    ifstream file("facturasPorCliente.txt");
+    if (!file.is_open()) {
+        cerr << "No se pudo abrir el archivo." << endl;
+        return "";
     }
 
-    return ""; // Devuelve un string vacío si no se encuentra la cédula
+    string linea;
+    while (std::getline(file, linea)) {
+        stringstream ss(linea);
+        string cedulaArchivo, valor;
+        if (getline(ss, cedulaArchivo, ';') && getline(ss, valor, ';')) {
+            if (cedulaArchivo == cedula) {
+                return valor;
+            }
+        }
+    }
+
+    file.close();
+    return "0";
 }
+
+
+
 void ArbolB::reporteClienteMasCompras(NodoAB* nodo, string& clienteMayor, int& maxNum)
 {
     if (nodo != NULL)

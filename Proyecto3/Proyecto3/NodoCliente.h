@@ -35,4 +35,12 @@ public:
     NodoCliente* eliminarPrimero(NodoCliente*& lista);
 
     void ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& clientes, ArbolAA*& inventarios, ArbolRN*& marcas);
+
+    string extraerCont();
+
+    void archivoAumentarCompras(string cedula);
+    void archivoAumentarFacturas(string cedula);
+
+    void clienteQueMasCompro();
+    bool archivoExiste(string archivoN);
 };
