@@ -1049,6 +1049,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->clientesDelSupermercadoToolStripMenuItem->Name = L"clientesDelSupermercadoToolStripMenuItem";
 			this->clientesDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
 			this->clientesDelSupermercadoToolStripMenuItem->Text = L"Clientes del supermercado";
+			this->clientesDelSupermercadoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::clientesDelSupermercadoToolStripMenuItem_Click);
 			// 
 			// pasillosDelSupermercadoToolStripMenuItem
 			// 
@@ -1169,7 +1170,7 @@ private: System::ComponentModel::IContainer^ components;
 			// datosToolStripMenuItem
 			// 
 			this->datosToolStripMenuItem->Name = L"datosToolStripMenuItem";
-			this->datosToolStripMenuItem->Size = System::Drawing::Size(180, 28);
+			this->datosToolStripMenuItem->Size = System::Drawing::Size(127, 28);
 			this->datosToolStripMenuItem->Text = L"Datos";
 			// 
 			// mMantenimiento1
@@ -2876,5 +2877,10 @@ private: System::Void clienteQueMásFacturoToolStripMenuItem_Click(System::Object
 	comprasClientes->clienteQueMasFacturo();
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
+private: System::Void clientesDelSupermercadoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	clientesB->reporteClientes();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+}	
 };
 }
