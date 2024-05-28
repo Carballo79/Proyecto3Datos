@@ -22,6 +22,8 @@ public:
     void recorrerArbol(NodoAAA*& nodo, int variable, int pos);
     void crearInventarios(ArbolBB& pasillos, ArbolAVL& productos, ArbolRN& marcas);
     wstring mostrarArbol(NodoAAA* nodo, int nivel);
+    void reporteInventariosR(NodoAAA* nodo, ofstream& archivo);
+    void reporteInventarios();
 
     NodoAAA* skew(NodoAAA* x);
     NodoAAA* split(NodoAAA* x);

@@ -24,8 +24,8 @@ public:
     void mostrarPorLlave(NodoAVL* nodo, string dato);
     void mostrarPorLlave(string dato);
     wstring mostrarArbol(NodoAVL* nodo, int nivel);
-    void crearReporteProPasillo(NodoAVL* nodo, string llaveNodo, ofstream& archivo);
-    void crearReporteProPasillo(string llaveNodo);
+    void productosPorPasilloR(NodoAVL* R, string codPasillo, ofstream& archivo);
+    void productosPorPasillo(string codPasillo);
 
     int altura(NodoAVL* N);
     int maximo(int a, int b);

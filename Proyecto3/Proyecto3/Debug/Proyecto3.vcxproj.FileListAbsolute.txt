@@ -46,3 +46,7 @@ D:\c++\PR3\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaPrincipal.r
 D:\c++\PR3\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaSupermercado.resources
 D:\c++\PR3\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaVerificaciones.resources
 D:\c++\PR3\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaFacturacionClientes.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaInformacion.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaVerificaciones.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaReportes.resources

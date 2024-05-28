@@ -30,4 +30,6 @@ public:
     void rotacionDerecha(NodoARN* nodo);
 
     void filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox);
+
+    void marcasPorProducto();
 };

@@ -1,0 +1,14 @@
+Pasillos del supermercado:
+
+Codigo de pasillo: 1
+Nombre: Abarrotes
+------------------------------------
+Codigo de pasillo: 4
+Nombre: Carnes
+------------------------------------
+Codigo de pasillo: 15
+Nombre: Bebidas
+------------------------------------
+Codigo de pasillo: 20
+Nombre: Limpieza
+------------------------------------

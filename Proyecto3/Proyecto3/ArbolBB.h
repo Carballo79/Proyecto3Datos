@@ -22,14 +22,11 @@ public:
     void crearPasillos();
     void crearCiudades();
     wstring mostrarArbol(NodoABB* nodo, int nivel);
-    string buscarMasVisitado(NodoABB* nodo);
-    string buscarMasVisitado();
-    string buscarMenosVisitado(NodoABB* nodo);
-    string buscarMenosVisitado();
-    void crearReportePasillos(NodoABB* nodo, ofstream& archivo);
-    void crearReportePasillos();
-    void crearReportePasilloMasVisitado();
-    void crearReportePasilloMenosVisitado();
+    void aumentarPasilloVisitado(string cod);
+    void reportePasillosR(NodoABB* nodo, ofstream& archivo);
+    void reportePasillos();
+    void pasilloMasVisitado();
+    void pasilloMenosVisitado();
 
     void inordenR(NodoABB* R, System::Windows::Forms::ComboBox^ comboBox);
 };

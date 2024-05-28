@@ -1,0 +1,58 @@
+Inventario del supermercado:
+
+Código de pasillo: 4
+Código de producto: 73
+Código de marca: 38
+Código de inventario: 12
+Nombre: CintaAzul
+Stock: 27
+Código de canasta: 1
+----------------------------
+Código de pasillo: 1
+Código de producto: 20
+Código de marca: 67
+Código de inventario: 33
+Nombre: SalSol
+Stock: 10
+Código de canasta: 0
+----------------------------
+Código de pasillo: 20
+Código de producto: 45
+Código de marca: 67
+Código de inventario: 45
+Nombre: Blanquita
+Stock: 44
+Código de canasta: 0
+----------------------------
+Código de pasillo: 1
+Código de producto: 34
+Código de marca: 36
+Código de inventario: 90
+Nombre: Rojitos
+Stock: 35
+Código de canasta: 0
+----------------------------
+Código de pasillo: 1
+Código de producto: 20
+Código de marca: 51
+Código de inventario: 100
+Nombre: Luisiana
+Stock: 50
+Código de canasta: 1
+----------------------------
+Código de pasillo: 15
+Código de producto: 28
+Código de marca: 37
+Código de inventario: 102
+Nombre: Kerns
+Stock: 16
+Código de canasta: 0
+----------------------------
+Código de pasillo: 1
+Código de producto: 20
+Código de marca: 51
+Código de inventario: 666
+Nombre: FELO
+Stock: 10
+Código de canasta: 0
+----------------------------

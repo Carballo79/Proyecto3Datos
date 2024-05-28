@@ -442,6 +442,8 @@ private: System::Void btnConsultar_Click(System::Object^ sender, System::EventAr
 				String^ pasilloStr = msclr::interop::marshal_as<String^>(pasillo);
 				MessageBox::Show("Pasillo encontrado: " + pasilloStr, "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
+				pasillosB->aumentarPasilloVisitado(codPasilloStr);
+
 				this->Hide();
 				ventana2->Show();
 			}

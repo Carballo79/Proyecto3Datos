@@ -6,10 +6,11 @@
   Proyecto3.VentanaInsercion.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaModificacion.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaPrincipal.resources - Embedded, ContainedInManifestFile, 
+  Proyecto3.VentanaReportes.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaSupermercado.resources - Embedded, ContainedInManifestFile, 
   Proyecto3.VentanaVerificaciones.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
-Assembly Proyecto3, Version=0.0.*, Culture=Todos los idiomas (todos los países): 
+Assembly Proyecto3, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -76,6 +77,13 @@ Class Proyecto3.VentanaModificacion: AutoLayout, AnsiClass, Class, Public, Befor
     System.Windows.Forms.Form ventana2 : Public
     Int32 opc : Public
 Class Proyecto3.VentanaVerificaciones: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(System.Windows.Forms.Form, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Form ventana2 : Public
+    Int32 opc : Public
+Class Proyecto3.VentanaReportes: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(System.Windows.Forms.Form, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

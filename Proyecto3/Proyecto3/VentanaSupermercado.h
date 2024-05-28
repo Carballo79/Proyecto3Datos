@@ -9,6 +9,7 @@
 #include "VentanaInformacion.h"
 #include "VentanaVerificaciones.h"
 #include "VentanaFacturacionClientes.h"
+#include "VentanaReportes.h"
 #include "NodoCliente.h"
 #include <Windows.h>
 
@@ -979,12 +980,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->mPasilloMasVisitado->Name = L"mPasilloMasVisitado";
 			this->mPasilloMasVisitado->Size = System::Drawing::Size(453, 28);
 			this->mPasilloMasVisitado->Text = L"Pasillo mas visitado";
+			this->mPasilloMasVisitado->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mPasilloMasVisitado_Click);
 			// 
 			// mPasilloMenosVisitado
 			// 
 			this->mPasilloMenosVisitado->Name = L"mPasilloMenosVisitado";
 			this->mPasilloMenosVisitado->Size = System::Drawing::Size(453, 28);
 			this->mPasilloMenosVisitado->Text = L"Pasillo menos visitado";
+			this->mPasilloMenosVisitado->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mPasilloMenosVisitado_Click);
 			// 
 			// mProductosPorPasilloMasVendidos
 			// 
@@ -1030,6 +1033,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->marcasDeUnProductoToolStripMenuItem->Name = L"marcasDeUnProductoToolStripMenuItem";
 			this->marcasDeUnProductoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
 			this->marcasDeUnProductoToolStripMenuItem->Text = L"Marcas de un producto";
+			this->marcasDeUnProductoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::marcasDeUnProductoToolStripMenuItem_Click);
 			// 
 			// facturaDeMayorMontoToolStripMenuItem
 			// 
@@ -1043,6 +1047,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->productosDeUnPasilloToolStripMenuItem->Name = L"productosDeUnPasilloToolStripMenuItem";
 			this->productosDeUnPasilloToolStripMenuItem->Size = System::Drawing::Size(453, 28);
 			this->productosDeUnPasilloToolStripMenuItem->Text = L"Productos de un pasillo";
+			this->productosDeUnPasilloToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::productosDeUnPasilloToolStripMenuItem_Click);
 			// 
 			// clientesDelSupermercadoToolStripMenuItem
 			// 
@@ -1056,12 +1061,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->pasillosDelSupermercadoToolStripMenuItem->Name = L"pasillosDelSupermercadoToolStripMenuItem";
 			this->pasillosDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
 			this->pasillosDelSupermercadoToolStripMenuItem->Text = L"Pasillos del supermercado";
+			this->pasillosDelSupermercadoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::pasillosDelSupermercadoToolStripMenuItem_Click);
 			// 
 			// inventarioDelSupermercadoToolStripMenuItem
 			// 
 			this->inventarioDelSupermercadoToolStripMenuItem->Name = L"inventarioDelSupermercadoToolStripMenuItem";
 			this->inventarioDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
 			this->inventarioDelSupermercadoToolStripMenuItem->Text = L"Inventario del supermercado";
+			this->inventarioDelSupermercadoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::inventarioDelSupermercadoToolStripMenuItem_Click);
 			// 
 			// mFacturacion
 			// 
@@ -1504,7 +1511,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip2->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mMantenimiento1 });
 			this->menuStrip2->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip2->Location = System::Drawing::Point(326, 165);
+			this->menuStrip2->Location = System::Drawing::Point(326, 162);
 			this->menuStrip2->Name = L"menuStrip2";
 			this->menuStrip2->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip2->Size = System::Drawing::Size(150, 162);
@@ -1518,7 +1525,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip3->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip3->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mReportes1 });
 			this->menuStrip3->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip3->Location = System::Drawing::Point(565, 165);
+			this->menuStrip3->Location = System::Drawing::Point(565, 162);
 			this->menuStrip3->Name = L"menuStrip3";
 			this->menuStrip3->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip3->Size = System::Drawing::Size(144, 162);
@@ -1676,7 +1683,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip4->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip4->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mControles1 });
 			this->menuStrip4->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip4->Location = System::Drawing::Point(672, 388);
+			this->menuStrip4->Location = System::Drawing::Point(672, 385);
 			this->menuStrip4->Name = L"menuStrip4";
 			this->menuStrip4->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip4->Size = System::Drawing::Size(144, 162);
@@ -1777,7 +1784,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip5->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip5->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mUsuarios });
 			this->menuStrip5->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip5->Location = System::Drawing::Point(447, 388);
+			this->menuStrip5->Location = System::Drawing::Point(447, 385);
 			this->menuStrip5->Name = L"menuStrip5";
 			this->menuStrip5->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip5->Size = System::Drawing::Size(144, 162);
@@ -2024,7 +2031,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip6->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip6->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mFacturacion1 });
 			this->menuStrip6->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip6->Location = System::Drawing::Point(791, 165);
+			this->menuStrip6->Location = System::Drawing::Point(791, 162);
 			this->menuStrip6->Name = L"menuStrip6";
 			this->menuStrip6->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip6->Size = System::Drawing::Size(144, 162);
@@ -2055,6 +2062,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem95->Size = System::Drawing::Size(250, 30);
 			this->toolStripMenuItem95->Text = L"Facturación Cliente";
 			this->toolStripMenuItem95->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem95->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem95_Click);
 			// 
 			// toolStripMenuItem96
 			// 
@@ -2070,7 +2078,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(1264, 610);
+			this->ClientSize = System::Drawing::Size(1264, 681);
 			this->Controls->Add(this->menuStrip6);
 			this->Controls->Add(this->menuStrip5);
 			this->Controls->Add(this->menuStrip4);
@@ -2858,7 +2866,7 @@ private: System::Void mVerificarInventario1_Click(System::Object^ sender, System
 }
 private: System::Void facturaciónClienteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
-	VentanaFacturacionClientes^ ventana = gcnew VentanaFacturacionClientes(this,*comprasClientes);
+	VentanaFacturacionClientes^ ventana = gcnew VentanaFacturacionClientes(this, *comprasClientes);
 	ventana->ShowDialog();
 }
 private: System::Void mClienteQueMasCompro_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2882,5 +2890,40 @@ private: System::Void clientesDelSupermercadoToolStripMenuItem_Click(System::Obj
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 }	
+private: System::Void toolStripMenuItem95_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	VentanaFacturacionClientes^ ventana = gcnew VentanaFacturacionClientes(this, *comprasClientes);
+	ventana->ShowDialog();
+}
+private: System::Void pasillosDelSupermercadoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	pasillosB->reportePasillos();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void mPasilloMasVisitado_Click(System::Object^ sender, System::EventArgs^ e) {
+	pasillosB->pasilloMasVisitado();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void mPasilloMenosVisitado_Click(System::Object^ sender, System::EventArgs^ e) {
+	pasillosB->pasilloMenosVisitado();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void inventarioDelSupermercadoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	inventariosB->reporteInventarios();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void productosDeUnPasilloToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	opc = 1;
+
+	this->Hide();
+	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void marcasDeUnProductoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	opc = 2;
+
+	this->Hide();
+	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
+	ventana->ShowDialog();
+}
 };
 }

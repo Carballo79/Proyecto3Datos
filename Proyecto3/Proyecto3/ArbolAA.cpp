@@ -230,6 +230,36 @@ wstring ArbolAA::mostrarArbol(NodoAAA* nodo, int nivel)
     return salida;
 }
 
+void ArbolAA::reporteInventariosR(NodoAAA* nodo, ofstream& archivo)
+{
+    if (nodo != NULL) {
+        reporteInventariosR(nodo->Hizq, archivo);
+
+        archivo << "Código de pasillo: " << obtenerLlave(nodo->dato, 0) << "\n";
+        archivo << "Código de producto: " << obtenerLlave(nodo->dato, 1) << "\n";
+        archivo << "Código de marca: " << obtenerLlave(nodo->dato, 2) << "\n";
+        archivo << "Código de inventario: " << obtenerLlave(nodo->dato, 3) << "\n";
+        archivo << "Nombre: " << obtenerDato(nodo->dato, 4) << "\n";
+        archivo << "Stock: " << obtenerDato(nodo->dato, 5) << "\n";
+        archivo << "Código de canasta: " << obtenerDato(nodo->dato, 6) << "\n";
+        archivo << "----------------------------\n";
+
+        reporteInventariosR(nodo->Hder, archivo);
+    }
+}
+
+void ArbolAA::reporteInventarios() {
+    ofstream archivo("Reporte-Inventarios.txt");
+    if (archivo.is_open()) {
+        archivo << "Inventario del supermercado:\n\n";
+        reporteInventariosR(raiz, archivo);
+        archivo.close();
+    }
+    else {
+        cout << "\nNo se pudo abrir el archivo.\n";
+    }
+}
+
 NodoAAA* ArbolAA::skew(NodoAAA* x)
 {
     // cout << "Rotacion derecha" << endl;

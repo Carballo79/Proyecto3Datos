@@ -40,6 +40,8 @@ namespace Proyecto3 {
 			//
 			if (comprasClientes == NULL) {
 				MessageBox::Show("No hay facturas pendientes.", "Informacion", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				// this->facturasClientes->Items->Add("No hay facturas pendientes.");
+				// this->facturasClientes->Enabled = false;
 				this->btnEliminarProducto->Enabled = false;
 				this->btnModificarCantidad->Enabled = false;
 				this->btnFacturar->Enabled = false;
@@ -48,7 +50,7 @@ namespace Proyecto3 {
 			else {
 				String^ cliente = gcnew String(comprasClientes->info.cedula.c_str());
 				comprasClientes->mostrarClientePorcedulaFacturar(comprasClientes, comprasClientes->info.cedula, facturasClientes);
-				//MessageBox::Show("Primero en la cola: " + cliente, "Informacion", MessageBoxButtons::OK, MessageBoxIcon::Information);
+				// MessageBox::Show("Primero en la cola: " + cliente, "Informacion", MessageBoxButtons::OK, MessageBoxIcon::Information);
 			}
 
 		}

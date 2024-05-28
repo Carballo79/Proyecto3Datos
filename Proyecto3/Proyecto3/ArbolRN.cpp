@@ -468,3 +468,5 @@ void ArbolRN::filtrarPorProducto(NodoARN* R, string codProducto, System::Windows
 
     filtrarPorProducto(R->Hder, codProducto, comboBox);
 }
+
+void ArbolRN::marcasPorProducto() {}

@@ -259,35 +259,64 @@ wstring ArbolAVL::mostrarArbol(NodoAVL* nodo, int nivel)
     return salida;
 }
 
-void ArbolAVL::crearReporteProPasillo(string llaveNodo) {
-    ofstream archivo;
-
-    archivo.open("Reporte-Productos por pasillo.txt", ios::out);
-
-    if (archivo.fail()) {
-        cout << "\nNo se pudo abrir el archivo";
+void ArbolAVL::productosPorPasilloR(NodoAVL* R, string codPasillo, ofstream& archivo)
+{
+    if (R == NULL)
         return;
-    }
 
-    archivo << "Productos por pasillo\n";
-    crearReporteProPasillo(raiz, llaveNodo, archivo);
-    archivo.close();
-}
+    productosPorPasilloR(R->Hizq, codPasillo, archivo);
 
-void ArbolAVL::crearReporteProPasillo(NodoAVL* nodo, string llaveNodo, ofstream& archivo) {
-    if (nodo != NULL)
+    if (obtenerDato(R->dato, 0) == codPasillo)
     {
-        if (obtenerLlave(nodo->dato, 0) == stringAInt(llaveNodo))
-        {
-            archivo << "Numero de pasillo:" << obtenerDato(nodo->dato, 0) << "\n";
-            archivo << "Codigo de producto:" << obtenerDato(nodo->dato, 1) << "\n";
-            archivo << "Nombre de producto:" << obtenerDato(nodo->dato, 2) << "\n";
-        }
+        archivo << "Codigo de pasillo: " << obtenerLlave(R->dato, 0) << "\n";
+        archivo << "Codigo de producto: " << obtenerLlave(R->dato, 1) << "\n";
+        archivo << "Nombre: " << obtenerDato(R->dato, 2) << "\n";
+        archivo << "----------------------------\n";
+    }
 
-        crearReporteProPasillo(nodo->Hizq, llaveNodo, archivo);
-        crearReporteProPasillo(nodo->Hder, llaveNodo, archivo);
+    productosPorPasilloR(R->Hder, codPasillo, archivo);
+}
+
+void ArbolAVL::productosPorPasillo(string codPasillo) {
+    ofstream archivo("Reporte-ProductosPorPasillo.txt");
+    if (archivo.is_open()) {
+        archivo << "Productos de un pasillo:\n\n";
+        productosPorPasilloR(raiz, codPasillo, archivo);
+        archivo.close();
+    }
+    else {
+        cout << "\nNo se pudo abrir el archivo.\n";
     }
 }
+
+    //    ofstream archivo;
+//
+//    archivo.open("Reporte-Productos por pasillo.txt", ios::out);
+//
+//    if (archivo.fail()) {
+//        cout << "\nNo se pudo abrir el archivo";
+//        return;
+//    }
+//
+//    archivo << "Productos por pasillo\n";
+//    crearReporteProPasillo(raiz, llaveNodo, archivo);
+//    archivo.close();
+//}
+//
+//void ArbolAVL::crearReporteProPasillo(NodoAVL* nodo, string llaveNodo, ofstream& archivo) {
+//    if (nodo != NULL)
+//    {
+//        if (obtenerLlave(nodo->dato, 0) == stringAInt(llaveNodo))
+//        {
+//            archivo << "Numero de pasillo:" << obtenerDato(nodo->dato, 0) << "\n";
+//            archivo << "Codigo de producto:" << obtenerDato(nodo->dato, 1) << "\n";
+//            archivo << "Nombre de producto:" << obtenerDato(nodo->dato, 2) << "\n";
+//        }
+//
+//        crearReporteProPasillo(nodo->Hizq, llaveNodo, archivo);
+//        crearReporteProPasillo(nodo->Hder, llaveNodo, archivo);
+//    }
+//}
 
 int ArbolAVL::altura(NodoAVL* N)
 {

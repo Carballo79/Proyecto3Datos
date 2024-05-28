@@ -1,0 +1,10 @@
+Reporte de clientes:
+
+Cédula: 1234567
+Nombre: Juan Perez
+
+Cédula: 1290738
+Nombre: Jose Ramirez
+
+Cédula: 2345678
+Nombre: Ana Campos

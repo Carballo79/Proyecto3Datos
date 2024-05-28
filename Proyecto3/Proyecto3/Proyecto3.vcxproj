@@ -143,6 +143,7 @@
     <ClCompile Include="VentanaInsercion.cpp" />
     <ClCompile Include="VentanaModificacion.cpp" />
     <ClCompile Include="VentanaPrincipal.cpp" />
+    <ClCompile Include="VentanaReportes.cpp" />
     <ClCompile Include="VentanaSupermercado.cpp" />
     <ClCompile Include="VentanaVerificaciones.cpp" />
   </ItemGroup>
@@ -187,6 +188,9 @@
     <ClInclude Include="VentanaPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="VentanaReportes.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaSupermercado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -218,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaReportes.resx">
+      <DependentUpon>VentanaReportes.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaSupermercado.resx">
       <DependentUpon>VentanaSupermercado.h</DependentUpon>
