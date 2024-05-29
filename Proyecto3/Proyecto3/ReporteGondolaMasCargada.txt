@@ -1,0 +1,3 @@
+Producto: 20
+Número de cargas: 2
+-----------------

@@ -136,7 +136,10 @@ namespace Proyecto3 {
 
 #pragma endregion
 	private: System::Void btnVerificarGondolas_Click(System::Object^ sender, System::EventArgs^ e) {
-		
+		string mensaje = "";
+		marcasB->recorrerMarcas(marcasB->raiz,mensaje);
+		String^ mensajeFinal = gcnew String(mensaje.c_str());
+		MessageBox::Show(mensajeFinal, "Resultado del Recorrido", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 	private: System::Void btnVerificarInventarios_Click(System::Object^ sender, System::EventArgs^ e) {
 		///////////////////CODIGO

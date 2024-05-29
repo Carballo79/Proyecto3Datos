@@ -31,7 +31,12 @@ public:
     void rotacionIzquierda(NodoARN* nodo);
     void rotacionDerecha(NodoARN* nodo);
 
-    void inordenR(NodoARN* R, string codProducto);
+
+    void recorrerMarcas(NodoARN* R,string& mensaje);
+
+    void archivoAumentarGondolas(string codProducto);
+
+    void gondolaMasCargada();
 
     void filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox);
 };

@@ -16,6 +16,9 @@ public:
     bool existeNodo(string dato);
     string buscarPorMarca(NodoAAA* nodo, string dato);
     string buscarPorMarca(string dato);
+    NodoAAA* buscarPorMarcaInventario(NodoAAA* nodo, string dato);
+
+
     void modificarNodo(string llaveNodo, string nuevoDato);
     NodoAAA* eliminarNodoRecursivo(NodoAAA* nodo, int cod);
     void eliminarNodo(int cod);

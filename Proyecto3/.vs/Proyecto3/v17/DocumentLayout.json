@@ -1,58 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\",
+  "WorkspaceRootPath": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolRN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaReportes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaReportes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaSupermercado.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolRN.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolRN.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\NodoCliente.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\NodoCliente.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaReportes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaReportes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolAVL.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\ArbolAVL.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\Proyecto3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\Proyecto3.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{03F1B1A7-161F-450E-A72C-D9313C145151}|Proyecto3\\Proyecto3.vcxproj|solutionrelative:Proyecto3\\VentanaVerificaciones.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,20 +42,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 15,
+          "SelectedChildIndex": 5,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "VentanaVerificaciones.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaVerificaciones.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h [Design]",
-              "RelativeToolTip": "Proyecto3\\VentanaVerificaciones.h [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-29T06:07:16.365Z",
-              "EditorCaption": " [Design]"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -98,157 +66,105 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "VentanaVerificaciones.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaVerificaciones.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h",
-              "RelativeToolTip": "Proyecto3\\VentanaVerificaciones.h",
-              "ViewState": "AQIAAHwAAAAAAAAAAAAcwIoAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "VentanaSupermercado.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
+              "RelativeToolTip": "Proyecto3\\VentanaSupermercado.h",
+              "ViewState": "AQIAAGgLAAAAAAAAAAAcwIILAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-29T06:07:18.24Z",
+              "WhenOpened": "2024-05-29T08:36:44.835Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "VentanaReportes.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaReportes.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaReportes.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaReportes.h [Design]",
-              "RelativeToolTip": "Proyecto3\\VentanaReportes.h [Design]",
+              "Title": "VentanaSupermercado.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto3\\VentanaSupermercado.h [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-29T05:29:04.147Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-05-29T08:36:35.577Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Proyecto3.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\Proyecto3.h",
-              "RelativeDocumentMoniker": "Proyecto3\\Proyecto3.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\Proyecto3.h",
-              "RelativeToolTip": "Proyecto3\\Proyecto3.h",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAASAAAA",
+              "DocumentIndex": 3,
+              "Title": "ArbolRN.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h",
+              "RelativeDocumentMoniker": "Proyecto3\\ArbolRN.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h",
+              "RelativeToolTip": "Proyecto3\\ArbolRN.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-29T05:12:45.704Z",
+              "WhenOpened": "2024-05-29T08:28:15.462Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
+              "Title": "ArbolRN.cpp",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp",
+              "RelativeDocumentMoniker": "Proyecto3\\ArbolRN.cpp",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp",
+              "RelativeToolTip": "Proyecto3\\ArbolRN.cpp",
+              "ViewState": "AQIAADwCAAAAAAAAAAAjwFgCAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-05-29T08:24:01.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "NodoCliente.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
               "RelativeDocumentMoniker": "Proyecto3\\NodoCliente.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.cpp",
               "RelativeToolTip": "Proyecto3\\NodoCliente.cpp",
-              "ViewState": "AQIAAPMDAAAAAAAAAAAswEsEAAAAAAAA",
+              "ViewState": "AQIAALwDAAAAAAAAAAAjwNkDAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-05-29T04:53:24.382Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "NodoCliente.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
               "RelativeDocumentMoniker": "Proyecto3\\NodoCliente.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\NodoCliente.h",
               "RelativeToolTip": "Proyecto3\\NodoCliente.h",
-              "ViewState": "AQIAACAAAAAAAAAAAAAswDIAAAAaAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwDAAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2024-05-29T04:53:13.597Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "VentanaReportes.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaReportes.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaReportes.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaReportes.h",
-              "RelativeToolTip": "Proyecto3\\VentanaReportes.h",
-              "ViewState": "AQIAANoAAAAAAAAAAAAcwOgAAAAyAAAA",
+              "DocumentIndex": 7,
+              "Title": "VentanaVerificaciones.h",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaVerificaciones.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h",
+              "RelativeToolTip": "Proyecto3\\VentanaVerificaciones.h",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAawIsAAAAZAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-29T03:27:58.914Z",
+              "WhenOpened": "2024-05-29T08:23:43.074Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ArbolRN.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolRN.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.h",
-              "RelativeToolTip": "Proyecto3\\ArbolRN.h",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAACEAAAARAAAA",
+              "Title": "VentanaVerificaciones.h [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h",
+              "RelativeDocumentMoniker": "Proyecto3\\VentanaVerificaciones.h",
+              "ToolTip": "C:\\Users\\jonns\\Documents\\GitHub\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaVerificaciones.h [Dise\u00F1o]",
+              "RelativeToolTip": "Proyecto3\\VentanaVerificaciones.h [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:43:48.584Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "VentanaSupermercado.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
-              "RelativeToolTip": "Proyecto3\\VentanaSupermercado.h",
-              "ViewState": "AQIAAA8LAAAAAAAAAAAcwB0LAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:45:11.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "VentanaSupermercado.h [Design]",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h",
-              "RelativeDocumentMoniker": "Proyecto3\\VentanaSupermercado.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\VentanaSupermercado.h [Design]",
-              "RelativeToolTip": "Proyecto3\\VentanaSupermercado.h [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:45:04.251Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ArbolRN.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolRN.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolRN.cpp",
-              "RelativeToolTip": "Proyecto3\\ArbolRN.cpp",
-              "ViewState": "AQIAAMsBAAAAAAAAAAAcwPgBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-28T20:43:49.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ArbolAVL.cpp",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.cpp",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolAVL.cpp",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.cpp",
-              "RelativeToolTip": "Proyecto3\\ArbolAVL.cpp",
-              "ViewState": "AQIAAO4AAAAAAAAAAAAAAGEAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-05-28T20:41:59.439Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ArbolAVL.h",
-              "DocumentMoniker": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h",
-              "RelativeDocumentMoniker": "Proyecto3\\ArbolAVL.h",
-              "ToolTip": "C:\\Users\\cjose\\Documents\\ProyectosC\u002B\u002B\\Proyecto3Datos\\Proyecto3\\Proyecto3\\ArbolAVL.h",
-              "RelativeToolTip": "Proyecto3\\ArbolAVL.h",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABwAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-05-28T20:41:58.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-29T08:23:41.661Z",
+              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }

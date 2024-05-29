@@ -1,10 +1,14 @@
 
-#include "ArbolRN.h"
 #include "Utilidades.h"
-
+#include "Windows.h"
 #include <string>
 #include <fstream>
 #include <sstream>
+#include "Proyecto3.h"
+
+
+
+#include <msclr/marshal_cppstd.h>
 
 ArbolRN::ArbolRN() : raiz(NULL) {}
 
@@ -500,6 +504,210 @@ void ArbolRN::filtrarPorProducto(NodoARN* R, string codProducto, System::Windows
         comboBox->Items->Add(gcnew System::String(R->dato.c_str()));
 
     filtrarPorProducto(R->Hder, codProducto, comboBox);
+}
+
+void ArbolRN::archivoAumentarGondolas(string codProducto) {
+    string nombreArchivo = "CargaGondolas.txt";
+
+    // Verifica si el archivo existe
+    ifstream archivoLectura(nombreArchivo);
+    bool archivoExiste = archivoLectura.is_open();
+    archivoLectura.close();
+
+    if (!archivoExiste) {
+        // El archivo no existe
+        ofstream archivoCreacion(nombreArchivo);
+        if (!archivoCreacion.is_open()) {
+            cerr << "Error al crear el archivo." << std::endl;
+            return;
+        }
+        archivoCreacion.close();
+    }
+
+    // Abrir el archivo en modo lectura
+    archivoLectura.open(nombreArchivo);
+    if (!archivoLectura.is_open()) {
+        cerr << "Error al abrir el archivo para lectura." << std::endl;
+        return;
+    }
+
+    bool codEncontrado = false;
+    string linea;
+    while (getline(archivoLectura, linea)) {
+        istringstream ss(linea); // Mueve esta línea dentro del bucle
+        string codActual;
+        while (getline(ss, codActual, ';')) {
+            if (codActual == codProducto) {
+                codEncontrado = true;
+                break;
+            }
+        }
+        if (codEncontrado) {
+            break; // Sal del bucle exterior si encontraste el codigo del pasillo
+        }
+    }
+
+    archivoLectura.close();
+
+    if (!codEncontrado) {
+        // Abrir el archivo en modo escritura (append)
+        ofstream archivoEscritura(nombreArchivo, std::ios::app);
+        if (!archivoEscritura.is_open()) {
+            cerr << "Error al abrir el archivo para escritura." << endl;
+            return;
+        }
+
+        archivoEscritura << codProducto + ";1" << endl; // Agrega ";1" al final de la línea
+        archivoEscritura.close();
+    }
+    else {
+        // Incrementar el número junto a la cédula
+        ifstream archivoLectura2(nombreArchivo);
+        ofstream archivoTemporal("temp.txt"); // Archivo temporal para escribir los datos actualizados
+
+        if (!archivoLectura2.is_open() || !archivoTemporal.is_open()) {
+            cerr << "Error al abrir archivos para lectura/escritura." << endl;
+            return;
+        }
+
+        string linea;
+        while (getline(archivoLectura2, linea)) {
+            istringstream ss(linea);
+            string codActual;
+            getline(ss, codActual, ';');
+
+            if (codActual == codProducto) {
+                // Encontramos el codigo, incrementa el número
+                int numero;
+                ss >> numero; // Lee el número actual
+                ++numero; // Incrementa el número
+                archivoTemporal << codProducto << ";" << numero << endl;
+            }
+            else {
+                // No es la cédula buscada, copia la línea tal cual
+                archivoTemporal << linea << endl;
+            }
+        }
+
+        archivoLectura2.close();
+        archivoTemporal.close();
+
+        // Reemplazar el archivo original con el archivo temporal
+        remove(nombreArchivo.c_str());
+        rename("temp.txt", nombreArchivo.c_str());
+    }
+}
+
+void ArbolRN::gondolaMasCargada() {
+    string nombreArchivoEntrada = "CargaGondolas.txt";
+    string nombreArchivoSalida = "ReporteGondolaMasCargada.txt";
+
+    // Primero, encontrar el número máximo de facturas
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    int numCargasMax = 0;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int codProducto, numCargas;
+        char separador;
+        if (iss >> codProducto >> separador >> numCargas) {
+            if (numCargas > numCargasMax) {
+                numCargasMax = numCargas;
+            }
+        }
+    }
+    archivoEntrada.close();
+
+    // Segundo, escribir todos los clientes con el número máximo de facturas
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int codProducto, numCargas;
+        char separador;
+        if (iss >> codProducto >> separador >> numCargas) {
+            if (numCargas == numCargasMax) {
+                archivoSalida << "Producto: " << codProducto << "\n";
+                archivoSalida << "Número de cargas: " << numCargas << "\n";
+                archivoSalida << "-----------------\n";
+            }
+        }
+    }
+
+    archivoEntrada.close();
+    archivoSalida.close();
+
+}
+
+
+void ArbolRN::recorrerMarcas(NodoARN* R,string& mensaje)
+{
+    if (R == NULL)
+        return;
+
+    // Recorrer el subárbol izquierdo
+    recorrerMarcas(R->Hizq,mensaje);
+
+
+    int cantGondola = stringAInt(obtenerDato(R->dato, 4));
+    string codMarca = obtenerDato(R->dato, 2);
+    string codProducto = obtenerDato(R->dato, 1);
+    
+
+    NodoAAA* Inventario = inventariosB->buscarPorMarcaInventario(inventariosB->raiz, codMarca);
+    int cantidadStock = stringAInt(obtenerDato(Inventario->dato, 5));
+    string codInventario = obtenerDato(Inventario->dato, 3);
+
+
+    if (cantGondola <= 2) {
+        int cantReq = 20 - cantGondola;
+        if (cantidadStock >= cantReq) {
+
+            string nuevoDatoM = obtenerDato(R->dato, 3) + "; " + "20" + "; " + obtenerDato(R->dato, 5);
+            marcasB->modificarNodo(codMarca, nuevoDatoM);
+
+            string cantStockNueva = intAString(stringAInt(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato,5)) - cantReq);
+            string nuevoDatoI = obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 4) + "; " + cantStockNueva + "; " + obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 6);
+            inventariosB->modificarNodo(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 3), nuevoDatoI);
+            mensaje = mensaje + "Se aumento la cantidad en gondola de la marca: " + codMarca + "\n";
+            archivoAumentarGondolas(codProducto);
+
+        }
+        else {
+            if (cantidadStock != 0) {
+                string cantGondolaNueva = intAString(stringAInt(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 5)) + cantGondola);
+                string nuevoDatoM = obtenerDato(R->dato, 3) + "; " + cantGondolaNueva + "; " + obtenerDato(R->dato, 5);
+                marcasB->modificarNodo(codMarca, nuevoDatoM);
+
+                string nuevoDatoI = obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 4) + "; " + "0" + "; " + obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 6);
+                inventariosB->modificarNodo(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 3), nuevoDatoI);
+
+                mensaje = mensaje + "Se aumento la cantidad en gondola de la marca: " + codMarca + "\n";
+                archivoAumentarGondolas(codProducto);
+            }
+            else {
+                mensaje = mensaje + "No hay inventario para la  marca: " + codMarca + "\n";
+            }   
+        }
+    }
+
+    recorrerMarcas(R->Hder,mensaje);
 }
 
 

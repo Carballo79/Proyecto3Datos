@@ -1022,6 +1022,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Name = L"productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1";
 			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Size = System::Drawing::Size(453, 28);
 			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Text = L"Producto que más se cargó en las Góndolas";
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1_Click);
 			// 
 			// clienteQueMásFacturoToolStripMenuItem
 			// 
@@ -2936,6 +2937,10 @@ private: System::Void mProductosPorPasilloMasVendidos_Click(System::Object^ send
 }
 private: System::Void mMarcasMasVendidos_Click(System::Object^ sender, System::EventArgs^ e) {
 	comprasClientes->marcasMasVendidas();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
+	marcasB->gondolaMasCargada();
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };

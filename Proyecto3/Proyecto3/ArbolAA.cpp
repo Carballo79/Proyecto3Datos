@@ -73,6 +73,25 @@ string ArbolAA::buscarPorMarca(string codMarca)
     }
 }
 
+NodoAAA* ArbolAA::buscarPorMarcaInventario(NodoAAA* nodo, string dato)
+{
+    if (nodo == NULL)
+        return NULL;
+
+    if (obtenerLlave(nodo->dato, 2) == stringAInt(dato))
+        return nodo;
+
+    NodoAAA* encontrado = buscarPorMarcaInventario(nodo->Hizq, dato);
+
+    if (encontrado != NULL)
+        return encontrado;
+
+    return buscarPorMarcaInventario(nodo->Hder, dato);
+}
+
+
+
+
 void ArbolAA::modificarNodo(string llaveNodo, string nuevoDato)
 {
     NodoAAA* nodo = buscarNodo(raiz, llaveNodo);

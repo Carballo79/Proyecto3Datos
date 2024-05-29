@@ -64,3 +64,4 @@ C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyec
 C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaSupermercado.resources
 C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaVerificaciones.resources
 C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
+C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaReportes.resources
