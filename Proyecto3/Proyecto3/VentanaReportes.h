@@ -42,11 +42,15 @@ namespace Proyecto3 {
 
 			if (opc == 1)
 			{
-				productosPasillo();
+				productosPorPasillo();
 			}
 			if (opc == 2)
 			{
-				marcasProducto();
+				marcasPorProducto();
+			}
+			if (opc == 3)
+			{
+				productosPorPasilloMasVendidos();
 			}
 		}
 
@@ -182,16 +186,22 @@ namespace Proyecto3 {
 
 		}
 
-		void productosPasillo(void)
+		void productosPorPasillo(void)
 		{
 			this->codPasillo->Enabled = true;
 			this->codProducto->Enabled = false;
 		}
 
-		void marcasProducto(void)
+		void marcasPorProducto(void)
 		{
 			this->codPasillo->Enabled = true;
 			this->codProducto->Enabled = true;
+		}
+
+		void productosPorPasilloMasVendidos(void)
+		{
+			this->codPasillo->Enabled = true;
+			this->codProducto->Enabled = false;
 		}
 
 #pragma endregion
@@ -204,13 +214,23 @@ namespace Proyecto3 {
 			productosB->productosPorPasillo(codPasilloStr);
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-			this->Hide();	
+			this->Hide();
 			ventana2->Show();
 		}
 
 		if (opc == 2)
 		{
-			marcasB->marcasPorProducto();
+			marcasB->marcasPorProducto(codPasilloStr, codProductoStr);
+
+			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+			this->Hide();
+			ventana2->Show();
+		}
+
+		if (opc == 3)
+		{
+			comprasClientes->productosPorPasilloMasVendidos(codPasilloStr);
 
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 

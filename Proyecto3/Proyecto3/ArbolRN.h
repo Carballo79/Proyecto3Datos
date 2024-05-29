@@ -26,10 +26,12 @@ public:
     void mostrarPorLlave(NodoARN* nodo, string dato);
     void mostrarPorLlave(string dato);
     wstring mostrarArbol(NodoARN* nodo, int nivel);
+    void marcasPorProductoR(NodoARN* R, string codPasillo, string codProducto, ofstream& archivo);
+    void marcasPorProducto(string codPasillo, string codProducto);
     void rotacionIzquierda(NodoARN* nodo);
     void rotacionDerecha(NodoARN* nodo);
 
-    void filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox);
+    void inordenR(NodoARN* R, string codProducto);
 
-    void marcasPorProducto();
+    void filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox);
 };

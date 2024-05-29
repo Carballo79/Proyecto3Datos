@@ -133,9 +133,10 @@ namespace Proyecto3 {
 		{
 			this->btnVerificarInventarios->Enabled = true;
 		}
+
 #pragma endregion
 	private: System::Void btnVerificarGondolas_Click(System::Object^ sender, System::EventArgs^ e) {
-		///////////////////CODIGO
+		
 	}
 	private: System::Void btnVerificarInventarios_Click(System::Object^ sender, System::EventArgs^ e) {
 		///////////////////CODIGO

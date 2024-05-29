@@ -1,5 +1,5 @@
 
-#include "NodoCliente.h"
+#include "Proyecto3.h"
 #include "Utilidades.h"
 #include <msclr/marshal_cppstd.h>
 #using <System.Windows.Forms.dll>
@@ -436,6 +436,190 @@ void NodoCliente::archivoAumentarFacturas(string cedula) {
     }
 }
 
+void NodoCliente::archivoAumentarVentas(string codPasillo) {
+    string nombreArchivo = "VentasPorProductoPasillo.txt";
+
+    // Verifica si el archivo existe
+    ifstream archivoLectura(nombreArchivo);
+    bool archivoExiste = archivoLectura.is_open();
+    archivoLectura.close();
+
+    if (!archivoExiste) {
+        // El archivo no existe
+        ofstream archivoCreacion(nombreArchivo);
+        if (!archivoCreacion.is_open()) {
+            cerr << "Error al crear el archivo." << std::endl;
+            return;
+        }
+        archivoCreacion.close();
+    }
+
+    // Abrir el archivo en modo lectura
+    archivoLectura.open(nombreArchivo);
+    if (!archivoLectura.is_open()) {
+        cerr << "Error al abrir el archivo para lectura." << std::endl;
+        return;
+    }
+
+    bool codEncontrado = false;
+    string linea;
+    while (getline(archivoLectura, linea)) {
+        istringstream ss(linea); // Mueve esta línea dentro del bucle
+        string codActual;
+        while (getline(ss, codActual, ';')) {
+            if (codActual == codPasillo) {
+                codEncontrado = true;
+                break;
+            }
+        }
+        if (codEncontrado) {
+            break; // Sal del bucle exterior si encontraste el codigo del pasillo
+        }
+    }
+
+    archivoLectura.close();
+
+    if (!codEncontrado) {
+        // Abrir el archivo en modo escritura (append)
+        ofstream archivoEscritura(nombreArchivo, std::ios::app);
+        if (!archivoEscritura.is_open()) {
+            cerr << "Error al abrir el archivo para escritura." << endl;
+            return;
+        }
+
+        archivoEscritura << codPasillo + ";1" << endl; // Agrega ";1" al final de la línea
+        archivoEscritura.close();
+    }
+    else {
+        // Incrementar el número junto a la cédula
+        ifstream archivoLectura2(nombreArchivo);
+        ofstream archivoTemporal("temp.txt"); // Archivo temporal para escribir los datos actualizados
+
+        if (!archivoLectura2.is_open() || !archivoTemporal.is_open()) {
+            cerr << "Error al abrir archivos para lectura/escritura." << endl;
+            return;
+        }
+
+        string linea;
+        while (getline(archivoLectura2, linea)) {
+            istringstream ss(linea);
+            string codActual;
+            getline(ss, codActual, ';');
+
+            if (codActual == codPasillo) {
+                // Encontramos el codigo, incrementa el número
+                int numero;
+                ss >> numero; // Lee el número actual
+                ++numero; // Incrementa el número
+                archivoTemporal << codPasillo << ";" << numero << endl;
+            }
+            else {
+                // No es la cédula buscada, copia la línea tal cual
+                archivoTemporal << linea << endl;
+            }
+        }
+
+        archivoLectura2.close();
+        archivoTemporal.close();
+
+        // Reemplazar el archivo original con el archivo temporal
+        remove(nombreArchivo.c_str());
+        rename("temp.txt", nombreArchivo.c_str());
+    }
+}
+
+void NodoCliente::archivoAumentarVentasMarcas(string codMarca) {
+    string nombreArchivo = "VentasMarcas.txt";
+
+    // Verifica si el archivo existe
+    ifstream archivoLectura(nombreArchivo);
+    bool archivoExiste = archivoLectura.is_open();
+    archivoLectura.close();
+
+    if (!archivoExiste) {
+        // El archivo no existe
+        ofstream archivoCreacion(nombreArchivo);
+        if (!archivoCreacion.is_open()) {
+            cerr << "Error al crear el archivo." << std::endl;
+            return;
+        }
+        archivoCreacion.close();
+    }
+
+    // Abrir el archivo en modo lectura
+    archivoLectura.open(nombreArchivo);
+    if (!archivoLectura.is_open()) {
+        cerr << "Error al abrir el archivo para lectura." << std::endl;
+        return;
+    }
+
+    bool codEncontrado = false;
+    string linea;
+    while (getline(archivoLectura, linea)) {
+        istringstream ss(linea); // Mueve esta línea dentro del bucle
+        string codActual;
+        while (getline(ss, codActual, ';')) {
+            if (codActual == codMarca) {
+                codEncontrado = true;
+                break;
+            }
+        }
+        if (codEncontrado) {
+            break; // Sal del bucle exterior si encontraste el codigo del pasillo
+        }
+    }
+
+    archivoLectura.close();
+
+    if (!codEncontrado) {
+        // Abrir el archivo en modo escritura (append)
+        ofstream archivoEscritura(nombreArchivo, std::ios::app);
+        if (!archivoEscritura.is_open()) {
+            cerr << "Error al abrir el archivo para escritura." << endl;
+            return;
+        }
+
+        archivoEscritura << codMarca + ";1" << endl; // Agrega ";1" al final de la línea
+        archivoEscritura.close();
+    }
+    else {
+        // Incrementar el número junto a la cédula
+        ifstream archivoLectura2(nombreArchivo);
+        ofstream archivoTemporal("temp.txt"); // Archivo temporal para escribir los datos actualizados
+
+        if (!archivoLectura2.is_open() || !archivoTemporal.is_open()) {
+            cerr << "Error al abrir archivos para lectura/escritura." << endl;
+            return;
+        }
+
+        string linea;
+        while (getline(archivoLectura2, linea)) {
+            istringstream ss(linea);
+            string codActual;
+            getline(ss, codActual, ';');
+
+            if (codActual == codMarca) {
+                // Encontramos el codigo, incrementa el número
+                int numero;
+                ss >> numero; // Lee el número actual
+                ++numero; // Incrementa el número
+                archivoTemporal << codMarca << ";" << numero << endl;
+            }
+            else {
+                // No es la cédula buscada, copia la línea tal cual
+                archivoTemporal << linea << endl;
+            }
+        }
+
+        archivoLectura2.close();
+        archivoTemporal.close();
+
+        // Reemplazar el archivo original con el archivo temporal
+        remove(nombreArchivo.c_str());
+        rename("temp.txt", nombreArchivo.c_str());
+    }
+}
+
 void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& clientes, ArbolAA*& inventarios, ArbolRN*& marcas) {
     NodoCliente* aux = ComprasClientes;
     int cantFacturasINT;
@@ -516,6 +700,10 @@ void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& cliente
             string marcaStr = msclr::interop::marshal_as<string>(ultimoElemento);
             string cantidadStr = msclr::interop::marshal_as<string>(cantidad);
 
+            string pasilloStr = obtenerDato(marcasB->buscarNodo(marcasB->raiz, marcaStr)->dato, 0);
+
+            archivoAumentarVentas(pasilloStr);
+            archivoAumentarVentasMarcas(marcaStr);
 
             System::Windows::Forms::MessageBox::Show(elementoMedio);
             System::Windows::Forms::MessageBox::Show(ultimoElemento);
@@ -795,4 +983,117 @@ void NodoCliente::clienteQueMasFacturo() {
     archivoEntrada.close();
     archivoSalida.close();
 
+}
+
+void NodoCliente::productosPorPasilloMasVendidos(string codPasillo) {
+    string nombreArchivoEntrada = "VentasPorProductoPasillo.txt";
+    string nombreArchivoSalida = "Reporte-ProductosPorPasilloMasVendidos.txt";
+
+    // Primero, encontrar el número máximo de ventas
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    int numVentasMax = 0;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int codPasillo, numVentas;
+        char separador;
+        if (iss >> codPasillo >> separador >> numVentas) {
+            if (numVentas > numVentasMax) {
+                numVentasMax = numVentas;
+            }
+        }
+    }
+    archivoEntrada.close();
+
+    // Segundo, escribir todos los clientes con el número máximo de ventas
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int codPasillo, numVentas;
+        char separador;
+        if (iss >> codPasillo >> separador >> numVentas) {
+            if (numVentas == numVentasMax) {
+                archivoSalida << "Código de pasillo: " << codPasillo << "\n";
+                //archivoSalida << "Código de producto: " << obtenerDato(productosB->obtenerCodProducto(productosB->raiz, intAString(codPasillo))->dato, 1) << "\n";
+                archivoSalida << "Número de ventas: " << numVentas << "\n";
+                archivoSalida << "-----------------\n";
+            }
+        }
+    }
+
+    archivoEntrada.close();
+    archivoSalida.close();
+}
+
+void NodoCliente::marcasMasVendidas() {
+    string nombreArchivoEntrada = "VentasMarcas.txt";
+    string nombreArchivoSalida = "Reporte-MarcasMasVendidas.txt";
+
+    // Primero, encontrar el número máximo de ventas
+    ifstream archivoEntrada(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    int numVentasMax = 0;
+    string linea;
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int codMarca, numVentas;
+        char separador;
+        if (iss >> codMarca >> separador >> numVentas) {
+            if (numVentas > numVentasMax) {
+                numVentasMax = numVentas;
+            }
+        }
+    }
+    archivoEntrada.close();
+
+    // Segundo, escribir todos las marcas con el número máximo de ventas
+    archivoEntrada.open(nombreArchivoEntrada);
+    if (!archivoEntrada.is_open()) {
+        cerr << "Error al volver a abrir el archivo: " << nombreArchivoEntrada << endl;
+        return;
+    }
+
+    ofstream archivoSalida(nombreArchivoSalida);
+    if (!archivoSalida.is_open()) {
+        cerr << "Error al crear el archivo: " << nombreArchivoSalida << endl;
+        archivoEntrada.close();
+        return;
+    }
+
+    while (getline(archivoEntrada, linea)) {
+        istringstream iss(linea);
+        int codMarca, numVentas;
+        char separador;
+        if (iss >> codMarca >> separador >> numVentas) {
+            if (numVentas == numVentasMax) {
+                archivoSalida << "Código de marca: " << codMarca << "\n";
+                archivoSalida << "Número de ventas: " << numVentas << "\n";
+                archivoSalida << "-----------------\n";
+            }
+        }
+    }
+
+    archivoEntrada.close();
+    archivoSalida.close();
 }

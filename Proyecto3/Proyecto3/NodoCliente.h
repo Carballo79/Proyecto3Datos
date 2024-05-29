@@ -40,10 +40,13 @@ public:
 
     void archivoAumentarCompras(string cedula);
     void archivoAumentarFacturas(string cedula);
+    void archivoAumentarVentas(string codPasillo);
+    void archivoAumentarVentasMarcas(string codMarca);
 
     void clienteQueMasCompro();
     void clienteQueMenosCompro();
     void clienteQueMasPago();
     void clienteQueMasFacturo();
-    bool archivoExiste(string archivoN);
+    void productosPorPasilloMasVendidos(string codPasillo);
+    void marcasMasVendidas();
 };

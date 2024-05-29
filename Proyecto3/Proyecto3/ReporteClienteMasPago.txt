@@ -1,4 +1,0 @@
-Cédula: 1234567
-Monto pagado: 11266.5
-Factura: 1
------------------

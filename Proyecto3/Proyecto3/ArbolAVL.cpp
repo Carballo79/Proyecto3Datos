@@ -83,6 +83,20 @@ NodoAVL* ArbolAVL::filtrarDato(NodoAVL* nodo, string dato)
     return filtrarDato(nodo->Hder, dato);
 }
 
+NodoAVL* ArbolAVL::obtenerCodProducto(NodoAVL* nodo, string dato)
+{
+    if (nodo == NULL)
+        return NULL;
+
+    if (nodo == NULL || dato == obtenerDato(nodo->dato, 0))
+        return nodo;
+
+    if (obtenerLlave(dato, 1) < stringAInt(obtenerDato(nodo->dato, 1)))
+        return obtenerCodProducto(nodo->Hizq, dato);
+
+    return obtenerCodProducto(nodo->Hder, dato);
+}
+
 void ArbolAVL::modificarNodo(string llaveNodo, string nuevoDato)
 {
     NodoAVL* nodo = buscarNodo(raiz, llaveNodo);
@@ -288,35 +302,6 @@ void ArbolAVL::productosPorPasillo(string codPasillo) {
         cout << "\nNo se pudo abrir el archivo.\n";
     }
 }
-
-    //    ofstream archivo;
-//
-//    archivo.open("Reporte-Productos por pasillo.txt", ios::out);
-//
-//    if (archivo.fail()) {
-//        cout << "\nNo se pudo abrir el archivo";
-//        return;
-//    }
-//
-//    archivo << "Productos por pasillo\n";
-//    crearReporteProPasillo(raiz, llaveNodo, archivo);
-//    archivo.close();
-//}
-//
-//void ArbolAVL::crearReporteProPasillo(NodoAVL* nodo, string llaveNodo, ofstream& archivo) {
-//    if (nodo != NULL)
-//    {
-//        if (obtenerLlave(nodo->dato, 0) == stringAInt(llaveNodo))
-//        {
-//            archivo << "Numero de pasillo:" << obtenerDato(nodo->dato, 0) << "\n";
-//            archivo << "Codigo de producto:" << obtenerDato(nodo->dato, 1) << "\n";
-//            archivo << "Nombre de producto:" << obtenerDato(nodo->dato, 2) << "\n";
-//        }
-//
-//        crearReporteProPasillo(nodo->Hizq, llaveNodo, archivo);
-//        crearReporteProPasillo(nodo->Hder, llaveNodo, archivo);
-//    }
-//}
 
 int ArbolAVL::altura(NodoAVL* N)
 {

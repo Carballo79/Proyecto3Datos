@@ -1,7 +1,19 @@
-﻿  VentanaPrincipal.cpp
+﻿  NodoCliente.cpp
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\NodoCliente.cpp(746,53): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\NodoCliente.cpp(647,15): warning C4996: 'localtime': This function or variable may be unsafe. Consider using localtime_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Proyecto3.cpp
+  VentanaCompras.cpp
+  VentanaConsultas.cpp
+  VentanaEliminación.cpp
+  VentanaFacturacionClientes.cpp
+  VentanaInformacion.cpp
+  VentanaInsercion.cpp
+  VentanaModificacion.cpp
+  VentanaPrincipal.cpp
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\VentanaPrincipal.cpp(7,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
   VentanaReportes.cpp
   VentanaSupermercado.cpp
+  VentanaVerificaciones.cpp
   Generating Code...
   ArbolAA.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   Proyecto3.vcxproj -> C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Debug\Proyecto3.exe

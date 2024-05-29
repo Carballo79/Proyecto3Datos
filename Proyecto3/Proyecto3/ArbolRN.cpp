@@ -414,6 +414,39 @@ wstring ArbolRN::mostrarArbol(NodoARN* nodo, int nivel)
     return salida;
 }
 
+void ArbolRN::marcasPorProductoR(NodoARN* R, string codPasillo, string codProducto, ofstream& archivo)
+{
+    if (R == NULL)
+        return;
+
+    marcasPorProductoR(R->Hizq, codPasillo, codProducto, archivo);
+
+    if ((obtenerDato(R->dato, 0) == codPasillo) && (obtenerDato(R->dato, 1) == codProducto))
+    {
+        archivo << "Código de pasillo: " << obtenerLlave(R->dato, 0) << "\n";
+        archivo << "Código de producto: " << obtenerLlave(R->dato, 1) << "\n";
+        archivo << "Código de marca: " << obtenerLlave(R->dato, 2) << "\n";
+        archivo << "Nombre: " << obtenerDato(R->dato, 3) << "\n";
+        archivo << "Cantidad en góndola: " << obtenerLlave(R->dato, 4) << "\n";
+        archivo << "Precio: " << obtenerLlave(R->dato, 5) << "\n";
+        archivo << "----------------------------\n";
+    }
+
+    marcasPorProductoR(R->Hder, codPasillo, codProducto, archivo);
+}
+
+void ArbolRN::marcasPorProducto(string codPasillo, string codProducto) {
+    ofstream archivo("Reporte-MarcasPorProducto.txt");
+    if (archivo.is_open()) {
+        archivo << "Marcas de un producto:\n\n";
+        marcasPorProductoR(raiz, codPasillo, codProducto, archivo);
+        archivo.close();
+    }
+    else {
+        cout << "\nNo se pudo abrir el archivo.\n";
+    }
+}
+
 void ArbolRN::rotacionIzquierda(NodoARN* nodo)
 {
     NodoARN* y = nodo->Hder;
@@ -469,4 +502,4 @@ void ArbolRN::filtrarPorProducto(NodoARN* R, string codProducto, System::Windows
     filtrarPorProducto(R->Hder, codProducto, comboBox);
 }
 
-void ArbolRN::marcasPorProducto() {}
+

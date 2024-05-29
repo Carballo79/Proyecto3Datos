@@ -994,12 +994,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->mProductosPorPasilloMasVendidos->Name = L"mProductosPorPasilloMasVendidos";
 			this->mProductosPorPasilloMasVendidos->Size = System::Drawing::Size(453, 28);
 			this->mProductosPorPasilloMasVendidos->Text = L"Productos por pasillo más vendidos";
+			this->mProductosPorPasilloMasVendidos->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mProductosPorPasilloMasVendidos_Click);
 			// 
 			// mMarcasMasVendidos
 			// 
 			this->mMarcasMasVendidos->Name = L"mMarcasMasVendidos";
 			this->mMarcasMasVendidos->Size = System::Drawing::Size(453, 28);
 			this->mMarcasMasVendidos->Text = L"Marcas más vendidos";
+			this->mMarcasMasVendidos->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mMarcasMasVendidos_Click);
 			// 
 			// mClienteQueMasCompro
 			// 
@@ -2924,6 +2926,17 @@ private: System::Void marcasDeUnProductoToolStripMenuItem_Click(System::Object^ 
 	this->Hide();
 	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
 	ventana->ShowDialog();
+}
+private: System::Void mProductosPorPasilloMasVendidos_Click(System::Object^ sender, System::EventArgs^ e) {
+	opc = 3;
+
+	this->Hide();
+	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void mMarcasMasVendidos_Click(System::Object^ sender, System::EventArgs^ e) {
+	comprasClientes->marcasMasVendidas();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 };
 }

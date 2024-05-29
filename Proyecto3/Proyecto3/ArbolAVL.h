@@ -16,6 +16,7 @@ public:
     NodoAVL* buscarNodo(NodoAVL* nodo, string dato);
     bool existeNodo(string dato);
     NodoAVL* filtrarDato(NodoAVL* nodo, string dato);
+    NodoAVL* obtenerCodProducto(NodoAVL* nodo, string dato);
     void modificarNodo(string llaveNodo, string nuevoDato);
     NodoAVL* eliminarNodo(NodoAVL* root, int key);
     NodoAVL* eliminar(int dato);

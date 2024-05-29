@@ -1,6 +1,0 @@
-Código: 15
-Número de visitas: 2
------------------
-Código: 20
-Número de visitas: 2
------------------
