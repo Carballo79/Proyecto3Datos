@@ -1,6 +1,0 @@
-Código de pasillo: 4
-Número de ventas: 1
------------------
-Código de pasillo: 1
-Número de ventas: 1
------------------

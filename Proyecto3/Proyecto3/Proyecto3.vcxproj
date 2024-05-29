@@ -135,6 +135,7 @@
     <ClCompile Include="NodoProducto.cpp" />
     <ClCompile Include="Proyecto3.cpp" />
     <ClCompile Include="Utilidades.cpp" />
+    <ClCompile Include="VentanaComprarInventario.cpp" />
     <ClCompile Include="VentanaCompras.cpp" />
     <ClCompile Include="VentanaConsultas.cpp" />
     <ClCompile Include="VentanaEliminación.cpp" />
@@ -164,6 +165,9 @@
     <ClInclude Include="NodoProInfo.h" />
     <ClInclude Include="Proyecto3.h" />
     <ClInclude Include="Utilidades.h" />
+    <ClInclude Include="VentanaComprarInventario.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaCompras.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -199,6 +203,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VentanaComprarInventario.resx">
+      <DependentUpon>VentanaComprarInventario.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaCompras.resx">
       <DependentUpon>VentanaCompras.h</DependentUpon>
     </EmbeddedResource>

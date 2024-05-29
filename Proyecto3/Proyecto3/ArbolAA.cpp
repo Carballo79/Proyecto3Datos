@@ -317,3 +317,22 @@ NodoAAA* ArbolAA::split(NodoAAA* x)
 
     return x;
 }
+
+
+void ArbolAA::recorrerInventarios(NodoAAA* R, string& mensaje)
+{
+    if (R == NULL)
+        return;
+
+    // Recorrer el subárbol izquierdo
+    recorrerInventarios(R->Hizq, mensaje);
+
+
+    int cantStock = stringAInt(obtenerDato(R->dato, 5));
+    string codInventario = obtenerDato(R->dato, 3);
+
+    if (cantStock < 20) {
+        mensaje = mensaje + "El inventario: " + codInventario + " tiene menos de 20 unidades." "\n";
+    }
+    recorrerInventarios(R->Hder, mensaje);
+}

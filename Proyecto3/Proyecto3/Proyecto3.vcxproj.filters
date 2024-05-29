@@ -93,6 +93,9 @@
     <ClCompile Include="VentanaReportes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="VentanaComprarInventario.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VentanaPrincipal.h">
@@ -174,6 +177,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VentanaReportes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="VentanaComprarInventario.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

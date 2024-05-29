@@ -139,10 +139,16 @@ namespace Proyecto3 {
 		string mensaje = "";
 		marcasB->recorrerMarcas(marcasB->raiz,mensaje);
 		String^ mensajeFinal = gcnew String(mensaje.c_str());
-		MessageBox::Show(mensajeFinal, "Resultado del Recorrido", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 	private: System::Void btnVerificarInventarios_Click(System::Object^ sender, System::EventArgs^ e) {
-		///////////////////CODIGO
+		string mensaje = "";
+		inventariosB->recorrerInventarios(inventariosB->raiz, mensaje);
+		String^ mensajeFinal = gcnew String(mensaje.c_str());
+		MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		if (mensaje != "") {
+			///Abrir ventana Comprar inventario.
+		}
 	}
 	private: System::Void VentanaVerificaciones_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 		this->Hide();

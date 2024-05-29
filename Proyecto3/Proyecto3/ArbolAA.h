@@ -28,6 +28,8 @@ public:
     void reporteInventariosR(NodoAAA* nodo, ofstream& archivo);
     void reporteInventarios();
 
+    void recorrerInventarios(NodoAAA* R, string& mensaje);
+
     NodoAAA* skew(NodoAAA* x);
     NodoAAA* split(NodoAAA* x);
 };

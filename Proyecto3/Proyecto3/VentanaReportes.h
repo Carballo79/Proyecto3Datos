@@ -211,6 +211,7 @@ namespace Proyecto3 {
 
 		if (opc == 1)
 		{
+			///validar
 			productosB->productosPorPasillo(codPasilloStr);
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
@@ -220,6 +221,7 @@ namespace Proyecto3 {
 
 		if (opc == 2)
 		{
+			///validar
 			marcasB->marcasPorProducto(codPasilloStr, codProductoStr);
 
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -230,6 +232,7 @@ namespace Proyecto3 {
 
 		if (opc == 3)
 		{
+			///validar
 			comprasClientes->productosPorPasilloMasVendidos(codPasilloStr);
 
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);

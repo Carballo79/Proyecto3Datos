@@ -10,6 +10,7 @@
 #include "VentanaVerificaciones.h"
 #include "VentanaFacturacionClientes.h"
 #include "VentanaReportes.h"
+#include "VentanaComprarInventario.h"
 #include "NodoCliente.h"
 #include <Windows.h>
 
@@ -1090,6 +1091,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->facturaciónInventarioToolStripMenuItem->Name = L"facturaciónInventarioToolStripMenuItem";
 			this->facturaciónInventarioToolStripMenuItem->Size = System::Drawing::Size(242, 28);
 			this->facturaciónInventarioToolStripMenuItem->Text = L"Comprar Inventario";
+			this->facturaciónInventarioToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::facturaciónInventarioToolStripMenuItem_Click);
 			// 
 			// facturaciónClienteToolStripMenuItem
 			// 
@@ -2942,6 +2944,11 @@ private: System::Void mMarcasMasVendidos_Click(System::Object^ sender, System::E
 private: System::Void productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
 	marcasB->gondolaMasCargada();
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void facturaciónInventarioToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
+	ventana->ShowDialog();
 }
 };
 }
