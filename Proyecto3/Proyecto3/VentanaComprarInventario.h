@@ -81,11 +81,11 @@ namespace Proyecto3 {
 			// 
 			// btnComprar
 			// 
-			this->btnComprar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnComprar->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnComprar->Location = System::Drawing::Point(134, 99);
+			this->btnComprar->Location = System::Drawing::Point(130, 153);
 			this->btnComprar->Name = L"btnComprar";
-			this->btnComprar->Size = System::Drawing::Size(121, 31);
+			this->btnComprar->Size = System::Drawing::Size(121, 37);
 			this->btnComprar->TabIndex = 0;
 			this->btnComprar->Text = L"Comprar";
 			this->btnComprar->UseVisualStyleBackColor = true;
@@ -94,44 +94,48 @@ namespace Proyecto3 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(68, 9);
+			this->label1->Location = System::Drawing::Point(33, 37);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(96, 24);
+			this->label1->Size = System::Drawing::Size(97, 23);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Inventario:";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(68, 58);
+			this->label2->Location = System::Drawing::Point(33, 86);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(89, 24);
+			this->label2->Size = System::Drawing::Size(90, 23);
 			this->label2->TabIndex = 2;
 			this->label2->Text = L"Cantidad:";
 			// 
 			// codInventario
 			// 
-			this->codInventario->Location = System::Drawing::Point(170, 14);
+			this->codInventario->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->codInventario->Location = System::Drawing::Point(150, 38);
 			this->codInventario->Name = L"codInventario";
-			this->codInventario->Size = System::Drawing::Size(150, 20);
+			this->codInventario->Size = System::Drawing::Size(182, 26);
 			this->codInventario->TabIndex = 3;
 			// 
 			// Cantidad
 			// 
-			this->Cantidad->Location = System::Drawing::Point(170, 62);
+			this->Cantidad->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Cantidad->Location = System::Drawing::Point(150, 87);
 			this->Cantidad->Name = L"Cantidad";
-			this->Cantidad->Size = System::Drawing::Size(150, 20);
+			this->Cantidad->Size = System::Drawing::Size(182, 26);
 			this->Cantidad->TabIndex = 4;
 			// 
 			// VentanaComprarInventario
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(370, 142);
+			this->ClientSize = System::Drawing::Size(372, 218);
 			this->Controls->Add(this->Cantidad);
 			this->Controls->Add(this->codInventario);
 			this->Controls->Add(this->label2);

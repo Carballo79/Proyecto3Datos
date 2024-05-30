@@ -135,9 +135,11 @@
     <ClCompile Include="NodoProducto.cpp" />
     <ClCompile Include="Proyecto3.cpp" />
     <ClCompile Include="Utilidades.cpp" />
+    <ClCompile Include="VentanaAcercaDe.cpp" />
     <ClCompile Include="VentanaComprarInventario.cpp" />
     <ClCompile Include="VentanaCompras.cpp" />
     <ClCompile Include="VentanaConsultas.cpp" />
+    <ClCompile Include="VentanaContacto.cpp" />
     <ClCompile Include="VentanaEliminación.cpp" />
     <ClCompile Include="VentanaFacturacionClientes.cpp" />
     <ClCompile Include="VentanaInformacion.cpp" />
@@ -146,7 +148,6 @@
     <ClCompile Include="VentanaPrincipal.cpp" />
     <ClCompile Include="VentanaReportes.cpp" />
     <ClCompile Include="VentanaSupermercado.cpp" />
-    <ClCompile Include="VentanaVerificaciones.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArbolAA.h" />
@@ -165,6 +166,9 @@
     <ClInclude Include="NodoProInfo.h" />
     <ClInclude Include="Proyecto3.h" />
     <ClInclude Include="Utilidades.h" />
+    <ClInclude Include="VentanaAcercaDe.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="VentanaComprarInventario.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -172,6 +176,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaConsultas.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="VentanaContacto.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="VentanaEliminación.h">
@@ -198,11 +205,11 @@
     <ClInclude Include="VentanaSupermercado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="VentanaVerificaciones.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="VentanaAcercaDe.resx">
+      <DependentUpon>VentanaAcercaDe.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VentanaComprarInventario.resx">
       <DependentUpon>VentanaComprarInventario.h</DependentUpon>
     </EmbeddedResource>
@@ -211,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaConsultas.resx">
       <DependentUpon>VentanaConsultas.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VentanaContacto.resx">
+      <DependentUpon>VentanaContacto.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaEliminación.resx">
       <DependentUpon>VentanaEliminación.h</DependentUpon>
@@ -235,9 +245,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VentanaSupermercado.resx">
       <DependentUpon>VentanaSupermercado.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="VentanaVerificaciones.resx">
-      <DependentUpon>VentanaVerificaciones.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

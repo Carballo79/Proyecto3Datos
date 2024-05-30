@@ -7,10 +7,11 @@
 #include "VentanaEliminación.h"
 #include "VentanaCompras.h"
 #include "VentanaInformacion.h"
-#include "VentanaVerificaciones.h"
 #include "VentanaFacturacionClientes.h"
 #include "VentanaReportes.h"
 #include "VentanaComprarInventario.h"
+#include "VentanaAcercaDe.h"
+#include "VentanaContacto.h"
 #include "NodoCliente.h"
 #include <Windows.h>
 
@@ -211,7 +212,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem55;
 
 
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem46;
-private: System::Windows::Forms::ToolStripMenuItem^ datosToolStripMenuItem;
+
 private: System::Windows::Forms::ToolStripMenuItem^ verÁrbolesToolStripMenuItem;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem38;
 private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem39;
@@ -507,7 +508,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->mComprar = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mAcercaDe = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mContactos = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->datosToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mMantenimiento1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem33 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem34 = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -541,20 +541,20 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip2 = (gcnew System::Windows::Forms::MenuStrip());
 			this->menuStrip3 = (gcnew System::Windows::Forms::MenuStrip());
 			this->mReportes1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem119 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem118 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem117 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem116 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem115 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem114 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem113 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem112 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem111 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem110 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem109 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem108 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem107 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem106 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem107 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem108 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem109 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem110 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem111 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem112 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem113 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem114 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem115 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem116 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem117 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem118 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem119 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip4 = (gcnew System::Windows::Forms::MenuStrip());
 			this->mControles1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->mRevisarGondolas1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -979,98 +979,98 @@ private: System::ComponentModel::IContainer^ components;
 			// mPasilloMasVisitado
 			// 
 			this->mPasilloMasVisitado->Name = L"mPasilloMasVisitado";
-			this->mPasilloMasVisitado->Size = System::Drawing::Size(453, 28);
+			this->mPasilloMasVisitado->Size = System::Drawing::Size(450, 28);
 			this->mPasilloMasVisitado->Text = L"Pasillo mas visitado";
 			this->mPasilloMasVisitado->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mPasilloMasVisitado_Click);
 			// 
 			// mPasilloMenosVisitado
 			// 
 			this->mPasilloMenosVisitado->Name = L"mPasilloMenosVisitado";
-			this->mPasilloMenosVisitado->Size = System::Drawing::Size(453, 28);
+			this->mPasilloMenosVisitado->Size = System::Drawing::Size(450, 28);
 			this->mPasilloMenosVisitado->Text = L"Pasillo menos visitado";
 			this->mPasilloMenosVisitado->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mPasilloMenosVisitado_Click);
 			// 
 			// mProductosPorPasilloMasVendidos
 			// 
 			this->mProductosPorPasilloMasVendidos->Name = L"mProductosPorPasilloMasVendidos";
-			this->mProductosPorPasilloMasVendidos->Size = System::Drawing::Size(453, 28);
+			this->mProductosPorPasilloMasVendidos->Size = System::Drawing::Size(450, 28);
 			this->mProductosPorPasilloMasVendidos->Text = L"Productos por pasillo más vendidos";
 			this->mProductosPorPasilloMasVendidos->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mProductosPorPasilloMasVendidos_Click);
 			// 
 			// mMarcasMasVendidos
 			// 
 			this->mMarcasMasVendidos->Name = L"mMarcasMasVendidos";
-			this->mMarcasMasVendidos->Size = System::Drawing::Size(453, 28);
-			this->mMarcasMasVendidos->Text = L"Marcas más vendidos";
+			this->mMarcasMasVendidos->Size = System::Drawing::Size(450, 28);
+			this->mMarcasMasVendidos->Text = L"Marcas más vendidas";
 			this->mMarcasMasVendidos->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mMarcasMasVendidos_Click);
 			// 
 			// mClienteQueMasCompro
 			// 
 			this->mClienteQueMasCompro->Name = L"mClienteQueMasCompro";
-			this->mClienteQueMasCompro->Size = System::Drawing::Size(453, 28);
-			this->mClienteQueMasCompro->Text = L"Cliente que más compro";
+			this->mClienteQueMasCompro->Size = System::Drawing::Size(450, 28);
+			this->mClienteQueMasCompro->Text = L"Cliente que más compró";
 			this->mClienteQueMasCompro->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mClienteQueMasCompro_Click);
 			// 
 			// mClienteQueMenosCompro
 			// 
 			this->mClienteQueMenosCompro->Name = L"mClienteQueMenosCompro";
-			this->mClienteQueMenosCompro->Size = System::Drawing::Size(453, 28);
-			this->mClienteQueMenosCompro->Text = L"Cliente que menos compro";
+			this->mClienteQueMenosCompro->Size = System::Drawing::Size(450, 28);
+			this->mClienteQueMenosCompro->Text = L"Cliente que menos compró";
 			this->mClienteQueMenosCompro->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mClienteQueMenosCompro_Click);
 			// 
 			// productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1
 			// 
 			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Name = L"productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1";
-			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Size = System::Drawing::Size(453, 28);
-			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Text = L"Producto que más se cargó en las Góndolas";
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Size = System::Drawing::Size(450, 28);
+			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Text = L"Producto que más se cargó en las góndolas";
 			this->productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1->Click += gcnew System::EventHandler(this, &VentanaSupermercado::productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1_Click);
 			// 
 			// clienteQueMásFacturoToolStripMenuItem
 			// 
 			this->clienteQueMásFacturoToolStripMenuItem->Name = L"clienteQueMásFacturoToolStripMenuItem";
-			this->clienteQueMásFacturoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
-			this->clienteQueMásFacturoToolStripMenuItem->Text = L"Cliente que más facturo";
+			this->clienteQueMásFacturoToolStripMenuItem->Size = System::Drawing::Size(450, 28);
+			this->clienteQueMásFacturoToolStripMenuItem->Text = L"Cliente que más facturó";
 			this->clienteQueMásFacturoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::clienteQueMásFacturoToolStripMenuItem_Click);
 			// 
 			// marcasDeUnProductoToolStripMenuItem
 			// 
 			this->marcasDeUnProductoToolStripMenuItem->Name = L"marcasDeUnProductoToolStripMenuItem";
-			this->marcasDeUnProductoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
+			this->marcasDeUnProductoToolStripMenuItem->Size = System::Drawing::Size(450, 28);
 			this->marcasDeUnProductoToolStripMenuItem->Text = L"Marcas de un producto";
 			this->marcasDeUnProductoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::marcasDeUnProductoToolStripMenuItem_Click);
 			// 
 			// facturaDeMayorMontoToolStripMenuItem
 			// 
 			this->facturaDeMayorMontoToolStripMenuItem->Name = L"facturaDeMayorMontoToolStripMenuItem";
-			this->facturaDeMayorMontoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
+			this->facturaDeMayorMontoToolStripMenuItem->Size = System::Drawing::Size(450, 28);
 			this->facturaDeMayorMontoToolStripMenuItem->Text = L"Factura de mayor monto";
 			this->facturaDeMayorMontoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::facturaDeMayorMontoToolStripMenuItem_Click);
 			// 
 			// productosDeUnPasilloToolStripMenuItem
 			// 
 			this->productosDeUnPasilloToolStripMenuItem->Name = L"productosDeUnPasilloToolStripMenuItem";
-			this->productosDeUnPasilloToolStripMenuItem->Size = System::Drawing::Size(453, 28);
+			this->productosDeUnPasilloToolStripMenuItem->Size = System::Drawing::Size(450, 28);
 			this->productosDeUnPasilloToolStripMenuItem->Text = L"Productos de un pasillo";
 			this->productosDeUnPasilloToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::productosDeUnPasilloToolStripMenuItem_Click);
 			// 
 			// clientesDelSupermercadoToolStripMenuItem
 			// 
 			this->clientesDelSupermercadoToolStripMenuItem->Name = L"clientesDelSupermercadoToolStripMenuItem";
-			this->clientesDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
+			this->clientesDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(450, 28);
 			this->clientesDelSupermercadoToolStripMenuItem->Text = L"Clientes del supermercado";
 			this->clientesDelSupermercadoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::clientesDelSupermercadoToolStripMenuItem_Click);
 			// 
 			// pasillosDelSupermercadoToolStripMenuItem
 			// 
 			this->pasillosDelSupermercadoToolStripMenuItem->Name = L"pasillosDelSupermercadoToolStripMenuItem";
-			this->pasillosDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
+			this->pasillosDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(450, 28);
 			this->pasillosDelSupermercadoToolStripMenuItem->Text = L"Pasillos del supermercado";
 			this->pasillosDelSupermercadoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::pasillosDelSupermercadoToolStripMenuItem_Click);
 			// 
 			// inventarioDelSupermercadoToolStripMenuItem
 			// 
 			this->inventarioDelSupermercadoToolStripMenuItem->Name = L"inventarioDelSupermercadoToolStripMenuItem";
-			this->inventarioDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(453, 28);
+			this->inventarioDelSupermercadoToolStripMenuItem->Size = System::Drawing::Size(450, 28);
 			this->inventarioDelSupermercadoToolStripMenuItem->Text = L"Inventario del supermercado";
 			this->inventarioDelSupermercadoToolStripMenuItem->Click += gcnew System::EventHandler(this, &VentanaSupermercado::inventarioDelSupermercadoToolStripMenuItem_Click);
 			// 
@@ -1169,21 +1169,16 @@ private: System::ComponentModel::IContainer^ components;
 			this->mAcercaDe->Name = L"mAcercaDe";
 			this->mAcercaDe->Size = System::Drawing::Size(109, 28);
 			this->mAcercaDe->Text = L"Acerca de";
+			this->mAcercaDe->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mAcercaDe_Click);
 			// 
 			// mContactos
 			// 
-			this->mContactos->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->datosToolStripMenuItem });
 			this->mContactos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->mContactos->Name = L"mContactos";
 			this->mContactos->Size = System::Drawing::Size(105, 28);
 			this->mContactos->Text = L"Contactos";
-			// 
-			// datosToolStripMenuItem
-			// 
-			this->datosToolStripMenuItem->Name = L"datosToolStripMenuItem";
-			this->datosToolStripMenuItem->Size = System::Drawing::Size(127, 28);
-			this->datosToolStripMenuItem->Text = L"Datos";
+			this->mContactos->Click += gcnew System::EventHandler(this, &VentanaSupermercado::mContactos_Click);
 			// 
 			// mMantenimiento1
 			// 
@@ -1541,10 +1536,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->mReportes1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->mReportes1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(14) {
-				this->toolStripMenuItem119,
-					this->toolStripMenuItem118, this->toolStripMenuItem117, this->toolStripMenuItem116, this->toolStripMenuItem115, this->toolStripMenuItem114,
-					this->toolStripMenuItem113, this->toolStripMenuItem112, this->toolStripMenuItem111, this->toolStripMenuItem110, this->toolStripMenuItem109,
-					this->toolStripMenuItem108, this->toolStripMenuItem107, this->toolStripMenuItem106
+				this->toolStripMenuItem106,
+					this->toolStripMenuItem107, this->toolStripMenuItem108, this->toolStripMenuItem109, this->toolStripMenuItem110, this->toolStripMenuItem111,
+					this->toolStripMenuItem112, this->toolStripMenuItem113, this->toolStripMenuItem114, this->toolStripMenuItem115, this->toolStripMenuItem116,
+					this->toolStripMenuItem117, this->toolStripMenuItem118, this->toolStripMenuItem119
 			});
 			this->mReportes1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -1555,131 +1550,145 @@ private: System::ComponentModel::IContainer^ components;
 			this->mReportes1->Text = L"Reportes";
 			this->mReportes1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			// 
-			// toolStripMenuItem119
+			// toolStripMenuItem106
 			// 
-			this->toolStripMenuItem119->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem119.Image")));
-			this->toolStripMenuItem119->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem119->Name = L"toolStripMenuItem119";
-			this->toolStripMenuItem119->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem119->Text = L"Inventario del supermercado";
-			this->toolStripMenuItem119->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem118
-			// 
-			this->toolStripMenuItem118->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem118.Image")));
-			this->toolStripMenuItem118->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem118->Name = L"toolStripMenuItem118";
-			this->toolStripMenuItem118->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem118->Text = L"Pasillos del supermercado";
-			this->toolStripMenuItem118->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem117
-			// 
-			this->toolStripMenuItem117->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem117.Image")));
-			this->toolStripMenuItem117->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem117->Name = L"toolStripMenuItem117";
-			this->toolStripMenuItem117->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem117->Text = L"Clientes del supermercado";
-			this->toolStripMenuItem117->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem116
-			// 
-			this->toolStripMenuItem116->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem116.Image")));
-			this->toolStripMenuItem116->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem116->Name = L"toolStripMenuItem116";
-			this->toolStripMenuItem116->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem116->Text = L"Productos de un pasillo";
-			this->toolStripMenuItem116->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem115
-			// 
-			this->toolStripMenuItem115->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem115.Image")));
-			this->toolStripMenuItem115->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem115->Name = L"toolStripMenuItem115";
-			this->toolStripMenuItem115->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem115->Text = L"Factura de mayor monto";
-			this->toolStripMenuItem115->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem114
-			// 
-			this->toolStripMenuItem114->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem114.Image")));
-			this->toolStripMenuItem114->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem114->Name = L"toolStripMenuItem114";
-			this->toolStripMenuItem114->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem114->Text = L"Marcas de un producto";
-			this->toolStripMenuItem114->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem113
-			// 
-			this->toolStripMenuItem113->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem113.Image")));
-			this->toolStripMenuItem113->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem113->Name = L"toolStripMenuItem113";
-			this->toolStripMenuItem113->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem113->Text = L"Cliente que más facturo";
-			this->toolStripMenuItem113->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem112
-			// 
-			this->toolStripMenuItem112->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem112.Image")));
-			this->toolStripMenuItem112->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem112->Name = L"toolStripMenuItem112";
-			this->toolStripMenuItem112->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem112->Text = L"Producto que más se cargó en las Góndolas";
-			this->toolStripMenuItem112->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem111
-			// 
-			this->toolStripMenuItem111->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem111.Image")));
-			this->toolStripMenuItem111->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem111->Name = L"toolStripMenuItem111";
-			this->toolStripMenuItem111->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem111->Text = L"Cliente que menos compro";
-			this->toolStripMenuItem111->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem110
-			// 
-			this->toolStripMenuItem110->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem110.Image")));
-			this->toolStripMenuItem110->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem110->Name = L"toolStripMenuItem110";
-			this->toolStripMenuItem110->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem110->Text = L"Cliente que más compro";
-			this->toolStripMenuItem110->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem109
-			// 
-			this->toolStripMenuItem109->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem109.Image")));
-			this->toolStripMenuItem109->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem109->Name = L"toolStripMenuItem109";
-			this->toolStripMenuItem109->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem109->Text = L"Marcas más vendidos";
-			this->toolStripMenuItem109->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			// 
-			// toolStripMenuItem108
-			// 
-			this->toolStripMenuItem108->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem108.Image")));
-			this->toolStripMenuItem108->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem108->Name = L"toolStripMenuItem108";
-			this->toolStripMenuItem108->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem108->Text = L"Productos por pasillo más vendidos";
-			this->toolStripMenuItem108->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem106->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem106.Image")));
+			this->toolStripMenuItem106->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem106->Name = L"toolStripMenuItem106";
+			this->toolStripMenuItem106->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem106->Text = L"Pasillo mas visitado";
+			this->toolStripMenuItem106->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem106->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem106_Click);
 			// 
 			// toolStripMenuItem107
 			// 
 			this->toolStripMenuItem107->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem107.Image")));
 			this->toolStripMenuItem107->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
 			this->toolStripMenuItem107->Name = L"toolStripMenuItem107";
-			this->toolStripMenuItem107->Size = System::Drawing::Size(461, 30);
+			this->toolStripMenuItem107->Size = System::Drawing::Size(458, 30);
 			this->toolStripMenuItem107->Text = L"Pasillo menos visitado";
 			this->toolStripMenuItem107->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem107->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem107_Click);
 			// 
-			// toolStripMenuItem106
+			// toolStripMenuItem108
 			// 
-			this->toolStripMenuItem106->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem106.Image")));
-			this->toolStripMenuItem106->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem106->Name = L"toolStripMenuItem106";
-			this->toolStripMenuItem106->Size = System::Drawing::Size(461, 30);
-			this->toolStripMenuItem106->Text = L"Pasillo mas visitado";
-			this->toolStripMenuItem106->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem108->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem108.Image")));
+			this->toolStripMenuItem108->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem108->Name = L"toolStripMenuItem108";
+			this->toolStripMenuItem108->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem108->Text = L"Productos por pasillo más vendidos";
+			this->toolStripMenuItem108->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem108->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem108_Click);
+			// 
+			// toolStripMenuItem109
+			// 
+			this->toolStripMenuItem109->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem109.Image")));
+			this->toolStripMenuItem109->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem109->Name = L"toolStripMenuItem109";
+			this->toolStripMenuItem109->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem109->Text = L"Marcas más vendidas";
+			this->toolStripMenuItem109->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem109->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem109_Click);
+			// 
+			// toolStripMenuItem110
+			// 
+			this->toolStripMenuItem110->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem110.Image")));
+			this->toolStripMenuItem110->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem110->Name = L"toolStripMenuItem110";
+			this->toolStripMenuItem110->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem110->Text = L"Cliente que más compró";
+			this->toolStripMenuItem110->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem110->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem110_Click);
+			// 
+			// toolStripMenuItem111
+			// 
+			this->toolStripMenuItem111->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem111.Image")));
+			this->toolStripMenuItem111->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem111->Name = L"toolStripMenuItem111";
+			this->toolStripMenuItem111->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem111->Text = L"Cliente que menos compró";
+			this->toolStripMenuItem111->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem111->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem111_Click);
+			// 
+			// toolStripMenuItem112
+			// 
+			this->toolStripMenuItem112->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem112.Image")));
+			this->toolStripMenuItem112->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem112->Name = L"toolStripMenuItem112";
+			this->toolStripMenuItem112->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem112->Text = L"Producto que más se cargó en las góndolas";
+			this->toolStripMenuItem112->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem112->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem112_Click);
+			// 
+			// toolStripMenuItem113
+			// 
+			this->toolStripMenuItem113->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem113.Image")));
+			this->toolStripMenuItem113->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem113->Name = L"toolStripMenuItem113";
+			this->toolStripMenuItem113->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem113->Text = L"Cliente que más facturó";
+			this->toolStripMenuItem113->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem113->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem113_Click);
+			// 
+			// toolStripMenuItem114
+			// 
+			this->toolStripMenuItem114->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem114.Image")));
+			this->toolStripMenuItem114->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem114->Name = L"toolStripMenuItem114";
+			this->toolStripMenuItem114->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem114->Text = L"Marcas de un producto";
+			this->toolStripMenuItem114->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem114->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem114_Click);
+			// 
+			// toolStripMenuItem115
+			// 
+			this->toolStripMenuItem115->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem115.Image")));
+			this->toolStripMenuItem115->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem115->Name = L"toolStripMenuItem115";
+			this->toolStripMenuItem115->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem115->Text = L"Factura de mayor monto";
+			this->toolStripMenuItem115->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem115->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem115_Click);
+			// 
+			// toolStripMenuItem116
+			// 
+			this->toolStripMenuItem116->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem116.Image")));
+			this->toolStripMenuItem116->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem116->Name = L"toolStripMenuItem116";
+			this->toolStripMenuItem116->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem116->Text = L"Productos de un pasillo";
+			this->toolStripMenuItem116->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem116->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem116_Click);
+			// 
+			// toolStripMenuItem117
+			// 
+			this->toolStripMenuItem117->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem117.Image")));
+			this->toolStripMenuItem117->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem117->Name = L"toolStripMenuItem117";
+			this->toolStripMenuItem117->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem117->Text = L"Clientes del supermercado";
+			this->toolStripMenuItem117->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem117->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem117_Click);
+			// 
+			// toolStripMenuItem118
+			// 
+			this->toolStripMenuItem118->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem118.Image")));
+			this->toolStripMenuItem118->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem118->Name = L"toolStripMenuItem118";
+			this->toolStripMenuItem118->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem118->Text = L"Pasillos del supermercado";
+			this->toolStripMenuItem118->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem118->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem118_Click);
+			// 
+			// toolStripMenuItem119
+			// 
+			this->toolStripMenuItem119->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem119.Image")));
+			this->toolStripMenuItem119->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem119->Name = L"toolStripMenuItem119";
+			this->toolStripMenuItem119->Size = System::Drawing::Size(458, 30);
+			this->toolStripMenuItem119->Text = L"Inventario del supermercado";
+			this->toolStripMenuItem119->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem119->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem119_Click);
 			// 
 			// menuStrip4
 			// 
@@ -2047,8 +2056,8 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->mFacturacion1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
 			this->mFacturacion1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-				this->toolStripMenuItem95,
-					this->toolStripMenuItem96
+				this->toolStripMenuItem96,
+					this->toolStripMenuItem95
 			});
 			this->mFacturacion1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -2077,6 +2086,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem96->Size = System::Drawing::Size(250, 30);
 			this->toolStripMenuItem96->Text = L"Comprar Inventario";
 			this->toolStripMenuItem96->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem96->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem96_Click);
 			// 
 			// VentanaSupermercado
 			// 
@@ -2846,28 +2856,40 @@ private: System::Void mConsultarMarcas1_Click(System::Object^ sender, System::Ev
 }
 
 private: System::Void mRevisarGondolas_Click(System::Object^ sender, System::EventArgs^ e) {
-	int opc = 1;
-	this->Hide();
-	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
-	ventana->ShowDialog();
+	string mensaje = "";
+	marcasB->recorrerMarcas(marcasB->raiz, mensaje);
+	String^ mensajeFinal = gcnew String(mensaje.c_str());
+	MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void mVerificarInventario_Click(System::Object^ sender, System::EventArgs^ e) {
-	int opc = 2;
-	this->Hide();
-	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
-	ventana->ShowDialog();
+	string mensaje = "";
+	inventariosB->recorrerInventarios(inventariosB->raiz, mensaje);
+	String^ mensajeFinal = gcnew String(mensaje.c_str());
+	MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	if (mensaje != "") {
+		this->Hide();
+		VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
+		ventana->ShowDialog();
+	}
 }
 private: System::Void mRevisarGondolas1_Click(System::Object^ sender, System::EventArgs^ e) {
-	int opc = 1;
-	this->Hide();
-	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
-	ventana->ShowDialog();
+	string mensaje = "";
+	marcasB->recorrerMarcas(marcasB->raiz, mensaje);
+	String^ mensajeFinal = gcnew String(mensaje.c_str());
+	MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void mVerificarInventario1_Click(System::Object^ sender, System::EventArgs^ e) {
-	int opc = 2;
-	this->Hide();
-	VentanaVerificaciones^ ventana = gcnew VentanaVerificaciones(this, opc);
-	ventana->ShowDialog();
+	string mensaje = "";
+	inventariosB->recorrerInventarios(inventariosB->raiz, mensaje);
+	String^ mensajeFinal = gcnew String(mensaje.c_str());
+	MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	if (mensaje != "") {
+		this->Hide();
+		VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
+		ventana->ShowDialog();
+	}
 }
 private: System::Void facturaciónClienteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
@@ -2948,6 +2970,86 @@ private: System::Void productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1_Click
 private: System::Void facturaciónInventarioToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Hide();
 	VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
+	ventana->ShowDialog();
+}
+private: System::Void mContactos_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	VentanaContacto^ ventana = gcnew VentanaContacto(this);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem96_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem106_Click(System::Object^ sender, System::EventArgs^ e) {
+	pasillosB->pasilloMasVisitado();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem107_Click(System::Object^ sender, System::EventArgs^ e) {
+	pasillosB->pasilloMenosVisitado();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem108_Click(System::Object^ sender, System::EventArgs^ e) {
+	opc = 3;
+
+	this->Hide();
+	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem109_Click(System::Object^ sender, System::EventArgs^ e) {
+	comprasClientes->marcasMasVendidas();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem110_Click(System::Object^ sender, System::EventArgs^ e) {
+	comprasClientes->clienteQueMasCompro();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem111_Click(System::Object^ sender, System::EventArgs^ e) {
+	comprasClientes->clienteQueMenosCompro();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem112_Click(System::Object^ sender, System::EventArgs^ e) {
+	marcasB->gondolaMasCargada();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem113_Click(System::Object^ sender, System::EventArgs^ e) {
+	comprasClientes->clienteQueMasFacturo();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem114_Click(System::Object^ sender, System::EventArgs^ e) {
+	opc = 2;
+
+	this->Hide();
+	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem115_Click(System::Object^ sender, System::EventArgs^ e) {
+	comprasClientes->clienteQueMasPago();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem116_Click(System::Object^ sender, System::EventArgs^ e) {
+	opc = 1;
+
+	this->Hide();
+	VentanaReportes^ ventana = gcnew VentanaReportes(this, opc);
+	ventana->ShowDialog();
+}
+private: System::Void toolStripMenuItem117_Click(System::Object^ sender, System::EventArgs^ e) {
+	clientesB->reporteClientes();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem118_Click(System::Object^ sender, System::EventArgs^ e) {
+	pasillosB->reportePasillos();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void toolStripMenuItem119_Click(System::Object^ sender, System::EventArgs^ e) {
+	inventariosB->reporteInventarios();
+	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
+}
+private: System::Void mAcercaDe_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Hide();
+	VentanaAcercaDe^ ventana = gcnew VentanaAcercaDe(this);
 	ventana->ShowDialog();
 }
 };

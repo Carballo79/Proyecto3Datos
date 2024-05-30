@@ -103,19 +103,23 @@ namespace Proyecto3 {
 			// 
 			// facturasClientes
 			// 
+			this->facturasClientes->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->facturasClientes->FormattingEnabled = true;
-			this->facturasClientes->Location = System::Drawing::Point(12, 12);
+			this->facturasClientes->Location = System::Drawing::Point(25, 26);
 			this->facturasClientes->Name = L"facturasClientes";
 			this->facturasClientes->ScrollAlwaysVisible = true;
-			this->facturasClientes->Size = System::Drawing::Size(227, 229);
+			this->facturasClientes->Size = System::Drawing::Size(260, 235);
 			this->facturasClientes->TabIndex = 0;
 			this->facturasClientes->SelectedIndexChanged += gcnew System::EventHandler(this, &VentanaFacturacionClientes::facturasClientes_SelectedIndexChanged);
 			// 
 			// btnEliminarProducto
 			// 
-			this->btnEliminarProducto->Location = System::Drawing::Point(245, 12);
+			this->btnEliminarProducto->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnEliminarProducto->Location = System::Drawing::Point(395, 26);
 			this->btnEliminarProducto->Name = L"btnEliminarProducto";
-			this->btnEliminarProducto->Size = System::Drawing::Size(150, 23);
+			this->btnEliminarProducto->Size = System::Drawing::Size(171, 31);
 			this->btnEliminarProducto->TabIndex = 2;
 			this->btnEliminarProducto->Text = L"Eliminar Producto";
 			this->btnEliminarProducto->UseVisualStyleBackColor = true;
@@ -123,9 +127,11 @@ namespace Proyecto3 {
 			// 
 			// btnModificarCantidad
 			// 
-			this->btnModificarCantidad->Location = System::Drawing::Point(245, 56);
+			this->btnModificarCantidad->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnModificarCantidad->Location = System::Drawing::Point(395, 72);
 			this->btnModificarCantidad->Name = L"btnModificarCantidad";
-			this->btnModificarCantidad->Size = System::Drawing::Size(151, 23);
+			this->btnModificarCantidad->Size = System::Drawing::Size(171, 31);
 			this->btnModificarCantidad->TabIndex = 3;
 			this->btnModificarCantidad->Text = L"Modificar Cantidad";
 			this->btnModificarCantidad->UseVisualStyleBackColor = true;
@@ -133,9 +139,11 @@ namespace Proyecto3 {
 			// 
 			// btnFacturar
 			// 
-			this->btnFacturar->Location = System::Drawing::Point(245, 195);
+			this->btnFacturar->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->btnFacturar->Location = System::Drawing::Point(395, 230);
 			this->btnFacturar->Name = L"btnFacturar";
-			this->btnFacturar->Size = System::Drawing::Size(150, 23);
+			this->btnFacturar->Size = System::Drawing::Size(171, 31);
 			this->btnFacturar->TabIndex = 4;
 			this->btnFacturar->Text = L"Facturar y Continuar";
 			this->btnFacturar->UseVisualStyleBackColor = true;
@@ -143,17 +151,21 @@ namespace Proyecto3 {
 			// 
 			// nuevaCantidad
 			// 
-			this->nuevaCantidad->Location = System::Drawing::Point(341, 105);
+			this->nuevaCantidad->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->nuevaCantidad->Location = System::Drawing::Point(462, 140);
 			this->nuevaCantidad->Name = L"nuevaCantidad";
-			this->nuevaCantidad->Size = System::Drawing::Size(48, 20);
+			this->nuevaCantidad->Size = System::Drawing::Size(104, 26);
 			this->nuevaCantidad->TabIndex = 5;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(245, 108);
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->Location = System::Drawing::Point(325, 144);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(90, 13);
+			this->label1->Size = System::Drawing::Size(130, 19);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Nueva Cantidad: ";
 			// 
@@ -161,7 +173,7 @@ namespace Proyecto3 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(408, 273);
+			this->ClientSize = System::Drawing::Size(589, 284);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->nuevaCantidad);
 			this->Controls->Add(this->btnFacturar);
@@ -277,6 +289,7 @@ namespace Proyecto3 {
 				string cantidadComprada = msclr::interop::marshal_as<string>(cantidad);
 				string nuevaCantidad;
 				string nuevoDato;
+
 				if (!nCantidad.empty()) {
 					if (stringAInt(obtenerDato(marcasB->buscarNodo(marcasB->raiz, marcaStr)->dato, 4)) + stringAInt(cantidadComprada) >= stringAInt(nCantidad)) {
 

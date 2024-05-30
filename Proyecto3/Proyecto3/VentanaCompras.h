@@ -125,79 +125,78 @@ namespace Proyecto3 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->label1->Location = System::Drawing::Point(190, 39);
+			this->label1->Location = System::Drawing::Point(233, 36);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(105, 25);
+			this->label1->Size = System::Drawing::Size(98, 25);
 			this->label1->TabIndex = 32;
 			this->label1->Text = L"Compras";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(30, 175);
+			this->label2->Location = System::Drawing::Point(42, 182);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(161, 20);
+			this->label2->Size = System::Drawing::Size(194, 23);
 			this->label2->TabIndex = 33;
 			this->label2->Text = L"Seleccione un pasillo:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(30, 221);
+			this->label3->Location = System::Drawing::Point(42, 228);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(180, 20);
+			this->label3->Size = System::Drawing::Size(213, 23);
 			this->label3->TabIndex = 35;
 			this->label3->Text = L"Seleccione un producto:";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(30, 269);
+			this->label4->Location = System::Drawing::Point(42, 276);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(170, 20);
+			this->label4->Size = System::Drawing::Size(200, 23);
 			this->label4->TabIndex = 37;
 			this->label4->Text = L"Seleccione una marca:";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(30, 343);
+			this->label5->Location = System::Drawing::Point(42, 350);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(222, 20);
+			this->label5->Size = System::Drawing::Size(266, 23);
 			this->label5->TabIndex = 38;
 			this->label5->Text = L"Indique la cantidad a comprar:";
 			// 
 			// txtCantCompra
 			// 
 			this->txtCantCompra->Enabled = false;
-			this->txtCantCompra->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtCantCompra->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtCantCompra->Location = System::Drawing::Point(271, 340);
+			this->txtCantCompra->Location = System::Drawing::Point(323, 347);
 			this->txtCantCompra->Name = L"txtCantCompra";
 			this->txtCantCompra->Size = System::Drawing::Size(164, 26);
 			this->txtCantCompra->TabIndex = 39;
-			this->txtCantCompra->TextChanged += gcnew System::EventHandler(this, &VentanaCompras::txtCantCompra_TextChanged);
 			// 
 			// btnCarrito
 			// 
 			this->btnCarrito->Enabled = false;
-			this->btnCarrito->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnCarrito->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnCarrito->Location = System::Drawing::Point(294, 416);
+			this->btnCarrito->Location = System::Drawing::Point(346, 412);
 			this->btnCarrito->Name = L"btnCarrito";
-			this->btnCarrito->Size = System::Drawing::Size(141, 31);
+			this->btnCarrito->Size = System::Drawing::Size(141, 43);
 			this->btnCarrito->TabIndex = 40;
 			this->btnCarrito->Text = L"Agregar al carrito";
 			this->btnCarrito->UseVisualStyleBackColor = true;
@@ -205,22 +204,21 @@ namespace Proyecto3 {
 			// 
 			// txtCedula
 			// 
-			this->txtCedula->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->txtCedula->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->txtCedula->Location = System::Drawing::Point(222, 95);
+			this->txtCedula->Location = System::Drawing::Point(274, 102);
 			this->txtCedula->Name = L"txtCedula";
 			this->txtCedula->Size = System::Drawing::Size(147, 26);
 			this->txtCedula->TabIndex = 46;
-			this->txtCedula->TextChanged += gcnew System::EventHandler(this, &VentanaCompras::txtCedula_TextChanged);
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(30, 98);
+			this->label6->Location = System::Drawing::Point(42, 105);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(139, 20);
+			this->label6->Size = System::Drawing::Size(163, 23);
 			this->label6->TabIndex = 45;
 			this->label6->Text = L"Ingrese su cédula:";
 			// 
@@ -230,7 +228,7 @@ namespace Proyecto3 {
 			this->btnValidarCliente->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
 			this->btnValidarCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnValidarCliente->Location = System::Drawing::Point(385, 85);
+			this->btnValidarCliente->Location = System::Drawing::Point(437, 92);
 			this->btnValidarCliente->Name = L"btnValidarCliente";
 			this->btnValidarCliente->Size = System::Drawing::Size(50, 50);
 			this->btnValidarCliente->TabIndex = 47;
@@ -241,10 +239,10 @@ namespace Proyecto3 {
 			// 
 			this->cBoxPasillos->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cBoxPasillos->Enabled = false;
-			this->cBoxPasillos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cBoxPasillos->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cBoxPasillos->FormattingEnabled = true;
-			this->cBoxPasillos->Location = System::Drawing::Point(222, 173);
+			this->cBoxPasillos->Location = System::Drawing::Point(274, 180);
 			this->cBoxPasillos->Name = L"cBoxPasillos";
 			this->cBoxPasillos->Size = System::Drawing::Size(213, 26);
 			this->cBoxPasillos->TabIndex = 48;
@@ -254,10 +252,10 @@ namespace Proyecto3 {
 			// 
 			this->cBoxProductos->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cBoxProductos->Enabled = false;
-			this->cBoxProductos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cBoxProductos->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cBoxProductos->FormattingEnabled = true;
-			this->cBoxProductos->Location = System::Drawing::Point(222, 219);
+			this->cBoxProductos->Location = System::Drawing::Point(274, 226);
 			this->cBoxProductos->Name = L"cBoxProductos";
 			this->cBoxProductos->Size = System::Drawing::Size(213, 26);
 			this->cBoxProductos->TabIndex = 49;
@@ -267,20 +265,19 @@ namespace Proyecto3 {
 			// 
 			this->cBoxMarcas->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cBoxMarcas->Enabled = false;
-			this->cBoxMarcas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cBoxMarcas->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cBoxMarcas->FormattingEnabled = true;
-			this->cBoxMarcas->Location = System::Drawing::Point(222, 267);
+			this->cBoxMarcas->Location = System::Drawing::Point(274, 274);
 			this->cBoxMarcas->Name = L"cBoxMarcas";
 			this->cBoxMarcas->Size = System::Drawing::Size(213, 26);
 			this->cBoxMarcas->TabIndex = 50;
-			this->cBoxMarcas->SelectedIndexChanged += gcnew System::EventHandler(this, &VentanaCompras::cBoxMarcas_SelectedIndexChanged);
 			// 
 			// VentanaCompras
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(473, 477);
+			this->ClientSize = System::Drawing::Size(532, 489);
 			this->Controls->Add(this->cBoxMarcas);
 			this->Controls->Add(this->cBoxProductos);
 			this->Controls->Add(this->cBoxPasillos);
@@ -449,12 +446,6 @@ private: System::Void btnCarrito_Click(System::Object^ sender, System::EventArgs
 private: System::Void VentanaCompras_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 	this->Hide();
 	ventana2->Show();
-}
-private: System::Void cBoxMarcas_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void txtCantCompra_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void txtCedula_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

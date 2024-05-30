@@ -23,6 +23,7 @@ namespace Proyecto3 {
 	public:
 		Form^ ventana2;
 		int opc;
+
 		VentanaInformacion(void)
 		{
 			InitializeComponent();
@@ -30,6 +31,7 @@ namespace Proyecto3 {
 			//TODO: agregar código de constructor aquí
 			//
 		}
+
 		VentanaInformacion(Form^ ventana,int _opc, NodoCliente& _comprasClientes)
 		{
 			ventana2 = ventana;
@@ -60,11 +62,14 @@ namespace Proyecto3 {
 			{
 				InformacionMarca();
 			}
+
+			this->cBoxPasillos->SelectedIndexChanged += gcnew System::EventHandler(this,
+				&VentanaInformacion::ComboBox_SelectedIndexChanged);
+			this->cBoxProductos->SelectedIndexChanged += gcnew System::EventHandler(this,
+				&VentanaInformacion::ComboBox_SelectedIndexChanged);
+			this->cBoxMarcas->SelectedIndexChanged += gcnew System::EventHandler(this,
+				&VentanaInformacion::ComboBox_SelectedIndexChanged);
 		}
-
-
-
-
 
 	protected:
 		/// <summary>
@@ -121,10 +126,10 @@ namespace Proyecto3 {
 			// 
 			this->cBoxMarcas->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cBoxMarcas->Enabled = false;
-			this->cBoxMarcas->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cBoxMarcas->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cBoxMarcas->FormattingEnabled = true;
-			this->cBoxMarcas->Location = System::Drawing::Point(226, 179);
+			this->cBoxMarcas->Location = System::Drawing::Point(269, 185);
 			this->cBoxMarcas->Name = L"cBoxMarcas";
 			this->cBoxMarcas->Size = System::Drawing::Size(213, 26);
 			this->cBoxMarcas->TabIndex = 63;
@@ -134,10 +139,10 @@ namespace Proyecto3 {
 			// 
 			this->cBoxProductos->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cBoxProductos->Enabled = false;
-			this->cBoxProductos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cBoxProductos->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cBoxProductos->FormattingEnabled = true;
-			this->cBoxProductos->Location = System::Drawing::Point(226, 131);
+			this->cBoxProductos->Location = System::Drawing::Point(269, 137);
 			this->cBoxProductos->Name = L"cBoxProductos";
 			this->cBoxProductos->Size = System::Drawing::Size(213, 26);
 			this->cBoxProductos->TabIndex = 62;
@@ -147,10 +152,10 @@ namespace Proyecto3 {
 			// 
 			this->cBoxPasillos->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->cBoxPasillos->Enabled = false;
-			this->cBoxPasillos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->cBoxPasillos->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->cBoxPasillos->FormattingEnabled = true;
-			this->cBoxPasillos->Location = System::Drawing::Point(226, 85);
+			this->cBoxPasillos->Location = System::Drawing::Point(269, 91);
 			this->cBoxPasillos->Name = L"cBoxPasillos";
 			this->cBoxPasillos->Size = System::Drawing::Size(213, 26);
 			this->cBoxPasillos->TabIndex = 61;
@@ -159,11 +164,11 @@ namespace Proyecto3 {
 			// btnConsultar
 			// 
 			this->btnConsultar->Enabled = false;
-			this->btnConsultar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnConsultar->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnConsultar->Location = System::Drawing::Point(166, 264);
+			this->btnConsultar->Location = System::Drawing::Point(205, 299);
 			this->btnConsultar->Name = L"btnConsultar";
-			this->btnConsultar->Size = System::Drawing::Size(141, 31);
+			this->btnConsultar->Size = System::Drawing::Size(141, 39);
 			this->btnConsultar->TabIndex = 57;
 			this->btnConsultar->Text = L"Consultar";
 			this->btnConsultar->UseVisualStyleBackColor = true;
@@ -172,11 +177,11 @@ namespace Proyecto3 {
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(34, 181);
+			this->label4->Location = System::Drawing::Point(39, 187);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(170, 20);
+			this->label4->Size = System::Drawing::Size(200, 23);
 			this->label4->TabIndex = 54;
 			this->label4->Text = L"Seleccione una marca:";
 			this->label4->Click += gcnew System::EventHandler(this, &VentanaInformacion::label4_Click);
@@ -184,11 +189,11 @@ namespace Proyecto3 {
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(34, 133);
+			this->label3->Location = System::Drawing::Point(39, 139);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(180, 20);
+			this->label3->Size = System::Drawing::Size(213, 23);
 			this->label3->TabIndex = 53;
 			this->label3->Text = L"Seleccione un producto:";
 			this->label3->Click += gcnew System::EventHandler(this, &VentanaInformacion::label3_Click);
@@ -196,11 +201,11 @@ namespace Proyecto3 {
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(34, 87);
+			this->label2->Location = System::Drawing::Point(39, 93);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(161, 20);
+			this->label2->Size = System::Drawing::Size(194, 23);
 			this->label2->TabIndex = 52;
 			this->label2->Text = L"Seleccione un pasillo:";
 			this->label2->Click += gcnew System::EventHandler(this, &VentanaInformacion::label2_Click);
@@ -208,40 +213,42 @@ namespace Proyecto3 {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->label1->Location = System::Drawing::Point(173, 33);
+			this->label1->Location = System::Drawing::Point(213, 33);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(134, 25);
+			this->label1->Size = System::Drawing::Size(128, 25);
 			this->label1->TabIndex = 51;
-			this->label1->Text = L"Informacion";
+			this->label1->Text = L"Información";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(34, 227);
+			this->label5->Location = System::Drawing::Point(39, 233);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(141, 20);
+			this->label5->Size = System::Drawing::Size(165, 23);
 			this->label5->TabIndex = 64;
 			this->label5->Text = L"Descuento cliente:";
 			// 
 			// infDescuento
 			// 
 			this->infDescuento->Enabled = false;
-			this->infDescuento->Location = System::Drawing::Point(226, 227);
+			this->infDescuento->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->infDescuento->Location = System::Drawing::Point(269, 233);
 			this->infDescuento->Name = L"infDescuento";
-			this->infDescuento->Size = System::Drawing::Size(213, 20);
+			this->infDescuento->Size = System::Drawing::Size(213, 26);
 			this->infDescuento->TabIndex = 65;
 			// 
 			// VentanaInformacion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(473, 311);
+			this->ClientSize = System::Drawing::Size(523, 368);
 			this->Controls->Add(this->infDescuento);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->cBoxMarcas);
@@ -325,6 +332,52 @@ private: System::Void label2_Click(System::Object^ sender, System::EventArgs^ e)
 	}
 private: System::Void cBoxMarcas_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
+
+private: System::Void ComboBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (opc == 3)
+	{
+		if ((cBoxPasillos->SelectedItem != nullptr) && (cBoxProductos->SelectedItem != nullptr))
+		{
+			string codPasilloStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxProductos->SelectedItem->ToString()), 0);
+			string codProductoStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxProductos->SelectedItem->ToString()), 1);
+			string nombreStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxProductos->SelectedItem->ToString()), 2);
+			
+			String^ codPasillo = gcnew String(codPasilloStr.c_str());
+			String^ codProducto = gcnew String(codProductoStr.c_str());
+			String^ nombre = gcnew String(nombreStr.c_str());
+			
+			MessageBox::Show("Producto: " + codPasillo + "; " + codProducto + "; " + nombre, "Información", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+	}
+
+	if (opc == 4)
+	{
+		if ((cBoxPasillos->SelectedItem != nullptr) && (cBoxProductos->SelectedItem != nullptr) && (cBoxMarcas->SelectedItem != nullptr))
+		{
+			string codPasilloStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxMarcas->SelectedItem->ToString()), 0);
+			string codProductoStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxMarcas->SelectedItem->ToString()), 1);
+			string codMarcaStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxMarcas->SelectedItem->ToString()), 2);
+			string nombreStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxMarcas->SelectedItem->ToString()), 3);
+			string cantGondolaStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxMarcas->SelectedItem->ToString()), 4);
+			string PrecioStr = obtenerDato(msclr::interop::marshal_as<string>(cBoxMarcas->SelectedItem->ToString()), 5);
+			
+			String^ codPasillo = gcnew String(codPasilloStr.c_str());
+			String^ codProducto = gcnew String(codProductoStr.c_str());
+			String^ codMarca = gcnew String(codMarcaStr.c_str());
+			String^ nombre = gcnew String(nombreStr.c_str());
+			String^ cantGondola = gcnew String(cantGondolaStr.c_str());
+			String^ precio = gcnew String(PrecioStr.c_str());
+			
+			MessageBox::Show("Producto: " + codPasillo + "; " + codProducto + "; " + codMarca + "; " + nombre + "; " + cantGondola + "; " + precio,
+				"Información", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		}
+		else
+		{
+			this->btnConsultar->Enabled = false;
+		}
+	}
+}
+
 private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
 	string infDescuentoStr = msclr::interop::marshal_as<string>(this->infDescuento->Text);
 	if (opc == 1) {

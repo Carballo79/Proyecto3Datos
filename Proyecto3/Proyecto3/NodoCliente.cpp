@@ -705,11 +705,6 @@ void NodoCliente::ImprimirFactura(NodoCliente* ComprasClientes, ArbolB*& cliente
             archivoAumentarVentas(pasilloStr);
             archivoAumentarVentasMarcas(marcaStr);
 
-            System::Windows::Forms::MessageBox::Show(elementoMedio);
-            System::Windows::Forms::MessageBox::Show(ultimoElemento);
-            System::Windows::Forms::MessageBox::Show(cantidad);
-            
-
             archivo << "CodProducto: " << productoStr << " /// Marca: " << marcaStr << " /// Cantidad: " << cantidadStr
                 << " /// Precio Unitario: " << obtenerDato(marcas->buscarNodo(marcas->raiz,marcaStr)->dato,5)
                 << " /// Total por producto: " << stringAInt(cantidadStr) * stringAInt(obtenerDato(marcas->buscarNodo(marcas->raiz, marcaStr)->dato, 5)) << endl;

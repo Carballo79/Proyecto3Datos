@@ -48,7 +48,6 @@ D:\c++\PR3\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaVerificacio
 D:\c++\PR3\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaFacturacionClientes.resources
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaInformacion.resources
-C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaVerificaciones.resources
 C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaReportes.resources
 C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.AssemblyReference.cache
 C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.SuggestedBindingRedirects.cache
@@ -66,3 +65,6 @@ C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyec
 C:\Users\jadriecmmv\source\repos\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.vcxproj.GenerateResource.cache
 C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaReportes.resources
 C:\Users\jonns\Documents\GitHub\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaComprarInventario.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaComprarInventario.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaAcercaDe.resources
+C:\Users\cjose\Documents\ProyectosC++\Proyecto3Datos\Proyecto3\Proyecto3\Debug\Proyecto3.VentanaContacto.resources

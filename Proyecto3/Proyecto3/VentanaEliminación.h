@@ -150,22 +150,22 @@ namespace Proyecto3 {
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label9->Font = (gcnew System::Drawing::Font(L"Roboto", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(64)), static_cast<System::Int32>(static_cast<System::Byte>(64)),
 				static_cast<System::Int32>(static_cast<System::Byte>(64)));
-			this->label9->Location = System::Drawing::Point(221, 66);
+			this->label9->Location = System::Drawing::Point(241, 38);
 			this->label9->Name = L"label9";
 			this->label9->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label9->Size = System::Drawing::Size(97, 35);
+			this->label9->Size = System::Drawing::Size(91, 35);
 			this->label9->TabIndex = 80;
 			this->label9->Text = L"Eliminar";
 			// 
 			// btnEliminar
 			// 
-			this->btnEliminar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->btnEliminar->Font = (gcnew System::Drawing::Font(L"Roboto", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->btnEliminar->Location = System::Drawing::Point(393, 206);
+			this->btnEliminar->Location = System::Drawing::Point(424, 206);
 			this->btnEliminar->Name = L"btnEliminar";
 			this->btnEliminar->Size = System::Drawing::Size(109, 48);
 			this->btnEliminar->TabIndex = 79;
@@ -176,176 +176,176 @@ namespace Proyecto3 {
 			// codPasillo
 			// 
 			this->codPasillo->Enabled = false;
-			this->codPasillo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codPasillo->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codPasillo->Location = System::Drawing::Point(171, 104);
+			this->codPasillo->Location = System::Drawing::Point(183, 104);
 			this->codPasillo->Name = L"codPasillo";
-			this->codPasillo->Size = System::Drawing::Size(200, 22);
+			this->codPasillo->Size = System::Drawing::Size(200, 26);
 			this->codPasillo->TabIndex = 78;
 			// 
 			// codProducto
 			// 
 			this->codProducto->Enabled = false;
-			this->codProducto->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codProducto->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codProducto->Location = System::Drawing::Point(171, 138);
+			this->codProducto->Location = System::Drawing::Point(183, 138);
 			this->codProducto->Name = L"codProducto";
-			this->codProducto->Size = System::Drawing::Size(200, 22);
+			this->codProducto->Size = System::Drawing::Size(200, 26);
 			this->codProducto->TabIndex = 77;
 			// 
 			// codMarca
 			// 
 			this->codMarca->Enabled = false;
-			this->codMarca->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codMarca->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codMarca->Location = System::Drawing::Point(171, 172);
+			this->codMarca->Location = System::Drawing::Point(183, 172);
 			this->codMarca->Name = L"codMarca";
-			this->codMarca->Size = System::Drawing::Size(200, 22);
+			this->codMarca->Size = System::Drawing::Size(200, 26);
 			this->codMarca->TabIndex = 76;
 			// 
 			// codInventario
 			// 
 			this->codInventario->Enabled = false;
-			this->codInventario->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codInventario->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codInventario->Location = System::Drawing::Point(171, 206);
+			this->codInventario->Location = System::Drawing::Point(183, 206);
 			this->codInventario->Name = L"codInventario";
-			this->codInventario->Size = System::Drawing::Size(200, 22);
+			this->codInventario->Size = System::Drawing::Size(200, 26);
 			this->codInventario->TabIndex = 75;
 			// 
 			// codCliente
 			// 
 			this->codCliente->Enabled = false;
-			this->codCliente->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codCliente->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codCliente->Location = System::Drawing::Point(171, 240);
+			this->codCliente->Location = System::Drawing::Point(183, 240);
 			this->codCliente->Name = L"codCliente";
-			this->codCliente->Size = System::Drawing::Size(200, 22);
+			this->codCliente->Size = System::Drawing::Size(200, 26);
 			this->codCliente->TabIndex = 74;
 			// 
 			// codAdmin
 			// 
 			this->codAdmin->Enabled = false;
-			this->codAdmin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codAdmin->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codAdmin->Location = System::Drawing::Point(171, 274);
+			this->codAdmin->Location = System::Drawing::Point(183, 274);
 			this->codAdmin->Name = L"codAdmin";
-			this->codAdmin->Size = System::Drawing::Size(200, 22);
+			this->codAdmin->Size = System::Drawing::Size(200, 26);
 			this->codAdmin->TabIndex = 73;
 			// 
 			// codVendedor
 			// 
 			this->codVendedor->Enabled = false;
-			this->codVendedor->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codVendedor->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codVendedor->Location = System::Drawing::Point(171, 308);
+			this->codVendedor->Location = System::Drawing::Point(183, 308);
 			this->codVendedor->Name = L"codVendedor";
-			this->codVendedor->Size = System::Drawing::Size(200, 22);
+			this->codVendedor->Size = System::Drawing::Size(200, 26);
 			this->codVendedor->TabIndex = 72;
 			// 
 			// codCiudad
 			// 
 			this->codCiudad->Enabled = false;
-			this->codCiudad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->codCiudad->Font = (gcnew System::Drawing::Font(L"Roboto", 11.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->codCiudad->Location = System::Drawing::Point(171, 342);
+			this->codCiudad->Location = System::Drawing::Point(183, 342);
 			this->codCiudad->Name = L"codCiudad";
-			this->codCiudad->Size = System::Drawing::Size(200, 22);
+			this->codCiudad->Size = System::Drawing::Size(200, 26);
 			this->codCiudad->TabIndex = 71;
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label8->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label8->Location = System::Drawing::Point(29, 339);
+			this->label8->Location = System::Drawing::Point(41, 339);
 			this->label8->Name = L"label8";
 			this->label8->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label8->Size = System::Drawing::Size(110, 34);
+			this->label8->Size = System::Drawing::Size(108, 33);
 			this->label8->TabIndex = 70;
 			this->label8->Text = L"CodCiudad:";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label7->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label7->Location = System::Drawing::Point(29, 305);
+			this->label7->Location = System::Drawing::Point(41, 305);
 			this->label7->Name = L"label7";
 			this->label7->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label7->Size = System::Drawing::Size(135, 34);
+			this->label7->Size = System::Drawing::Size(130, 33);
 			this->label7->TabIndex = 69;
 			this->label7->Text = L"CodVendedor:";
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label6->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label6->Location = System::Drawing::Point(29, 271);
+			this->label6->Location = System::Drawing::Point(41, 271);
 			this->label6->Name = L"label6";
 			this->label6->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label6->Size = System::Drawing::Size(105, 34);
+			this->label6->Size = System::Drawing::Size(104, 33);
 			this->label6->TabIndex = 68;
 			this->label6->Text = L"CodAdmin:";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label5->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label5->Location = System::Drawing::Point(29, 237);
+			this->label5->Location = System::Drawing::Point(41, 237);
 			this->label5->Name = L"label5";
 			this->label5->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label5->Size = System::Drawing::Size(108, 34);
+			this->label5->Size = System::Drawing::Size(107, 33);
 			this->label5->TabIndex = 67;
 			this->label5->Text = L"CodCliente:";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label4->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label4->Location = System::Drawing::Point(29, 203);
+			this->label4->Location = System::Drawing::Point(41, 203);
 			this->label4->Name = L"label4";
 			this->label4->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label4->Size = System::Drawing::Size(131, 34);
+			this->label4->Size = System::Drawing::Size(131, 33);
 			this->label4->TabIndex = 66;
 			this->label4->Text = L"CodInventario:";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label3->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label3->Location = System::Drawing::Point(29, 169);
+			this->label3->Location = System::Drawing::Point(41, 169);
 			this->label3->Name = L"label3";
 			this->label3->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label3->Size = System::Drawing::Size(102, 34);
+			this->label3->Size = System::Drawing::Size(102, 33);
 			this->label3->TabIndex = 65;
 			this->label3->Text = L"CodMarca:";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(29, 135);
+			this->label2->Location = System::Drawing::Point(41, 135);
 			this->label2->Name = L"label2";
 			this->label2->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label2->Size = System::Drawing::Size(126, 34);
+			this->label2->Size = System::Drawing::Size(126, 33);
 			this->label2->TabIndex = 64;
 			this->label2->Text = L"CodProducto:";
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"Roboto", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(29, 101);
+			this->label1->Location = System::Drawing::Point(41, 101);
 			this->label1->Name = L"label1";
 			this->label1->Padding = System::Windows::Forms::Padding(0, 5, 0, 5);
-			this->label1->Size = System::Drawing::Size(104, 34);
+			this->label1->Size = System::Drawing::Size(107, 33);
 			this->label1->TabIndex = 63;
 			this->label1->Text = L"CodPasillo:";
 			// 
@@ -353,7 +353,7 @@ namespace Proyecto3 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(514, 439);
+			this->ClientSize = System::Drawing::Size(573, 416);
 			this->Controls->Add(this->label9);
 			this->Controls->Add(this->btnEliminar);
 			this->Controls->Add(this->codPasillo);

@@ -685,7 +685,7 @@ void ArbolRN::recorrerMarcas(NodoARN* R,string& mensaje)
             string cantStockNueva = intAString(stringAInt(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato,5)) - cantReq);
             string nuevoDatoI = obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 4) + "; " + cantStockNueva + "; " + obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 6);
             inventariosB->modificarNodo(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 3), nuevoDatoI);
-            mensaje = mensaje + "Se aumento la cantidad en gondola de la marca: " + codMarca + "\n";
+            mensaje = mensaje + "Se aumentó la cantidad en góndola de la marca: " + codMarca + "\n";
             archivoAumentarGondolas(codProducto);
 
         }
@@ -698,7 +698,7 @@ void ArbolRN::recorrerMarcas(NodoARN* R,string& mensaje)
                 string nuevoDatoI = obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 4) + "; " + "0" + "; " + obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 6);
                 inventariosB->modificarNodo(obtenerDato(inventariosB->buscarNodo(inventariosB->raiz, codInventario)->dato, 3), nuevoDatoI);
 
-                mensaje = mensaje + "Se aumento la cantidad en gondola de la marca: " + codMarca + "\n";
+                mensaje = mensaje + "Se aumentó la cantidad en góndola de la marca: " + codMarca + "\n";
                 archivoAumentarGondolas(codProducto);
             }
             else {
