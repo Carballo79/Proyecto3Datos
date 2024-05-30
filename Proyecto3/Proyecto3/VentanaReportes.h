@@ -207,23 +207,30 @@ namespace Proyecto3 {
 		}
 
 #pragma endregion
-	private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
-		string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
-		string codProductoStr = msclr::interop::marshal_as<string>(this->codProducto->Text);
+private: System::Void btnConsultar_Click(System::Object^ sender, System::EventArgs^ e) {
+	string codPasilloStr = msclr::interop::marshal_as<string>(this->codPasillo->Text);
+	string codProductoStr = msclr::interop::marshal_as<string>(this->codProducto->Text);
 
-		if (opc == 1)
+	if (opc == 1)
+	{
+		if (!String::IsNullOrEmpty(this->codPasillo->Text))
 		{
-			///validar
 			productosB->productosPorPasillo(codPasilloStr);
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 			this->Hide();
 			ventana2->Show();
 		}
-
-		if (opc == 2)
+		else
 		{
-			///validar
+			MessageBox::Show("Campo sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 2)
+	{
+		if (!String::IsNullOrEmpty(this->codPasillo->Text) && String::IsNullOrEmpty(this->codProducto->Text))
+		{
 			marcasB->marcasPorProducto(codPasilloStr, codProductoStr);
 
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -231,10 +238,16 @@ namespace Proyecto3 {
 			this->Hide();
 			ventana2->Show();
 		}
-
-		if (opc == 3)
+		else
 		{
-			///validar
+			MessageBox::Show("Campo sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
+	}
+
+	if (opc == 3)
+	{
+		if (!String::IsNullOrEmpty(this->codPasillo->Text))
+		{
 			comprasClientes->productosPorPasilloMasVendidos(codPasilloStr);
 
 			MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
@@ -242,7 +255,12 @@ namespace Proyecto3 {
 			this->Hide();
 			ventana2->Show();
 		}
+		else
+		{
+			MessageBox::Show("Campo sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+		}
 	}
+}
 private: System::Void VentanaReportes_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
 	this->Hide();
 	ventana2->Show();

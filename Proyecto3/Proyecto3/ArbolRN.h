@@ -36,7 +36,7 @@ public:
 
     void archivoAumentarGondolas(string codProducto);
 
-    void gondolaMasCargada();
+    void reporteGondolaMasCargada();
 
     void filtrarPorProducto(NodoARN* R, string codProducto, System::Windows::Forms::ComboBox^ comboBox);
 };

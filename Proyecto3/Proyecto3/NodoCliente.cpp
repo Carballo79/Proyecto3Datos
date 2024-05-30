@@ -1026,7 +1026,7 @@ void NodoCliente::productosPorPasilloMasVendidos(string codPasillo) {
         if (iss >> codPasillo >> separador >> numVentas) {
             if (numVentas == numVentasMax) {
                 archivoSalida << "Código de pasillo: " << codPasillo << "\n";
-                //archivoSalida << "Código de producto: " << obtenerDato(productosB->obtenerCodProducto(productosB->raiz, intAString(codPasillo))->dato, 1) << "\n";
+                // archivoSalida << "Código de producto: " << obtenerDato(productosB->obtenerCodProducto(productosB->raiz, intAString(codPasillo))->dato, 1) << "\n";
                 archivoSalida << "Número de ventas: " << numVentas << "\n";
                 archivoSalida << "-----------------\n";
             }

@@ -1,0 +1,15 @@
+20;45;38;8;CloroPuro;22;0
+15;28;12;9;JugosFrescos;25;0
+04;73;38;7;JamonesDelicia;20;1
+10;11;57;5;PanTostado;16;0
+11;11;42;8;LecheFresca;21;1
+03;06;98;12;CamisetasCool;28;0
+06;06;18;7;MuñecasEncantadas;19;0
+14;14;29;6;ParacetamolPlus;17;0
+09;09;83;9;DestornilladorPro;24;0
+08;08;55;10;LicuadoraMaster;23;0
+01;20;67;5;ArrocesRojos;15;1
+01;34;89;6;FrijolesDelValle;18;1
+01;20;67;10;SalMarina;19;1
+01;04;33;4;GalletasCrujientes;14;0
+15;04;22;6;RefrescosFiesta;17;0

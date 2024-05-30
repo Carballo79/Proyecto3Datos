@@ -346,6 +346,23 @@ wstring ArbolB::mostrarArbol(NodoAB* nodo, int nivel)
     return salida;
 }
 
+void ArbolB::reporteClientes(NodoAB* nodo, ofstream& archivo)
+{
+    if (nodo != NULL)
+    {
+        for (int i = 0; i < nodo->cuenta; i++)
+            archivo << "\nCédula: " << obtenerDato(nodo->llaves[i], 0)
+            << "\nNombre: " << obtenerDato(nodo->llaves[i], 1)
+            << "\nCódigo de ciudad: " << obtenerDato(nodo->llaves[i], 2)
+            << "\nNúmero de teléfono: " << obtenerDato(nodo->llaves[i], 3)
+            << "\nCorreo: " << obtenerDato(nodo->llaves[i], 4)
+            << "\n----------------------------\n";
+
+        for (int i = 0; i <= nodo->cuenta; i++)
+            reporteClientes(nodo->hijos[i], archivo);
+    }
+}
+
 void ArbolB::reporteClientes()
 {
     ofstream archivo("Reporte-Clientes.txt");
@@ -360,19 +377,6 @@ void ArbolB::reporteClientes()
     }
     else
         cout << "\tNo se pudo abrir o crear el archivo." << endl;
-}
-
-void ArbolB::reporteClientes(NodoAB* nodo, ofstream& archivo)
-{
-    if (nodo != NULL)
-    {
-        for (int i = 0; i < nodo->cuenta; i++)
-            archivo << "\nCédula: " << obtenerDato(nodo->llaves[i], 0)
-            << "\nNombre: " << obtenerDato(nodo->llaves[i], 1) << endl;
-
-        for (int i = 0; i <= nodo->cuenta; i++)
-            reporteClientes(nodo->hijos[i], archivo);
-    }
 }
 
 string ArbolB::buscarMostrarContacto(string cedula)
@@ -549,7 +553,7 @@ void ArbolB::reporteClienteMasCompras()
     int maxCompras = -1;
     reporteClienteMasCompras(raiz, cliente, maxCompras);
 
-    ofstream archivo("Reporte-Cliente mas compras.txt");
+    ofstream archivo("Reporte-ClienteMasCompras.txt");
     if (archivo.is_open())
     {
         stringstream ss(cliente);
@@ -563,11 +567,11 @@ void ArbolB::reporteClienteMasCompras()
         getline(ss, numFacturas, ';');
         getline(ss, numCompras, ';');
 
-        archivo << "Cliente que mas compro:\n";
-        archivo << "Cedula:" << cedula << "\n";
+        archivo << "Cliente que más compró:\n";
+        archivo << "Cédula:" << cedula << "\n";
         archivo << "Nombre: " << nombre << "\n";
-        archivo << "Codigo de ciudad: " << codigoCiudad << "\n";
-        archivo << "Numero de telefono: " << telefono << "\n";
+        archivo << "Código de ciudad: " << codigoCiudad << "\n";
+        archivo << "Número de teléfono: " << telefono << "\n";
         archivo << "Correo: " << correo << "\n";
         archivo << "Cantidad de facturas: " << numFacturas << "\n";
         archivo << "Cantidad de compras:" << numCompras << "\n";
@@ -576,7 +580,7 @@ void ArbolB::reporteClienteMasCompras()
     }
     else
     {
-        cout << "No se pudo abrir el archivo Reporte-Cliente mas compras.txt" << endl;
+        cout << "No se pudo abrir el archivo Reporte-ClienteMasCompras.txt" << endl;
     }
 }
 void ArbolB::reporteClienteMenosCompras()
@@ -585,7 +589,7 @@ void ArbolB::reporteClienteMenosCompras()
     int minNum = INT_MAX;
     reporteClienteMenosCompras(raiz, clienteMenor, minNum);
 
-    ofstream archivo("Reporte-Cliente menos compras.txt");
+    ofstream archivo("Reporte-ClienteMenosCompras.txt");
     if (archivo.is_open())
     {
         stringstream ss(clienteMenor);
@@ -599,11 +603,11 @@ void ArbolB::reporteClienteMenosCompras()
         getline(ss, numFacturas, ';');
         getline(ss, numCompras, ';');
 
-        archivo << "Cliente que menos compro:\n";
-        archivo << "Cedula:" << cedula << "\n";
+        archivo << "Cliente que menos compró:\n";
+        archivo << "Cédula:" << cedula << "\n";
         archivo << "Nombre: " << nombre << "\n";
-        archivo << "Codigo de ciudad: " << codigoCiudad << "\n";
-        archivo << "Numero de telefono: " << telefono << "\n";
+        archivo << "Código de ciudad: " << codigoCiudad << "\n";
+        archivo << "Número de teléfono: " << telefono << "\n";
         archivo << "Correo: " << correo << "\n";
         archivo << "Cantidad de facturas: " << numFacturas << "\n";
         archivo << "Cantidad de compras:" << numCompras << "\n";
@@ -612,7 +616,7 @@ void ArbolB::reporteClienteMenosCompras()
     }
     else
     {
-        cout << "No se pudo abrir el archivo Reporte-Cliente menos compras.txt" << endl;
+        cout << "No se pudo abrir el archivo Reporte-ClienteMenosCompras.txt" << endl;
     }
 }
 
@@ -650,7 +654,7 @@ void ArbolB::reporteClienteMasFacturas()
     int maxNum = -1; // Inicializar con el valor más pequeño posible
     reporteClienteMasFacturas(raiz, clienteMayor, maxNum);
 
-    ofstream archivo("Reporte-Cliente que mas Facturo.txt");
+    ofstream archivo("Reporte-ClienteQueMasFacturo.txt");
     if (archivo.is_open())
     {
         stringstream ss(clienteMayor);
@@ -664,11 +668,11 @@ void ArbolB::reporteClienteMasFacturas()
         getline(ss, numFacturas, ';');
         getline(ss, numCompras, ';');
 
-        archivo << "Cliente que mas facturo:\n";
-        archivo << "Cedula:" << cedula << "\n";
+        archivo << "Cliente que más facturó:\n";
+        archivo << "Cédula:" << cedula << "\n";
         archivo << "Nombre: " << nombre << "\n";
-        archivo << "Codigo de ciudad: " << codigoCiudad << "\n";
-        archivo << "Numero de telefono: " << telefono << "\n";
+        archivo << "Código de ciudad: " << codigoCiudad << "\n";
+        archivo << "Número de teléfono: " << telefono << "\n";
         archivo << "Correo: " << correo << "\n";
         archivo << "Cantidad de facturas: " << numFacturas << "\n";
         archivo << "Cantidad de compras:" << numCompras << "\n";
@@ -677,7 +681,7 @@ void ArbolB::reporteClienteMasFacturas()
     }
     else
     {
-        cout << "No se pudo abrir el archivo Reporte-Cliente que mas Facturo.txt" << endl;
+        cout << "No se pudo abrir el archivo Reporte-ClienteQueMasFacturo.txt" << endl;
     }
 }
 

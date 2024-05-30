@@ -282,8 +282,8 @@ void ArbolAVL::productosPorPasilloR(NodoAVL* R, string codPasillo, ofstream& arc
 
     if (obtenerDato(R->dato, 0) == codPasillo)
     {
-        archivo << "Codigo de pasillo: " << obtenerLlave(R->dato, 0) << "\n";
-        archivo << "Codigo de producto: " << obtenerLlave(R->dato, 1) << "\n";
+        archivo << "Código de pasillo: " << obtenerLlave(R->dato, 0) << "\n";
+        archivo << "Código de producto: " << obtenerLlave(R->dato, 1) << "\n";
         archivo << "Nombre: " << obtenerDato(R->dato, 2) << "\n";
         archivo << "----------------------------\n";
     }

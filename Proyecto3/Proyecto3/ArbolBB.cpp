@@ -254,7 +254,7 @@ void ArbolBB::reportePasillosR(NodoABB* nodo, ofstream& archivo)
     if (nodo != NULL) {
         reportePasillosR(nodo->Hizq, archivo);
 
-        archivo << "Codigo de pasillo: " << obtenerLlave(nodo->dato, 0) << "\n";
+        archivo << "Código de pasillo: " << obtenerLlave(nodo->dato, 0) << "\n";
         archivo << "Nombre: " << obtenerDato(nodo->dato, 1) << "\n";
         archivo << "----------------------------\n";
 
@@ -411,7 +411,8 @@ void ArbolBB::pasilloMasVisitado() {
         char separador;
         if (iss >> codPasillo >> separador >> numVisitas) {
             if (numVisitas == numPasilloMax) {
-                archivoSalida << "Código: " << codPasillo << "\n";
+                archivoSalida << "Pasillo más visitado:\n";
+                archivoSalida << "Código de pasillo: " << codPasillo << "\n";
                 archivoSalida << "Número de visitas: " << numVisitas << "\n";
                 archivoSalida << "-----------------\n";
             }
@@ -468,7 +469,8 @@ void ArbolBB::pasilloMenosVisitado() {
         char separador;
         if (iss >> codPasillo >> separador >> numVisitas) {
             if (numVisitas == numPasillosMin) {
-                archivoSalida << "Código: " << codPasillo << "\n";
+                archivoSalida << "Pasillo menos visitado:\n";
+                archivoSalida << "Código de pasillo: " << codPasillo << "\n";
                 archivoSalida << "Número de visitas: " << numVisitas << "\n";
                 archivoSalida << "-----------------\n";
             }

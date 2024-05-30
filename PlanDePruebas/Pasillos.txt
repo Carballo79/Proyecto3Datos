@@ -1,0 +1,12 @@
+01;Abarrotes
+20;Limpieza
+15;Bebidas
+4;Carnes
+10;Panaderia
+11;Lacteos
+08;Electrodomesticos
+9;Ferreteria
+03;Ropa
+04;Dulces y Snacks
+06;Juguetes
+14;Farmacia

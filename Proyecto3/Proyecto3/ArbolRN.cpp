@@ -598,9 +598,9 @@ void ArbolRN::archivoAumentarGondolas(string codProducto) {
     }
 }
 
-void ArbolRN::gondolaMasCargada() {
+void ArbolRN::reporteGondolaMasCargada() {
     string nombreArchivoEntrada = "CargaGondolas.txt";
-    string nombreArchivoSalida = "ReporteGondolaMasCargada.txt";
+    string nombreArchivoSalida = "Reporte-GondolaMasCargada.txt";
 
     // Primero, encontrar el número máximo de facturas
     ifstream archivoEntrada(nombreArchivoEntrada);
@@ -643,7 +643,7 @@ void ArbolRN::gondolaMasCargada() {
         char separador;
         if (iss >> codProducto >> separador >> numCargas) {
             if (numCargas == numCargasMax) {
-                archivoSalida << "Producto: " << codProducto << "\n";
+                archivoSalida << "Código de producto: " << codProducto << "\n";
                 archivoSalida << "Número de cargas: " << numCargas << "\n";
                 archivoSalida << "-----------------\n";
             }

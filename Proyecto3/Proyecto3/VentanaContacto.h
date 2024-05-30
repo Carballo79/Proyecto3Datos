@@ -145,6 +145,7 @@ namespace Proyecto3 {
 			this->btnEnviar->TabIndex = 21;
 			this->btnEnviar->Text = L"Enviar";
 			this->btnEnviar->UseVisualStyleBackColor = true;
+			this->btnEnviar->Click += gcnew System::EventHandler(this, &VentanaContacto::btnEnviar_Click);
 			// 
 			// txtComentario
 			// 
@@ -254,6 +255,7 @@ namespace Proyecto3 {
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Name = L"VentanaContacto";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"VentanaContacto";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &VentanaContacto::VentanaContacto_FormClosing);
 			this->ResumeLayout(false);
@@ -261,9 +263,24 @@ namespace Proyecto3 {
 
 		}
 #pragma endregion
-	private: System::Void VentanaContacto_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
-		this->Hide();
-		ventana2->Show();
+private: System::Void VentanaContacto_FormClosing(System::Object^ sender, System::Windows::Forms::FormClosingEventArgs^ e) {
+	this->Hide();
+	ventana2->Show();
+}
+private: System::Void btnEnviar_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ nombre = this->txtNombre->Text;
+	String^ correo = this->txtCorreo->Text;
+	String^ telefono = this->txtTelefono->Text;
+	String^ comentario = this->txtComentario->Text;
+	
+	if (!String::IsNullOrEmpty(nombre) && !String::IsNullOrEmpty(correo) && !String::IsNullOrEmpty(telefono)) {
+		MessageBox::Show("Contacto guardado con exitosamente", "Informacion de contacto", MessageBoxButtons::OK, MessageBoxIcon::Information);
+		Close();
 	}
+	else
+	{
+		MessageBox::Show("Campos sin rellenar.", "Error", MessageBoxButtons::OK, MessageBoxIcon::Error);
+	}
+}
 };
 }

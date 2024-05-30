@@ -1,0 +1,15 @@
+01;20;Arroz
+20;45;Cloro
+01;34;Frijoles
+15;28;Jugos
+04;73;Jamones
+01;20;Sal
+01;04;Galletas
+15;04;Refrescos
+10;11;Pan Blanco
+11;11;Leche Entera
+03;06;Camisetas
+06;06;Muñecas
+14;14;Paracetamol
+09;09;Destornillador
+08;08;Licuadora

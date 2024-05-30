@@ -1,0 +1,15 @@
+1155;San Jose
+2301;Limon
+3564;Puntarenas
+4902;Alajuela
+5643;Heredia
+6210;Cartago
+7325;Liberia
+8198;Quepos
+9382;Golfito
+10567;Jaco
+11789;Puerto Viejo
+12245;Cahuita
+13567;Nicoya
+14230;Guanacaste
+15432;Montezuma

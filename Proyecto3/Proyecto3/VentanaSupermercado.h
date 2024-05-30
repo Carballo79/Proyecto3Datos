@@ -588,8 +588,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem93 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip6 = (gcnew System::Windows::Forms::MenuStrip());
 			this->mFacturacion1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->toolStripMenuItem95 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem96 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->toolStripMenuItem95 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->menuStrip2->SuspendLayout();
 			this->menuStrip3->SuspendLayout();
@@ -1511,7 +1511,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip2->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip2->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mMantenimiento1 });
 			this->menuStrip2->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip2->Location = System::Drawing::Point(326, 162);
+			this->menuStrip2->Location = System::Drawing::Point(326, 166);
 			this->menuStrip2->Name = L"menuStrip2";
 			this->menuStrip2->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip2->Size = System::Drawing::Size(150, 162);
@@ -1525,7 +1525,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip3->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip3->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mReportes1 });
 			this->menuStrip3->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip3->Location = System::Drawing::Point(565, 162);
+			this->menuStrip3->Location = System::Drawing::Point(565, 166);
 			this->menuStrip3->Name = L"menuStrip3";
 			this->menuStrip3->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip3->Size = System::Drawing::Size(144, 162);
@@ -1697,7 +1697,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip4->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip4->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mControles1 });
 			this->menuStrip4->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip4->Location = System::Drawing::Point(672, 385);
+			this->menuStrip4->Location = System::Drawing::Point(672, 389);
 			this->menuStrip4->Name = L"menuStrip4";
 			this->menuStrip4->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip4->Size = System::Drawing::Size(144, 162);
@@ -1798,7 +1798,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip5->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip5->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mUsuarios });
 			this->menuStrip5->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip5->Location = System::Drawing::Point(447, 385);
+			this->menuStrip5->Location = System::Drawing::Point(447, 389);
 			this->menuStrip5->Name = L"menuStrip5";
 			this->menuStrip5->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip5->Size = System::Drawing::Size(144, 162);
@@ -2045,7 +2045,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip6->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip6->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->mFacturacion1 });
 			this->menuStrip6->LayoutStyle = System::Windows::Forms::ToolStripLayoutStyle::VerticalStackWithOverflow;
-			this->menuStrip6->Location = System::Drawing::Point(791, 162);
+			this->menuStrip6->Location = System::Drawing::Point(791, 166);
 			this->menuStrip6->Name = L"menuStrip6";
 			this->menuStrip6->Padding = System::Windows::Forms::Padding(4, 2, 0, 2);
 			this->menuStrip6->Size = System::Drawing::Size(144, 162);
@@ -2068,16 +2068,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->mFacturacion1->Text = L"Facturación";
 			this->mFacturacion1->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			// 
-			// toolStripMenuItem95
-			// 
-			this->toolStripMenuItem95->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem95.Image")));
-			this->toolStripMenuItem95->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
-			this->toolStripMenuItem95->Name = L"toolStripMenuItem95";
-			this->toolStripMenuItem95->Size = System::Drawing::Size(250, 30);
-			this->toolStripMenuItem95->Text = L"Facturación Cliente";
-			this->toolStripMenuItem95->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
-			this->toolStripMenuItem95->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem95_Click);
-			// 
 			// toolStripMenuItem96
 			// 
 			this->toolStripMenuItem96->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem96.Image")));
@@ -2087,6 +2077,16 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolStripMenuItem96->Text = L"Comprar Inventario";
 			this->toolStripMenuItem96->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
 			this->toolStripMenuItem96->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem96_Click);
+			// 
+			// toolStripMenuItem95
+			// 
+			this->toolStripMenuItem95->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"toolStripMenuItem95.Image")));
+			this->toolStripMenuItem95->ImageScaling = System::Windows::Forms::ToolStripItemImageScaling::None;
+			this->toolStripMenuItem95->Name = L"toolStripMenuItem95";
+			this->toolStripMenuItem95->Size = System::Drawing::Size(250, 30);
+			this->toolStripMenuItem95->Text = L"Facturación Cliente";
+			this->toolStripMenuItem95->TextImageRelation = System::Windows::Forms::TextImageRelation::ImageAboveText;
+			this->toolStripMenuItem95->Click += gcnew System::EventHandler(this, &VentanaSupermercado::toolStripMenuItem95_Click);
 			// 
 			// VentanaSupermercado
 			// 
@@ -2859,36 +2859,64 @@ private: System::Void mRevisarGondolas_Click(System::Object^ sender, System::Eve
 	string mensaje = "";
 	marcasB->recorrerMarcas(marcasB->raiz, mensaje);
 	String^ mensajeFinal = gcnew String(mensaje.c_str());
-	MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	
+	if (mensaje != "")
+	{
+		MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	else
+	{
+		MessageBox::Show("No hay góndolas por cargar.", "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void mVerificarInventario_Click(System::Object^ sender, System::EventArgs^ e) {
 	string mensaje = "";
 	inventariosB->recorrerInventarios(inventariosB->raiz, mensaje);
 	String^ mensajeFinal = gcnew String(mensaje.c_str());
-	MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-	if (mensaje != "") {
+	if (mensaje != "")
+	{
+		MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
 		this->Hide();
 		VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
 		ventana->ShowDialog();
+	}
+	else
+	{
+		MessageBox::Show("No hay inventarios que deben ser cargados.", "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 }
 private: System::Void mRevisarGondolas1_Click(System::Object^ sender, System::EventArgs^ e) {
 	string mensaje = "";
 	marcasB->recorrerMarcas(marcasB->raiz, mensaje);
 	String^ mensajeFinal = gcnew String(mensaje.c_str());
-	MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
+	if (mensaje != "")
+	{
+		MessageBox::Show(mensajeFinal, "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
+	else
+	{
+		MessageBox::Show("No hay góndolas por cargar.", "Góndolas cargadas", MessageBoxButtons::OK, MessageBoxIcon::Information);
+	}
 }
 private: System::Void mVerificarInventario1_Click(System::Object^ sender, System::EventArgs^ e) {
 	string mensaje = "";
 	inventariosB->recorrerInventarios(inventariosB->raiz, mensaje);
 	String^ mensajeFinal = gcnew String(mensaje.c_str());
-	MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
 
-	if (mensaje != "") {
+	if (mensaje != "")
+	{
+		MessageBox::Show(mensajeFinal, "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
+
 		this->Hide();
 		VentanaComprarInventario^ ventana = gcnew VentanaComprarInventario(this);
 		ventana->ShowDialog();
+	}
+	else
+	{
+		MessageBox::Show("No hay inventarios que deben ser cargados.", "Inventarios por comprar", MessageBoxButtons::OK, MessageBoxIcon::Information);
 	}
 }
 private: System::Void facturaciónClienteToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2964,7 +2992,7 @@ private: System::Void mMarcasMasVendidos_Click(System::Object^ sender, System::E
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void productoQueMásSeCargóEnLasGóndolasToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
-	marcasB->gondolaMasCargada();
+	marcasB->reporteGondolaMasCargada();
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void facturaciónInventarioToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3010,7 +3038,7 @@ private: System::Void toolStripMenuItem111_Click(System::Object^ sender, System:
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void toolStripMenuItem112_Click(System::Object^ sender, System::EventArgs^ e) {
-	marcasB->gondolaMasCargada();
+	marcasB->reporteGondolaMasCargada();
 	MessageBox::Show("Reporte generado exitosamente.", "Éxito", MessageBoxButtons::OK, MessageBoxIcon::Information);
 }
 private: System::Void toolStripMenuItem113_Click(System::Object^ sender, System::EventArgs^ e) {

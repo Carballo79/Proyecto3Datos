@@ -18,11 +18,11 @@ public:
     void crearVendedores();
     string obtenerNodo(string dato);
     wstring mostrarArbol(NodoAB* nodo, int nivel);
-    void reporteClientes();
     string buscarMostrarContacto(string dato);
     void aumentarNumFacturas(string dato);
     void aumentarNumCompras(string dato);
     string conseguirContFacturas(string dato);
+    void reporteClientes();
     void reporteClienteMasCompras();
     void reporteClienteMenosCompras();
     void reporteClienteMasFacturas();
