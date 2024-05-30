@@ -229,7 +229,7 @@ private: System::Void btnConsultar_Click(System::Object^ sender, System::EventAr
 
 	if (opc == 2)
 	{
-		if (!String::IsNullOrEmpty(this->codPasillo->Text) && String::IsNullOrEmpty(this->codProducto->Text))
+		if (!String::IsNullOrEmpty(this->codPasillo->Text) && !String::IsNullOrEmpty(this->codProducto->Text))
 		{
 			marcasB->marcasPorProducto(codPasilloStr, codProductoStr);
 
